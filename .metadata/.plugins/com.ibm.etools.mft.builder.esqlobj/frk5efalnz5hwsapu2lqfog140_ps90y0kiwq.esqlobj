@@ -1,0 +1,34 @@
+CREATE PROCEDURE buildResClient_WP_RIW_ERROR(IN refRoot REFERENCE,
+										      IN refJsonIn REFERENCE,
+										      IN isErrorHost CHARACTER,
+										      IN chrCodigoError CHARACTER,
+										      IN chrDescripcionError CHARACTER)
+BEGIN
+	
+	CREATE LASTCHILD OF refRoot NAME 'XMLNSC';
+	CREATE LASTCHILD OF refRoot.XMLNSC NAME 'integrationResponse';
+	DECLARE refIntegrationResp REFERENCE TO refRoot.XMLNSC.integrationResponse;
+	
+	CALL buildHeaderResponse(refIntegrationResp, refJsonIn, getSI(), isErrorHost, chrCodigoError, chrDescripcionError);
+	
+	--CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	--DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	--SET refResponseHeader.idSesion 				= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionEmpresa		= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionBanco		= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idOperacion			= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	
+	--IF isErrorHost = getNO() THEN
+	-- 	SET refResponseHeader.codigoServicio	= getCOD_RPTA_ERROR();
+	-- 	SET refResponseHeader.mensajeServicio	= chrCodigoError || chrDescripcionError;
+	--ELSE
+	-- 	SET refResponseHeader.codigoServicio	= chrCodigoError;
+	-- 	SET refResponseHeader.mensajeServicio	= chrDescripcionError;
+	--END IF;
+ 	
+ 	--SET refResponseHeader.estadoServicio		= getEST_RPTA_ERROR();
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseBody';
+	
+END;

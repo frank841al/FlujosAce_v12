@@ -1,0 +1,48 @@
+CREATE PROCEDURE BuildPS9Request(IN refOutputRoot REFERENCE,
+								IN refParamOperation REFERENCE,
+								IN chrTramaTxRq CHARACTER, 
+								IN refParamGeneric REFERENCE,
+								IN refCodService CHARACTER,
+								IN refEnv REFERENCE)
+
+BEGIN 
+	
+	--Declaracion de variables
+	DECLARE refMsgPS9 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgIH 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgME 		REFERENCE TO refOutputRoot;
+	DECLARE refIntegRequest	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+	DECLARE longMsjHost 	INTEGER LENGTH(COALESCE(chrTramaTxRq, ''));
+	DECLARE tipoFormatoTerminal CHARACTER COALESCE(FIELDVALUE(refParamOperation.TIPO_TERMINAL), 'FA');
+	DECLARE nameOperation REFERENCE TO refIntegRequest.requestHeader.idOperacion;
+
+	SET refEnv.Data.longMsjHost = longMsjHost;
+
+	DECLARE al CHARACTER COALESCE(FIELDVALUE(refParamOperation.RANDOM_NRO_SECUENCE), 'N');
+	
+	CREATE LASTCHILD OF refOutputRoot AS refMsgPS9 NAME 'PS9MsgIN';
+	CREATE LASTCHILD OF refMsgPS9 NAME 'ESPACIO_FIJO' VALUE '';
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgIH NAME 'IH';
+	
+	SET refMsgIH.ID_PROTOCOLO 		= '26'; 	--COALESCE(FIELDVALUE(refParamOperation.IH_IDENTIFICADOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TERMINAL_LOGICO 	= '88%0'; 	--getTerminalApp(refCodService, FIELDVALUE(refParamGeneric.URL_APP_TERMINAL));
+	SET refMsgIH.TERMINAL_CONTABLE 	= '88%0';   --COALESCE(FIELDVALUE(refParamOperation.IH_TERMINAL_CONTABLE), getEMPTY_CHARACTER());
+	SET refMsgIH.USUARIO 			= refIntegRequest.requestHeader.usuario; --'P004718';	--COALESCE(FIELDVALUE(refParamOperation.IH_USUARIO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.NUMERO_SECUENCIA 	= '00000000';		--getSecuenciaPS9();
+	SET refMsgIH.TRANS_CODE_HOST 	= 'VLA2';--getNamespaceOperation(nameOperation);----	OperationNam;	--COALESCE(FIELDVALUE(refParamOperation.IH_CODIGO_TRANSACCION), getEMPTY_CHARACTER());	
+	SET refMsgIH.OPCION_APLICACION 	= '00'; 		--'00';ACE		--COALESCE(FIELDVALUE(refParamOperation.IH_OPCION_APLICACION_USER), getEMPTY_CHARACTER());
+	SET refMsgIH.LONGITUD_TRAMA 	= longMsjHost;	--'00126'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LONGITUD_TRAMA), getEMPTY_CHARACTER());
+	SET refMsgIH.INDICADOR_COMMIT 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_COMMIT_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_MENSAJE_IN 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_MENSAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_PROCESO 		= 'O'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_PROCESO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.CANAL_COMUNICACION = refIntegRequest.requestHeader.canal;	--'VL'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_CANAL), getEMPTY_CHARACTER());
+	SET refMsgIH.IND_PRE_FORMATO 	= 'N'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_PREFOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.LENGUAJE 			= 'R'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LENGUAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgME NAME 'ME';
+	
+	SET refMsgME.LONGITUD_MENSAJE = longMsjHost;
+	SET refMsgME.TIPO_MENSAJE = '1'; 			--FIELDVALUE(refParamOperation.ME_TIPO_MENSAJE_PROTOCOLO);
+	SET refMsgME.MENSAJE = chrTramaTxRq;
+	
+END;

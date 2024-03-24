@@ -1,0 +1,17 @@
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E516_COD_CLIENTE 	= refJsonData.integrationRequest.cod_cliente;
+		SET refRoot.E516_CTA_VALOR 	= refJsonData.integrationRequest.cta_valor;
+		SET refRoot.E516_NRO_ORDEN 	= refJsonData.integrationRequest.nro_orden;
+		SET refRoot.E516_FECHA_DESDE 	= refJsonData.integrationRequest.fecha_desde;
+		SET refRoot.E516_FECHA_HASTA 	= refJsonData.integrationRequest.fecha_hasta;
+		SET refRoot.E516_USUARIO 		= refJsonData.integrationRequest.usuario;
+		SET refRoot.E516_NEMONICO 		= refJsonData.integrationRequest.nemonico;
+		SET refRoot.E516_CAMPO_AUX1 = refJsonData.integrationRequest.campo_aux1;
+		SET refRoot.E516_CAMPO_AUX2 	= refJsonData.integrationRequest.campo_aux2;
+		SET refRoot.E516_CAMPO_AUX3 		= refJsonData.integrationRequest.campo_aux3;
+		SET refRoot.E516_CAMPO_AUX4 = refJsonData.integrationRequest.campo_aux4;
+		SET refRoot.E516_IND_PAGINAC 	= refJsonData.integrationRequest.ind_paginac;
+END;

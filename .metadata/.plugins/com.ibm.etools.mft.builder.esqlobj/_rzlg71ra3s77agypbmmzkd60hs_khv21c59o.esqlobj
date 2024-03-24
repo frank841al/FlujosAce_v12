@@ -1,0 +1,33 @@
+CREATE PROCEDURE setOutputHeaderRFH2 (IN refOutUsr 		REFERENCE, 
+									  IN idProtocolo	CHARACTER,
+									  IN tipoProtocolo	CHARACTER,
+									  IN msgId			BLOB,
+									  IN inEnconding	INTEGER,
+									  IN inCCSID		INTEGER,
+									  IN RequestIdentifier BLOB,
+									  IN IP				CHARACTER,
+									  IN PutApplName	CHARACTER)
+BEGIN
+	  
+	SET refOutUsr.inEncoding 	= inEnconding;
+	SET refOutUsr.inCCSID 		= inCCSID; 
+			
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Protocolo';
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Servicio';
+	CREATE LASTCHILD OF refOutUsr.Parametros.Servicio 	NAME 'Datos';
+	
+	DECLARE refParamPro 	REFERENCE TO refOutUsr.Parametros.Protocolo;
+	DECLARE refParamDatos 	REFERENCE TO refOutUsr.Parametros.Servicio.Datos;
+	
+	SET refParamPro.IdProtocolo			= idProtocolo;
+	SET refParamPro.TipoProtocolo		= tipoProtocolo;
+	
+	SET refParamDatos.MsgId				= msgId;
+	SET refParamDatos.CorrelId			= msgId;
+	SET refParamDatos.PutApplName		= PutApplName;
+	SET refParamDatos.Encoding			= inEnconding;
+	SET refParamDatos.CodedCharSetId	= inCCSID;
+	SET refParamDatos.RequestIdentifier = RequestIdentifier;
+	SET refParamDatos.IP				= IP;
+			
+END;

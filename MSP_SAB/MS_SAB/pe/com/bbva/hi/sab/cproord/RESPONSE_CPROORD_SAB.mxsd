@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://sab.hi.bbva.com.pe/cproord/" xmlns:tns="http://sab.hi.bbva.com.pe/cproord/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="VLMC526SDATOSSALIDA">
+    <xsd:sequence>
+            <xsd:element maxOccurs="100" minOccurs="0" name="VLMC526D_DATOS_SALIDA" type="tns:Vlmc526sdatossalida_vlmc526d__datos__salida">
+        <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF" skipCountTrailing="0">
+              <cwfAggrRep accessor="readWrite" attributeInBit="false" contentSize="6700" offset="69" size="6700">
+                <ArrayTD_arrayDescr alignmentKind="byte" lowerBound="100" stride="67" strideInBit="false" upperBound="100"/>
+              </cwfAggrRep>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+            <xsd:element name="S526_ARQUITECTURA">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="10" lengthEncoding="fixedLength" offset="0" paddingCharacter="SPACE" prefixLength="0" size="10" typeName="MRCWFStringRep" width="10"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_ULT_ORDEN">
+        <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" contentSize="9" offset="10" signFormat="trailing" signed="false" size="9" typeName="MRCWFExternalDecimalRep" width="9"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="999999999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_HAY_MAS">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="19" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_COD_RETORNO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="2" lengthEncoding="fixedLength" offset="20" paddingCharacter="SPACE" prefixLength="0" size="2" typeName="MRCWFStringRep" width="2"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_COD_ERROR_DEV">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="7" lengthEncoding="fixedLength" offset="22" paddingCharacter="SPACE" prefixLength="0" size="7" typeName="MRCWFStringRep" width="7"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="7"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_VAR1_ERROR">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="20" lengthEncoding="fixedLength" offset="29" paddingCharacter="SPACE" prefixLength="0" size="20" typeName="MRCWFStringRep" width="20"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="S526_VAR2_ERROR">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="20" lengthEncoding="fixedLength" offset="49" paddingCharacter="SPACE" prefixLength="0" size="20" typeName="MRCWFStringRep" width="20"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Vlmc526sdatossalida_vlmc526d__datos__salida">
+        <xsd:group ref="tns:vlmc526sdatossalida_vlmc526d__datos__salida"/>
+    </xsd:complexType>
+  <xsd:group name="vlmc526sdatossalida_vlmc526d__datos__salida">
+    <xsd:sequence>
+      <xsd:element name="D526_ARQUITECTURA">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="10" lengthEncoding="fixedLength" offset="69" paddingCharacter="SPACE" prefixLength="0" size="10" typeName="MRCWFStringRep" width="10"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_LUGNEGOC">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="79" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_MERCADO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="80" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_COMVEN">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="81" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_MENONICO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="10" lengthEncoding="fixedLength" offset="82" paddingCharacter="SPACE" prefixLength="0" size="10" typeName="MRCWFStringRep" width="10"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_PRECIO">
+        <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" contentSize="10" offset="92" signFormat="trailing" signed="false" size="10" typeName="MRCWFExternalDecimalRep" virtualDecimalPoint="3" width="10"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="9999999.999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_DURACION">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="102" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_CANT_TITULOS">
+        <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" contentSize="12" offset="103" signFormat="trailing" signed="false" size="12" typeName="MRCWFExternalDecimalRep" width="12"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:long">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="999999999999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_REF_TIPO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="1" lengthEncoding="fixedLength" offset="115" paddingCharacter="SPACE" prefixLength="0" size="1" typeName="MRCWFStringRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_REFER_ORD">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="9" lengthEncoding="fixedLength" offset="116" paddingCharacter="SPACE" prefixLength="0" size="9" typeName="MRCWFStringRep" width="9"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="9"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_FECH_FPT">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" characterSize="1" contentSize="10" lengthEncoding="fixedLength" offset="125" paddingCharacter="SPACE" prefixLength="0" size="10" typeName="MRCWFStringRep" width="10"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="D526_CORTO">
+        <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep accessor="readWrite" addrUnit="byte" alignment="byte" attributeInBit="false" contentSize="1" offset="135" signFormat="trailing" signed="false" size="1" typeName="MRCWFExternalDecimalRep" width="1"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:short">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="9"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+    <xsd:element name="msg_VLMC526SDATOSSALIDA" type="tns:VLMC526SDATOSSALIDA">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/msg_VLMC526SDATOSSALIDA;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

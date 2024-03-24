@@ -1,0 +1,11 @@
+CREATE PROCEDURE setOutputHeaderProperties (IN RefOutputRoot 		REFERENCE, 
+											IN MessageFormatParam 	CHARACTER,
+											IN EncodingParam		INTEGER,
+											IN CodedCharSetIdParam	INTEGER,
+											IN PersistenceParam		BOOLEAN)
+BEGIN
+		SET RefOutputRoot.Properties.MessageFormat 	= MessageFormatParam;
+		SET RefOutputRoot.Properties.Encoding		= EncodingParam;
+		SET RefOutputRoot.Properties.CodedCharSetId = CodedCharSetIdParam;
+		SET RefOutputRoot.Properties.Persistence	= PersistenceParam;
+END;

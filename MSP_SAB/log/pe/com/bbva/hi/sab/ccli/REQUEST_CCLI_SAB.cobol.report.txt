@@ -1,0 +1,41 @@
+
+
+Importing file: C:\Users\a.alcocer.sotil\workspace\continentalsab\MSP_SAB\importFiles\pe\com\bbva\hi\sab\ccli\VLMC502E.cpy
+
+Import options for COBOL: 
+	EXT_DECIMAL_SIGN=ASCII
+	NUMPROC=PFD
+	QUOTE=DOUBLE
+	FLOATING_POINT_FORMAT=0
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXTENSION_CPY=DS
+	CODEPAGE=ISO8859_1
+	TRUNC=STD
+	EXTENSION_CBL=FP
+	PLATFORM_SELECTION=0
+	EXTENSION_CCP=FP
+	REMOTE_ENDIAN=Little
+	EXTENSION_COB=FP
+	SCHEMA_TARGET_NAMESPACE_URI=http://sab.hi.bbva.com.pe/ccli
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "msg_VLMC502EDATOSENTRADA" for type "VLMC502EDATOSENTRADA"
+Creating message "msg_VLMC502EDATOSENTRADA" from global element "msg_VLMC502EDATOSENTRADA"
+Setting Padding Character for elements of type String  "SPACE"
+
+<<<<<<< HEAD
+Elapsed time processing this message definition file: 1.281 seconds
+=======
+Elapsed time processing this message definition file: 0.246 seconds
+>>>>>>> 69fa570d73c6d5eeba2bed1e454a33ca01a09253
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

@@ -1,0 +1,76 @@
+CREATE FUNCTION cambiarCaracteresProhibidosXML(IN blobPS9Host BLOB, IN ccsid INTEGER)
+	RETURNS BLOB
+	BEGIN
+	        DECLARE newBlob BLOB blobPS9Host;
+	       
+	        --&amp;
+	        DECLARE ampersand_500 BLOB X'50';
+	        DECLARE ampersand_HTML_500 BLOB X'508194975e';
+	        DECLARE ampersand_1208 BLOB X'26';
+	        DECLARE ampersand_HTML_1208 BLOB X'26616d703b';
+	       
+	        --&apos;
+	        DECLARE comillaSimple_500 BLOB X'7d';
+	        DECLARE comillaSimple_HTML_500 BLOB X'50819796a25e';
+	        DECLARE comillaSimple_1208 BLOB X'27';
+	        DECLARE comillaSimple_HTML_1208 BLOB X'2661706f733b';
+	       
+	        --&quot;
+	        DECLARE comillaDoble_500 BLOB X'7f';
+	        DECLARE comillaDoble_HTML_500 BLOB X'5098a496a35e';
+	        DECLARE comillaDoble_1208 BLOB X'22';
+	        DECLARE comillaDoble_HTML_1208 BLOB X'2671756f743b';
+	       
+	        --&lt; --> '<'
+	        DECLARE menorQue_500 BLOB X'4c';
+	        DECLARE menorQue_HTML_500 BLOB X'5093a35e';
+	        DECLARE menorQue_1208 BLOB X'3c';
+	        DECLARE menorQue_HTML_1208 BLOB X'266c743b';
+	       
+	        --&gt; --> '>'
+	        DECLARE mayorQue_500 BLOB X'6e';
+	        DECLARE mayorQue_HTML_500 BLOB X'5087a35e';
+	        DECLARE mayorQue_1208 BLOB X'3e';
+	        DECLARE mayorQue_HTML_1208 BLOB X'2667743b';
+	       
+	        --#;
+	        DECLARE numeral_500 BLOB X'7b';         --#
+	        DECLARE numeral_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE numeral_1208 BLOB X'23'; --#
+	        DECLARE numeral_error_1208 BLOB X'c391'; --Ã‘
+	       
+	        --¿;
+	        DECLARE interrogacion_500 BLOB X'7b';               --¿
+	        DECLARE interrogacion_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE interrogacion_1208 BLOB X'23'; --¿
+	        DECLARE interrogacion_error_1208 BLOB X'c2bf'; --Â¿
+	       
+	        --!;
+	        DECLARE admiracion_500 BLOB X'7b';    --!
+	        DECLARE admiracion_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE admiracion_1208 BLOB X'23'; --!
+	        DECLARE admiracion_error_1208 BLOB X'c2bf'; --Â!
+	       
+	       
+	        IF ccsid = 500 THEN
+	           SET newBlob = REPLACE(newBlob,ampersand_500,ampersand_HTML_500);
+	           SET newBlob = REPLACE(newBlob,comillaSimple_500,comillaSimple_HTML_500);
+	           SET newBlob = REPLACE(newBlob,comillaDoble_500,comillaDoble_HTML_500);
+	           SET newBlob = REPLACE(newBlob,menorQue_500,menorQue_HTML_500);
+	           SET newBlob = REPLACE(newBlob,mayorQue_500,mayorQue_HTML_500);
+	           --SET newBlob = REPLACE(newBlob,numeral_error_500,numeral_500);
+	                      
+	        ELSEIF ccsid = 1208 THEN                            
+	           SET newBlob = REPLACE(newBlob,ampersand_1208,ampersand_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,comillaSimple_1208,comillaSimple_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,comillaDoble_1208,comillaDoble_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,menorQue_1208,menorQue_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,mayorQue_1208,mayorQue_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,numeral_error_1208,numeral_1208);
+	                      
+	        ELSE
+	           THROW USER EXCEPTION CATALOG 'MyCatalog' MESSAGE 9998 VALUES('No soporta este CCSID '||CAST(ccsid AS CHARACTER)) ;                            
+	        END IF;
+	 
+	        RETURN newBlob;
+	END;

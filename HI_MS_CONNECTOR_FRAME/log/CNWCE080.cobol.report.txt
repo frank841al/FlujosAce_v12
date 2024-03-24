@@ -1,0 +1,37 @@
+
+
+Importing file: D:\MDP\HUBINT V2.0\workspaceTransfIBM\HI_MS_CONNECTOR_FRAME\cpyaut\CNWCE080.cpy
+
+Import options for COBOL: 
+	EXT_DECIMAL_SIGN=ASCII
+	NUMPROC=PFD
+	QUOTE=DOUBLE
+	FLOATING_POINT_FORMAT=0
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXTENSION_CPY=DS
+	CODEPAGE=ISO8859_1
+	TRUNC=STD
+	EXTENSION_CBL=FP
+	PLATFORM_SELECTION=0
+	EXTENSION_CCP=FP
+	REMOTE_ENDIAN=Little
+	EXTENSION_COB=FP
+	SCHEMA_TARGET_NAMESPACE_URI=null
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "DE80CNWCE080" for type "DE80CNWCE080"
+Creating message "DE80CNWCE080" from global element "DE80CNWCE080"
+Setting Padding Character for elements of type String  "SPACE"
+
+Elapsed time processing this message definition file: 0.531 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

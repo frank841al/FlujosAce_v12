@@ -1,0 +1,33 @@
+CREATE PROCEDURE buildHeaderResponse(INOUT refIntegrationResp REFERENCE,
+									 IN refJsonIn REFERENCE,
+									 IN isError CHARACTER,
+									 IN isErrorHost CHARACTER,
+									 IN chrCodigoError CHARACTER,
+									 IN chrDescripcionError CHARACTER)
+BEGIN
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	--Se arma la cabecera
+	SET refResponseHeader.idSesion			= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	SET refResponseHeader.idPeticionEmpresa	= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	SET refResponseHeader.idPeticionBanco	= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	SET refResponseHeader.idOperacion		= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	
+	IF isError = getNO() THEN
+		SET refResponseHeader.codigoServicio	= getCOD_RPTA_OK();
+	 	SET refResponseHeader.mensajeServicio	= getDES_RPTA_OK();
+	 	SET refResponseHeader.estadoServicio	= getEST_RPTA_OK();
+	ELSE
+		IF isErrorHost = getNO() THEN
+		 	SET refResponseHeader.codigoServicio	= getCOD_RPTA_ERROR();
+		 	SET refResponseHeader.mensajeServicio	= chrCodigoError || chrDescripcionError;
+		ELSE
+		 	SET refResponseHeader.codigoServicio	= chrCodigoError;
+		 	SET refResponseHeader.mensajeServicio	= chrDescripcionError;
+		END IF;
+		SET refResponseHeader.estadoServicio	= getEST_RPTA_ERROR();
+	END IF;
+	
+END;

@@ -1,0 +1,310 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa
+
+
+
+CREATE FUNCTION getSERVGEN() RETURNS CHARACTER
+BEGIN
+	RETURN C_COD_SERVGEN;
+END;
+
+CREATE FUNCTION getEMPTY_CHARACTER() RETURNS CHARACTER
+BEGIN
+	RETURN C_EMPTY_CHARACTER;
+END;
+
+/* 
+ * genera messaid Unico para transacciones
+*/
+CREATE FUNCTION getMsgId(IN qmgr CHARACTER)
+RETURNS BLOB
+BEGIN
+	RETURN CAST(LEFT(qmgr || '    ', 8) AS BLOB CCSID 1208) || UUIDASBLOB;
+
+END;
+
+CREATE FUNCTION getID_PROTOCOLO_ENTRADA_HTTP() RETURNS CHARACTER
+BEGIN
+	RETURN C_ID_PROTOCOLO_ENTRADA_HTTP;
+END;
+
+CREATE FUNCTION getPROTOCOLO_ENTRADA_HTTP() RETURNS CHARACTER
+BEGIN
+	RETURN C_PROTOCOLO_ENTRADA_HTTP;
+END;
+
+CREATE FUNCTION getSI() RETURNS CHARACTER
+BEGIN
+	RETURN C_SI;
+END;
+
+/*
+* Description: FunciÃ³n que convierte una estructura definida a una cadena de bits (BLOB)
+* Parameters:
+* IN: RefRoot REFERENCE - referencia del Ã¡rbol que se desea convertir
+* IN: MsgSet CHARACTER - Message Set aplicado al mensaje
+* IN: MsgType CHARACTER - Message Type aplicado al mensaje
+* IN: MsgFormat CHARACTER - Message Format aplicado al mensaje
+* IN: MsgEncoding INTEGER - Encoding aplicado al mensaje
+* IN: MsgCCSID INTEGER - CodedCharSetId aplicado al mensaje
+* RETURN: BLOB - estructura del mensaje en formato blob
+*/
+CREATE FUNCTION ConvertReferenceToBitStream( IN RefRoot     REFERENCE, 
+										     IN MsgSet		CHARACTER, 
+										     IN MsgType		CHARACTER,
+										     IN MsgFormat	CHARACTER,
+										     IN MsgEncoding	INTEGER,
+										     IN MsgCCSID	INTEGER	) RETURNS BLOB
+BEGIN
+	DECLARE dataBlob BLOB;
+	SET dataBlob = ASBITSTREAM( RefRoot
+								SET 	 MsgSet
+								TYPE 	 MsgType
+								FORMAT 	 MsgFormat
+								ENCODING MsgEncoding
+								CCSID 	 MsgCCSID
+								OPTIONS  ValidateImmediate);
+	RETURN  dataBlob;
+END;
+
+CREATE FUNCTION getRP_MQ() RETURNS CHARACTER
+BEGIN
+	RETURN C_RP_MQ;
+END;
+
+CREATE FUNCTION getNO() RETURNS CHARACTER
+BEGIN
+	RETURN C_NO;
+END;
+
+--FUNCTIONS PS9--
+------------------ 
+--FUNCTIONS TRAMA TOTAL PS9
+
+--CREATE FUNCTION GET_MESSAGE_CCSID_UTF8() RETURNS CHARACTER
+--BEGIN
+--	RETURN C_MESSAGE_CCSID_UTF8;
+--END;
+
+CREATE FUNCTION GET_MESSAGE_SET_CONNECTOR_FRAME() RETURNS CHARACTER
+BEGIN
+	RETURN C_MESSAGE_SET_CONNECTOR_FRAME;
+END;
+
+CREATE FUNCTION GET_MSGTYPE_REQ_PS9MSG() RETURNS CHARACTER
+BEGIN
+	RETURN C_MSGTYPE_REQ_PS9MSG;
+END;
+
+CREATE FUNCTION GET_MSGFORMAT_PS9MSG() RETURNS CHARACTER
+BEGIN
+	RETURN C_MSGFORMAT_PS9MSG;
+END;
+
+
+-- 15/02/2024
+
+DECLARE operationRvalusu CONSTANT CHARACTER 'RVALUSU';		-- VLA0
+DECLARE operationCordclismv CONSTANT CHARACTER 'CORDCLISMV';		-- VLA1
+DECLARE operationCcli CONSTANT CHARACTER 'CCLI';		-- VLA2
+DECLARE operationCclis CONSTANT CHARACTER 'CCLIS';		-- VLA3
+DECLARE operationCfacs CONSTANT CHARACTER 'CFACS';		-- VLA4
+CREATE FUNCTION determinarValorTransCodeHost(refIntegRequest REFERENCE) RETURNS CHARACTER 
+BEGIN
+	
+	DECLARE valorResultado CHARACTER;
+
+    -- Obtener el valor de idOperacion desde refIntegRequest
+    DECLARE idOperacion CHARACTER;
+    SET idOperacion = refIntegRequest.requestHeader.idOperacion;
+
+    -- Determinar el valor de valorResultado según el valor de idOperacion
+    IF idOperacion = 'CCLI' THEN
+        SET valorResultado = 'VLA2';
+    ELSEIF idOperacion = 'CCLIS' THEN
+        SET valorResultado = 'VLA3';
+    ELSEIF idOperacion = 'RVALUSU' THEN
+        SET valorResultado = 'VLA0';
+    ELSEIF idOperacion = 'CORDCLISMV' THEN
+        SET valorResultado = 'VLA1';
+    ELSEIF idOperacion = 'CFACS' THEN
+        SET valorResultado = 'VLA4';
+    ELSEIF idOperacion = 'CSALSTITVAL' THEN
+        SET valorResultado = 'VLA5';
+    ELSEIF idOperacion = 'CCATSVAL' THEN
+        SET valorResultado = 'VLA6';
+    ELSEIF idOperacion = 'PORDCOMVAL' THEN
+        SET valorResultado = 'VLA7';
+    ELSEIF idOperacion = 'PORDVENVAL' THEN
+        SET valorResultado = 'VLA8';
+    ELSEIF idOperacion = 'ROPERENFIJVAR' THEN
+        SET valorResultado = 'VLA9';
+    ELSEIF idOperacion = 'CORDSCLI' THEN
+        SET valorResultado = 'VLAA';
+    ELSEIF idOperacion = 'CDETORD' THEN
+        SET valorResultado = 'VLAB';
+    ELSEIF idOperacion = 'RORDSEXT' THEN
+        SET valorResultado = 'VLAC';
+    ELSEIF idOperacion = 'CCTAVALEMP' THEN
+        SET valorResultado = 'VLAD';
+    ELSEIF idOperacion = 'CCTAVALSALEMP' THEN
+        SET valorResultado = 'VLAE';
+    ELSEIF idOperacion = 'RGAR' THEN
+        SET valorResultado = 'VLAF';
+    ELSEIF idOperacion = 'RGENPOL' THEN
+        SET valorResultado = 'VLAG';
+    ELSEIF idOperacion = 'RACTPOL' THEN
+        SET valorResultado = 'VLAH';
+    ELSEIF idOperacion = 'CDETPOL' THEN
+        SET valorResultado = 'VLAI';
+    ELSEIF idOperacion = 'CPOLSCTAVAL' THEN
+        SET valorResultado = 'VLAJ';
+    ELSEIF idOperacion = 'CPOLSFEC' THEN
+        SET valorResultado = 'VLAK';
+    ELSEIF idOperacion = 'ROPEPOL' THEN
+        SET valorResultado = 'VLAL';
+    ELSEIF idOperacion = 'CNEMS' THEN
+        SET valorResultado = 'VLAM';
+    ELSEIF idOperacion = 'CBRKS' THEN
+        SET valorResultado = 'VLAN';
+    ELSEIF idOperacion = 'CORDSPENS' THEN
+        SET valorResultado = 'VLAO';
+    ELSEIF idOperacion = 'RSIMOPEREP' THEN
+        SET valorResultado = 'VLAP';
+    ELSEIF idOperacion = 'CPROORD' THEN
+        SET valorResultado = 'VLAQ';
+    ELSEIF idOperacion = 'RORDNEG' THEN
+        SET valorResultado = 'VLAR';
+    ELSEIF idOperacion = 'CMAPSGLOS' THEN
+        SET valorResultado = 'VLAS';
+    ELSEIF idOperacion = 'CDETMAPGLO' THEN
+        SET valorResultado = 'VLAT';
+    ELSEIF idOperacion = 'CCLISESPS' THEN
+        SET valorResultado = 'VLAU';
+    ELSEIF idOperacion = 'COPESCLIESP' THEN
+        SET valorResultado = 'VLAV';
+    ELSEIF idOperacion = 'CDETCUEEFE' THEN
+        SET valorResultado = 'VLAW';
+    ELSE
+        SET valorResultado = 'Valor_Por_Defecto'; -- Manejar otros casos si es necesario
+    END IF;
+	
+    RETURN valorResultado;
+END;
+
+--17/02/2024
+CREATE FUNCTION getCOD_RPTA_OK() RETURNS CHARACTER
+BEGIN
+	RETURN C_COD_RPTA_OK;
+END;
+
+CREATE FUNCTION getDES_RPTA_OK() RETURNS CHARACTER
+BEGIN
+	RETURN C_DES_RPTA_OK;
+END;
+
+CREATE FUNCTION getEST_RPTA_OK() RETURNS CHARACTER
+BEGIN
+	RETURN C_EST_RPTA_OK;
+END;
+
+CREATE FUNCTION getCOD_RPTA_ERROR() RETURNS CHARACTER
+BEGIN
+	RETURN C_COD_RPTA_ERROR;
+END;
+
+CREATE FUNCTION getDES_RPTA_ERROR() RETURNS CHARACTER
+BEGIN
+	RETURN C_DES_RPTA_ERROR;
+END;
+
+CREATE FUNCTION getEST_RPTA_ERROR() RETURNS CHARACTER
+BEGIN
+	RETURN C_EST_RPTA_ERROR;
+END;
+--27/02/24
+
+-- Description: Función que obtiene la longitud total de la trama incluyendo los metadatos		
+CREATE FUNCTION getLengthTramaPS9(lengthTramaTx INTEGER) RETURNS INTEGER
+BEGIN
+	RETURN lengthTramaTx + GET_PS9_LENGTH_TAG_IH() + GET_PS9_LENGTH_TAG_ME();
+END;
+
+/*
+ * Obtiene el año y mes YYYYMM
+ */
+CREATE FUNCTION obtenerAnoMesAuditoria()
+RETURNS CHARACTER
+BEGIN
+	RETURN CAST(CURRENT_DATE AS CHAR FORMAT C_FORMATO_ANOMES_BD);
+END;
+
+/*
+ * Funciones que manejan la fecha y hora de la auditoria en BD
+ */
+CREATE FUNCTION obtenerFechaHoraAuditoria()
+RETURNS CHARACTER
+BEGIN
+	RETURN CAST(CURRENT_TIMESTAMP AS CHAR FORMAT C_FORMATO_FECHA_2);
+
+END;
+
+/*
+ * Obtiene la hora en cadena
+ */
+CREATE FUNCTION obtenerHoraAuditoria()
+RETURNS CHARACTER
+BEGIN
+	RETURN CAST(CURRENT_TIME AS CHAR FORMAT C_FORMATO_HORA_BD);
+END;
+
+--evento GET_MENSAJE DE AUDITORIA
+CREATE FUNCTION getMENSAJE_ENTRADA() RETURNS CHARACTER
+BEGIN
+	RETURN C_MENSAJE_ENTRADA;
+END;
+
+CREATE FUNCTION getMENSAJE_FORMATEADO() RETURNS CHARACTER
+BEGIN
+	RETURN C_MENSAJE_FORMATEADO;
+END;
+
+CREATE FUNCTION getMENSAJE_RESPPROV() RETURNS CHARACTER
+BEGIN
+	RETURN C_MENSAJE_RESPPROV;
+END;
+
+CREATE FUNCTION getMENSAJE_RESPCONS() RETURNS CHARACTER
+BEGIN
+	RETURN C_MENSAJE_RESPCONS;
+END;
+
+CREATE FUNCTION getMENSAJE_ERROR() RETURNS CHARACTER
+BEGIN
+	RETURN C_MENSAJE_ERROR;
+END;
+
+--GET EVENTO de MENSAJE
+CREATE FUNCTION getEVENTO_ENTRADA() RETURNS CHARACTER
+BEGIN
+	RETURN C_EVENTO_ENTRADA;
+END;
+
+CREATE FUNCTION getEVENTO_FORMATEO() RETURNS CHARACTER
+BEGIN
+	RETURN C_EVENTO_FORMATEO;
+END;
+
+CREATE FUNCTION getEVENTO_RESPPROV() RETURNS CHARACTER
+BEGIN
+	RETURN C_EVENTO_RESPPROV;
+END;
+
+CREATE FUNCTION getEVENTO_RESPCONS() RETURNS CHARACTER
+BEGIN
+	RETURN C_EVENTO_RESPCONS;
+END;
+
+CREATE FUNCTION getEVENTO_ERROR() RETURNS CHARACTER
+BEGIN
+	RETURN C_EVENTO_ERROR;
+END;

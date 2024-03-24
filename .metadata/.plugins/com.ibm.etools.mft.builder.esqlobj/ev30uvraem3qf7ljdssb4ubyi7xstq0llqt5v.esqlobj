@@ -1,0 +1,80 @@
+CREATE PROCEDURE buildResClient_WP_RIW3_OK(IN refRoot REFERENCE,
+										   IN refInPS9 REFERENCE,
+										   IN refJsonIn REFERENCE)
+BEGIN
+	
+	CREATE LASTCHILD OF refRoot NAME 'integrationResponse';
+	DECLARE refIntegrationResp REFERENCE TO refRoot.integrationResponse;
+	
+	CALL buildHeaderResponse(refIntegrationResp, refJsonIn, getNO(), getNO(), getEMPTY_CHARACTER(), getEMPTY_CHARACTER());
+	
+	--CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	--DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseBody';
+	DECLARE refResponseBody REFERENCE TO refIntegrationResp.responseBody;
+	
+	DECLARE refBody REFERENCE TO refInPS9.OC[1];
+	
+	--Se arma la cabecera
+	--SET refResponseHeader.idSesion			= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionEmpresa	= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionBanco	= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idOperacion		= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.codigoServicio	= getCOD_RPTA_OK();
+ 	--SET refResponseHeader.mensajeServicio	= getDES_RPTA_OK();
+ 	--SET refResponseHeader.estadoServicio	= getEST_RPTA_OK();
+ 	
+ 	--Se arma el cuerpo
+ 	WHILE LASTMOVE(refBody) DO
+	 	IF SUBSTRING(refBody FROM 1 FOR 10) = 'B1RIMSRIW3' THEN
+		 	SET refResponseBody.tipoPersona			= TRIM(COALESCE(SUBSTRING(refBody FROM 26 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numDocumento		= TRIM(COALESCE(SUBSTRING(refBody FROM 32 FOR 11), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codDocumento		= TRIM(COALESCE(SUBSTRING(refBody FROM 46 FOR 1), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.razonSocial			= TRIM(COALESCE(SUBSTRING(refBody FROM 50 FOR 60), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.oficinaCliente		= TRIM(COALESCE(SUBSTRING(refBody FROM 113 FOR 4), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.descOficinaCliente	= TRIM(COALESCE(SUBSTRING(refBody FROM 120 FOR 35), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codGestorCli		= TRIM(COALESCE(SUBSTRING(refBody FROM 158 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.nombreGestor		= TRIM(COALESCE(SUBSTRING(refBody FROM 169 FOR 25), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.tecomCliente		= TRIM(COALESCE(SUBSTRING(refBody FROM 197 FOR 5), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.desCEtiqueta		= TRIM(COALESCE(SUBSTRING(refBody FROM 205 FOR 19), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codCentral			= TRIM(COALESCE(SUBSTRING(refBody FROM 227 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codActivCli			= TRIM(COALESCE(SUBSTRING(refBody FROM 238 FOR 11), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.desActividad		= TRIM(COALESCE(SUBSTRING(refBody FROM 252 FOR 45), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.clasifBanco			= TRIM(COALESCE(SUBSTRING(refBody FROM 300 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.clasifSistFinanc	= TRIM(COALESCE(SUBSTRING(refBody FROM 319 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.buro				= TRIM(COALESCE(SUBSTRING(refBody FROM 338 FOR 2), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.fechaNac			= TRIM(COALESCE(SUBSTRING(refBody FROM 343 FOR 10), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dirCliente			= TRIM(COALESCE(SUBSTRING(refBody FROM 356 FOR 90), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.prefTelef			= TRIM(COALESCE(SUBSTRING(refBody FROM 449 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numTelef			= TRIM(COALESCE(SUBSTRING(refBody FROM 455 FOR 9), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numEntidades		= TRIM(COALESCE(SUBSTRING(refBody FROM 467 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.edad				= TRIM(COALESCE(SUBSTRING(refBody FROM 473 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.periodoRating		= TRIM(COALESCE(SUBSTRING(refBody FROM 479 FOR 6), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.puntRating			= TRIM(COALESCE(SUBSTRING(refBody FROM 488 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.escRating			= TRIM(COALESCE(SUBSTRING(refBody FROM 499 FOR 5), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.sobreendeu			= RTRIM(COALESCE(SUBSTRING(refBody FROM 507 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.impagos				= TRIM(COALESCE(SUBSTRING(refBody FROM 530 FOR 1), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.inelegibles			= TRIM(COALESCE(SUBSTRING(refBody FROM 534 FOR 30), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.riesgoAct			= RTRIM(COALESCE(SUBSTRING(refBody FROM 567 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.tipoCambio			= RTRIM(COALESCE(SUBSTRING(refBody FROM 590 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codGrupEco			= TRIM(COALESCE(SUBSTRING(refBody FROM 609 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.nomGrupo			= TRIM(COALESCE(SUBSTRING(refBody FROM 620 FOR 50), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.periodoSisFin		= TRIM(COALESCE(SUBSTRING(refBody FROM 673 FOR 6), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudSisFin			= RTRIM(COALESCE(SUBSTRING(refBody FROM 682 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaBanco			= RTRIM(COALESCE(SUBSTRING(refBody FROM 705 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaSeguro			= RTRIM(COALESCE(SUBSTRING(refBody FROM 728 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.correo				= TRIM(COALESCE(SUBSTRING(refBody FROM 751 FOR 80), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dcastsf				= RTRIM(COALESCE(SUBSTRING(refBody FROM 834 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dcastbc				= RTRIM(COALESCE(SUBSTRING(refBody FROM 857 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.propyme				= TRIM(COALESCE(SUBSTRING(refBody FROM 880 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.ubigeo				= TRIM(COALESCE(SUBSTRING(refBody FROM 903 FOR 7), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaDirectaSF		= RTRIM(COALESCE(SUBSTRING(refBody FROM 913 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaIndirectaSF	= RTRIM(COALESCE(SUBSTRING(refBody FROM 936 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaDirectaBanco	= RTRIM(COALESCE(SUBSTRING(refBody FROM 959 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaIndirectaBanco	= RTRIM(COALESCE(SUBSTRING(refBody FROM 982 FOR 20), getEMPTY_CHARACTER()));
+	 	END IF;
+		MOVE refBody NEXTSIBLING;
+ 	END WHILE;
+ 	
+END;

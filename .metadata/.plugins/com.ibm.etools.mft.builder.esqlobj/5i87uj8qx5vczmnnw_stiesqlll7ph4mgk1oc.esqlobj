@@ -1,0 +1,56 @@
+CREATE PROCEDURE CreateResponseToCclis(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+		
+--		DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);		
+--		CREATE LASTCHILD OF refRoot DOMAIN GET_MESSAGE_DOMAIN_XMLNSC();
+		
+		CREATE LASTCHILD OF refRoot NAME 'integrationResponse';
+		
+--		DECLARE refDomain REFERENCE TO refRoot.XMLNSC;
+		 
+--		CREATE LASTCHILD OF refDomain NAMESPACE nsOper NAME 'integrationResponse';
+		DECLARE refIntegrationResp REFERENCE TO refRoot.integrationResponse;
+		
+		CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+		DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+		
+		DECLARE refDataRequest REFERENCE TO refEnv.Backup.JSON.Data.integrationRequest.requestHeader;
+		
+	
+		SET refResponseHeader.idSesion 				= refDataRequest.idSesion; --COALESCE(refDataAudit.idSesion, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idPeticionEmpresa		= refDataRequest.idPeticionEmpresa; --COALESCE(refDataAudit.idPeticionEmpresa, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idPeticionBanco		= refDataRequest.idPeticionBanco; --COALESCE(refDataAudit.idPeticionBanco, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idOperacion			= refDataRequest.idOperacion;--COALESCE(refDataAudit.idOperacion, GET_EMPTY_CHARACTER());
+				
+--		SET refResponseHeader.codigoError			= '000000'; --C_COD_RPTA_OK_FMT;
+		SET refResponseHeader.codigoError			= '0000000'; --C_COD_RPTA_OK_FMT;
+	 	SET refResponseHeader.mensajeError			= 'Respuesta Satisfactoria'; --C_DES_RPTA_OK_FMT;
+		
+		DECLARE refBody REFERENCE TO refEnv.Variables.Work.XMLNSC.PS9Rs.OC[1];	
+		DECLARE refTmp REFERENCE TO  refRoot;  
+		 --Se arma el cuerpo
+		WHILE LASTMOVE(refBody) DO
+			IF SUBSTRING(refBody FROM 1 FOR 10) = 'C1VLM503D ' THEN
+			
+			CREATE LASTCHILD OF refIntegrationResp.listadoDetalle AS refTmp NAME 'detalle';
+			
+		    	SET refTmp.cliente 					= TRIM(COALESCE(SUBSTRING(refBody FROM 11 FOR 80), ''));
+				SET refTmp.rutbvl 				= TRIM(COALESCE(SUBSTRING(refBody FROM 91 FOR 08), ''));
+				SET refTmp.tipo_doc 		= TRIM(COALESCE(SUBSTRING(refBody FROM 99 FOR 01), ''));
+				SET refTmp.nume_doc 				= TRIM(COALESCE(SUBSTRING(refBody FROM 100 FOR 20), ''));
+			ELSE
+			IF SUBSTRING(refBody FROM 1 FOR 10) = 'C1VLM503S ' THEN					
+			SET refIntegrationResp.hay_mas  		= TRIM(COALESCE(SUBSTRING(refBody FROM 11 FOR 01), ''));
+			SET refIntegrationResp.sgte_cliente   			= TRIM(COALESCE(SUBSTRING(refBody FROM 12 FOR 80), ''));
+			SET refIntegrationResp.sgte_rut   			= TRIM(COALESCE(SUBSTRING(refBody FROM 92 FOR 08), ''));
+			SET refIntegrationResp.cod_retorno 		= TRIM(COALESCE(SUBSTRING(refBody FROM 100 FOR 02), ''));
+			SET refIntegrationResp.cod_error_dev 			= TRIM(COALESCE(SUBSTRING(refBody FROM 102 FOR 07), ''));
+			SET refIntegrationResp.var1_error 		= TRIM(COALESCE(SUBSTRING(refBody FROM 122 FOR 20), ''));
+			SET refIntegrationResp.var2_error 			= TRIM(COALESCE(SUBSTRING(refBody FROM 142 FOR 20), ''));
+			END IF;
+			END IF;
+				
+		MOVE refBody NEXTSIBLING;
+		END WHILE;			 	       
+END;

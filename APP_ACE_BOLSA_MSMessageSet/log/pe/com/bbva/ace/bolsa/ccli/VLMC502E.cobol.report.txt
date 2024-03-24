@@ -1,0 +1,38 @@
+
+
+Importing file: D:\BBVA\X-Proyectos\BOLSA\2024\ws_Bolsa_v12f\APP_ACE_BOLSA_MS\operaciones-cpy\ccli-VLA2\VLMC502E.cpy
+
+BIP0223W The message set has no Custom Wire Format layer defined. Only the logical information will appear in the model.
+Import options for COBOL: 
+	EXTENSION_COB=FP
+	EXTENSION_CCP=FP
+	QUOTE=DOUBLE
+	EXTENSION_CPY=DS
+	EXTENSION_CBL=FP
+	CODEPAGE=ISO8859_1
+	FLOATING_POINT_FORMAT=0
+	REMOTE_ENDIAN=Little
+	TRUNC=STD
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXT_DECIMAL_SIGN=ASCII
+	PLATFORM_SELECTION=0
+	NUMPROC=PFD
+	SCHEMA_TARGET_NAMESPACE_URI=http://bolsa.ace.bbva.com.pe/ccli/
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "msg_VLMC502EDATOSENTRADA" for type "VLMC502EDATOSENTRADA"
+Creating message "msg_VLMC502EDATOSENTRADA" from global element "msg_VLMC502EDATOSENTRADA"
+Setting Padding Character for elements of type String  "SPACE"
+
+Elapsed time processing this message definition file: 0.441 seconds
+Number of warnings for this message definition file: 1
+
+
+Number of files processed: 1
+
+

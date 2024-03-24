@@ -1,0 +1,108 @@
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_cdetcueefe_PrepareRequest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+--		CALL CopyEntireMessage();
+
+		--Se elimina la cabecera del Properties
+		DELETE FIELD OutputRoot.Properties;
+		
+		
+		CREATE FIELD Environment.Backup.MRM1;
+		CREATE LASTCHILD OF Environment.Backup.MRM1 DOMAIN 'MRM';
+		CREATE FIELD Environment.Backup.MRM2;
+		CREATE LASTCHILD OF Environment.Backup.MRM2 DOMAIN 'MRM';
+		
+		--Declaracion de variables
+		DECLARE refJSONInData 		REFERENCE TO InputRoot.JSON.Data;
+		DECLARE refRootMRM1 		REFERENCE TO Environment.Backup.MRM1.MRM;
+		DECLARE refRootMRM2 		REFERENCE TO Environment.Backup.MRM2.MRM;
+		DECLARE refParamGen 		REFERENCE TO OutputRoot.MQRFH2.usr.ParametrosGenericos;
+		DECLARE refParamOperation 	REFERENCE TO OutputRoot.MQRFH2.usr.ParametrosOperacion;
+		DECLARE inEnconding INTEGER CAST(COALESCE(refParamOperation.ENCODING, 546) AS INTEGER);
+		DECLARE inCCSID INTEGER CAST(COALESCE(refParamOperation.CCSID, 1208) AS INTEGER);
+		
+		CALL buildPS9Rq(refRootMRM1, refJSONInData);
+		
+		/*
+		** CONSTRUCCION DE LA TRAMA PS9
+		*/
+		
+		DECLARE tramaPS9In BLOB X'';
+		DECLARE chrTramaTxRq CHARACTER getEMPTY_CHARACTER();
+		
+		SET tramaPS9In = ConvertReferenceToBitStream(refRootMRM1, 'APP_ACE_BOLSA_MSMessageSet', 'msg_VLMC527EDATOSENTRADA', 'CWF', 546, 1208);  --273(Encoding) --546
+		SET chrTramaTxRq = CAST(tramaPS9In AS CHARACTER CCSID 1208);
+		SET Environment.DATA_RQ.Character.dataAplicacion.chrTramaTxRq = chrTramaTxRq;
+
+		CALL BuildPS9Request_Rordneg(refRootMRM2, refParamOperation, chrTramaTxRq, refParamGen, inService_cdetcueefe, Environment);
+		
+		SET Environment.Backup.MQRFH2 = OutputRoot.MQRFH2;
+		
+		--Eliminacion de data
+		DELETE FIELD OutputRoot.JSON;
+		DELETE FIELD OutputRoot.MQMD;
+		
+		DECLARE refRfh2 REFERENCE TO Environment.Backup.MQRFH2.usr;
+		DECLARE refOperacion REFERENCE TO refRfh2.Operacion;
+		DECLARE refParamOpera REFERENCE TO refRfh2.ParametrosOperacion;
+		
+		CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+		
+		CREATE LASTCHILD OF OutputRoot DOMAIN 'MRM';
+		DECLARE refRootMRM REFERENCE TO OutputRoot.MRM;
+		
+		--Configuracion de las cabeceras MQ (Properties y MQMD)
+    	CALL setOutputConfigProperties(OutputRoot, GET_MESSAGE_SET_CONNECTOR_FRAME(), GET_MSGTYPE_REQ_PS9MSG(), GET_MSGFORMAT_PS9MSG(), getRP_MQ(), getEMPTY_CHARACTER());   --msgPS9RQ
+		CALL setOutputConfigMQMD(Environment, OutputRoot, refParamOpera, InputRoot.MQMD.MsgId, REPLY_TO_QMGR);
+		
+		-- Se crea el mensaje de salida para el proveedor
+		SET refRootMRM = refRootMRM2;
+		SET Environment.DATA.refRootMRM = refRootMRM;
+		
+		-- Guarda la trama ps9 para mostrarlo en el trace .log
+		DECLARE options INTEGER BITOR(RootBitStream,ValidateNone);
+		SET Environment.DATA.TramaHostBlob = ASBITSTREAM(OutputRoot.MRM OPTIONS options
+																   CCSID 1208 --GET_MESSAGE_CCSID_UTF8()			--128
+																   SET 'HI_MS_CONNECTOR_FRAME'--GET_MESSAGE_SET_CONNECTOR_FRAME() 	--HI_MS_CONNECTOR_FRAME
+																   TYPE GET_MSGTYPE_REQ_PS9MSG() 			--mPS9MsgIN
+																   FORMAT GET_MSGFORMAT_PS9MSG()); 			--Text1
+																   
+		-- Se convierte el BLOB a CHARACTER
+		DECLARE TramaHostCharacter CHARACTER CAST(Environment.DATA.TramaHostBlob AS CHARACTER CCSID 1208); --InputRoot.Properties.CodedCharSetId
+		SET Environment.DATA.TramaHostCharacter = TramaHostCharacter;																   
+																   
+--		--Eliminacion de cabecera
+--		DELETE FIELD OutputRoot.MQRFH2;
+		
+		-- Se envia en mensaje a la cola remota
+--		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = refOperacion.INPUT;
+		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'QRT.ECS2.ENVIO.MPD1'; --'QRT.BOLSA.ENVIO.MPD1';
+		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = 'TMDWGW1'; --'TMDW5';--REPLY_TO_QMGR; --REPLY_TO_QMGR;
+		
+		
+--		/*
+--		** SE PREPARA LOS DATOS PARA AUDITORIA Y EVENTO [2]
+--		*/
+----		DECLARE TramaPS9 BLOB X'';
+----		SET TramaPS9 = ConvertReferenceToBitStream(refRootMRM2, 'MS_GENERIC_PS9', 'mPS9MsgIN', 'Text1', inEnconding, inCCSID);
+----		
+--		CREATE LASTCHILD OF Environment.Request DOMAIN 'XMLNSC';
+--		DECLARE refEnt REFERENCE TO Environment.Request.XMLNSC;
+--		SET refEnt.Posicional = CAST(Environment.TramaHostBlob AS CHARACTER CCSID 1208);
+----		
+----		
+--		CREATE FIELD Environment.Backup.Auxiliar;
+--		DECLARE refAuxiliar REFERENCE TO Environment.Backup.Auxiliar;
+--		SET refAuxiliar.Generate.MsgTwo = getSI();
+--		SET refAuxiliar.Generate.isJson = getNO(); --Tiene envio Json?
+--		SET refAuxiliar.REPLY_TO_QMGR = REPLY_TO_QMGR;
+		
+		PROPAGATE TO TERMINAL 0 DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

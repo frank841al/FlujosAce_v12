@@ -1,0 +1,101 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.rgenpol
+PATH pe.com.bbva.ace.bolsa;
+
+-- Declaracion de variables globales
+DECLARE IP EXTERNAL CHARACTER '127.0.0.1';
+DECLARE REPLY_TO_QMGR  CHARACTER 'TMDW5'; --'TMDW5';---'TMDWGW1'; ---getEMPTY_CHARACTER();
+DECLARE inService_rgenpol EXTERNAL CHARACTER '10108';
+DECLARE cacheServices SHARED ROW;
+
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_rgenpol_ObtenerParametros
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+	CALL CopyEntireMessage();
+		
+		SET Environment.Backup.TramaJson = InputRoot;
+		SET Environment.Backup.TramaJson.LocalEnvironment = InputLocalEnvironment;
+		
+		--Validacion de campos
+		--CALL getValidationField (Environment.Backup, InputRoot.JSON.Data.integrationRequest.requestHeader);
+		
+		--Se elimina la cabecera del http
+		DELETE FIELD OutputRoot.HTTPInputHeader;
+		
+		DECLARE nameOperation CHARACTER InputRoot.JSON.Data.integrationRequest.requestHeader.idOperacion;
+		
+		--1. Carga de parametria del servicio
+		ROUTING : BEGIN ATOMIC  
+		  IF COALESCE(cacheServices.{"inService_rgenpol"}.iniciado,FALSE) <> TRUE THEN
+				CALL loadCacheParameter(cacheServices,inService_rgenpol, nameOperation, Environment);
+		  END IF;
+		END ROUTING;
+		
+		--Carga de cache  
+		SET Environment.Service.MQRFH2.usr	= cacheServices.{"inService_rgenpol"}.Header.usr;
+		SET Environment.Service.validate	= cacheServices.{"inService_rgenpol"}.validate;
+				
+		--Validacion si hubo error de cache  
+		IF Environment.Service.validate.errorCode <> 0 THEN  
+			THROW USER EXCEPTION MESSAGE Environment.Service.validate.errorCode VALUES(Environment.Service.validate.errorMsg);
+		END IF;
+		
+		--2. Se genera la cabeceras para el mensaje
+		SET OutputRoot.Properties = InputRoot.Properties;
+		
+		CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+		CREATE NEXTSIBLING OF OutputRoot.MQMD DOMAIN 'MQRFH2';
+		CREATE FIELD OutputRoot.MQRFH2.usr;
+		CREATE FIELD OutputRoot.MQRFH2.usr.Parametros;
+		
+		DECLARE refOutUsr REFERENCE TO OutputRoot.MQRFH2.usr;
+		DECLARE refUsrEnv REFERENCE TO Environment.Service.MQRFH2.usr;
+		
+		--Carga cache en cabecera MQRFH2 usr
+		--CALL loadCacheHeader(refOutUsr , refUsrEnv, inServiceWP_RIW3, getNAME_SERVICE_WP_RIW3());
+		
+   		DECLARE inEnconding INTEGER CAST(COALESCE(refOutUsr.Parametros.ENCODING, 546) AS INTEGER);
+		DECLARE inCCSID 	INTEGER CAST(COALESCE(refOutUsr.Parametros.CCSID, 1208) AS INTEGER);
+		DECLARE msgId 		BLOB getMsgId(REPLY_TO_QMGR);
+		
+		--Seteo de Propiedades en Properties y MQMD
+		CALL setOutputHeaderProperties(OutputRoot, getEMPTY_CHARACTER(), inEnconding, inCCSID, FALSE);
+		CALL setOutputHeaderMQMD(OutputRoot, msgId, msgId, inEnconding, inCCSID);
+		
+		--Seteo de valores Protocolo y Servicio
+		CALL setOutputHeaderRFH2(refOutUsr,
+								 getID_PROTOCOLO_ENTRADA_HTTP(), --Cambiar por ID Protocolo que corresponda 
+								 getPROTOCOLO_ENTRADA_HTTP(), --Cambiar por Protocolo que corresponda
+								 msgId,
+								 inEnconding,
+								 inCCSID,
+								 InputLocalEnvironment.Destination.HTTP.RequestIdentifier,
+								 IP,
+								 NULL);
+		
+		--3. Se procede a generar los eventos de auditoria
+--		IF LENGTH(refOutUsr.Parametros.LEVEL_AUDIT) <> 4 THEN
+--			THROW USER EXCEPTION MESSAGE 1003 VALUES('El servicio ' || inService_ccli || ' tiene mal configurado el nivel de auditoria');
+--		END IF;
+--		
+--		SET OutputRoot.MQRFH2.usr.Parametros.Map.NAME_OPERATION = nameOperation;
+--		
+--		/*
+--		** SE PREPARA LOS DATOS PARA AUDITORIA Y EVENTO [1]
+--		*/
+--		
+--		CREATE FIELD Environment.Backup.Auxiliar;
+--		DECLARE refAuxiliar REFERENCE TO Environment.Backup.Auxiliar;
+--		SET refAuxiliar.Generate.MsgOne = getSI();
+--		SET refAuxiliar.Generate.isJson = getSI(); --Tiene entrada Json?
+--		SET refAuxiliar.REPLY_TO_QMGR = REPLY_TO_QMGR;
+		
+		PROPAGATE TO TERMINAL 0 DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

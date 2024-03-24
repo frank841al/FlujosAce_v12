@@ -1,0 +1,332 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa
+
+
+
+CREATE PROCEDURE loadCacheParameter (IN cacheServices REFERENCE,
+									 IN inService CHARACTER,
+									 IN nameOperation CHARACTER,
+									 IN refEnv REFERENCE)
+BEGIN
+	
+	--En caso el cache del servicio no este activo, se carga la parametria del servicio
+	--Declaracion de variables
+	DECLARE errorConfig BOOLEAN FALSE;
+	DECLARE errorCode INTEGER 0; 
+	DECLARE errorMsg CHARACTER ''; 
+	DECLARE rowsParamService ROW;
+	DECLARE rowsParamOpe ROW;
+	DECLARE rowsParamGeneric ROW;
+	DECLARE rowsOpe ROW;
+	DECLARE rowsMap ROW;
+	DECLARE rowsUsr ROW;
+	DECLARE rowEnvironment 	ROW;
+	
+	--Carga parametria del Servicio
+	CALL SP_GET_PARAMETER_SERVICE   	(inService		, rowsParamService.Config[]);  
+	CALL SP_GET_PARAMETER_SERVICE		(getSERVGEN()	, rowsParamGeneric.Config[]);
+	CALL SP_GET_MAPEO 					(inService		, rowsMap.Config[]);  
+	CALL SP_GET_OPERATION 				(inService		, rowEnvironment.Operations[]);
+	CALL SP_GET_PARAMETER_OPERATION		(inService		, rowEnvironment.TableParameterOperation[]);
+			
+	CREATE FIELD rowsUsr.usr.Operacion;
+	CREATE FIELD rowsUsr.usr.Parametros;
+	CREATE FIELD rowsUsr.usr.Parametros.Map;
+	CREATE FIELD rowsUsr.usr.ParametrosGenericos;
+	CREATE FIELD rowsUsr.usr.ParametrosOperacion;
+	CREATE FIELD rowsUsr.usr.AddHeaderOperacion;
+	
+	CREATE FIELD refEnv.Operation;
+	CREATE FIELD refEnv.ParamOperation;
+	
+		
+	DECLARE refParam 			REFERENCE TO rowsUsr.usr.Parametros;
+	DECLARE refParamGen 		REFERENCE TO rowsUsr.usr.ParametrosGenericos;
+	DECLARE refParamOperation 	REFERENCE TO rowsUsr.usr.ParametrosOperacion;
+	DECLARE refOperation 		REFERENCE TO rowsUsr.usr.Operacion; 
+	SET rowsOpe.Tabla[] = (SELECT	P.CODE_OPERATION,
+									P.NAME,
+									P.CONDITIONAL,
+									P.ROUTE_CONDITIONAL,
+									P.CODE_SERVICE,
+									P.INPUT
+									FROM rowEnvironment.Operations[] as P
+									WHERE P.CODE_SERVICE = inService AND
+										  P.STATUS = 'A'
+									);
+	
+	SET rowsParamOpe.Config[] =	(SELECT	P.CODE_SERVICE,
+										P.CODE_OPERATION,
+										P.ATTRIBUTE,
+										P.VALUE,
+										P.STATUS_PARAMETER,
+										P.STATUS_OPERATION,
+										P.STATUS_SERVICE
+								 FROM rowEnvironment.TableParameterOperation[] as P
+								 WHERE P.CODE_SERVICE = inService  AND
+									  P.STATUS_PARAMETER = 'A' AND P.STATUS_OPERATION = 'A' AND
+									  P.STATUS_SERVICE = 'A'
+								 );
+
+	CALL crearNombreCampos (rowsParamService	, refParam);
+	CALL crearNombreCampos (rowsParamGeneric	, refParamGen);		
+	CALL crearNombreCampos (rowsParamOpe		, refParamOperation);
+	
+	SET refParam.Map	= rowsMap.Config[1];
+	SET refOperation	= rowsOpe.Tabla[1];
+	--Validaciones de parametria del HUB     
+	IF inService = '' OR inService IS NULL THEN
+		SET errorCode = 1000; 
+		SET errorMsg  = 'No se envio el codigo de servicio';		 
+	ELSEIF CARDINALITY(rowsParamService.Config[]) < 1 THEN
+		SET errorCode = 1001;
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene parametros asignados';
+	ELSEIF LENGTH(refParam.LEVEL_AUDIT) < 4 THEN
+		SET errorCode = 1003; 
+		SET errorMsg  = 'El servicio ' || inService || ' tiene mal configurado el nivel de auditoria'; 
+	ELSEIF CARDINALITY(rowsOpe.Tabla[]) < 1 THEN
+		SET errorCode = 1007; 
+		SET errorMsg  = 'El servicio ' || inService || ' no contiene operaciones'; 
+	ELSEIF CARDINALITY(rowsParamOpe.Config[]) < 1 THEN
+		SET errorCode = 1001; 
+		SET errorMsg  = 'La operacion ' || nameOperation || ' del servicio ' || inService || ' no tiene parametros asignados'; 
+	ELSEIF CARDINALITY(rowsMap.Config[]) < 1 THEN
+		SET errorCode = 1004; 
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene una mapa a seguir'; 
+	END IF;
+	
+		
+	SET cacheServices.{"inService"}.Header.usr 			= rowsUsr.usr;	
+	SET cacheServices.{"inService"}.validate.errorCode  = errorCode;
+	SET cacheServices.{"inService"}.validate.errorMsg 	= errorMsg;
+	SET cacheServices.{"inService"}.Map 				= rowsMap;
+	SET cacheServices.{"inService"}.Operation 	    	= rowsOpe;
+	SET cacheServices.{"inService"}.ParamOperation 		= rowsParamOpe;
+	SET cacheServices.{"inService"}.iniciado 			= TRUE; 
+END;
+
+
+
+/*
+ * Procedimiento para obtener el template x Operacion de un servicio
+ */
+CREATE PROCEDURE SP_GET_PARAMETER_SERVICE (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_PARAMETER_SERVICE";
+
+
+/*
+ * Procedimiento para obtener los paarametros de una operacion por servicio
+*/
+CREATE PROCEDURE SP_GET_PARAMETER_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_PARAMETER_OPERATION";
+
+
+/*
+ * Procedimiento para obtener agregar parametros a la cabecera por REST
+*/
+CREATE PROCEDURE SP_ADD_HEADER_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_ADD_HEADER_OPERATION";
+
+
+/*
+ * Procedimiento para obtener las operaciones por servicio
+ */
+CREATE PROCEDURE SP_GET_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_OPERATION";
+
+
+/*
+ * Procedimiento para obtener el mapeo de un servicio
+ */
+CREATE PROCEDURE SP_GET_MAPEO (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_MAPEO";
+
+------
+
+/*
+* Crea a partir de una lista nombres de campos
+*/
+CREATE PROCEDURE crearNombreCampos(IN refCampo REFERENCE, IN refSalida REFERENCE)
+BEGIN
+
+	DECLARE refField REFERENCE TO refCampo.Config[1];
+
+	WHILE LASTMOVE(refField) DO
+		SET refSalida.{refField.ATTRIBUTE} = refField.VALUE;
+		MOVE refField NEXTSIBLING;
+	END WHILE;
+
+END;
+
+
+CREATE PROCEDURE setOutputHeaderProperties (IN RefOutputRoot 		REFERENCE, 
+											IN MessageFormatParam 	CHARACTER,
+											IN EncodingParam		INTEGER,
+											IN CodedCharSetIdParam	INTEGER,
+											IN PersistenceParam		BOOLEAN)
+BEGIN
+		SET RefOutputRoot.Properties.MessageFormat 	= MessageFormatParam;
+		SET RefOutputRoot.Properties.Encoding		= EncodingParam;
+		SET RefOutputRoot.Properties.CodedCharSetId = CodedCharSetIdParam;
+		SET RefOutputRoot.Properties.Persistence	= PersistenceParam;
+END;
+
+
+CREATE PROCEDURE setOutputHeaderMQMD (IN RefOutputRoot 	REFERENCE, 
+									  IN CorrelIdParam	BLOB, 
+									  IN MsgIdParam		BLOB,												
+									  IN inEncoding		INTEGER,
+									  IN inCCSID		INTEGER)
+BEGIN		
+		SET RefOutputRoot.MQMD.MsgId    		= MsgIdParam;		
+		SET RefOutputRoot.MQMD.CorrelId 		= CorrelIdParam;
+		SET RefOutputRoot.MQMD.Encoding			= inEncoding;
+		SET RefOutputRoot.MQMD.CodedCharSetId	= inCCSID;
+			
+END;
+
+
+CREATE PROCEDURE setOutputHeaderRFH2 (IN refOutUsr 		REFERENCE, 
+									  IN idProtocolo	CHARACTER,
+									  IN tipoProtocolo	CHARACTER,
+									  IN msgId			BLOB,
+									  IN inEnconding	INTEGER,
+									  IN inCCSID		INTEGER,
+									  IN RequestIdentifier BLOB,
+									  IN IP				CHARACTER,
+									  IN PutApplName	CHARACTER)
+BEGIN
+	  
+	SET refOutUsr.inEncoding 	= inEnconding;
+	SET refOutUsr.inCCSID 		= inCCSID; 
+			
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Protocolo';
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Servicio';
+	CREATE LASTCHILD OF refOutUsr.Parametros.Servicio 	NAME 'Datos';
+	
+	DECLARE refParamPro 	REFERENCE TO refOutUsr.Parametros.Protocolo;
+	DECLARE refParamDatos 	REFERENCE TO refOutUsr.Parametros.Servicio.Datos;
+	
+	SET refParamPro.IdProtocolo			= idProtocolo;
+	SET refParamPro.TipoProtocolo		= tipoProtocolo;
+	
+	SET refParamDatos.MsgId				= msgId;
+	SET refParamDatos.CorrelId			= msgId;
+	SET refParamDatos.PutApplName		= PutApplName;
+	SET refParamDatos.Encoding			= inEnconding;
+	SET refParamDatos.CodedCharSetId	= inCCSID;
+	SET refParamDatos.RequestIdentifier = RequestIdentifier;
+	SET refParamDatos.IP				= IP;
+			
+END;
+
+
+/*
+* Procedimiento que crea la estructura PS9 de petición hacia host
+*
+*/
+CREATE PROCEDURE BuildPS9Request(IN refOutputRoot REFERENCE,
+								IN refParamOperation REFERENCE,
+								IN chrTramaTxRq CHARACTER, 
+								IN refParamGeneric REFERENCE,
+								IN refCodService CHARACTER,
+								IN refEnv REFERENCE)
+
+BEGIN 
+	
+	--Declaracion de variables
+	DECLARE refMsgPS9 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgIH 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgME 		REFERENCE TO refOutputRoot;
+	DECLARE refIntegRequest	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+	DECLARE longMsjHost 	INTEGER LENGTH(COALESCE(chrTramaTxRq, ''));
+	DECLARE tipoFormatoTerminal CHARACTER COALESCE(FIELDVALUE(refParamOperation.TIPO_TERMINAL), 'FA');
+
+	SET refEnv.Data.longMsjHost = longMsjHost;
+
+	DECLARE al CHARACTER COALESCE(FIELDVALUE(refParamOperation.RANDOM_NRO_SECUENCE), 'N');
+	
+	CREATE LASTCHILD OF refOutputRoot AS refMsgPS9 NAME 'PS9MsgIN';
+	CREATE LASTCHILD OF refMsgPS9 NAME 'ESPACIO_FIJO' VALUE '';
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgIH NAME 'IH';
+	
+	SET refMsgIH.ID_PROTOCOLO 		= '26'; 	--COALESCE(FIELDVALUE(refParamOperation.IH_IDENTIFICADOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TERMINAL_LOGICO 	= '88%6'; 	--getTerminalApp(refCodService, FIELDVALUE(refParamGeneric.URL_APP_TERMINAL));
+	SET refMsgIH.TERMINAL_CONTABLE 	= '87%7';   --COALESCE(FIELDVALUE(refParamOperation.IH_TERMINAL_CONTABLE), getEMPTY_CHARACTER());
+	SET refMsgIH.USUARIO 			= refIntegRequest.requestHeader.usuario; --'P004718';	--COALESCE(FIELDVALUE(refParamOperation.IH_USUARIO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.NUMERO_SECUENCIA 	= '00000000';		--getSecuenciaPS9();
+	SET refMsgIH.TRANS_CODE_HOST 	= 'VLA2';		--COALESCE(FIELDVALUE(refParamOperation.IH_CODIGO_TRANSACCION), getEMPTY_CHARACTER());	
+	SET refMsgIH.OPCION_APLICACION 	= '00'; 		--'00';ACE		--COALESCE(FIELDVALUE(refParamOperation.IH_OPCION_APLICACION_USER), getEMPTY_CHARACTER());
+	SET refMsgIH.LONGITUD_TRAMA 	= longMsjHost;	--'00126'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LONGITUD_TRAMA), getEMPTY_CHARACTER());
+	SET refMsgIH.INDICADOR_COMMIT 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_COMMIT_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_MENSAJE_IN 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_MENSAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_PROCESO 		= 'O'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_PROCESO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.CANAL_COMUNICACION = refIntegRequest.requestHeader.canal;	--'VL'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_CANAL), getEMPTY_CHARACTER());
+	SET refMsgIH.IND_PRE_FORMATO 	= 'N'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_PREFOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.LENGUAJE 			= 'R'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LENGUAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgME NAME 'ME';
+	
+	SET refMsgME.LONGITUD_MENSAJE = longMsjHost;
+	SET refMsgME.TIPO_MENSAJE = '1'; 			--FIELDVALUE(refParamOperation.ME_TIPO_MENSAJE_PROTOCOLO);
+	SET refMsgME.MENSAJE = chrTramaTxRq;
+	
+END;
+
+
+CREATE PROCEDURE setOutputConfigProperties (IN refOutputRoot 	REFERENCE, 
+											IN messageSet 		CHARACTER,
+											IN messageType		CHARACTER,
+											IN messageFormat	CHARACTER,
+											IN replyProtocol	CHARACTER,
+											IN contentType		CHARACTER)
+BEGIN
+		
+		SET refOutputRoot.Properties.MessageSet 	= messageSet;
+		SET refOutputRoot.Properties.MessageType 	= messageType;
+		SET refOutputRoot.Properties.MessageFormat 	= messageFormat;
+		SET refOutputRoot.Properties.ReplyProtocol	= replyProtocol;
+		SET refOutputRoot.Properties.ContentType	= contentType;
+END;
+
+CREATE PROCEDURE setOutputConfigMQMD (IN refEnv REFERENCE,
+									  IN refOutputRoot 	REFERENCE, 
+									  IN refParamOpera	REFERENCE, 
+									  IN msgId			BLOB,												
+									  IN REPLY_TO_QMGR	CHARACTER)
+BEGIN
+		
+		DECLARE nameQmgr CHARACTER ''; --getEMPTY_CHARACTER();
+    	SET nameQmgr = COALESCE(refParamOpera.REPLY_TO_QMGR, ''); --getEMPTY_CHARACTER());
+    		
+    	IF CONTAINS(nameQmgr, '**') THEN
+    		SET nameQmgr = REPLACE(nameQmgr, '**', REPLY_TO_QMGR);
+    	END IF;
+		
+		SET refOutputRoot.MQMD.Encoding			= 465; --CAST(COALESCE(refParamOpera.ENCODING, 273) AS INTEGER);
+		SET refOutputRoot.MQMD.CodedCharSetId   = 500;
+		SET refOutputRoot.MQMD.Format			= 'MQSTR'; --COALESCE(refParamOpera.FORMAT, MQFMT_STRING);
+		SET refOutputRoot.MQMD.Version			= CAST(COALESCE(refParamOpera.VERSION, 2) AS INTEGER);
+		SET refOutputRoot.MQMD.Report			= CAST(COALESCE(refParamOpera.REPORT, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgType			= CAST(COALESCE(refParamOpera.MSG_TYPE, 8) AS INTEGER);
+		SET refOutputRoot.MQMD.Expiry			= CAST(COALESCE(refParamOpera.EXPIRY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Feedback			= CAST(COALESCE(refParamOpera.FEED_BACK, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.Priority			= CAST(COALESCE(refParamOpera.PRIORITY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Persistence		= CAST(COALESCE(refParamOpera.PERSISTENCE, 1) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgId			= msgId;
+		SET refOutputRoot.MQMD.CorrelId			= msgId;
+--		SET refOutputRoot.MQMD.ReplyToQ			= COALESCE(refParamOpera.REPLY_TO_Q, getEMPTY_CHARACTER());
+		SET refOutputRoot.MQMD.ReplyToQ			= 'QLT.ECS2.RESP';
+		SET refOutputRoot.MQMD.ReplyToQMgr		= nameQmgr;
+		
+		SET refEnv.Data.Format					= COALESCE(refOutputRoot.MQMD.Format,'MQSTR_X' );
+END;

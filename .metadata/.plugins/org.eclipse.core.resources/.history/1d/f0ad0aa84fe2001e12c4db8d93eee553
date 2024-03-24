@@ -1,0 +1,184 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cclis
+PATH pe.com.bbva.ace.bolsa;
+
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_cclis_PrepareResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+	CALL CopyEntireMessage();
+		
+		DECLARE refJsonIn REFERENCE TO Environment.Backup.JSON.Data.integrationRequest.requestHeader;
+		
+		--Eliminando datos
+		DELETE FIELD OutputRoot.BLOB;
+		DELETE FIELD OutputRoot.MQRFH2;
+		DELETE FIELD OutputRoot.MQMD;
+		
+		CREATE LASTCHILD OF OutputRoot DOMAIN 'JSON';
+		CREATE FIELD OutputRoot.JSON.Data;
+		
+		
+		--Declaracion de variables
+		DECLARE refPS9Rs REFERENCE TO Environment.PS9.XMLNSC.Data;
+		DECLARE refOut REFERENCE TO OutputRoot.JSON.Data;
+		
+		
+		/* 
+		*  SE ARMA RESPUESTA AL CONSUMIDOR
+		*/
+		
+		IF FIELDTYPE(refPS9Rs.ER) IS NULL THEN
+			-- Se crea el mensaje de respuesta del proveedor con éxito
+			CALL buildResClient_WP_RIW3_OK(refOut, refPS9Rs, refJsonIn);
+			
+		ELSE
+			-- Se crea el mensaje de respuesta del proveedor con error de negocio
+			DECLARE chrCodigoError CHARACTER getEMPTY_CHARACTER();
+			DECLARE chrDescripcionError CHARACTER getEMPTY_CHARACTER();
+			
+			SET chrCodigoError = LEFT(FIELDVALUE(refPS9Rs.ER),7);
+			SET chrDescripcionError = SUBSTRING(FIELDVALUE(refPS9Rs.ER) FROM 9);
+			
+			CALL buildResClient_WP_RIW_ERROR(refOut, refJsonIn, getSI(), chrCodigoError, chrDescripcionError);
+			
+		END IF;
+		
+		-- Se establece la id correlacion del mensaje HTTP
+		SET OutputLocalEnvironment.Destination.HTTP.RequestIdentifier =  Environment.Backup.LocalEnvironment.Destination.SOAP.Reply.ReplyIdentifier;	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+--		RETURN TRUE;
+--Prueba		
+--	CALL CopyEntireMessage();
+----		
+--
+--		DELETE FIELD InputRoot.MQMD;
+--		DELETE FIELD OutputRoot.MQMD;
+----		DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);
+--		
+--		DECLARE EsbXMLHeader REFERENCE TO Environment.ESBXMLHeader;
+--		
+--		-- Se establece las propiedades del mensaje de salida
+----		CALL SetOutputRootPropertiesHeader(OutputRoot,
+----										   GET_MSGSET_INTERCONEXION(),
+----										   GET_EMPTY_CHARACTER(),
+----										   GET_EMPTY_CHARACTER(),
+----										   C_ZERO, 
+----										   C_ZERO, 
+----										   C_BOOLEAN_TRUE,
+----										   C_ZERO);
+--
+--		DECLARE Fals BOOLEAN;
+--		SET Fals = FALSE;	
+--		
+--		SET OutputRoot.Properties.MessageSet 	= ''; --MessageSetParam;
+--		SET OutputRoot.Properties.MessageType 	= ''; --MessageTypeParam;
+--		SET OutputRoot.Properties.MessageFormat = ''; --MessageFormatParam;
+--		SET OutputRoot.Properties.Persistence	= Fals;
+--		SET OutputRoot.Properties.Encoding		= 546; --EncodingParam;
+--		SET OutputRoot.Properties.CodedCharSetId = 1208; --CodedCharSetIdParam;
+--		SET OutputRoot.Properties.ExpirationTime = -1; --ExpirationTimeParam;			   
+--		
+--		-- Se establece la id correlación del mensaje HTTP
+----		SET OutputLocalEnvironment.Destination.HTTP.RequestIdentifier = Environment.Backup.LocalEnvironment.Destination.HTTP.RequestIdentifier; --GetCorrelationIdFromESBXML(EsbXMLHeader);
+--		SET OutputLocalEnvironment.Destination.HTTP.RequestIdentifier = Environment.Backup.MQRFH2.usr.Parametros.Servicio.Datos.RequestIdentifier;
+--		
+--		DECLARE refInputRoot REFERENCE TO InputRoot;
+--		DECLARE refEnvironment REFERENCE TO Environment;
+--		
+--		-- Esto se personaliza según el protocolo
+--		SET refEnvironment.CCSID = InputRoot.Properties.CodedCharSetId;
+--		
+--		-- Se reemplazan caracteres extraños de la respuesta de HOST y se le agrega el XML Root <PS9Rs>
+--		CALL ParseBlobPS9RsHostToXML(refInputRoot,refEnvironment);
+--			
+--		DECLARE refEnvWork		REFERENCE TO Environment.Variables.Work;
+--		DECLARE refInPS9Rs 		REFERENCE TO refEnvWork.XMLNSC.PS9Rs;
+--		DECLARE refOutDomain 	REFERENCE TO refEnvWork.XMLNSC;
+--		
+--		
+--		IF FIELDTYPE(refInPS9Rs.ER) IS NULL THEN
+--			
+--			-- Se convierte el formato "XML de host" a formato XML válido
+--	--		CALL buildBodyRsPS9(refOutDomain);
+--			
+--	--		SET Environment.PS9Rs.DataHost = refOutDomain;	
+--	--		SET Environment.PS9Rs.preSUBSTRING1 = Environment.chrResHost;
+--	--		SET Environment.PS9Rs.DataSUBSTRING = SUBSTRING(Environment.chrResHost AFTER '</DE>');	
+--	--		DECLARE ccsidHost INTEGER COALESCE(refEnvironment.CCSID,0);	
+--	--		DECLARE newBlob BLOB;	
+--	--	SET newBlob = CAST(Environment.PS9Rs.DataSUBSTRING AS BLOB CCSID ccsidHost); 
+--	--	CREATE LASTCHILD OF refEnvironment.Variables.Work.OC DOMAIN 'XMLNSC' --C_MESSAGE_DOMAIN_XMLNSC
+--	--		PARSE(newBlob,,ccsidHost,,,,RootBitStream); 
+--		--	DECLARE blobRptaTX BLOB CAST(refOutDomain.tramaTxRs AS BLOB CCSID InputRoot.Properties.CodedCharSetId);
+--			
+--			-- Se genera la estructura lógica (MRM) para recorrer la respuesta de HOST
+----			CALL ParseBlobToRootDomain( OutputRoot,
+----							 		    C_MESSAGE_DOMAIN_MRM,
+----							 		    blobRptaTX,
+----							 		    GET_MSGSET_INTERCONEXION(),
+----							 			C_MESSAGE_TYPE_COPYRES,
+----							 			C_MESSAGE_FORMAT_CWF,
+----							 			InputRoot.Properties.Encoding,
+----									 	InputRoot.Properties.CodedCharSetId);
+--			
+----			DECLARE refTempRoot REFERENCE TO OutputRoot.MRM;
+----			SET Environment.ROOT = refTempRoot;
+----			CALL RemoveTempOutputRoot(refTempRoot);
+--			
+--			
+--			CREATE FIELD OutputRoot.JSON.Data;
+--			DECLARE refOut REFERENCE TO OutputRoot.JSON.Data;
+--			-- Se crea el mensaje de respuesta del proveedor con éxito
+--			CALL CreateResponseToCclis(refOut,Environment);	 		
+--			
+--		ELSE
+--			
+--			DECLARE codError CHARACTER LEFT(refInPS9Rs.ER, 7); -- segun documento Trama_PS9_HUB.docx
+--			DECLARE msjError CHARACTER SUBSTRING(refInPS9Rs.ER FROM 9); -- segun documento Trama_PS9_HUB.docx
+--			
+----			DECLARE refCatalogError REFERENCE TO Environment.ESBXMLHeader.catalogError;
+----			CALL ApplyEquivalenceError(refCatalogError,codError,msjError);
+--			
+--			-- Se crea el mensaje de respuesta del proveedor con error de negocio
+--			CREATE FIELD OutputRoot.JSON.Data;
+--			DECLARE refOut REFERENCE TO OutputRoot.JSON.Data;
+----			CALL CreateResponseErrorToClient(refOut,Environment);
+--			
+--			SET OutputRoot.JSON.Data.XMLNSC.integrationResponse.responseHeader.codigoError = codError;
+--			SET OutputRoot.JSON.Data.XMLNSC.integrationResponse.responseHeader.mensajeError = msjError;
+--			
+--		END IF;
+--		
+--		CREATE LASTCHILD OF Environment.ResponseWsJSON DOMAIN 'JSON';
+--		DECLARE refEnt REFERENCE TO Environment.ResponseWsJSON.JSON;
+--		SET refEnt = OutputRoot.JSON;
+		
+		PROPAGATE TO TERMINAL 0 DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

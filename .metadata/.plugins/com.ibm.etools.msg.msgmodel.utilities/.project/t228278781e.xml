@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><MRMessageSet id="HM370SO002001" name="HI_MS_CONNECTOR_FRAME" parser="XMLNSC">
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+<MRMsgCollection href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd#/0/DE80CNWCE080;XSDElementDeclaration$MRMessage" name="DE80CNWCE080">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="DE80CNWCE080" messageSetDefaultRep="XML1" render="XMLElement" xmlName="DE80CNWCE080"/>
+    </message>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd#/0/DE80CNWCE080;XSDElementDeclaration" name="DE80CNWCE080" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{}DE80CNWCE080">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="DE80CNWCE080"/>
+    </element>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd#/0/DE80CNWCE080;XSDComplexTypeDefinition" name="DE80CNWCE080"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/IntegrationFrameRequest;XSDElementDeclaration$MRMessage" name="IntegrationFrameRequest">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="IntegrationFrameRequest" messageSetDefaultRep="XML1" render="XMLElement" xmlName="IntegrationFrameRequest"/>
+    </message>
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/IntegrationFrameResponse;XSDElementDeclaration=1$MRMessage" name="IntegrationFrameResponse">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="IntegrationFrameResponse" messageSetDefaultRep="XML1" render="XMLElement" xmlName="IntegrationFrameResponse"/>
+    </message>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/IntegrationFrameRequest;XSDElementDeclaration" name="IntegrationFrameRequest" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{}IntegrationFrame_Type">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="IntegrationFrameRequest"/>
+    </element>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/IntegrationFrameResponse;XSDElementDeclaration=1" name="IntegrationFrameResponse" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{}complexType">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="IntegrationFrameResponse"/>
+    </element>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/CabeceraRequest_Type;XSDComplexTypeDefinition" name="CabeceraRequest_Type"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/TramaVariable_Type;XSDComplexTypeDefinition=1" name="TramaVariable_Type"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/IntegrationFrame_Type;XSDComplexTypeDefinition=2" name="IntegrationFrame_Type"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/CabeceraResponse_Type;XSDComplexTypeDefinition=3" name="CabeceraResponse_Type"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd#/0/complexType;XSDComplexTypeDefinition=4" name="complexType"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd" prefix="tns" targetNamespace="ps9.connector.hi.bbva.com.pe">
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/PS9BD;XSDElementDeclaration$MRMessage" name="PS9BD">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="PS9BD" messageSetDefaultRep="XML1" render="XMLElement" xmlName="PS9BD"/>
+    </message>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/PS9BD;XSDElementDeclaration" name="PS9BD" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{ps9.connector.hi.bbva.com.pe}tPS9BD">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="PS9BD"/>
+    </element>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/tConfigTX;XSDComplexTypeDefinition" name="tConfigTX"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/tIHBD;XSDComplexTypeDefinition=1" name="tIHBD"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/tMEBD;XSDComplexTypeDefinition=2" name="tMEBD"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd#/0/tPS9BD;XSDComplexTypeDefinition=3" name="tPS9BD"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd#/0/RouteFrame;XSDElementDeclaration$MRMessage" name="RouteFrame">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="RouteFrame" messageSetDefaultRep="XML1" render="XMLElement" xmlName="RouteFrame"/>
+    </message>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd#/0/RouteFrame;XSDElementDeclaration" name="RouteFrame" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{}RotuteFrame_Type">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="RouteFrame"/>
+    </element>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd#/0/RotuteFrame_Type;XSDComplexTypeDefinition" name="RotuteFrame_Type"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd" prefix="tns" targetNamespace="ps9.connector.hi.bbva.com.pe">
+    <message href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/mPS9MsgIN;XSDElementDeclaration$MRMessage" name="mPS9MsgIN">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="mPS9MsgIN" messageSetDefaultRep="XML1" render="XMLElement" xmlName="mPS9MsgIN"/>
+    </message>
+    <element href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/mPS9MsgIN;XSDElementDeclaration" name="mPS9MsgIN" type="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{ps9.connector.hi.bbva.com.pe}tPS9MsgIN">
+      <tds messageSetDefaultRep="Text1" tag=""/>
+      <xwf messageSetDefaultRep="XML1" xmlName="mPS9MsgIN"/>
+    </element>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/tIH;XSDComplexTypeDefinition" name="tIH"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/tME;XSDComplexTypeDefinition=1" name="tME"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/tPS9REQ;XSDComplexTypeDefinition=2" name="tPS9REQ"/>
+    <complexType baseType="mset://HI_MS_CONNECTOR_FRAME#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd#/0/tPS9MsgIN;XSDComplexTypeDefinition=3" name="tPS9MsgIN"/>
+  </MRMsgCollection>
+</MRMessageSet>

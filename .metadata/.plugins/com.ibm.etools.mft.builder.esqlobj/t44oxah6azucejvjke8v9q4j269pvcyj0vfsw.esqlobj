@@ -1,0 +1,44 @@
+CREATE PROCEDURE armarAuditoriaEventoEntrada (IN refOutput REFERENCE,
+											  IN chrMsgId BLOB,
+											  IN refMQRFH2usr REFERENCE,
+											  IN refBody REFERENCE)
+BEGIN
+	DELETE FIELD refOutput.XMLNSC;
+	CREATE LASTCHILD OF refOutput DOMAIN 'XMLNSC';
+	
+	--CALL setearPropiedadesMensaje(refOutput,'MS_ESB_CORE_GENERICS','MSG_AUDITORIA','CWF1');
+	--CREATE LASTCHILD OF refOutput DOMAIN 'XMLNSC';
+	CREATE FIELD refOutput.XMLNSC.MENSAJE.DATOSAUDITORIA;
+	DECLARE refA REFERENCE TO refOutput.XMLNSC.MENSAJE.DATOSAUDITORIA;
+
+	SET refA.MSGID = SUBSTRING(CAST(chrMsgId AS CHARACTER) FROM 3 FOR 48);
+	SET refA.FECHAHORA = obtenerFechaHoraAuditoria();  
+	SET refA.HORA = obtenerHoraAuditoria();
+	SET refA.IP_ORIGEN = refMQRFH2usr.Parametros.Servicio.Datos.IP;
+	SET refA.CODSERVICIO = refMQRFH2usr.inService;
+	SET refA.PROTOCOLOENTRADA = refMQRFH2usr.Parametros.Protocolo.IdProtocolo;
+	SET refA.OPERATION = COALESCE(refMQRFH2usr.Parametros.Map.NAME_OPERATION,'');
+	--SET refA.RUTASERVICIO = refMQRFH2usr.Auditoria.rutaServicio;
+	--SET refA.GRUPOSERVICIO = refMQRFH2usr.Auditoria.grupoServicio;
+	SET refA.ANOMES = obtenerAnoMesAuditoria();
+	SET refA.TIPOEVENTO = getEVENTO_ENTRADA();
+	SET refA.TIPOMENSAJE = getMENSAJE_ENTRADA();
+
+	SET refA.BROKER = BrokerName;
+	SET refA.IS = ExecutionGroupLabel;
+	SET refA.FLUJO = MessageFlowLabel;
+	SET refA.CODERROR = '';
+
+	DECLARE blobMensaje BLOB;
+	DECLARE chrMensaje CHARACTER;
+    
+	SET blobMensaje = ASBITSTREAM(refBody CCSID 1208);
+	
+	SET chrMensaje = CAST(blobMensaje AS CHARACTER CCSID 1208);
+	SET chrMensaje = REPLACE(chrMensaje,'&lt;','<');
+	SET chrMensaje = REPLACE(chrMensaje,'&gt;','>');
+	SET chrMensaje = REPLACE(chrMensaje,'&quot;','"');
+
+	SET refA.DATO = chrMensaje;
+
+END;

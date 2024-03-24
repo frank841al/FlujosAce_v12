@@ -1,0 +1,13 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		CALL CopyEntireMessage();
+		
+		PROPAGATE TO LABEL 'LBL_AUXLIAR' DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;

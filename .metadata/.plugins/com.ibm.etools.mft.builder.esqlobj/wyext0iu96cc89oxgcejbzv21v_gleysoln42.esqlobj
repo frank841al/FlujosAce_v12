@@ -1,0 +1,32 @@
+CREATE PROCEDURE setOutputConfigMQMD (IN refEnv REFERENCE,
+									  IN refOutputRoot 	REFERENCE, 
+									  IN refParamOpera	REFERENCE, 
+									  IN msgId			BLOB,												
+									  IN REPLY_TO_QMGR	CHARACTER)
+BEGIN
+		
+		DECLARE nameQmgr CHARACTER ''; --getEMPTY_CHARACTER();
+    	SET nameQmgr = COALESCE(refParamOpera.REPLY_TO_QMGR, ''); --getEMPTY_CHARACTER());
+    		
+    	IF CONTAINS(nameQmgr, '**') THEN
+    		SET nameQmgr = REPLACE(nameQmgr, '**', REPLY_TO_QMGR);
+    	END IF;
+		
+		SET refOutputRoot.MQMD.Encoding			= 465; --CAST(COALESCE(refParamOpera.ENCODING, 273) AS INTEGER);
+		SET refOutputRoot.MQMD.CodedCharSetId   = 500;
+		SET refOutputRoot.MQMD.Format			= 'MQSTR'; --COALESCE(refParamOpera.FORMAT, MQFMT_STRING);
+		SET refOutputRoot.MQMD.Version			= CAST(COALESCE(refParamOpera.VERSION, 2) AS INTEGER);
+		SET refOutputRoot.MQMD.Report			= CAST(COALESCE(refParamOpera.REPORT, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgType			= CAST(COALESCE(refParamOpera.MSG_TYPE, 8) AS INTEGER);
+		SET refOutputRoot.MQMD.Expiry			= CAST(COALESCE(refParamOpera.EXPIRY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Feedback			= CAST(COALESCE(refParamOpera.FEED_BACK, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.Priority			= CAST(COALESCE(refParamOpera.PRIORITY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Persistence		= CAST(COALESCE(refParamOpera.PERSISTENCE, 1) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgId			= msgId;
+		SET refOutputRoot.MQMD.CorrelId			= msgId;
+--		SET refOutputRoot.MQMD.ReplyToQ			= COALESCE(refParamOpera.REPLY_TO_Q, getEMPTY_CHARACTER());
+		SET refOutputRoot.MQMD.ReplyToQ			= 'QLT.ECS2.RESP';
+		SET refOutputRoot.MQMD.ReplyToQMgr		= 'TMDW5'; --nameQmgr;
+		
+		SET refEnv.Data.Format					= COALESCE(refOutputRoot.MQMD.Format,'MQSTR_X' );
+END;

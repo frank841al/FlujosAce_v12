@@ -1,0 +1,12 @@
+CREATE PROCEDURE setOutputHeaderMQMD (IN RefOutputRoot 	REFERENCE, 
+									  IN CorrelIdParam	BLOB, 
+									  IN MsgIdParam		BLOB,												
+									  IN inEncoding		INTEGER,
+									  IN inCCSID		INTEGER)
+BEGIN		
+		SET RefOutputRoot.MQMD.MsgId    		= MsgIdParam;		
+		SET RefOutputRoot.MQMD.CorrelId 		= CorrelIdParam;
+		SET RefOutputRoot.MQMD.Encoding			= inEncoding;
+		SET RefOutputRoot.MQMD.CodedCharSetId	= inCCSID;
+			
+END;

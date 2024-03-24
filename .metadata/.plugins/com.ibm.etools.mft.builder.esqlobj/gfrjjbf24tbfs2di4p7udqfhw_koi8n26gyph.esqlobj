@@ -1,0 +1,25 @@
+CREATE FUNCTION determinarValorTransCodeHost(refIntegRequest REFERENCE) RETURNS CHARACTER 
+BEGIN
+	DECLARE operation CHARACTER;
+    DECLARE transCodeHost CHARACTER;
+    DECLARE flagExiste BOOLEAN FALSE;
+    DECLARE refParameterOpera REFERENCE TO refIntegRequest.requestHeader.parameters;
+    
+    -- Inicializar el valor de transCodeHost
+    SET transCodeHost = 'Valor_Por_Defecto';
+    
+    -- Obtener el valor de la operación desde refIntegRequest
+    SET operation = refIntegRequest.requestHeader.nameOperation;
+
+    -- Recorrer los parámetros hasta encontrar el correspondiente a la operación
+    WHILE LASTMOVE(refParameterOpera) DO
+        IF refParameterOpera.key = operation THEN
+            SET transCodeHost = refParameterOpera.value;
+            SET flagExiste = TRUE;
+           -- BREAK; -- Salir del bucle una vez que se encuentra el valor correspondiente
+        END IF;
+        MOVE refParameterOpera NEXTSIBLING;
+    END WHILE;
+
+    RETURN transCodeHost;
+END;

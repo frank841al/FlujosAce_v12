@@ -1,0 +1,925 @@
+2024-02-13 14:17:16.705603Z: [Thread 8616] (Msg 1/1) BIP1990I: El servidor de integración 'TEST_SERVER' está empezando la inicialización; versión '12.0.7.0' (64 bits) 
+2024-02-13 14:17:16.758398Z: [Thread 8616] (Msg 1/1) BIP9905I: Inicializando gestores de recursos. 
+2024-02-13 14:17:42.585972Z: [Thread 8616] (Msg 1/1) BIP9906I: Leyendo recursos desplegados. 
+2024-02-13 14:17:49.926716Z: [Thread 25988] (Msg 1/1) BIP2866I: La administración de seguridad de IBM App Connect Enterprise es inactive. 
+2024-02-13 14:17:49.939936Z: [Thread 25988] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7600' para conexiones 'RestAdmin http'. 
+2024-02-13 14:17:49.941236Z: [Thread 8616] (Msg 1/1) BIP1991I: El servidor de integración ha terminado la inicialización. 
+2024-02-13 14:19:06.007136Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 14:19:06.319351Z: [Thread 15852] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'SendRequestProvider', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_8' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-13 14:19:06.319434Z: [Thread 15852] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Get', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_11' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-13 14:19:06.320947Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:19:06.321040Z: [Thread 15852] (Msg 1/1) BIP9324W: La petición a 'Initialize' recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application' ha fallado. 
+2024-02-13 14:19:06.321086Z: [Thread 15852] (Msg 1/1) BIP1096E: El origen 'BOLSA_test.bar' se ha desplegado, pero ha habido uno o más errores que podrían suponer que los recursos desplegados no puedan ejecutar. 
+2024-02-13 14:19:06.321317Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 14:19:44.837252Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 14:19:45.144216Z: [Thread 24328] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'SendRequestProvider', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_8' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-13 14:19:45.144296Z: [Thread 24328] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Get', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_11' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-13 14:19:45.144948Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:19:45.145020Z: [Thread 24328] (Msg 1/1) BIP9324W: La petición a 'Initialize' recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application' ha fallado. 
+2024-02-13 14:19:45.145056Z: [Thread 24328] (Msg 1/1) BIP1096E: El origen 'BOLSA_test.bar' se ha desplegado, pero ha habido uno o más errores que podrían suponer que los recursos desplegados no puedan ejecutar. 
+2024-02-13 14:19:45.145256Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 14:20:38.774900Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 14:20:39.126640Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:20:39.126868Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:20:39.129760Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:20:39.974296Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 14:20:40.225632Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:20:40.296064Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 14:20:40.296904Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 14:20:40.297460Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 14:20:40.297692Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:20:40.297884Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:20:40.298080Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 14:20:40.298296Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 14:20:40.299204Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 14:47:58.836356Z: [Thread 19864] (Msg 1/1) BIP4064W: Error de sistema operativo 'No such file or directory' al abrir el archivo de rastreo '/opt/MB_WORK/murex/ccliente_error.log' para el nodo de rastreo 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente.Error'. 
+2024-02-13 14:49:13.546141Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 14:49:13.841378Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:49:13.841555Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:13.841656Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.284418Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 14:49:15.284680Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:49:15.300044Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 14:49:15.345252Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.345335Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.380225Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:49:15.380426Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.382513Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.527664Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 14:49:15.561479Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 14:49:15.631974Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 14:49:15.633465Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 14:49:15.634264Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 14:49:15.634526Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.634983Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 14:49:15.635203Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 14:49:15.635420Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 14:49:15.636575Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 16:03:18.005420Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 16:03:18.277268Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 16:03:18.277400Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:18.277442Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.221738Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 16:03:22.222176Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 16:03:22.251686Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 16:03:22.303780Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.303872Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.337566Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 16:03:22.337770Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.339966Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.478298Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 16:03:22.518884Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 16:03:22.581272Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 16:03:22.582226Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 16:03:22.583062Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 16:03:22.583486Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.583806Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 16:03:22.584040Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 16:03:22.584248Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 16:03:22.585354Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 17:20:46.664728Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 17:20:46.960604Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:20:46.960864Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:46.960940Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.539712Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 17:20:51.539896Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:20:51.555060Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 17:20:51.582112Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.582228Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.618348Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:20:51.618612Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.620932Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.759576Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 17:20:51.794672Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:20:51.854768Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 17:20:51.855848Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 17:20:51.856500Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 17:20:51.856732Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.856956Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:20:51.857204Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 17:20:51.857588Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 17:20:51.858724Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 17:52:22.090018Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 17:52:22.345866Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:52:22.346038Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:22.346096Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:26.955216Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 17:52:26.955424Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:52:26.986128Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 17:52:27.002292Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.002392Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.040526Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:52:27.040766Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.042898Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.155648Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 17:52:27.193720Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 17:52:27.250268Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 17:52:27.250530Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 17:52:27.250732Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 17:52:27.250812Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.250868Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 17:52:27.250922Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 17:52:27.250968Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 17:52:27.251384Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:02:05.783793Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:02:05.783965Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:02:05.784015Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:02:10.741442Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:02:10.741637Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:02:10.757442Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:02:10.778056Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:02:10.778155Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:02:14.601808Z: [Thread 22468] (Msg 1/1) BIP9521I: Application 'APP_ACE_BOLSA' se ha borrado. 
+2024-02-13 18:09:37.396316Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:09:37.681088Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:09:37.681300Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:09:37.683316Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:09:37.785120Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:09:37.816588Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:09:37.878332Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:09:37.878764Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:09:37.879036Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:09:37.879132Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:09:37.879216Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:09:37.879296Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha created correctamente. 
+2024-02-13 18:09:37.879368Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:09:37.879816Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:18:00.529137Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:18:00.832555Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:18:00.832744Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:00.832822Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.446151Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:18:05.446564Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:18:05.460496Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:18:05.489210Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.489295Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.520823Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:18:05.521021Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.523262Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.631393Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:18:05.663526Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:18:05.730166Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:18:05.730786Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:18:05.731184Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:18:05.731343Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.731485Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:18:05.731612Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 18:18:05.731737Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:18:05.732422Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:20:20.221388Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:20:20.895102Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:20:20.895590Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:20.895890Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:21.851706Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:20:21.852188Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:20:21.867190Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:20:21.922370Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:21.922708Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:22.072898Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:20:22.073622Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:22.083198Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:22.274726Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:20:22.345924Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:20:22.418470Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:20:22.418938Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:20:22.419192Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:20:22.419288Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:22.419358Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:20:22.419426Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 18:20:22.419508Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:20:22.419944Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:25:08.066595Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:25:08.852811Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:25:08.853062Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:08.853166Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.175012Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:25:13.175705Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:25:13.190473Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:25:13.246822Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.247139Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.398798Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:25:13.399576Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.409436Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.650042Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:25:13.693066Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:25:13.751286Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:25:13.752220Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:25:13.752812Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:25:13.753065Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.753290Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:25:13.753525Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 18:25:13.753725Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:25:13.754783Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:28:05.601312Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:28:06.136772Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:28:06.137377Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:06.137584Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.000531Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:28:11.001482Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:28:11.030858Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:28:11.083272Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.083605Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.233087Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:28:11.233833Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.243732Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.488008Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:28:11.540099Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:28:11.597303Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:28:11.598184Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:28:11.598768Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:28:11.598997Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.599451Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:28:11.599808Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 18:28:11.600012Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:28:11.601073Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-13 18:29:06.011555Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-13 18:29:06.680248Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:29:06.680687Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:06.680883Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:08.660740Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-13 18:29:08.661165Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:29:08.675963Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:29:08.731579Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:08.731917Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:08.863950Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:29:08.864320Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:08.869467Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:09.029861Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-13 18:29:09.080890Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-13 18:29:09.151482Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-13 18:29:09.151991Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-13 18:29:09.152297Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-13 18:29:09.152418Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:09.152517Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-13 18:29:09.152619Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-13 18:29:09.152714Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-13 18:29:09.153238Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:14:49.824492Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:14:50.141728Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:14:50.142664Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:50.142760Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:54.893864Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:14:54.894044Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:14:54.909036Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:14:54.962296Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:54.962400Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:55.006624Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:14:55.007008Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:55.010088Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:55.110196Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:14:55.139024Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:14:55.202076Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:14:55.202828Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:14:55.203244Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:14:55.203392Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:55.204484Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:14:55.204724Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:14:55.204940Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:14:55.205504Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:32:48.897008Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:32:49.221840Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:32:49.222080Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:49.222160Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:53.956708Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:32:53.957052Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:32:53.987396Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:32:54.014840Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.014936Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.047036Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:32:54.047244Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.049420Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.129076Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:32:54.161892Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:32:54.224372Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:32:54.224760Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:32:54.224968Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:32:54.225032Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.225112Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:32:54.225172Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:32:54.225220Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:32:54.225528Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:33:04.047533Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:33:04.386018Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:33:04.386163Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:04.386218Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.185187Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:33:06.185580Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:33:06.216693Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:33:06.245070Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.245161Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.281810Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:33:06.282002Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.284541Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.361299Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:33:06.392691Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:33:06.453242Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:33:06.454141Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:33:06.454723Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:33:06.454966Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.455172Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:33:06.455397Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:33:06.455606Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:33:06.456688Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:35:38.510804Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:35:38.819424Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:35:38.819588Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:38.819660Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.643656Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:35:42.644088Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:35:42.659380Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:35:42.699052Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.699136Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.729704Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:35:42.729896Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.732164Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.805824Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:35:42.836076Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:35:42.894872Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:35:42.895216Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:35:42.895384Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:35:42.895448Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.895492Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:35:42.895540Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:35:42.895580Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:35:42.895872Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:38:23.551132Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:38:23.840152Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:38:23.840270Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:23.840314Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.221658Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:38:27.222082Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:38:27.236594Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:38:27.264828Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.264926Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.296786Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:38:27.296974Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.299104Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.373190Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:38:27.398374Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:38:27.457012Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:38:27.457266Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:38:27.457498Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:38:27.457592Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.457638Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:38:27.457686Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:38:27.457728Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:38:27.458018Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:39:07.899561Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:39:07.899808Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:07.899898Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:09.487015Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:39:09.487391Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:39:09.518619Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:39:09.542920Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:09.543010Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:17.076726Z: [Thread 22092] (Msg 1/1) BIP9521I: Application 'APP_ACE_BOLSA' se ha borrado. 
+2024-02-14 01:39:24.257872Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:39:24.543846Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:39:24.544052Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:24.546138Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:24.620836Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:39:24.647816Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:39:24.716112Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:39:24.716446Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:39:24.716714Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:39:24.716828Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:24.716904Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:39:24.716970Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha created correctamente. 
+2024-02-14 01:39:24.717030Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:39:24.717434Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:43:25.720456Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:43:26.007124Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:43:26.007298Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:26.007368Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.039020Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:43:29.039132Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:43:29.054014Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:43:29.067936Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.068044Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.098944Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:43:29.099132Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.101138Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.177390Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:43:29.202984Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:43:29.260296Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:43:29.260600Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:43:29.260826Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:43:29.260904Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.260954Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:43:29.261022Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:43:29.261082Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:43:29.261406Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:44:42.835912Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:44:43.131524Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:44:43.131636Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:43.131680Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.373992Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:44:46.374428Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:44:46.389460Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:44:46.432308Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.432488Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.468180Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:44:46.468372Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.470288Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.545696Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:44:46.568988Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:44:46.625080Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:44:46.625940Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:44:46.626612Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:44:46.626816Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.627164Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:44:46.627356Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:44:46.627528Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:44:46.628492Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:50:42.396460Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:50:42.691568Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:50:42.691704Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:42.691740Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.158108Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:50:44.158576Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:50:44.173280Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:50:44.201872Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.201968Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.232832Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:50:44.233024Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.235188Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.321476Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:50:44.348896Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:50:44.409800Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:50:44.410068Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:50:44.410284Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:50:44.410364Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.410416Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:50:44.410476Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:50:44.410524Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:50:44.410820Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 01:59:18.624750Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 01:59:18.916190Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:59:18.916320Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:18.916362Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.703894Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 01:59:22.704416Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:59:22.718762Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:59:22.743420Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.743522Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.776112Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:59:22.776306Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.778392Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.856262Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 01:59:22.880530Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 01:59:22.939520Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 01:59:22.939960Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 01:59:22.940162Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 01:59:22.940236Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.940286Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 01:59:22.940348Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 01:59:22.940398Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 01:59:22.940730Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:04:16.654600Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:04:16.954728Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:04:16.954896Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:16.954948Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.393556Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:04:21.393836Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:04:21.408636Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:04:21.440252Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.440368Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.477528Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:04:21.477722Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.479838Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.559978Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:04:21.584580Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:04:21.644634Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:04:21.644856Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:04:21.645026Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:04:21.645088Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.645146Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:04:21.645194Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:04:21.645248Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:04:21.645546Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:07:06.410716Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:07:06.698637Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:06.698757Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:06.698799Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:07.954376Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:07:07.954562Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:07.985484Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:07:07.998559Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:07.998648Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:08.029790Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:08.029971Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:08.031993Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:08.105816Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:07:08.132383Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:08.188919Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:07:08.189807Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:07:08.190387Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:07:08.190636Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:08.190852Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:08.191405Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:07:08.191625Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:07:08.192734Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:07:30.888228Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:07:31.156488Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:31.156640Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:31.156716Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.202892Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:07:35.203624Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:35.233940Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:07:35.261860Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.261964Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.292532Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:35.292700Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.294616Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.364832Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:07:35.388668Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:07:35.450056Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:07:35.450468Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:07:35.450760Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:07:35.450852Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.450924Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:07:35.450992Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:07:35.451060Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:07:35.451452Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:08:54.150156Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:08:54.428004Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:08:54.428128Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:54.428172Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.386888Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:08:57.387152Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:08:57.418584Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:08:57.442432Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.442520Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.475632Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:08:57.475832Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.477924Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.546400Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:08:57.571132Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:08:57.636460Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:08:57.636752Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:08:57.637008Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:08:57.637108Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.637160Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:08:57.637224Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:08:57.637280Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:08:57.637640Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:15:20.298554Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:15:20.839980Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:15:20.840172Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:20.840228Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.387742Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:15:23.388148Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:15:23.402542Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:15:23.423120Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.423240Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.454478Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:15:23.454682Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.456638Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.523780Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:15:23.550976Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:15:23.620326Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:15:23.621236Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:15:23.621744Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:15:23.621988Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.622226Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:15:23.622426Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:15:23.622638Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:15:23.623690Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:16:09.340257Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:16:09.604994Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:16:09.605177Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:09.605255Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.631060Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:16:10.631474Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:16:10.662010Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:16:10.684860Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.684980Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.717163Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:16:10.717357Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.719463Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.787380Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:16:10.810731Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:16:10.867167Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:16:10.867584Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:16:10.867763Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:16:10.867834Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.867886Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:16:10.867942Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:16:10.867996Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:16:10.868315Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:21:20.560284Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:21:20.830966Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:21:20.831172Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:20.831250Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.201388Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:21:24.201802Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:21:24.215604Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:21:24.244158Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.244320Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.299074Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:21:24.299550Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.302360Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.436150Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:21:24.460332Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:21:24.526900Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:21:24.527230Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:21:24.527382Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:21:24.527434Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.527480Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:21:24.527560Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:21:24.527628Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:21:24.527946Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:31:18.926040Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:31:19.225178Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:31:19.225328Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:19.225384Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.657812Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:31:23.658452Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:31:23.687120Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:31:23.713250Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.713356Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.751740Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:31:23.751990Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.754130Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.824304Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:31:23.851032Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:31:23.920654Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:31:23.921014Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:31:23.921286Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:31:23.921408Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.921510Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:31:23.921598Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:31:23.921674Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:31:23.922122Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:36:21.291394Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:36:21.561880Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:36:21.562004Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:21.562052Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.368554Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:36:22.368672Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:36:22.383620Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:36:22.399046Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.399178Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.432808Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:36:22.433010Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.435156Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.509194Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:36:22.536268Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:36:22.606592Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:36:22.606936Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:36:22.607122Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:36:22.607200Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.607250Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:36:22.607300Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:36:22.607342Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:36:22.607602Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 13:38:06.623584Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 13:38:06.890502Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:38:06.890683Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:06.890775Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.668569Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 13:38:09.668972Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:38:09.699994Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:38:09.729647Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.729756Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.761306Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:38:09.761509Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.763654Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.831809Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 13:38:09.854810Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 13:38:09.918344Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 13:38:09.918669Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 13:38:09.918888Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 13:38:09.918950Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.918996Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 13:38:09.919126Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 13:38:09.919183Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 13:38:09.919444Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 14:00:59.908844Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 14:01:00.212297Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:01:00.212461Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:00.212502Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.562027Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 14:01:01.562449Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:01:01.591951Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:01:01.627589Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.627705Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.661587Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:01:01.661783Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.666580Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.735801Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 14:01:01.759068Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:01:01.828778Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:01:01.829031Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 14:01:01.829287Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 14:01:01.829354Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.829399Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:01:01.829443Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 14:01:01.829486Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 14:01:01.829747Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 14:31:00.356395Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 14:31:00.463895Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:31:00.464164Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:00.464278Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:04.689061Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 14:31:04.689464Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:31:04.718758Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:31:04.738821Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:04.738913Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:04.774740Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:31:04.774945Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:04.778375Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:04.872512Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 14:31:04.919877Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 14:31:04.945252Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:31:05.002981Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:31:05.003456Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 14:31:05.003769Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 14:31:05.003908Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:05.004012Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:31:05.004111Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 14:31:05.004197Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 14:31:05.004748Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 14:40:41.934580Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 14:40:42.066144Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:40:42.066400Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.066508Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.793520Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 14:40:42.793944Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:40:42.822780Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:40:42.839616Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.839740Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.883304Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:40:42.883492Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.886180Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:42.968388Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 14:40:43.004972Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 14:40:43.029696Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 14:40:43.091960Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 14:40:43.092312Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 14:40:43.092728Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 14:40:43.092828Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:43.092908Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 14:40:43.092984Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 14:40:43.093044Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 14:40:43.093440Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 15:09:42.398596Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 15:09:42.665484Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:09:42.665672Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:09:42.665740Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:09:47.519828Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 15:09:47.519960Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:09:47.550320Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 15:09:47.568344Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:09:47.568496Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:09:47.613432Z: [Thread 24328] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Output', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_17' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-14 15:09:47.613536Z: [Thread 24328] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Get', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_18' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-14 15:09:47.614440Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:09:47.614556Z: [Thread 24328] (Msg 1/1) BIP9324W: La petición a 'Initialize' recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application' ha fallado. 
+2024-02-14 15:09:47.614624Z: [Thread 24328] (Msg 1/1) BIP1096E: El origen 'BOLSA_test.bar' se ha desplegado, pero ha habido uno o más errores que podrían suponer que los recursos desplegados no puedan ejecutar. 
+2024-02-14 15:09:47.615024Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 15:10:18.574286Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 15:10:18.849018Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:10:18.849208Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:10:18.851982Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:10:18.954430Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 15:10:18.999844Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 15:10:19.025806Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:10:19.090498Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 15:10:19.090744Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 15:10:19.090896Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 15:10:19.090944Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:10:19.090986Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:10:19.091046Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 15:10:19.091086Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 15:10:19.091382Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 15:11:12.602467Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 15:11:12.795232Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:11:12.795586Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:12.795691Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.139309Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 15:11:16.139427Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:11:16.155298Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 15:11:16.171448Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.171574Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.212637Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:11:16.212818Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.215525Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.313940Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 15:11:16.353785Z: [Thread 15852] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 15:11:16.381681Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 15:11:16.438576Z: [Thread 15852] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 15:11:16.439476Z: [Thread 15852] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 15:11:16.440050Z: [Thread 15852] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 15:11:16.440287Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.440496Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 15:11:16.440702Z: [Thread 15852] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 15:11:16.440872Z: [Thread 15852] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 15:11:16.441973Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 17:26:01.780605Z: [Thread 25720] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 17:26:01.898460Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:26:01.899465Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:01.899572Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:03.878282Z: [Thread 25720] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 17:26:03.878439Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:26:03.903894Z: [Thread 25720] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:26:03.951897Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:03.951990Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:04.002420Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:26:04.002888Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:04.007301Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:04.113051Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 17:26:04.154262Z: [Thread 25720] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 17:26:04.179093Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:26:04.245721Z: [Thread 25720] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:26:04.246177Z: [Thread 25720] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 17:26:04.246379Z: [Thread 25720] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 17:26:04.246439Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:04.246497Z: [Thread 25720] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:26:04.246579Z: [Thread 25720] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 17:26:04.246646Z: [Thread 25720] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 17:26:04.246960Z: [Thread 25720] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 17:27:32.306984Z: [Thread 24328] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 17:27:32.390228Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:27:32.390458Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:32.390530Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.313244Z: [Thread 24328] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 17:27:36.313460Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:27:36.344824Z: [Thread 24328] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:27:36.358592Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.358680Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.396428Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:27:36.396624Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.399448Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.480776Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 17:27:36.516228Z: [Thread 24328] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 17:27:36.539636Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:27:36.609468Z: [Thread 24328] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:27:36.609940Z: [Thread 24328] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 17:27:36.610228Z: [Thread 24328] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 17:27:36.610336Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.610436Z: [Thread 24328] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:27:36.610532Z: [Thread 24328] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 17:27:36.610616Z: [Thread 24328] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 17:27:36.611136Z: [Thread 24328] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 17:29:25.573096Z: [Thread 25748] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 17:29:25.660064Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:29:25.660380Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:25.660542Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:27.748776Z: [Thread 25748] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 17:29:27.749080Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:29:27.779098Z: [Thread 25748] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:29:27.805298Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:27.805444Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:27.845738Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:29:27.845928Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:27.848686Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:27.931820Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 17:29:27.965314Z: [Thread 25748] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 17:29:27.989040Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:29:28.046510Z: [Thread 25748] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:29:28.046820Z: [Thread 25748] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 17:29:28.047014Z: [Thread 25748] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 17:29:28.047094Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:28.047154Z: [Thread 25748] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:29:28.047208Z: [Thread 25748] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 17:29:28.047250Z: [Thread 25748] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 17:29:28.047544Z: [Thread 25748] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-14 17:34:54.669996Z: [Thread 14280] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-14 17:34:54.764876Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:34:54.765116Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:54.765228Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.268708Z: [Thread 14280] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-14 17:34:57.268892Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:34:57.299472Z: [Thread 14280] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:34:57.319300Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.319416Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.361672Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:34:57.361872Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.364744Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.447836Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA/HI_MS_CONNECTOR_FRAME.bir'. 
+2024-02-14 17:34:57.480316Z: [Thread 14280] (Msg 1/1) BIP9342I: Se ha creado el archivo de esquema 'XMLNSC' compilado 'APP_ACE_BOLSA_MS/APP_ACE_BOLSA_MSMessageSet.bir'. 
+2024-02-14 17:34:57.503748Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-14 17:34:57.565672Z: [Thread 14280] (Msg 1/1) BIP3132I: El escucha HTTP ha empezado a escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-14 17:34:57.566056Z: [Thread 14280] (Msg 1/1) BIP1996I: Escuchando por el URL HTTP '/sab/ccli2'. 
+2024-02-14 17:34:57.566332Z: [Thread 14280] (Msg 1/1) BIP2269I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha iniciado satisfactoriamente. 
+2024-02-14 17:34:57.566420Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.566496Z: [Thread 14280] (Msg 1/1) BIP2155I: A punto de 'Start' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-14 17:34:57.566572Z: [Thread 14280] (Msg 1/1) BIP9332I: Application 'APP_ACE_BOLSA' se ha changed correctamente. 
+2024-02-14 17:34:57.566640Z: [Thread 14280] (Msg 1/1) BIP9326I: El origen 'BOLSA_test.bar' se ha desplegado correctamente. 
+2024-02-14 17:34:57.567032Z: [Thread 14280] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 
+2024-02-15 16:45:47.337336Z: [Thread 15852] (Msg 1/1) BIP2152I: Se ha recibido el mensaje de configuración. 
+2024-02-15 16:45:47.478696Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-15 16:45:47.479648Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-15 16:45:47.479756Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Stop' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-15 16:45:51.986812Z: [Thread 15852] (Msg 1/1) BIP2271I: El recurso desplegado 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' (uuid='pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente',tipo='MessageFlow') se ha detenido satisfactoriamente. 
+2024-02-15 16:45:51.987040Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-15 16:45:51.999692Z: [Thread 15852] (Msg 1/1) BIP3133I: El escucha HTTP ha dejado de escuchar en el puerto '7800' para conexiones 'http'. 
+2024-02-15 16:45:52.035944Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_MS' de tipo 'StaticLibrary'. 
+2024-02-15 16:45:52.036028Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'TearDown' el recurso desplegado 'APP_ACE_BOLSA_UTILITARIO' de tipo 'StaticLibrary'. 
+2024-02-15 16:45:52.090268Z: [Thread 15852] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Output', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_19' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-15 16:45:52.090348Z: [Thread 15852] (Msg 1/1) BIP1361E: El nodo de flujo de mensajes 'MQ Get', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#FCMComposite_1_20' en el flujo de mensajes 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente', 'pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente' requiere la política 'Default' de tipo 'MQEndpoint', que no está desplegada. 
+2024-02-15 16:45:52.092304Z: [Thread 15852] (Msg 1/1) BIP2155I: A punto de 'Initialize' el recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application'. 
+2024-02-15 16:45:52.092600Z: [Thread 15852] (Msg 1/1) BIP9324W: La petición a 'Initialize' recurso desplegado 'APP_ACE_BOLSA' de tipo 'Application' ha fallado. 
+2024-02-15 16:45:52.092880Z: [Thread 15852] (Msg 1/1) BIP1096E: El origen 'BOLSA_test.bar' se ha desplegado, pero ha habido uno o más errores que podrían suponer que los recursos desplegados no puedan ejecutar. 
+2024-02-15 16:45:52.093348Z: [Thread 15852] (Msg 1/1) BIP2154I: El servidor de integración ha finalizado con el mensaje de configuración. 

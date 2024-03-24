@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?><MRMessageSet id="DLVCG4G002001" name="MS_SAB" parser="MRM">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rgar/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd#/0/msg_VLMC515SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC515SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd#/0/msg_VLMC515SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC515SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rgar/}VLMC515SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd#/0/VLMC515SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC515SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd#/0/Vlmc515sdatossalida_vlmc515d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc515sdatossalida_vlmc515d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/RESPONSE_RGAR_SAB.mxsd#/0/vlmc515sdatossalida_vlmc515d__datos__salida;XSDModelGroupDefinition" name="vlmc515sdatossalida_vlmc515d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/REQUEST_CCLISESPS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cclisesps/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/REQUEST_CCLISESPS_SAB.mxsd#/0/msg_VLMC530EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC530EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/REQUEST_CCLISESPS_SAB.mxsd#/0/msg_VLMC530EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC530EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cclisesps/}VLMC530EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/REQUEST_CCLISESPS_SAB.mxsd#/0/VLMC530EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC530EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/RESPONSE_PORDCOMVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/pordcomval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/RESPONSE_PORDCOMVAL_SAB.mxsd#/0/msg_VLMC507SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC507SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/RESPONSE_PORDCOMVAL_SAB.mxsd#/0/msg_VLMC507SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC507SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/pordcomval/}VLMC507SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/RESPONSE_PORDCOMVAL_SAB.mxsd#/0/VLMC507SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC507SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cpolsfec/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd#/0/msg_VLMC520SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC520SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd#/0/msg_VLMC520SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC520SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cpolsfec/}VLMC520SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd#/0/VLMC520SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC520SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd#/0/Vlmc520sdatossalida_vlmc520d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc520sdatossalida_vlmc520d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/RESPONSE_CPOLSFEC_SAB.mxsd#/0/vlmc520sdatossalida_vlmc520d__datos__salida;XSDModelGroupDefinition" name="vlmc520sdatossalida_vlmc520d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/copescliesp/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd#/0/msg_VLMC531SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC531SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd#/0/msg_VLMC531SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC531SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/copescliesp/}VLMC531SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd#/0/VLMC531SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC531SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd#/0/Vlmc531sdatossalida_vlmc531d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc531sdatossalida_vlmc531d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/RESPONSE_COPESCLIESP_SAB.mxsd#/0/vlmc531sdatossalida_vlmc531d__datos__salida;XSDModelGroupDefinition" name="vlmc531sdatossalida_vlmc531d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/REQUEST_CORDCLISMV_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordclismv/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/REQUEST_CORDCLISMV_SAB.mxsd#/0/msg_VLMC501EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC501EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/REQUEST_CORDCLISMV_SAB.mxsd#/0/msg_VLMC501EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC501EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordclismv/}VLMC501EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/REQUEST_CORDCLISMV_SAB.mxsd#/0/VLMC501EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC501EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/REQUEST_CCATSVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ccatsval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/REQUEST_CCATSVAL_SAB.mxsd#/0/msg_VLMC506EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC506EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/REQUEST_CCATSVAL_SAB.mxsd#/0/msg_VLMC506EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC506EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ccatsval/}VLMC506EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/REQUEST_CCATSVAL_SAB.mxsd#/0/VLMC506EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC506EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cctavalemp/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd#/0/msg_VLMC513SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC513SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd#/0/msg_VLMC513SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC513SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cctavalemp/}VLMC513SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd#/0/VLMC513SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC513SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd#/0/Vlmc513sdatossalida_vlmc513d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc513sdatossalida_vlmc513d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/RESPONSE_CCTAVALEMP_SAB.mxsd#/0/vlmc513sdatossalida_vlmc513d__datos__salida;XSDModelGroupDefinition" name="vlmc513sdatossalida_vlmc513d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/REQUEST_RGAR_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rgar/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/REQUEST_RGAR_SAB.mxsd#/0/msg_VLMC515EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC515EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/REQUEST_RGAR_SAB.mxsd#/0/msg_VLMC515EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC515EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rgar/}VLMC515EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgar/REQUEST_RGAR_SAB.mxsd#/0/VLMC515EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC515EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ccatsval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd#/0/msg_VLMC506SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC506SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd#/0/msg_VLMC506SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC506SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ccatsval/}VLMC506SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd#/0/VLMC506SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC506SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd#/0/Vlmc506sdatossalida_vlmc506d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc506sdatossalida_vlmc506d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccatsval/RESPONSE_CCATSVAL_SAB.mxsd#/0/vlmc506sdatossalida_vlmc506d__datos__salida;XSDModelGroupDefinition" name="vlmc506sdatossalida_vlmc506d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/REQUEST_CCLIS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cclis/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/REQUEST_CCLIS_SAB.mxsd#/0/msg_VLMC503EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC503EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/REQUEST_CCLIS_SAB.mxsd#/0/msg_VLMC503EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC503EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cclis/}VLMC503EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/REQUEST_CCLIS_SAB.mxsd#/0/VLMC503EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC503EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/RESPONSE_RGENPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rgenpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/RESPONSE_RGENPOL_SAB.mxsd#/0/msg_VLMC516SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC516SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/RESPONSE_RGENPOL_SAB.mxsd#/0/msg_VLMC516SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC516SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rgenpol/}VLMC516SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/RESPONSE_RGENPOL_SAB.mxsd#/0/VLMC516SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC516SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/REQUEST_CDETMAPGLO_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetmapglo/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/REQUEST_CDETMAPGLO_SAB.mxsd#/0/msg_VLMC529EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC529EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/REQUEST_CDETMAPGLO_SAB.mxsd#/0/msg_VLMC529EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC529EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetmapglo/}VLMC529EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/REQUEST_CDETMAPGLO_SAB.mxsd#/0/VLMC529EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC529EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cmapsglos/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd#/0/msg_VLMC528SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC528SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd#/0/msg_VLMC528SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC528SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cmapsglos/}VLMC528SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd#/0/VLMC528SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC528SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd#/0/Vlmc528sdatossalida_vlmc528d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc528sdatossalida_vlmc528d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/RESPONSE_CMAPSGLOS_SAB.mxsd#/0/vlmc528sdatossalida_vlmc528d__datos__salida;XSDModelGroupDefinition" name="vlmc528sdatossalida_vlmc528d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/RESPONSE_RORDNEG_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rordneg/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/RESPONSE_RORDNEG_SAB.mxsd#/0/msg_VLMC527SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC527SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/RESPONSE_RORDNEG_SAB.mxsd#/0/msg_VLMC527SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC527SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rordneg/}VLMC527SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/RESPONSE_RORDNEG_SAB.mxsd#/0/VLMC527SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC527SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/RESPONSE_RORDNEG_SAB.mxsd#/0/Vlmc527sdatossalida;XSDComplexTypeDefinition=1" name="Vlmc527sdatossalida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ropepol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd#/0/msg_VLMC521SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC521SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd#/0/msg_VLMC521SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC521SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ropepol/}VLMC521SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd#/0/VLMC521SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC521SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd#/0/Vlmc521sdatossalida_vlmc521d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc521sdatossalida_vlmc521d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/RESPONSE_ROPEPOL_SAB.mxsd#/0/vlmc521sdatossalida_vlmc521d__datos__salida;XSDModelGroupDefinition" name="vlmc521sdatossalida_vlmc521d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cnems/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd#/0/msg_VLMC522SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC522SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd#/0/msg_VLMC522SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC522SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cnems/}VLMC522SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd#/0/VLMC522SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC522SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd#/0/Vlmc522sdatossalida_vlmc522d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc522sdatossalida_vlmc522d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/RESPONSE_CNEMS_SAB.mxsd#/0/vlmc522sdatossalida_vlmc522d__datos__salida;XSDModelGroupDefinition" name="vlmc522sdatossalida_vlmc522d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/REQUEST_CDETPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/REQUEST_CDETPOL_SAB.mxsd#/0/msg_VLMC518EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC518EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/REQUEST_CDETPOL_SAB.mxsd#/0/msg_VLMC518EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC518EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetpol/}VLMC518EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/REQUEST_CDETPOL_SAB.mxsd#/0/VLMC518EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC518EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/csalstitval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd#/0/msg_VLMC505SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC505SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd#/0/msg_VLMC505SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC505SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/csalstitval/}VLMC505SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd#/0/VLMC505SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC505SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd#/0/Vlmc505sdatossalida_vlmc505d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc505sdatossalida_vlmc505d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/RESPONSE_CSALSTITVAL_SAB.mxsd#/0/vlmc505sdatossalida_vlmc505d__datos__salida;XSDModelGroupDefinition" name="vlmc505sdatossalida_vlmc505d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/REQUEST_CDETORD_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetord/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/REQUEST_CDETORD_SAB.mxsd#/0/msg_VLMC511EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC511EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/REQUEST_CDETORD_SAB.mxsd#/0/msg_VLMC511EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC511EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetord/}VLMC511EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/REQUEST_CDETORD_SAB.mxsd#/0/VLMC511EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC511EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/REQUEST_CPOLSFEC_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cpolsfec/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/REQUEST_CPOLSFEC_SAB.mxsd#/0/msg_VLMC520EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC520EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/REQUEST_CPOLSFEC_SAB.mxsd#/0/msg_VLMC520EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC520EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cpolsfec/}VLMC520EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsfec/REQUEST_CPOLSFEC_SAB.mxsd#/0/VLMC520EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC520EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cbrks/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd#/0/msg_VLMC523SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC523SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd#/0/msg_VLMC523SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC523SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cbrks/}VLMC523SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd#/0/VLMC523SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC523SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd#/0/Vlmc523sdatossalida_vlmc523d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc523sdatossalida_vlmc523d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/RESPONSE_CBRKS_SAB.mxsd#/0/vlmc523sdatossalida_vlmc523d__datos__salida;XSDModelGroupDefinition" name="vlmc523sdatossalida_vlmc523d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/msg_VLMC518SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC518SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/msg_VLMC518SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC518SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetpol/}VLMC518SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/VLMC518SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC518SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/Vlmc518sdatossalida_vlmc518d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc518sdatossalida_vlmc518d__datos__salida"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/Vlmc518sdatossalida_vlmc518f__datos__salida;XSDComplexTypeDefinition=2" name="Vlmc518sdatossalida_vlmc518f__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/vlmc518sdatossalida_vlmc518d__datos__salida;XSDModelGroupDefinition" name="vlmc518sdatossalida_vlmc518d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetpol/RESPONSE_CDETPOL_SAB.mxsd#/0/vlmc518sdatossalida_vlmc518f__datos__salida;XSDModelGroupDefinition=1" name="vlmc518sdatossalida_vlmc518f__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cclis">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd#/0/msg_VLMC503SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC503SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd#/0/msg_VLMC503SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC503SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cclis}VLMC503SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd#/0/VLMC503SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC503SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd#/0/Vlmc503sdatossalida_vlmc503d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc503sdatossalida_vlmc503d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclis/RESPONSE_CCLIS_SAB.mxsd#/0/vlmc503sdatossalida_vlmc503d__datos__salida;XSDModelGroupDefinition" name="vlmc503sdatossalida_vlmc503d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/RESPONSE_CDETORD_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetord/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/RESPONSE_CDETORD_SAB.mxsd#/0/msg_VLMC511SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC511SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/RESPONSE_CDETORD_SAB.mxsd#/0/msg_VLMC511SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC511SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetord/}VLMC511SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetord/RESPONSE_CDETORD_SAB.mxsd#/0/VLMC511SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC511SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/RESPONSE_RVALUSU_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rvalusu">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/RESPONSE_RVALUSU_SAB.mxsd#/0/msg_A102MIFC1A02;XSDElementDeclaration$MRMessage" name="msg_A102MIFC1A02"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/RESPONSE_RVALUSU_SAB.mxsd#/0/msg_A102MIFC1A02;XSDElementDeclaration" name="msg_A102MIFC1A02" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rvalusu}A102MIFC1A02"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/RESPONSE_RVALUSU_SAB.mxsd#/0/A102MIFC1A02;XSDComplexTypeDefinition" name="A102MIFC1A02"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cproord/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd#/0/msg_VLMC526SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC526SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd#/0/msg_VLMC526SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC526SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cproord/}VLMC526SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd#/0/VLMC526SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC526SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd#/0/Vlmc526sdatossalida_vlmc526d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc526sdatossalida_vlmc526d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/RESPONSE_CPROORD_SAB.mxsd#/0/vlmc526sdatossalida_vlmc526d__datos__salida;XSDModelGroupDefinition" name="vlmc526sdatossalida_vlmc526d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/REQUEST_CORDSPENS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordspens/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/REQUEST_CORDSPENS_SAB.mxsd#/0/msg_VLMC524EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC524EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/REQUEST_CORDSPENS_SAB.mxsd#/0/msg_VLMC524EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC524EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordspens/}VLMC524EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/REQUEST_CORDSPENS_SAB.mxsd#/0/VLMC524EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC524EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/REQUEST_ROPERENFIJVAR_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/roperenfijvar/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/REQUEST_ROPERENFIJVAR_SAB.mxsd#/0/msg_VLMC509EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC509EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/REQUEST_ROPERENFIJVAR_SAB.mxsd#/0/msg_VLMC509EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC509EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/roperenfijvar/}VLMC509EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/REQUEST_ROPERENFIJVAR_SAB.mxsd#/0/VLMC509EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC509EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ractpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd#/0/msg_VLMC517SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC517SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd#/0/msg_VLMC517SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC517SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ractpol/}VLMC517SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd#/0/VLMC517SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC517SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd#/0/Vlmc517sdatossalida_vlmc517d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc517sdatossalida_vlmc517d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/RESPONSE_RACTPOL_SAB.mxsd#/0/vlmc517sdatossalida_vlmc517d__datos__salida;XSDModelGroupDefinition" name="vlmc517sdatossalida_vlmc517d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/REQUEST_CNEMS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cnems/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/REQUEST_CNEMS_SAB.mxsd#/0/msg_VLMC522EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC522EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/REQUEST_CNEMS_SAB.mxsd#/0/msg_VLMC522EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC522EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cnems/}VLMC522EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cnems/REQUEST_CNEMS_SAB.mxsd#/0/VLMC522EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC522EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/REQUEST_CBRKS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cbrks/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/REQUEST_CBRKS_SAB.mxsd#/0/msg_VLMC523EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC523EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/REQUEST_CBRKS_SAB.mxsd#/0/msg_VLMC523EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC523EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cbrks/}VLMC523EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cbrks/REQUEST_CBRKS_SAB.mxsd#/0/VLMC523EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC523EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/REQUEST_CFACS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cfacs/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/REQUEST_CFACS_SAB.mxsd#/0/msg_VLMC504EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC504EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/REQUEST_CFACS_SAB.mxsd#/0/msg_VLMC504EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC504EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cfacs/}VLMC504EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/REQUEST_CFACS_SAB.mxsd#/0/VLMC504EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC504EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cfacs/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd#/0/msg_VLMC504SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC504SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd#/0/msg_VLMC504SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC504SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cfacs/}VLMC504SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd#/0/VLMC504SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC504SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd#/0/Vlmc504sdatossalida_vlmc504d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc504sdatossalida_vlmc504d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cfacs/RESPONSE_CFACS_SAB.mxsd#/0/vlmc504sdatossalida_vlmc504d__datos__salida;XSDModelGroupDefinition" name="vlmc504sdatossalida_vlmc504d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ccli/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/msg_VLMC502SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC502SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/msg_VLMC502SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC502SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ccli/}VLMC502SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/VLMC502SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC502SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/vlmc502sdatossalida_s502__telefonos;XSDComplexTypeDefinition=1" name="vlmc502sdatossalida_s502__telefonos"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/Vlmc502sdatossalida_vlmc502d__datos__salida;XSDComplexTypeDefinition=2" name="Vlmc502sdatossalida_vlmc502d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/vlmc502sdatossalida_s502__telefonos;XSDModelGroupDefinition" name="vlmc502sdatossalida_s502__telefonos"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/RESPONSE_CCLI_SAB.mxsd#/0/vlmc502sdatossalida_vlmc502d__datos__salida;XSDModelGroupDefinition=1" name="vlmc502sdatossalida_vlmc502d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/REQUEST_RORDNEG_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rordneg/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/REQUEST_RORDNEG_SAB.mxsd#/0/msg_VLMC527EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC527EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/REQUEST_RORDNEG_SAB.mxsd#/0/msg_VLMC527EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC527EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rordneg/}VLMC527EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordneg/REQUEST_RORDNEG_SAB.mxsd#/0/VLMC527EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC527EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/REQUEST_ROPEPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ropepol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/REQUEST_ROPEPOL_SAB.mxsd#/0/msg_VLMC521EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC521EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/REQUEST_ROPEPOL_SAB.mxsd#/0/msg_VLMC521EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC521EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ropepol/}VLMC521EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ropepol/REQUEST_ROPEPOL_SAB.mxsd#/0/VLMC521EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC521EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/REQUEST_CORDSCLI_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordscli/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/REQUEST_CORDSCLI_SAB.mxsd#/0/msg_VLMC510EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC510EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/REQUEST_CORDSCLI_SAB.mxsd#/0/msg_VLMC510EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC510EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordscli/}VLMC510EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/REQUEST_CORDSCLI_SAB.mxsd#/0/VLMC510EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC510EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cclisesps/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd#/0/msg_VLMC530SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC530SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd#/0/msg_VLMC530SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC530SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cclisesps/}VLMC530SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd#/0/VLMC530SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC530SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd#/0/Vlmc530sdatossalida_vlmc530d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc530sdatossalida_vlmc530d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cclisesps/RESPONSE_CCLISESPS_SAB.mxsd#/0/vlmc530sdatossalida_vlmc530d__datos__salida;XSDModelGroupDefinition" name="vlmc530sdatossalida_vlmc530d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetmapglo/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd#/0/msg_VLMC529SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC529SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd#/0/msg_VLMC529SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC529SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetmapglo/}VLMC529SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd#/0/VLMC529SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC529SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd#/0/Vlmc529sdatossalida_vlmc529d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc529sdatossalida_vlmc529d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetmapglo/RESPONSE_CDETMAPGLO_SAB.mxsd#/0/vlmc529sdatossalida_vlmc529d__datos__salida;XSDModelGroupDefinition" name="vlmc529sdatossalida_vlmc529d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/REQUEST_RORDSEXT_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rordsext/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/REQUEST_RORDSEXT_SAB.mxsd#/0/msg_VLMC512EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC512EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/REQUEST_RORDSEXT_SAB.mxsd#/0/msg_VLMC512EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC512EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rordsext/}VLMC512EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/REQUEST_RORDSEXT_SAB.mxsd#/0/VLMC512EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC512EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/REQUEST_RGENPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rgenpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/REQUEST_RGENPOL_SAB.mxsd#/0/msg_VLMC516EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC516EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/REQUEST_RGENPOL_SAB.mxsd#/0/msg_VLMC516EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC516EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rgenpol/}VLMC516EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rgenpol/REQUEST_RGENPOL_SAB.mxsd#/0/VLMC516EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC516EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/REQUEST_CPOLSCTAVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cpolsctaval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/REQUEST_CPOLSCTAVAL_SAB.mxsd#/0/msg_VLMC519EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC519EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/REQUEST_CPOLSCTAVAL_SAB.mxsd#/0/msg_VLMC519EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC519EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cpolsctaval/}VLMC519EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/REQUEST_CPOLSCTAVAL_SAB.mxsd#/0/VLMC519EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC519EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/REQUEST_CCLI_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ccli">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/REQUEST_CCLI_SAB.mxsd#/0/msg_VLMC502EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC502EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/REQUEST_CCLI_SAB.mxsd#/0/msg_VLMC502EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC502EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ccli}VLMC502EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ccli/REQUEST_CCLI_SAB.mxsd#/0/VLMC502EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC502EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordclismv/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd#/0/msg_VLMC501SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC501SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd#/0/msg_VLMC501SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC501SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordclismv/}VLMC501SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd#/0/VLMC501SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC501SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd#/0/Vlmc501sdatossalida_vlmc501d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc501sdatossalida_vlmc501d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordclismv/RESPONSE_CORDCLISMV_SAB.mxsd#/0/vlmc501sdatossalida_vlmc501d__datos__salida;XSDModelGroupDefinition" name="vlmc501sdatossalida_vlmc501d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/REQUEST_CMAPSGLOS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cmapsglos/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/REQUEST_CMAPSGLOS_SAB.mxsd#/0/msg_VLMC528EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC528EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/REQUEST_CMAPSGLOS_SAB.mxsd#/0/msg_VLMC528EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC528EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cmapsglos/}VLMC528EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cmapsglos/REQUEST_CMAPSGLOS_SAB.mxsd#/0/VLMC528EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC528EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/RESPONSE_PORDVENVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/pordvenval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/RESPONSE_PORDVENVAL_SAB.mxsd#/0/msg_VLMC508SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC508SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/RESPONSE_PORDVENVAL_SAB.mxsd#/0/msg_VLMC508SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC508SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/pordvenval/}VLMC508SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/RESPONSE_PORDVENVAL_SAB.mxsd#/0/VLMC508SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC508SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/REQUEST_CCTAVALEMP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cctavalemp/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/REQUEST_CCTAVALEMP_SAB.mxsd#/0/msg_VLMC513EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC513EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/REQUEST_CCTAVALEMP_SAB.mxsd#/0/msg_VLMC513EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC513EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cctavalemp/}VLMC513EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cctavalemp/REQUEST_CCTAVALEMP_SAB.mxsd#/0/VLMC513EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC513EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/REQUEST_COPESCLIESP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/copescliesp/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/REQUEST_COPESCLIESP_SAB.mxsd#/0/msg_VLMC531EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC531EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/REQUEST_COPESCLIESP_SAB.mxsd#/0/msg_VLMC531EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC531EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/copescliesp/}VLMC531EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/copescliesp/REQUEST_COPESCLIESP_SAB.mxsd#/0/VLMC531EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC531EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordscli/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd#/0/msg_VLMC510SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC510SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd#/0/msg_VLMC510SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC510SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordscli/}VLMC510SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd#/0/VLMC510SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC510SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd#/0/Vlmc510sdatossalida_vlmc510d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc510sdatossalida_vlmc510d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordscli/RESPONSE_CORDSCLI_SAB.mxsd#/0/vlmc510sdatossalida_vlmc510d__datos__salida;XSDModelGroupDefinition" name="vlmc510sdatossalida_vlmc510d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/REQUEST_CDETCUEEFE_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetcueefe/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/REQUEST_CDETCUEEFE_SAB.mxsd#/0/msg_VLMC532EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC532EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/REQUEST_CDETCUEEFE_SAB.mxsd#/0/msg_VLMC532EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC532EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetcueefe/}VLMC532EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/REQUEST_CDETCUEEFE_SAB.mxsd#/0/VLMC532EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC532EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rsimoperep/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd#/0/msg_VLMC525SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC525SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd#/0/msg_VLMC525SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC525SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rsimoperep/}VLMC525SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd#/0/VLMC525SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC525SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd#/0/Vlmc525sdatossalida_vlmc525d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc525sdatossalida_vlmc525d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/RESPONSE_RSIMOPEREP_SAB.mxsd#/0/vlmc525sdatossalida_vlmc525d__datos__salida;XSDModelGroupDefinition" name="vlmc525sdatossalida_vlmc525d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cdetcueefe/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/msg_VLMC532SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC532SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/msg_VLMC532SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC532SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cdetcueefe/}S532VLMC532S"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/S532VLMC532S;XSDComplexTypeDefinition" name="S532VLMC532S"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/s532vlmc532s_s532__detalle__cuenta;XSDComplexTypeDefinition=1" name="s532vlmc532s_s532__detalle__cuenta"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/s532vlmc532s_s532__movimientos__cuenta;XSDComplexTypeDefinition=2" name="s532vlmc532s_s532__movimientos__cuenta"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/S532vlmc532s_vlmc532d__datos__salida;XSDComplexTypeDefinition=3" name="S532vlmc532s_vlmc532d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/s532vlmc532s_s532__detalle__cuenta;XSDModelGroupDefinition" name="s532vlmc532s_s532__detalle__cuenta"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/s532vlmc532s_s532__movimientos__cuenta;XSDModelGroupDefinition=1" name="s532vlmc532s_s532__movimientos__cuenta"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cdetcueefe/RESPONSE_CDETCUEEFE_SAB.mxsd#/0/s532vlmc532s_vlmc532d__datos__salida;XSDModelGroupDefinition=2" name="s532vlmc532s_vlmc532d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/REQUEST_CPROORD_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cproord/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/REQUEST_CPROORD_SAB.mxsd#/0/msg_VLMC526EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC526EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/REQUEST_CPROORD_SAB.mxsd#/0/msg_VLMC526EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC526EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cproord/}VLMC526EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cproord/REQUEST_CPROORD_SAB.mxsd#/0/VLMC526EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC526EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/REQUEST_RACTPOL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/ractpol/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/REQUEST_RACTPOL_SAB.mxsd#/0/msg_VLMC517EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC517EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/REQUEST_RACTPOL_SAB.mxsd#/0/msg_VLMC517EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC517EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/ractpol/}VLMC517EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/ractpol/REQUEST_RACTPOL_SAB.mxsd#/0/VLMC517EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC517EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/REQUEST_PORDVENVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/pordvenval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/REQUEST_PORDVENVAL_SAB.mxsd#/0/msg_VLMC508EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC508EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/REQUEST_PORDVENVAL_SAB.mxsd#/0/msg_VLMC508EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC508EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/pordvenval/}VLMC508EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordvenval/REQUEST_PORDVENVAL_SAB.mxsd#/0/VLMC508EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC508EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/REQUEST_CSALSTITVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/csalstitval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/REQUEST_CSALSTITVAL_SAB.mxsd#/0/msg_VLMC505EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC505EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/REQUEST_CSALSTITVAL_SAB.mxsd#/0/msg_VLMC505EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC505EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/csalstitval/}VLMC505EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/csalstitval/REQUEST_CSALSTITVAL_SAB.mxsd#/0/VLMC505EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC505EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/RESPONSE_RORDSEXT_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rordsext/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/RESPONSE_RORDSEXT_SAB.mxsd#/0/msg_VLMC512SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC512SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/RESPONSE_RORDSEXT_SAB.mxsd#/0/msg_VLMC512SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC512SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rordsext/}VLMC512SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rordsext/RESPONSE_RORDSEXT_SAB.mxsd#/0/VLMC512SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC512SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cordspens/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd#/0/msg_VLMC524SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC524SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd#/0/msg_VLMC524SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC524SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cordspens/}VLMC524SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd#/0/VLMC524SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC524SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd#/0/vlmc524sdatossalida_vlmc524d__datos__salida;XSDComplexTypeDefinition=1" name="vlmc524sdatossalida_vlmc524d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cordspens/RESPONSE_CORDSPENS_SAB.mxsd#/0/vlmc524sdatossalida_vlmc524d__datos__salida;XSDModelGroupDefinition" name="vlmc524sdatossalida_vlmc524d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/RESPONSE_ROPERENFIJVAR_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/roperenfijvar/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/RESPONSE_ROPERENFIJVAR_SAB.mxsd#/0/msg_VLMC509SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC509SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/RESPONSE_ROPERENFIJVAR_SAB.mxsd#/0/msg_VLMC509SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC509SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/roperenfijvar/}VLMC509SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/roperenfijvar/RESPONSE_ROPERENFIJVAR_SAB.mxsd#/0/VLMC509SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC509SDATOSSALIDA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/REQUEST_RVALUSU_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rvalusu">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/REQUEST_RVALUSU_SAB.mxsd#/0/msg_E500VLMC500E;XSDElementDeclaration$MRMessage" name="msg_E500VLMC500E"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/REQUEST_RVALUSU_SAB.mxsd#/0/msg_E500VLMC500E;XSDElementDeclaration" name="msg_E500VLMC500E" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rvalusu}E500VLMC500E"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rvalusu/REQUEST_RVALUSU_SAB.mxsd#/0/E500VLMC500E;XSDComplexTypeDefinition" name="E500VLMC500E"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/cpolsctaval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd#/0/msg_VLMC519SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC519SDATOSSALIDA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd#/0/msg_VLMC519SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC519SDATOSSALIDA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/cpolsctaval/}VLMC519SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd#/0/VLMC519SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC519SDATOSSALIDA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd#/0/Vlmc519sdatossalida_vlmc519d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc519sdatossalida_vlmc519d__datos__salida"/>
+    <group href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/cpolsctaval/RESPONSE_CPOLSCTAVAL_SAB.mxsd#/0/vlmc519sdatossalida_vlmc519d__datos__salida;XSDModelGroupDefinition" name="vlmc519sdatossalida_vlmc519d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/REQUEST_RSIMOPEREP_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/rsimoperep/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/REQUEST_RSIMOPEREP_SAB.mxsd#/0/msg_VLMC525EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC525EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/REQUEST_RSIMOPEREP_SAB.mxsd#/0/msg_VLMC525EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC525EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/rsimoperep/}VLMC525EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/rsimoperep/REQUEST_RSIMOPEREP_SAB.mxsd#/0/VLMC525EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC525EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/REQUEST_PORDCOMVAL_SAB.mxsd" prefix="tns" targetNamespace="http://sab.hi.bbva.com.pe/pordcomval/">
+    <message href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/REQUEST_PORDCOMVAL_SAB.mxsd#/0/msg_VLMC507EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC507EDATOSENTRADA"/>
+    <element href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/REQUEST_PORDCOMVAL_SAB.mxsd#/0/msg_VLMC507EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC507EDATOSENTRADA" type="mset://MS_SAB#/-/complexType{http://sab.hi.bbva.com.pe/pordcomval/}VLMC507EDATOSENTRADA"/>
+    <complexType baseType="mset://MS_SAB#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/MSP_SAB/MS_SAB/pe/com/bbva/hi/sab/pordcomval/REQUEST_PORDCOMVAL_SAB.mxsd#/0/VLMC507EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC507EDATOSENTRADA"/>
+  </MRMsgCollection>
+</MRMessageSet>

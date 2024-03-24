@@ -1,0 +1,5 @@
+
+
+Importing file: C:\Ginny\Workspace-bdk7\ContinentalSAB\MSP_SAB\copys\CORDCLISMV\VLMC501S-D.cpy
+
+BIP0223W The message set has no Custom Wire Format layer defined. Only the logical information will appear in the model.

@@ -1,0 +1,41 @@
+CREATE PROCEDURE CreateResponseToCclis(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+	
+--	    DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);		
+--		CREATE LASTCHILD OF refRoot DOMAIN GET_MESSAGE_DOMAIN_XMLNSC();
+--		DECLARE refDomain REFERENCE TO refRoot.XMLNSC;
+
+	DECLARE refIntegrationResp	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+		
+		DECLARE refEnvRoot REFERENCE TO refEnv.ROOT;
+		--		se adiciona la linea siguiente
+		DECLARE COUNTO INTEGER 1;
+		
+		DECLARE refDetalle REFERENCE TO  refEnvRoot.VLMC503D_DATOS_SALIDA;
+--		DECLARE refTmp REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA[1];
+		DECLARE refTmp REFERENCE TO  refIntegrationResp.listadoDetalle.detalle; 
+-- se comenta y se adiciona la linea siguiente	
+		WHILE LASTMOVE(refDetalle) DO
+					
+			IF (refDetalle.D502_ARQUITECTURA <> '' AND refDetalle.D503_CTAVALOR <> '' AND COUNTO<=30) THEN
+			CREATE LASTCHILD OF refIntegrationResp.listadoDetalle AS refTmp NAME 'detalle';  
+				SET refTmp.cliente   		    = COALESCE(refDetalle.D503_CLIENTE);
+				SET refTmp.rutbvl	   			    = COALESCE(refDetalle.D503_RUT_BVL);
+				SET refTmp.tipo_doc	   			= COALESCE(refDetalle.D503_TIPO_DOC);
+				SET refTmp.nume_doc	   			= COALESCE(refDetalle.D503_NUME_DOC);
+			END IF;
+			SET COUNTO= COUNTO+1;
+			MOVE refDetalle NEXTSIBLING;
+		END WHILE;
+		-- Establecer el valor de los campos de respuesta (response body JSON) en base al valor de los campos PS9 (response bosy HOST)
+		-- En esta operación no hay valores response
+		
+		SET refIntegrationResp.hay_mas     = COALESCE(refEnv.ROOT.S503_HAY_MAS    );
+		SET refIntegrationResp.sgte_cliente = COALESCE(refEnv.ROOT.S503_SGTE_CLIENTE);
+		SET refIntegrationResp.sgte_rut = COALESCE(refEnv.ROOT.S503_SGTE_RUT);
+		SET refIntegrationResp.cod_retorno   = COALESCE(refEnv.ROOT.S503_COD_RETORNO);
+		SET refIntegrationResp.cod_error_dev = COALESCE(refEnv.ROOT.S503_COD_ERROR_DEV);
+		SET refIntegrationResp.var1_error    = COALESCE(refEnv.ROOT.S503_VAR1_ERROR);
+		SET refIntegrationResp.var2_error    = COALESCE(refEnv.ROOT.S503_VAR2_ERROR);
+END;

@@ -1,0 +1,14 @@
+CREATE PROCEDURE setOutputConfigProperties (IN refOutputRoot 	REFERENCE, 
+											IN messageSet 		CHARACTER,
+											IN messageType		CHARACTER,
+											IN messageFormat	CHARACTER,
+											IN replyProtocol	CHARACTER,
+											IN contentType		CHARACTER)
+BEGIN
+		
+		SET refOutputRoot.Properties.MessageSet 	= getEMPTY_CHARACTER();--messageSet;
+		SET refOutputRoot.Properties.MessageType 	= getEMPTY_CHARACTER();--messageType;
+		SET refOutputRoot.Properties.MessageFormat 	= getEMPTY_CHARACTER();--messageFormat;
+		SET refOutputRoot.Properties.ReplyProtocol	= replyProtocol;
+		SET refOutputRoot.Properties.ContentType	= contentType;
+END;

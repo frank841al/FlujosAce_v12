@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0" overrideConfigurableProperties="true" includeESQL="false">
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1707340762305" workspaceResource="/APP_ACE_BOLSA_UTILITARIO/library.descriptor">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_ACE_BOLSA_UTILITARIO\library.descriptor.&#xA;Successfully added file APP_ACE_BOLSA_UTILITARIO\library.descriptor to BAR file.&#xA;Elapsed time: 0.001 second(s).&#xA;&#xA;Successfully added file APP_ACE_BOLSA_UTILITARIO\library.descriptor to BAR file.&#xA;" severity="0"/>
+      <barEntry name="library.descriptor"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1707938728226" workspaceResource="/APP_ACE_BOLSA_UTILITARIO/pe/com/bbva/ace/bolsa/UtilConstants.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilConstants.esql.&#xA;Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilConstants.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="pe\com\bbva\ace\bolsa\UtilConstants.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1707946687227" workspaceResource="/APP_ACE_BOLSA_UTILITARIO/pe/com/bbva/ace/bolsa/UtilFunction.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilFunction.esql.&#xA;Dependent ESQL file pe/com/bbva/ace/bolsa/UtilConstants.esql is added to the BAR file.&#xA;&#xA;Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilFunction.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="pe\com\bbva\ace\bolsa\UtilFunction.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1707753031242" workspaceResource="/APP_ACE_BOLSA_UTILITARIO/pe/com/bbva/ace/bolsa/UtilProcedure.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilProcedure.esql.&#xA;Dependent ESQL file pe/com/bbva/ace/bolsa/UtilFunction.esql is added to the BAR file.&#xA;&#xA;Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilProcedure.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="pe\com\bbva\ace\bolsa\UtilProcedure.esql"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>

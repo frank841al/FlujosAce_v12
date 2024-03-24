@@ -1,0 +1,343 @@
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente.msgflow.
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente.msgflow to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\application.descriptor.
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\application.descriptor.
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ConfHeader.esql.
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ConfHeader.esql to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql.
+Dependent ESQL file pe/com/bbva/ace/bolsa/UtilFunction.esql is added to the BAR file.
+
+Dependent ESQL file pe/com/bbva/ace/bolsa/ccliente/Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql is added to the BAR file.
+
+Dependent ESQL file pe/com/bbva/ace/bolsa/UtilProcedure.esql is added to the BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql.
+Dependent ESQL file pe/com/bbva/ace/bolsa/ccliente/Procedure.esql is added to the BAR file.
+
+Dependent ESQL file pe/com/bbva/ace/bolsa/UtilFunction.esql is added to the BAR file.
+
+Dependent ESQL file pe/com/bbva/ace/bolsa/UtilProcedure.esql is added to the BAR file.
+
+Dependent ESQL file pe/com/bbva/ace/bolsa/ccliente/Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql is added to the BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareResponse.esql.
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareResponse.esql to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Procedure.esql.
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Procedure.esql to BAR file.
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA_MS.
+Library file APP_ACE_BOLSA_MS.libzip successfully added to the BAR.
+Library compiled contents:
+    Generating .xsdzip file for message set "APP_ACE_BOLSA_MSMessageSet" 
+    
+    Generating schema for no XML Wire format
+    Generating schema using the lax option
+    
+    
+    Processing File : "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd"
+    
+    
+    
+    Processing File : "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd"
+    
+    Saving File : "/APP_ACE_BOLSA_MSMessageSet/.GeneratedSchemas/pe/com/bbva/ace/bolsa/ccli/VLMC502E.xsd" 
+    
+    Saving File : "/APP_ACE_BOLSA_MSMessageSet/.GeneratedSchemas/pe/com/bbva/ace/bolsa/ccli/VLMC502S.xsd" 
+    
+    Saving file "/APP_ACE_BOLSA_MSMessageSet/.KeywordsFile/meta-inf/keywords.txt" 
+    
+    Saving file "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/messageSet.mset" 
+    
+    
+    Elapsed time: 0.05 seconds
+    Warnings: 0
+    
+    
+    Operation complete
+    
+    
+    Generating .dictionary file for message set "APP_ACE_BOLSA_MSMessageSet" 
+    
+    BIP0183W This dictionary requires a Version 5 (or later) integration node.
+    Physical Format "CWF" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+    
+    BIP0183W This dictionary requires a Version 5 (or later) integration node.
+    Physical Format "XML1" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+    
+    Processing file "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/messageSet.mset" 
+    
+    BIP0177W This dictionary requires a Version 5 (or later) integration node.
+    This message set has namespace support enabled. Namespaces are not supported by integration nodes earlier than Version 5.
+    
+    "Broker will treat Length facet as MaxLength" is true. Length facets will be interpreted as maximum length only. This ensures that string fields which use padding characters will be processed correctly, but does not validate the message according to XML Schema rules. See the documentation for more details. 
+    
+    Processing file "APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd" 
+    
+    Processing file "APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd" 
+    
+    Generating dictionary logical model
+    Generating dictionary physical format "CWF"
+    Generating dictionary physical format "XML1"
+    
+    Elapsed time: 0.021 seconds
+    Warnings: 3
+    
+    
+    Operation complete
+    
+    
+    
+    
+    Processing file APP_ACE_BOLSA_MS\library.descriptor.
+    Successfully added file APP_ACE_BOLSA_MS\library.descriptor to BAR file.
+    Elapsed time: 0 second(s).
+    
+    Successfully added file APP_ACE_BOLSA_MS\library.descriptor to BAR file.
+    
+    Generating .xsdzip file for message set "APP_ACE_BOLSA_MSMessageSet" 
+    
+    Generating schema for no XML Wire format
+    Generating schema using the lax option
+    
+    
+    Processing File : "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd"
+    
+    
+    
+    Processing File : "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd"
+    
+    Saving File : "/APP_ACE_BOLSA_MSMessageSet/.GeneratedSchemas/pe/com/bbva/ace/bolsa/ccli/VLMC502E.xsd" 
+    
+    Saving File : "/APP_ACE_BOLSA_MSMessageSet/.GeneratedSchemas/pe/com/bbva/ace/bolsa/ccli/VLMC502S.xsd" 
+    
+    Saving file "/APP_ACE_BOLSA_MSMessageSet/.KeywordsFile/meta-inf/keywords.txt" 
+    
+    Saving file "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/messageSet.mset" 
+    
+    
+    Elapsed time: 0.05 seconds
+    Warnings: 0
+    
+    
+    Operation complete
+    
+    
+    Generating .dictionary file for message set "APP_ACE_BOLSA_MSMessageSet" 
+    
+    BIP0183W This dictionary requires a Version 5 (or later) integration node.
+    Physical Format "CWF" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+    
+    BIP0183W This dictionary requires a Version 5 (or later) integration node.
+    Physical Format "XML1" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+    
+    Processing file "/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/messageSet.mset" 
+    
+    BIP0177W This dictionary requires a Version 5 (or later) integration node.
+    This message set has namespace support enabled. Namespaces are not supported by integration nodes earlier than Version 5.
+    
+    "Broker will treat Length facet as MaxLength" is true. Length facets will be interpreted as maximum length only. This ensures that string fields which use padding characters will be processed correctly, but does not validate the message according to XML Schema rules. See the documentation for more details. 
+    
+    Processing file "APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd" 
+    
+    Processing file "APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd" 
+    
+    Generating dictionary logical model
+    Generating dictionary physical format "CWF"
+    Generating dictionary physical format "XML1"
+    
+    Elapsed time: 0.021 seconds
+    Warnings: 3
+    
+    
+    Operation complete
+    
+    
+    
+
+Elapsed time: 0.091 second(s).
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Processing file APP_ACE_BOLSA_UTILITARIO.
+Library file APP_ACE_BOLSA_UTILITARIO.libzip successfully added to the BAR.
+Library compiled contents:
+    
+    Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilConstants.esql.
+    Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilConstants.esql to BAR file.
+    
+    
+    Processing file APP_ACE_BOLSA_UTILITARIO\library.descriptor.
+    Successfully added file APP_ACE_BOLSA_UTILITARIO\library.descriptor to BAR file.
+    Elapsed time: 0.001 second(s).
+    
+    Successfully added file APP_ACE_BOLSA_UTILITARIO\library.descriptor to BAR file.
+    
+    
+    Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilFunction.esql.
+    Dependent ESQL file pe/com/bbva/ace/bolsa/UtilConstants.esql is added to the BAR file.
+    
+    Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilFunction.esql to BAR file.
+    
+    
+    Processing file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilProcedure.esql.
+    Dependent ESQL file pe/com/bbva/ace/bolsa/UtilFunction.esql is added to the BAR file.
+    
+    Successfully added file APP_ACE_BOLSA_UTILITARIO\pe\com\bbva\ace\bolsa\UtilProcedure.esql to BAR file.
+    
+
+Elapsed time: 0.002 second(s).
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+Generating .xsdzip file for message set "HI_MS_CONNECTOR_FRAME" 
+
+Generating schema for no XML Wire format
+Generating schema using the lax option
+
+
+Processing File : "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd"
+
+
+
+Processing File : "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd"
+
+
+
+Processing File : "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd"
+
+
+
+Processing File : "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd"
+
+
+
+Processing File : "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd"
+
+Saving File : "/HI_MS_CONNECTOR_FRAME/.GeneratedSchemas/CNWCE080.xsd" 
+
+Saving File : "/HI_MS_CONNECTOR_FRAME/.GeneratedSchemas/IntegrationFrame.xsd" 
+
+Saving File : "/HI_MS_CONNECTOR_FRAME/.GeneratedSchemas/RouteFrame.xsd" 
+
+Saving File : "/HI_MS_CONNECTOR_FRAME/.GeneratedSchemas/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.xsd" 
+
+Saving File : "/HI_MS_CONNECTOR_FRAME/.GeneratedSchemas/pe/com/bbva/hi/connector/ps9/PS9_REQ.xsd" 
+
+Saving file "/HI_MS_CONNECTOR_FRAME/.KeywordsFile/meta-inf/keywords.txt" 
+
+Saving file "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/messageSet.mset" 
+
+
+Elapsed time: 0.05 seconds
+Warnings: 0
+
+
+Operation complete
+
+
+Generating .dictionary file for message set "HI_MS_CONNECTOR_FRAME" 
+
+BIP0183W This dictionary requires a Version 5 (or later) integration node.
+Physical Format "XML1" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+
+BIP0183W This dictionary requires a Version 5 (or later) integration node.
+Physical Format "Text1" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+
+BIP0183W This dictionary requires a Version 5 (or later) integration node.
+Physical Format "CWF" uses Strict Datetime Checking. This option is not supported by integration nodes earlier than Version 5.
+
+Processing file "/HI_MS_CONNECTOR_FRAME/HI_MS_CONNECTOR_FRAME/messageSet.mset" 
+
+BIP0177W This dictionary requires a Version 5 (or later) integration node.
+This message set has namespace support enabled. Namespaces are not supported by integration nodes earlier than Version 5.
+
+"Broker will treat Length facet as MaxLength" is true. Length facets will be interpreted as maximum length only. This ensures that string fields which use padding characters will be processed correctly, but does not validate the message according to XML Schema rules. See the documentation for more details. 
+
+Processing file "HI_MS_CONNECTOR_FRAME/CNWCE080.mxsd" 
+
+Processing file "HI_MS_CONNECTOR_FRAME/IntegrationFrame.mxsd" 
+
+Processing file "HI_MS_CONNECTOR_FRAME/RouteFrame.mxsd" 
+
+Processing file "HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_CamposBD.mxsd" 
+
+Processing file "HI_MS_CONNECTOR_FRAME/pe/com/bbva/hi/connector/ps9/PS9_REQ.mxsd" 
+
+BIP0264W This dictionary requires a version 6.1 (or above) integration node.
+TDS Format "Text1" has the "Length units" property set to "Bytes" for a Physcial Type of "Text". This value is not supported by integration nodes earlier than version 6.1. The path to the object which uses the "Length units" is "/tME/LONGITUD_MENSAJE".             
+
+BIP0265W This dictionary requires a version 6.1 (or above) integration node.
+TDS Format "Text1" has the "Sign Orientation" property set to "Leading Overpunched" or "Trailing Overpunched". These values are not supported by integration nodes earlier than version 6.1. The path to the object which uses the "Sign Orientation" is "/tME/LONGITUD_MENSAJE".                     
+
+BIP0266W This dictionary requires a version 6.1 (or above) integration node.
+TDS Format "Text1" has the "Physical Type" property set to a value other than "Text" or "TLOG Specific". These values are not supported by integration nodes earlier than version 6.1. The path to the object which uses the "Physical Type" is "/tME/LONGITUD_MENSAJE".  
+
+Generating dictionary logical model
+Generating dictionary physical format "XML1"
+Generating dictionary physical format "Text1"
+Generating dictionary physical format "CWF"
+
+Elapsed time: 0.049 seconds
+Warnings: 7
+
+
+Operation complete
+
+

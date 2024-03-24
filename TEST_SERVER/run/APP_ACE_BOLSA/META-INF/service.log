@@ -1,0 +1,2071 @@
+
+==============================================
+
+!Thu Feb 15 11:45:43 COT 2024
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente.msgflow to BAR file.
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+Successfully added file APP_ACE_BOLSA\application.descriptor to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ConfHeader.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_ObtenerParametros.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareRequest.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Flow_Bolsa_RestHost_ccliente_PrepareResponse.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA\pe\com\bbva\ace\bolsa\ccliente\Procedure.esql to BAR file.
+
+Successfully added file APP_ACE_BOLSA_MS to BAR file.
+
+Successfully added file APP_ACE_BOLSA_UTILITARIO to BAR file.
+LogicalFormat2
+==============
+
+Identification (1000)
+--------------
+
+100001 : Message Set Identifier
+100002 : Message Set Name
+100003 : Message Set Level
+100004 : Model Version (Major)
+100005 : Model Version (Minor)
+100006 : Timestamp
+100007 : Dictionary Type
+100008 : Format Level
+100009 : Compatibility Level
+100010 : Dependency Table
+100022 : Message Set Alias
+
+  100001        100002                100003 100004 100005 100006 100007 100008 100009 100010        100022 
+0 HM370SO002001 HI_MS_CONNECTOR_FRAME 1      2      0             1      610    610    HM370SO002001        
+
+MessageSet (1)
+----------
+
+105 : Default Wire Format Identifier
+106 : Message Type Prefix
+107 : Use Namespaces
+
+  105 106 107 
+0         1   
+
+Tag (2)
+---
+
+201 : Tag Identifier
+202 : Tag Text Identifier
+203 : Type Identifier
+204 : Class
+205 : Min Length
+206 : Max Length
+207 : Nullable
+208 : Value Set Index
+209 : Default Value Index
+211 : Type Index
+212 : Namespace Index
+213 : Block
+214 : isAttribute
+215 : Interpret Value As
+
+   201 202                       203 204 205 206 207 208 209 211 212 213 214 215 
+0  50  DE80CNWCE080              51  M   0   -1  0   -1  -1  46  0   0   0   0   
+1  53  53^DE80_CRUBRO            75  F   0   2   0   84  -1  47  0   0   0   0   
+2  55  55^DE80_CEMPRESA          76  F   0   3   0   86  -1  48  0   0   0   0   
+3  57  57^DE80_CESTABLEC         77  F   0   3   0   88  -1  49  0   0   0   0   
+4  59  59^DE80_CTERMINAL         78  F   0   2   0   90  -1  50  0   0   0   0   
+5  61  61^DE80_CUSUARIO          79  F   0   2   0   92  -1  51  0   0   0   0   
+6  63  63^DE80_NROIP             80  F   0   15  0   94  -1  52  0   0   0   0   
+7  65  65^DE80_SESWAS            81  F   0   20  0   96  -1  53  0   0   0   0   
+8  67  67^DE80_NSESION           82  F   0   7   0   98  -1  54  0   0   0   0   
+9  69  69^DE80_NCICLO            83  F   0   7   0   100 -1  55  0   0   0   0   
+10 71  71^DE80_NRO_TARJETA       84  F   0   16  0   102 -1  56  0   0   0   0   
+11 73  73^DE80_PINBLOCK          85  F   0   16  0   104 -1  57  0   0   0   0   
+12 74  DE80CNWCE080              51  S   0   -1  0   -1  -1  46  0   0   0   0   
+13 86  IntegrationFrameRequest   87  M   0   -1  0   -1  -1  58  0   0   0   0   
+14 89  89^CabeceraRequest        90  S   0   -1  0   -1  -1  59  0   0   0   0   
+15 92  92^idProtocolo            5   F   0   -1  0   -1  -1  4   0   0   0   0   
+16 94  94^canal                  5   F   0   -1  0   -1  -1  4   0   0   0   0   
+17 96  96^codigoAplicacion       5   F   0   -1  0   -1  -1  4   0   0   0   0   
+18 98  98^idEmpresa              5   F   0   -1  0   -1  -1  4   0   0   0   0   
+19 100 100^longMensajeEntrada    5   F   0   -1  0   -1  -1  4   0   0   0   0   
+20 102 102^longMensajeSalida     5   F   0   -1  0   -1  -1  4   0   0   0   0   
+21 104 104^timeout               5   F   0   -1  0   -1  -1  4   0   0   0   0   
+22 106 106^usuario               5   F   0   -1  0   -1  -1  4   0   0   0   0   
+23 108 108^codigoTransaccion     5   F   0   -1  0   -1  -1  4   0   0   0   0   
+24 110 110^longitudTrama         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+25 112 112^tipoMensaje           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+26 114 114^fechaHora             5   F   0   -1  0   -1  -1  4   0   0   0   0   
+27 116 116^idTransaccion         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+28 118 118^masDatos              5   F   0   -1  0   -1  -1  4   0   0   0   0   
+29 120 120^TramaVariableRequest  121 S   0   -1  0   -1  -1  60  0   0   0   0   
+30 123 123^mensaje               5   F   0   -1  0   -1  -1  4   0   0   0   0   
+31 124 IntegrationFrameResponse  125 M   0   -1  0   -1  -1  61  0   0   0   0   
+32 127 127^CabeceraResponse      128 S   0   -1  0   -1  -1  62  0   0   0   0   
+33 130 130^idTransaccion         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+34 132 132^codigoRespuesta       5   F   0   -1  0   -1  -1  4   0   0   0   0   
+35 134 134^mensajeRespuesta      5   F   0   -1  0   -1  -1  4   0   0   0   0   
+36 136 136^TramaVariableResponse 121 S   0   -1  0   -1  -1  60  0   0   0   0   
+37 137 IntegrationFrameRequest   87  S   0   -1  0   -1  -1  58  0   0   0   0   
+38 138 IntegrationFrameResponse  125 S   0   -1  0   -1  -1  61  0   0   0   0   
+39 139 RouteFrame                140 M   0   -1  0   -1  -1  63  0   0   0   0   
+40 142 142^cabecera              5   F   0   -1  0   -1  -1  4   0   0   0   0   
+41 144 144^codigoOperacion       5   F   0   -1  0   -1  -1  4   0   0   0   0   
+42 146 146^tramaVariable         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+43 147 RouteFrame                140 S   0   -1  0   -1  -1  63  0   0   0   0   
+44 148 PS9BD                     149 M   0   -1  0   -1  -1  64  2   0   0   0   
+45 151 151^ConfigTX              152 S   0   -1  0   -1  -1  65  0   0   0   0   
+46 154 154^distQNameIN           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+47 156 156^distQNameOUT          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+48 158 158^hostQMName            5   F   0   -1  0   -1  -1  4   0   0   0   0   
+49 160 160^hostQNameOUT          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+50 162 162^CCSID                 5   F   0   -1  0   -1  -1  4   0   0   0   0   
+51 164 164^timeExpMsjTx          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+52 166 166^persistenciaMsj       5   F   0   -1  0   -1  -1  4   0   0   0   0   
+53 168 168^IH                    169 S   0   -1  0   -1  -1  66  0   0   0   0   
+54 171 171^idProtocolo           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+55 173 173^terminalInicial       5   F   0   -1  0   -1  -1  4   0   0   0   0   
+56 175 175^terminalFinal         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+57 177 177^usuario               5   F   0   -1  0   -1  -1  4   0   0   0   0   
+58 179 179^numSecuencia          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+59 181 181^codTX                 5   F   0   -1  0   -1  -1  4   0   0   0   0   
+60 183 183^opcApp                5   F   0   -1  0   -1  -1  4   0   0   0   0   
+61 185 185^indCommit             5   F   0   -1  0   -1  -1  4   0   0   0   0   
+62 187 187^tipoMensaje           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+63 189 189^tipoProceso           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+64 191 191^canalComunicacion     5   F   0   -1  0   -1  -1  4   0   0   0   0   
+65 193 193^indPreformato         5   F   0   -1  0   -1  -1  4   0   0   0   0   
+66 195 195^lenguaje              5   F   0   -1  0   -1  -1  4   0   0   0   0   
+67 197 197^ME                    198 S   0   -1  0   -1  -1  67  0   0   0   0   
+68 200 200^tipoMensaje           5   F   0   -1  0   -1  -1  4   0   0   0   0   
+69 201 PS9BD                     149 S   0   -1  0   -1  -1  64  2   0   0   0   
+70 202 mPS9MsgIN                 203 M   0   -1  0   -1  -1  68  2   0   0   0   
+71 205 205^PS9MsgIN              206 S   0   -1  0   -1  -1  69  0   0   0   0   
+72 208 208^ESPACIO_FIJO          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+73 210 210^IH                    211 S   0   -1  0   -1  -1  70  0   0   0   0   
+74 213 213^ID_PROTOCOLO          250 F   0   2   0   106 -1  72  0   0   0   0   
+75 215 215^TERMINAL_LOGICO       251 F   0   8   0   108 -1  73  0   0   0   0   
+76 217 217^TERMINAL_CONTABLE     252 F   0   8   0   110 -1  74  0   0   0   0   
+77 219 219^USUARIO               253 F   0   8   0   112 -1  75  0   0   0   0   
+78 221 221^NUMERO_SECUENCIA      254 F   0   8   0   114 -1  76  0   0   0   0   
+79 223 223^TRANS_CODE_HOST       255 F   0   8   0   116 -1  77  0   0   0   0   
+80 225 225^OPCION_APLICACION     256 F   0   2   0   118 -1  78  0   0   0   0   
+81 227 227^LONGITUD_TRAMA        257 F   0   5   0   120 -1  79  0   0   0   0   
+82 229 229^INDICADOR_COMMIT      258 F   0   1   0   122 -1  80  0   0   0   0   
+83 231 231^TIPO_MENSAJE_IN       259 F   0   1   0   124 -1  81  0   0   0   0   
+84 233 233^TIPO_PROCESO          260 F   0   1   0   126 -1  82  0   0   0   0   
+85 235 235^CANAL_COMUNICACION    261 F   0   2   0   128 -1  83  0   0   0   0   
+86 237 237^IND_PRE_FORMATO       262 F   0   1   0   130 -1  84  0   0   0   0   
+87 239 239^LENGUAJE              263 F   0   1   0   132 -1  85  0   0   0   0   
+88 241 241^ME                    242 S   0   -1  0   -1  -1  71  0   0   0   0   
+89 244 244^LONGITUD_MENSAJE      40  F   0   -1  0   58  -1  37  0   0   0   0   
+90 246 246^TIPO_MENSAJE          5   F   0   -1  0   -1  -1  4   0   0   0   0   
+91 248 248^MENSAJE               5   F   0   -1  0   -1  -1  4   0   0   0   0   
+92 249 mPS9MsgIN                 203 S   0   -1  0   -1  -1  68  2   0   0   0   
+
+Type Member (4)
+-----------
+
+401 : Parent Type Identifier
+402 : Child Tag Identifier
+403 : Child Type Identifier
+404 : Child Class
+405 : Child Physical Name
+406 : Sequence Number
+407 : Min Occurs
+409 : Child Repeat Indicator
+410 : Member Identifier
+411 : Max Occurs
+412 : Child Tag Index
+413 : Child Type Index
+
+   401 402 403 404 405 406 407 409 410 411 412 413 
+0  51  53  75  F       1   1   0   52  1   1   47  
+1  51  55  76  F       2   1   0   54  1   2   48  
+2  51  57  77  F       3   1   0   56  1   3   49  
+3  51  59  78  F       4   1   0   58  1   4   50  
+4  51  61  79  F       5   1   0   60  1   5   51  
+5  51  63  80  F       6   1   0   62  1   6   52  
+6  51  65  81  F       7   1   0   64  1   7   53  
+7  51  67  82  F       8   1   0   66  1   8   54  
+8  51  69  83  F       9   1   0   68  1   9   55  
+9  51  71  84  F       10  1   0   70  1   10  56  
+10 51  73  85  F       11  1   0   72  1   11  57  
+11 87  89  90  S       1   1   0   88  1   14  59  
+12 87  120 121 S       2   1   0   119 1   29  60  
+13 90  92  5   F       1   1   0   91  1   15  4   
+14 90  94  5   F       2   1   0   93  1   16  4   
+15 90  96  5   F       3   1   0   95  1   17  4   
+16 90  98  5   F       4   1   0   97  1   18  4   
+17 90  100 5   F       5   1   0   99  1   19  4   
+18 90  102 5   F       6   1   0   101 1   20  4   
+19 90  104 5   F       7   1   0   103 1   21  4   
+20 90  106 5   F       8   1   0   105 1   22  4   
+21 90  108 5   F       9   1   0   107 1   23  4   
+22 90  110 5   F       10  1   0   109 1   24  4   
+23 90  112 5   F       11  1   0   111 1   25  4   
+24 90  114 5   F       12  1   0   113 1   26  4   
+25 90  116 5   F       13  1   0   115 1   27  4   
+26 90  118 5   F       14  1   0   117 1   28  4   
+27 121 123 5   F       1   1   0   122 1   30  4   
+28 125 127 128 S       1   1   0   126 1   32  62  
+29 125 136 121 S       2   1   0   135 1   36  60  
+30 128 130 5   F       1   1   0   129 1   33  4   
+31 128 132 5   F       2   1   0   131 1   34  4   
+32 128 134 5   F       3   1   0   133 1   35  4   
+33 140 142 5   F       1   1   0   141 1   40  4   
+34 140 144 5   F       2   1   0   143 1   41  4   
+35 140 146 5   F       3   1   0   145 1   42  4   
+36 149 151 152 S       1   1   0   150 1   45  65  
+37 149 168 169 S       2   1   0   167 1   53  66  
+38 149 197 198 S       3   1   0   196 1   67  67  
+39 152 154 5   F       1   1   0   153 1   46  4   
+40 152 156 5   F       2   1   0   155 1   47  4   
+41 152 158 5   F       3   1   0   157 1   48  4   
+42 152 160 5   F       4   1   0   159 1   49  4   
+43 152 162 5   F       5   1   0   161 1   50  4   
+44 152 164 5   F       6   1   0   163 1   51  4   
+45 152 166 5   F       7   1   0   165 1   52  4   
+46 169 171 5   F       1   1   0   170 1   54  4   
+47 169 173 5   F       2   1   0   172 1   55  4   
+48 169 175 5   F       3   1   0   174 1   56  4   
+49 169 177 5   F       4   1   0   176 1   57  4   
+50 169 179 5   F       5   1   0   178 1   58  4   
+51 169 181 5   F       6   1   0   180 1   59  4   
+52 169 183 5   F       7   1   0   182 1   60  4   
+53 169 185 5   F       8   1   0   184 1   61  4   
+54 169 187 5   F       9   1   0   186 1   62  4   
+55 169 189 5   F       10  1   0   188 1   63  4   
+56 169 191 5   F       11  1   0   190 1   64  4   
+57 169 193 5   F       12  1   0   192 1   65  4   
+58 169 195 5   F       13  1   0   194 1   66  4   
+59 198 200 5   F       1   1   0   199 1   68  4   
+60 203 205 206 S       1   1   0   204 1   71  69  
+61 206 208 5   F       1   1   0   207 1   72  4   
+62 206 210 211 S       2   1   0   209 1   73  70  
+63 206 241 242 S       3   1   0   240 1   88  71  
+64 211 213 250 F       1   1   0   212 1   74  72  
+65 211 215 251 F       2   1   0   214 1   75  73  
+66 211 217 252 F       3   1   0   216 1   76  74  
+67 211 219 253 F       4   1   0   218 1   77  75  
+68 211 221 254 F       5   1   0   220 1   78  76  
+69 211 223 255 F       6   1   0   222 1   79  77  
+70 211 225 256 F       7   1   0   224 1   80  78  
+71 211 227 257 F       8   1   0   226 1   81  79  
+72 211 229 258 F       9   1   0   228 1   82  80  
+73 211 231 259 F       10  1   0   230 1   83  81  
+74 211 233 260 F       11  1   0   232 1   84  82  
+75 211 235 261 F       12  1   0   234 1   85  83  
+76 211 237 262 F       13  1   0   236 1   86  84  
+77 211 239 263 F       14  1   0   238 1   87  85  
+78 242 244 40  F       1   1   0   243 1   89  37  
+79 242 246 5   F       2   1   0   245 1   90  4   
+80 242 248 5   F       3   1   0   247 1   91  4   
+
+Member Id to Type Member index (20)
+------------------------------
+
+Row count: 81
+
+2001 : Member Identifier
+2002 : Type Member Index
+
+   2001 2002 
+0  52   0    
+1  54   1    
+2  56   2    
+3  58   3    
+4  60   4    
+5  62   5    
+6  64   6    
+7  66   7    
+8  68   8    
+9  70   9    
+10 72   10   
+11 88   11   
+12 91   13   
+13 93   14   
+14 95   15   
+15 97   16   
+16 99   17   
+17 101  18   
+18 103  19   
+19 105  20   
+20 107  21   
+21 109  22   
+22 111  23   
+23 113  24   
+24 115  25   
+25 117  26   
+26 119  12   
+27 122  27   
+28 126  28   
+29 129  30   
+30 131  31   
+31 133  32   
+32 135  29   
+33 141  33   
+34 143  34   
+35 145  35   
+36 150  36   
+37 153  39   
+38 155  40   
+39 157  41   
+40 159  42   
+41 161  43   
+42 163  44   
+43 165  45   
+44 167  37   
+45 170  46   
+46 172  47   
+47 174  48   
+48 176  49   
+49 178  50   
+50 180  51   
+51 182  52   
+52 184  53   
+53 186  54   
+54 188  55   
+55 190  56   
+56 192  57   
+57 194  58   
+58 196  38   
+59 199  59   
+60 204  60   
+61 207  61   
+62 209  62   
+63 212  64   
+64 214  65   
+65 216  66   
+66 218  67   
+67 220  68   
+68 222  69   
+69 224  70   
+70 226  71   
+71 228  72   
+72 230  73   
+73 232  74   
+74 234  75   
+75 236  76   
+76 238  77   
+77 240  63   
+78 243  78   
+79 245  79   
+80 247  80   
+
+Type (21)
+----
+
+Row count: 86
+
+2101 : Type Identifier
+2102 : Type Text Identifier
+2103 : Type Composition
+2104 : Type Content
+2105 : Base Type Identifier
+2106 : Logical Type
+2107 : Type Member Index
+2108 : Namespace Index
+2109 : Parent Type Index
+2110 : Block
+2111 : Abstract
+2112 : Derivation Style
+2113 : Value Set Index
+2114 : Item Type Index
+2115 : Type Class
+
+   2101 2102                  2103 2104 2105 2106 2107 2108 2109 2110 2111 2112 2113 2114 2115 
+0  1    anyType               6    3    0    0    -1   1    -1   3    0    1    -1   -1   4    
+1  2    date                  0    0    0    15   -1   1    2    0    0    4    0    -1   1    
+2  3    anySimpleType         0    0    0    2    -1   1    -1   0    0    4    -1   -1   1    
+3  4    dateTime              0    0    0    15   -1   1    2    0    0    4    -1   -1   1    
+4  5    string                0    0    0    2    -1   1    2    0    0    4    -1   -1   1    
+5  6    language              0    0    0    2    -1   1    6    0    0    4    2    -1   1    
+6  7    token                 0    0    0    2    -1   1    11   0    0    4    -1   -1   1    
+7  8    nonNegativeInteger    0    0    0    16   -1   1    8    0    0    4    4    -1   1    
+8  9    integer               0    0    0    16   -1   1    9    0    0    4    7    -1   1    
+9  10   decimal               0    0    0    16   -1   1    2    0    0    4    -1   -1   1    
+10 11   float                 0    0    0    6    -1   1    2    0    0    4    -1   -1   1    
+11 12   normalizedString      0    0    0    2    -1   1    4    0    0    4    -1   -1   1    
+12 13   long                  0    0    0    4    -1   1    8    0    0    4    9    -1   1    
+13 14   Name                  0    0    0    2    -1   1    6    0    0    4    13   -1   1    
+14 15   NCName                0    0    0    2    -1   1    13   0    0    4    15   -1   1    
+15 16   duration              0    0    0    14   -1   1    2    0    0    4    -1   -1   1    
+16 17   gYear                 0    0    0    15   -1   1    2    0    0    4    18   -1   1    
+17 18   ENTITY                0    0    0    2    -1   1    14   0    0    4    20   -1   1    
+18 19   hexBinary             0    0    0    10   -1   1    2    0    0    4    -1   -1   1    
+19 20   negativeInteger       0    0    0    16   -1   1    20   0    0    4    23   -1   1    
+20 21   nonPositiveInteger    0    0    0    16   -1   1    8    0    0    4    62   -1   1    
+21 22   unsignedByte          0    0    0    4    -1   1    22   0    0    4    26   -1   1    
+22 23   unsignedShort         0    0    0    4    -1   1    29   0    0    4    46   -1   1    
+23 24   gDay                  0    0    0    15   -1   1    2    0    0    4    30   -1   1    
+24 25   ENTITIES              0    0    0    0    -1   1    -1   0    0    5    32   17   1    
+25 27   ID                    0    0    0    2    -1   1    14   0    0    4    34   -1   1    
+26 28   unsignedLong          0    0    0    16   -1   1    7    0    0    4    37   -1   1    
+27 29   IDREF                 0    0    0    2    -1   1    14   0    0    4    41   -1   1    
+28 30   gMonthDay             0    0    0    15   -1   1    2    0    0    4    44   -1   1    
+29 31   unsignedInt           0    0    0    4    -1   1    26   0    0    4    72   -1   1    
+30 32   byte                  0    0    0    4    -1   1    31   0    0    4    50   -1   1    
+31 33   short                 0    0    0    4    -1   1    37   0    0    4    76   -1   1    
+32 34   double                0    0    0    6    -1   1    2    0    0    4    -1   -1   1    
+33 35   QName                 0    0    0    2    -1   1    2    0    0    4    -1   -1   1    
+34 36   anyURI                0    0    0    2    -1   1    2    0    0    4    -1   -1   1    
+35 37   gMonth                0    0    0    15   -1   1    2    0    0    4    54   -1   1    
+36 38   IDREFS                0    0    0    0    -1   1    -1   0    0    5    56   27   1    
+37 40   int                   0    0    0    4    -1   1    12   0    0    4    58   -1   1    
+38 41   boolean               0    0    0    12   -1   1    2    0    0    4    -1   -1   1    
+39 42   base64Binary          0    0    0    10   -1   1    2    0    0    4    -1   -1   1    
+40 43   NMTOKEN               0    0    0    2    -1   1    6    0    0    4    65   -1   1    
+41 44   NMTOKENS              0    0    0    0    -1   1    -1   0    0    5    67   40   1    
+42 46   positiveInteger       0    0    0    16   -1   1    7    0    0    4    69   -1   1    
+43 47   NOTATION              0    0    0    2    -1   1    2    0    0    4    -1   -1   1    
+44 48   time                  0    0    0    15   -1   1    2    0    0    4    80   -1   1    
+45 49   gYearMonth            0    0    0    15   -1   1    2    0    0    4    82   -1   1    
+46 51   DE80CNWCE080          6    1    0    0    0    0    0    0    0    1    -1   -1   4    
+47 75                         0    0    0    2    -1   0    4    0    0    4    84   -1   1    
+48 76                         0    0    0    2    -1   0    4    0    0    4    86   -1   1    
+49 77                         0    0    0    2    -1   0    4    0    0    4    88   -1   1    
+50 78                         0    0    0    2    -1   0    4    0    0    4    90   -1   1    
+51 79                         0    0    0    2    -1   0    4    0    0    4    92   -1   1    
+52 80                         0    0    0    2    -1   0    4    0    0    4    94   -1   1    
+53 81                         0    0    0    2    -1   0    4    0    0    4    96   -1   1    
+54 82                         0    0    0    2    -1   0    4    0    0    4    98   -1   1    
+55 83                         0    0    0    2    -1   0    4    0    0    4    100  -1   1    
+56 84                         0    0    0    2    -1   0    4    0    0    4    102  -1   1    
+57 85                         0    0    0    2    -1   0    4    0    0    4    104  -1   1    
+58 87   IntegrationFrame_Type 6    1    0    0    11   0    0    0    0    1    -1   -1   4    
+59 90   CabeceraRequest_Type  6    1    0    0    13   0    0    0    0    1    -1   -1   4    
+60 121  TramaVariable_Type    6    1    0    0    27   0    0    0    0    1    -1   -1   4    
+61 125  complexType           6    1    0    0    28   0    0    0    0    1    -1   -1   4    
+62 128  CabeceraResponse_Type 6    1    0    0    30   0    0    0    0    1    -1   -1   4    
+63 140  RotuteFrame_Type      6    1    0    0    33   0    0    0    0    1    -1   -1   4    
+64 149  tPS9BD                6    1    0    0    36   2    0    0    0    1    -1   -1   4    
+65 152  tConfigTX             6    1    0    0    39   2    0    0    0    1    -1   -1   4    
+66 169  tIHBD                 6    1    0    0    46   2    0    0    0    1    -1   -1   4    
+67 198  tMEBD                 6    1    0    0    59   2    0    0    0    1    -1   -1   4    
+68 203  tPS9MsgIN             6    1    0    0    60   2    0    0    0    1    -1   -1   4    
+69 206  tPS9REQ               6    1    0    0    61   2    0    0    0    1    -1   -1   4    
+70 211  tIH                   6    1    0    0    64   2    0    0    0    1    -1   -1   4    
+71 242  tME                   6    1    0    0    78   2    0    0    0    1    -1   -1   4    
+72 250                        0    0    0    2    -1   2    4    0    0    4    106  -1   1    
+73 251                        0    0    0    2    -1   2    4    0    0    4    108  -1   1    
+74 252                        0    0    0    2    -1   2    4    0    0    4    110  -1   1    
+75 253                        0    0    0    2    -1   2    4    0    0    4    112  -1   1    
+76 254                        0    0    0    2    -1   2    4    0    0    4    114  -1   1    
+77 255                        0    0    0    2    -1   2    4    0    0    4    116  -1   1    
+78 256                        0    0    0    2    -1   2    4    0    0    4    118  -1   1    
+79 257                        0    0    0    2    -1   2    4    0    0    4    120  -1   1    
+80 258                        0    0    0    2    -1   2    4    0    0    4    122  -1   1    
+81 259                        0    0    0    2    -1   2    4    0    0    4    124  -1   1    
+82 260                        0    0    0    2    -1   2    4    0    0    4    126  -1   1    
+83 261                        0    0    0    2    -1   2    4    0    0    4    128  -1   1    
+84 262                        0    0    0    2    -1   2    4    0    0    4    130  -1   1    
+85 263                        0    0    0    2    -1   2    4    0    0    4    132  -1   1    
+
+Value Set Table (24)
+---------------
+
+2000 : Row Count
+2401 : Value Index
+2402 : Role
+
+    2000 2401 2402 
+0   134  25   9    
+1        -1   0    
+2        1    10   
+3        -1   0    
+4        8    8    
+5        33   1    
+6        -1   0    
+7        8    8    
+8        -1   0    
+9        8    8    
+10       31   2    
+11       4    1    
+12       -1   0    
+13       3    10   
+14       -1   0    
+15       0    10   
+16       3    10   
+17       -1   0    
+18       23   9    
+19       -1   0    
+20       0    10   
+21       3    10   
+22       -1   0    
+23       8    8    
+24       32   2    
+25       -1   0    
+26       8    8    
+27       26   2    
+28       8    1    
+29       -1   0    
+30       19   9    
+31       -1   0    
+32       9    3    
+33       -1   0    
+34       0    10   
+35       3    10   
+36       -1   0    
+37       8    8    
+38       35   2    
+39       33   1    
+40       -1   0    
+41       0    10   
+42       3    10   
+43       -1   0    
+44       21   9    
+45       -1   0    
+46       8    8    
+47       28   2    
+48       8    1    
+49       -1   0    
+50       8    8    
+51       22   2    
+52       7    1    
+53       -1   0    
+54       20   9    
+55       -1   0    
+56       9    3    
+57       -1   0    
+58       8    8    
+59       29   2    
+60       5    1    
+61       -1   0    
+62       8    8    
+63       33   2    
+64       -1   0    
+65       2    10   
+66       -1   0    
+67       9    3    
+68       -1   0    
+69       8    8    
+70       34   1    
+71       -1   0    
+72       8    8    
+73       30   2    
+74       8    1    
+75       -1   0    
+76       8    8    
+77       27   2    
+78       6    1    
+79       -1   0    
+80       18   9    
+81       -1   0    
+82       24   9    
+83       -1   0    
+84       10   4    
+85       -1   0    
+86       11   4    
+87       -1   0    
+88       11   4    
+89       -1   0    
+90       10   4    
+91       -1   0    
+92       10   4    
+93       -1   0    
+94       15   4    
+95       -1   0    
+96       17   4    
+97       -1   0    
+98       13   4    
+99       -1   0    
+100      13   4    
+101      -1   0    
+102      16   4    
+103      -1   0    
+104      16   4    
+105      -1   0    
+106      10   4    
+107      -1   0    
+108      14   4    
+109      -1   0    
+110      14   4    
+111      -1   0    
+112      14   4    
+113      -1   0    
+114      14   4    
+115      -1   0    
+116      14   4    
+117      -1   0    
+118      10   4    
+119      -1   0    
+120      12   4    
+121      -1   0    
+122      9    4    
+123      -1   0    
+124      9    4    
+125      -1   0    
+126      9    4    
+127      -1   0    
+128      10   4    
+129      -1   0    
+130      9    4    
+131      -1   0    
+132      9    4    
+133      -1   0    
+
+Values (25)
+------
+
+2000 : Row Count
+2501 : String Value
+2502 : Integer Value
+2507 : Decimal Value
+
+   2000 2501                              2502                 2507                 
+0  36   [\i-[:]][\c-[:]]*                 -9223372036854775808 -1                   
+1       [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* -2147483648          0                    
+2       \c+                               -32768               1                    
+3       \i\c*                             -128                 18446744073709551615 
+4                                         0                                         
+5                                         1                                         
+6                                         2                                         
+7                                         3                                         
+8                                         5                                         
+9                                         7                                         
+10                                        8                                         
+11                                        15                                        
+12                                        16                                        
+13                                        20                                        
+14                                        31                                        
+15                                        32                                        
+16                                        64                                        
+17                                        96                                        
+18                                        127                                       
+19                                        128                                       
+20                                        192                                       
+21                                        224                                       
+22                                        255                                       
+23                                        32767                                     
+24                                        65535                                     
+25                                        2147483647                                
+26                                        4294967295                                
+27                                        9223372036854775807                       
+
+Namespace (26)
+---------
+
+2000 : Row Count
+2601 : Namespace URI
+
+  2000 2601                             
+0 3                                     
+1      http://www.w3.org/2001/XMLSchema 
+2      ps9.connector.hi.bbva.com.pe     
+
+Message (27)
+-------
+
+Row count: 6
+
+2701 : Tag Identifier
+2702 : Message Alias
+
+  2701 2702 
+0 50        
+1 86        
+2 124       
+3 139       
+4 148       
+5 202       
+
+XMLWireFormat (XML1)
+=============
+
+Identification (1000)
+--------------
+
+100001 : Message Set Identifier
+100002 : Message Set Name
+100003 : Message Set Level
+100004 : Model Version (Major)
+100005 : Model Version (Minor)
+100006 : Timestamp
+100007 : Dictionary Type
+100008 : Format Level
+100009 : Compatibility Level
+100010 : Dependency Table
+100022 : Message Set Alias
+100020 : Format Name
+100021 : Format Identifier
+
+  100001        100002                100003 100004 100005 100006 100007 100008 100009 100010        100022 100020 100021 
+0 HM370SO002001 HI_MS_CONNECTOR_FRAME 1      2      0             2      610    610    HM370SO002001        XML    XML1   
+
+MessageSet (1)
+----------
+
+105 : Default Wire Format Identifier
+106 : Message Type Prefix
+107 : Use Namespaces
+NP_0 : Suppress XML Declaration
+NP_1 : Standalone Document
+NP_2 : Suppress DOCTYPE
+NP_3 : DOCTYPE System ID
+NP_4 : DOCTYPE Public ID
+NP_5 : DOCTYPE Text
+NP_6 : Root Tag Name
+NP_7 : Enable Versioning Support
+NP_8 : Boolean True Value
+NP_9 : Boolean False Value
+NP_10 : Encoding Null Num
+NP_11 : Encoding Null Num Val
+NP_12 : Encoding Null Non-num
+NP_13 : Encoding Null Non-num Val
+NP_14 : Suppress Timestamp Comment
+NP_15 : Default DateTime Format
+NP_16 : Default Time Zone ID
+NP_17 : Century Window
+NP_18 : First Day of Week
+NP_19 : First Week of Year
+NP_20 : Allow Lenient Datetimes
+NP_21 : Output xsi:type policy
+NP_22 : XML Version Key
+NP_23 : Suppress XML Encoding
+NP_24 : Preserve UTC Format
+
+  105 106 107 NP_0  NP_1  NP_2  NP_3                           NP_4          NP_5  NP_6  NP_7  NP_8  NP_9  NP_10 NP_11 NP_12 NP_13 NP_14 NP_15                    NP_16 NP_17 NP_18 NP_19 NP_20 NP_21 NP_22 NP_23 NP_24  
+0         1   0           1     www.mrmnames.net/HM370SO002001 HM370SO002001             0     1     0     1           1           1     yyyy-MM-dd'T'HH:mm:ssZZZ       53          0     0     0     1.0   1     0      
+
+Tag (2)
+---
+
+201 : Tag Identifier
+203 : Type Identifier
+204 : Class
+207 : Nullable
+211 : Type Index
+212 : Namespace Index
+214 : isAttribute
+NP_0 : DOCTYPE System ID
+NP_1 : DOCTYPE Public ID
+NP_2 : DOCTYPE Text
+NP_3 : Root Tag Name
+NP_4 : XML Name
+NP_5 : Render
+NP_6 : ID Attribute Name
+NP_7 : ID Attribute Namespace
+NP_8 : ID Attribute Value
+NP_9 : Format
+NP_10 : Encoding
+NP_11 : Schema Location
+NP_12 : No Namespace Schema Location
+NP_13 : Output Namespace Declaration Policy
+NP_14 : Output xsi:type policy
+
+   201 203 204 207 211 212 214 NP_0                           NP_1          NP_2 NP_3 NP_4                      NP_5 NP_6 NP_7 NP_8                     NP_9 NP_10 NP_11 NP_12 NP_13 NP_14 
+0  50  51  M   0   46  0   0   www.mrmnames.net/HM370SO002001 HM370SO002001           DE80CNWCE080              0    id   0    DE80CNWCE080                  -1                1     0     
+1  53  75  F   0   47  0   0                                                          53_DE80_CRUBRO            0         -1                                 -1                -1    -1    
+2  55  76  F   0   48  0   0                                                          55_DE80_CEMPRESA          0         -1                                 -1                -1    -1    
+3  57  77  F   0   49  0   0                                                          57_DE80_CESTABLEC         0         -1                                 -1                -1    -1    
+4  59  78  F   0   50  0   0                                                          59_DE80_CTERMINAL         0         -1                                 -1                -1    -1    
+5  61  79  F   0   51  0   0                                                          61_DE80_CUSUARIO          0         -1                                 -1                -1    -1    
+6  63  80  F   0   52  0   0                                                          63_DE80_NROIP             0         -1                                 -1                -1    -1    
+7  65  81  F   0   53  0   0                                                          65_DE80_SESWAS            0         -1                                 -1                -1    -1    
+8  67  82  F   0   54  0   0                                                          67_DE80_NSESION           0         -1                                 -1                -1    -1    
+9  69  83  F   0   55  0   0                                                          69_DE80_NCICLO            0         -1                                 -1                -1    -1    
+10 71  84  F   0   56  0   0                                                          71_DE80_NRO_TARJETA       0         -1                                 -1                -1    -1    
+11 73  85  F   0   57  0   0                                                          73_DE80_PINBLOCK          0         -1                                 -1                -1    -1    
+12 74  51  S   0   46  0   0                                                          DE80CNWCE080              0         -1                                 -1                -1    -1    
+13 86  87  M   0   58  0   0   www.mrmnames.net/HM370SO002001 HM370SO002001           IntegrationFrameRequest   0    id   0    IntegrationFrameRequest       -1                1     0     
+14 89  90  S   0   59  0   0                                                          89_CabeceraRequest        0         -1                                 -1                -1    -1    
+15 92  5   F   0   4   0   0                                                          92_idProtocolo            0         -1                                 -1                -1    -1    
+16 94  5   F   0   4   0   0                                                          94_canal                  0         -1                                 -1                -1    -1    
+17 96  5   F   0   4   0   0                                                          96_codigoAplicacion       0         -1                                 -1                -1    -1    
+18 98  5   F   0   4   0   0                                                          98_idEmpresa              0         -1                                 -1                -1    -1    
+19 100 5   F   0   4   0   0                                                          100_longMensajeEntrada    0         -1                                 -1                -1    -1    
+20 102 5   F   0   4   0   0                                                          102_longMensajeSalida     0         -1                                 -1                -1    -1    
+21 104 5   F   0   4   0   0                                                          104_timeout               0         -1                                 -1                -1    -1    
+22 106 5   F   0   4   0   0                                                          106_usuario               0         -1                                 -1                -1    -1    
+23 108 5   F   0   4   0   0                                                          108_codigoTransaccion     0         -1                                 -1                -1    -1    
+24 110 5   F   0   4   0   0                                                          110_longitudTrama         0         -1                                 -1                -1    -1    
+25 112 5   F   0   4   0   0                                                          112_tipoMensaje           0         -1                                 -1                -1    -1    
+26 114 5   F   0   4   0   0                                                          114_fechaHora             0         -1                                 -1                -1    -1    
+27 116 5   F   0   4   0   0                                                          116_idTransaccion         0         -1                                 -1                -1    -1    
+28 118 5   F   0   4   0   0                                                          118_masDatos              0         -1                                 -1                -1    -1    
+29 120 121 S   0   60  0   0                                                          120_TramaVariableRequest  0         -1                                 -1                -1    -1    
+30 123 5   F   0   4   0   0                                                          123_mensaje               0         -1                                 -1                -1    -1    
+31 124 125 M   0   61  0   0   www.mrmnames.net/HM370SO002001 HM370SO002001           IntegrationFrameResponse  0    id   0    IntegrationFrameResponse      -1                1     0     
+32 127 128 S   0   62  0   0                                                          127_CabeceraResponse      0         -1                                 -1                -1    -1    
+33 130 5   F   0   4   0   0                                                          130_idTransaccion         0         -1                                 -1                -1    -1    
+34 132 5   F   0   4   0   0                                                          132_codigoRespuesta       0         -1                                 -1                -1    -1    
+35 134 5   F   0   4   0   0                                                          134_mensajeRespuesta      0         -1                                 -1                -1    -1    
+36 136 121 S   0   60  0   0                                                          136_TramaVariableResponse 0         -1                                 -1                -1    -1    
+37 137 87  S   0   58  0   0                                                          IntegrationFrameRequest   0         -1                                 -1                -1    -1    
+38 138 125 S   0   61  0   0                                                          IntegrationFrameResponse  0         -1                                 -1                -1    -1    
+39 139 140 M   0   63  0   0   www.mrmnames.net/HM370SO002001 HM370SO002001           RouteFrame                0    id   0    RouteFrame                    -1                1     0     
+40 142 5   F   0   4   0   0                                                          142_cabecera              0         -1                                 -1                -1    -1    
+41 144 5   F   0   4   0   0                                                          144_codigoOperacion       0         -1                                 -1                -1    -1    
+42 146 5   F   0   4   0   0                                                          146_tramaVariable         0         -1                                 -1                -1    -1    
+43 147 140 S   0   63  0   0                                                          RouteFrame                0         -1                                 -1                -1    -1    
+44 148 149 M   0   64  2   0   www.mrmnames.net/HM370SO002001 HM370SO002001           PS9BD                     0    id   0    PS9BD                         -1                1     0     
+45 151 152 S   0   65  0   0                                                          151_ConfigTX              0         -1                                 -1                -1    -1    
+46 154 5   F   0   4   0   0                                                          154_distQNameIN           0         -1                                 -1                -1    -1    
+47 156 5   F   0   4   0   0                                                          156_distQNameOUT          0         -1                                 -1                -1    -1    
+48 158 5   F   0   4   0   0                                                          158_hostQMName            0         -1                                 -1                -1    -1    
+49 160 5   F   0   4   0   0                                                          160_hostQNameOUT          0         -1                                 -1                -1    -1    
+50 162 5   F   0   4   0   0                                                          162_CCSID                 0         -1                                 -1                -1    -1    
+51 164 5   F   0   4   0   0                                                          164_timeExpMsjTx          0         -1                                 -1                -1    -1    
+52 166 5   F   0   4   0   0                                                          166_persistenciaMsj       0         -1                                 -1                -1    -1    
+53 168 169 S   0   66  0   0                                                          168_IH                    0         -1                                 -1                -1    -1    
+54 171 5   F   0   4   0   0                                                          171_idProtocolo           0         -1                                 -1                -1    -1    
+55 173 5   F   0   4   0   0                                                          173_terminalInicial       0         -1                                 -1                -1    -1    
+56 175 5   F   0   4   0   0                                                          175_terminalFinal         0         -1                                 -1                -1    -1    
+57 177 5   F   0   4   0   0                                                          177_usuario               0         -1                                 -1                -1    -1    
+58 179 5   F   0   4   0   0                                                          179_numSecuencia          0         -1                                 -1                -1    -1    
+59 181 5   F   0   4   0   0                                                          181_codTX                 0         -1                                 -1                -1    -1    
+60 183 5   F   0   4   0   0                                                          183_opcApp                0         -1                                 -1                -1    -1    
+61 185 5   F   0   4   0   0                                                          185_indCommit             0         -1                                 -1                -1    -1    
+62 187 5   F   0   4   0   0                                                          187_tipoMensaje           0         -1                                 -1                -1    -1    
+63 189 5   F   0   4   0   0                                                          189_tipoProceso           0         -1                                 -1                -1    -1    
+64 191 5   F   0   4   0   0                                                          191_canalComunicacion     0         -1                                 -1                -1    -1    
+65 193 5   F   0   4   0   0                                                          193_indPreformato         0         -1                                 -1                -1    -1    
+66 195 5   F   0   4   0   0                                                          195_lenguaje              0         -1                                 -1                -1    -1    
+67 197 198 S   0   67  0   0                                                          197_ME                    0         -1                                 -1                -1    -1    
+68 200 5   F   0   4   0   0                                                          200_tipoMensaje           0         -1                                 -1                -1    -1    
+69 201 149 S   0   64  2   0                                                          PS9BD                     0         -1                                 -1                -1    -1    
+70 202 203 M   0   68  2   0   www.mrmnames.net/HM370SO002001 HM370SO002001           mPS9MsgIN                 0    id   0    mPS9MsgIN                     -1                1     0     
+71 205 206 S   0   69  0   0                                                          205_PS9MsgIN              0         -1                                 -1                -1    -1    
+72 208 5   F   0   4   0   0                                                          208_ESPACIO_FIJO          0         -1                                 -1                -1    -1    
+73 210 211 S   0   70  0   0                                                          210_IH                    0         -1                                 -1                -1    -1    
+74 213 250 F   0   72  0   0                                                          213_ID_PROTOCOLO          0         -1                                 -1                -1    -1    
+75 215 251 F   0   73  0   0                                                          215_TERMINAL_LOGICO       0         -1                                 -1                -1    -1    
+76 217 252 F   0   74  0   0                                                          217_TERMINAL_CONTABLE     0         -1                                 -1                -1    -1    
+77 219 253 F   0   75  0   0                                                          219_USUARIO               0         -1                                 -1                -1    -1    
+78 221 254 F   0   76  0   0                                                          221_NUMERO_SECUENCIA      0         -1                                 -1                -1    -1    
+79 223 255 F   0   77  0   0                                                          223_TRANS_CODE_HOST       0         -1                                 -1                -1    -1    
+80 225 256 F   0   78  0   0                                                          225_OPCION_APLICACION     0         -1                                 -1                -1    -1    
+81 227 257 F   0   79  0   0                                                          227_LONGITUD_TRAMA        0         -1                                 -1                -1    -1    
+82 229 258 F   0   80  0   0                                                          229_INDICADOR_COMMIT      0         -1                                 -1                -1    -1    
+83 231 259 F   0   81  0   0                                                          231_TIPO_MENSAJE_IN       0         -1                                 -1                -1    -1    
+84 233 260 F   0   82  0   0                                                          233_TIPO_PROCESO          0         -1                                 -1                -1    -1    
+85 235 261 F   0   83  0   0                                                          235_CANAL_COMUNICACION    0         -1                                 -1                -1    -1    
+86 237 262 F   0   84  0   0                                                          237_IND_PRE_FORMATO       0         -1                                 -1                -1    -1    
+87 239 263 F   0   85  0   0                                                          239_LENGUAJE              0         -1                                 -1                -1    -1    
+88 241 242 S   0   71  0   0                                                          241_ME                    0         -1                                 -1                -1    -1    
+89 244 40  F   0   37  0   0                                                          244_LONGITUD_MENSAJE      0         -1                                 -1                -1    -1    
+90 246 5   F   0   4   0   0                                                          246_TIPO_MENSAJE          0         -1                                 -1                -1    -1    
+91 248 5   F   0   4   0   0                                                          248_MENSAJE               0         -1                                 -1                -1    -1    
+92 249 203 S   0   68  2   0                                                          mPS9MsgIN                 0         -1                                 -1                -1    -1    
+
+Type Member (4)
+-----------
+
+401 : Parent Type Identifier
+402 : Child Tag Identifier
+403 : Child Type Identifier
+404 : Child Class
+406 : Sequence Number
+410 : Member Identifier
+412 : Child Tag Index
+413 : Child Type Index
+NP_0 : XML Name
+NP_1 : Render
+NP_2 : ID Attribute Name
+NP_3 : ID Attribute Namespace
+NP_4 : ID Attribute Value
+NP_5 : Value Attribute Name
+NP_6 : Value Attribute Namespace
+NP_7 : Format
+NP_8 : Encoding
+
+   401 402 403 404 406 410 412 413 NP_0                  NP_1 NP_2 NP_3 NP_4                  NP_5 NP_6 NP_7 NP_8 
+0  51  53  75  F   1   52  1   47  DE80_CRUBRO           0    id   0    DE80_CRUBRO           val  0         -1   
+1  51  55  76  F   2   54  2   48  DE80_CEMPRESA         0    id   0    DE80_CEMPRESA         val  0         -1   
+2  51  57  77  F   3   56  3   49  DE80_CESTABLEC        0    id   0    DE80_CESTABLEC        val  0         -1   
+3  51  59  78  F   4   58  4   50  DE80_CTERMINAL        0    id   0    DE80_CTERMINAL        val  0         -1   
+4  51  61  79  F   5   60  5   51  DE80_CUSUARIO         0    id   0    DE80_CUSUARIO         val  0         -1   
+5  51  63  80  F   6   62  6   52  DE80_NROIP            0    id   0    DE80_NROIP            val  0         -1   
+6  51  65  81  F   7   64  7   53  DE80_SESWAS           0    id   0    DE80_SESWAS           val  0         -1   
+7  51  67  82  F   8   66  8   54  DE80_NSESION          0    id   0    DE80_NSESION          val  0         -1   
+8  51  69  83  F   9   68  9   55  DE80_NCICLO           0    id   0    DE80_NCICLO           val  0         -1   
+9  51  71  84  F   10  70  10  56  DE80_NRO_TARJETA      0    id   0    DE80_NRO_TARJETA      val  0         -1   
+10 51  73  85  F   11  72  11  57  DE80_PINBLOCK         0    id   0    DE80_PINBLOCK         val  0         -1   
+11 87  89  90  S   1   88  14  59  CabeceraRequest       0    id   0    CabeceraRequest       val  0         -1   
+12 87  120 121 S   2   119 29  60  TramaVariableRequest  0    id   0    TramaVariableRequest  val  0         -1   
+13 90  92  5   F   1   91  15  4   idProtocolo           0    id   0    idProtocolo           val  0         -1   
+14 90  94  5   F   2   93  16  4   canal                 0    id   0    canal                 val  0         -1   
+15 90  96  5   F   3   95  17  4   codigoAplicacion      0    id   0    codigoAplicacion      val  0         -1   
+16 90  98  5   F   4   97  18  4   idEmpresa             0    id   0    idEmpresa             val  0         -1   
+17 90  100 5   F   5   99  19  4   longMensajeEntrada    0    id   0    longMensajeEntrada    val  0         -1   
+18 90  102 5   F   6   101 20  4   longMensajeSalida     0    id   0    longMensajeSalida     val  0         -1   
+19 90  104 5   F   7   103 21  4   timeout               0    id   0    timeout               val  0         -1   
+20 90  106 5   F   8   105 22  4   usuario               0    id   0    usuario               val  0         -1   
+21 90  108 5   F   9   107 23  4   codigoTransaccion     0    id   0    codigoTransaccion     val  0         -1   
+22 90  110 5   F   10  109 24  4   longitudTrama         0    id   0    longitudTrama         val  0         -1   
+23 90  112 5   F   11  111 25  4   tipoMensaje           0    id   0    tipoMensaje           val  0         -1   
+24 90  114 5   F   12  113 26  4   fechaHora             0    id   0    fechaHora             val  0         -1   
+25 90  116 5   F   13  115 27  4   idTransaccion         0    id   0    idTransaccion         val  0         -1   
+26 90  118 5   F   14  117 28  4   masDatos              0    id   0    masDatos              val  0         -1   
+27 121 123 5   F   1   122 30  4   mensaje               0    id   0    mensaje               val  0         -1   
+28 125 127 128 S   1   126 32  62  CabeceraResponse      0    id   0    CabeceraResponse      val  0         -1   
+29 125 136 121 S   2   135 36  60  TramaVariableResponse 0    id   0    TramaVariableResponse val  0         -1   
+30 128 130 5   F   1   129 33  4   idTransaccion         0    id   0    idTransaccion         val  0         -1   
+31 128 132 5   F   2   131 34  4   codigoRespuesta       0    id   0    codigoRespuesta       val  0         -1   
+32 128 134 5   F   3   133 35  4   mensajeRespuesta      0    id   0    mensajeRespuesta      val  0         -1   
+33 140 142 5   F   1   141 40  4   cabecera              0    id   0    cabecera              val  0         -1   
+34 140 144 5   F   2   143 41  4   codigoOperacion       0    id   0    codigoOperacion       val  0         -1   
+35 140 146 5   F   3   145 42  4   tramaVariable         0    id   0    tramaVariable         val  0         -1   
+36 149 151 152 S   1   150 45  65  ConfigTX              0    id   0    ConfigTX              val  0         -1   
+37 149 168 169 S   2   167 53  66  IH                    0    id   0    IH                    val  0         -1   
+38 149 197 198 S   3   196 67  67  ME                    0    id   0    ME                    val  0         -1   
+39 152 154 5   F   1   153 46  4   distQNameIN           0    id   0    distQNameIN           val  0         -1   
+40 152 156 5   F   2   155 47  4   distQNameOUT          0    id   0    distQNameOUT          val  0         -1   
+41 152 158 5   F   3   157 48  4   hostQMName            0    id   0    hostQMName            val  0         -1   
+42 152 160 5   F   4   159 49  4   hostQNameOUT          0    id   0    hostQNameOUT          val  0         -1   
+43 152 162 5   F   5   161 50  4   CCSID                 0    id   0    CCSID                 val  0         -1   
+44 152 164 5   F   6   163 51  4   timeExpMsjTx          0    id   0    timeExpMsjTx          val  0         -1   
+45 152 166 5   F   7   165 52  4   persistenciaMsj       0    id   0    persistenciaMsj       val  0         -1   
+46 169 171 5   F   1   170 54  4   idProtocolo           0    id   0    idProtocolo           val  0         -1   
+47 169 173 5   F   2   172 55  4   terminalInicial       0    id   0    terminalInicial       val  0         -1   
+48 169 175 5   F   3   174 56  4   terminalFinal         0    id   0    terminalFinal         val  0         -1   
+49 169 177 5   F   4   176 57  4   usuario               0    id   0    usuario               val  0         -1   
+50 169 179 5   F   5   178 58  4   numSecuencia          0    id   0    numSecuencia          val  0         -1   
+51 169 181 5   F   6   180 59  4   codTX                 0    id   0    codTX                 val  0         -1   
+52 169 183 5   F   7   182 60  4   opcApp                0    id   0    opcApp                val  0         -1   
+53 169 185 5   F   8   184 61  4   indCommit             0    id   0    indCommit             val  0         -1   
+54 169 187 5   F   9   186 62  4   tipoMensaje           0    id   0    tipoMensaje           val  0         -1   
+55 169 189 5   F   10  188 63  4   tipoProceso           0    id   0    tipoProceso           val  0         -1   
+56 169 191 5   F   11  190 64  4   canalComunicacion     0    id   0    canalComunicacion     val  0         -1   
+57 169 193 5   F   12  192 65  4   indPreformato         0    id   0    indPreformato         val  0         -1   
+58 169 195 5   F   13  194 66  4   lenguaje              0    id   0    lenguaje              val  0         -1   
+59 198 200 5   F   1   199 68  4   tipoMensaje           0    id   0    tipoMensaje           val  0         -1   
+60 203 205 206 S   1   204 71  69  PS9MsgIN              0    id   0    PS9MsgIN              val  0         -1   
+61 206 208 5   F   1   207 72  4   ESPACIO_FIJO          0    id   0    ESPACIO_FIJO          val  0         -1   
+62 206 210 211 S   2   209 73  70  IH                    0    id   0    IH                    val  0         -1   
+63 206 241 242 S   3   240 88  71  ME                    0    id   0    ME                    val  0         -1   
+64 211 213 250 F   1   212 74  72  ID_PROTOCOLO          0    id   0    ID_PROTOCOLO          val  0         -1   
+65 211 215 251 F   2   214 75  73  TERMINAL_LOGICO       0    id   0    TERMINAL_LOGICO       val  0         -1   
+66 211 217 252 F   3   216 76  74  TERMINAL_CONTABLE     0    id   0    TERMINAL_CONTABLE     val  0         -1   
+67 211 219 253 F   4   218 77  75  USUARIO               0    id   0    USUARIO               val  0         -1   
+68 211 221 254 F   5   220 78  76  NUMERO_SECUENCIA      0    id   0    NUMERO_SECUENCIA      val  0         -1   
+69 211 223 255 F   6   222 79  77  TRANS_CODE_HOST       0    id   0    TRANS_CODE_HOST       val  0         -1   
+70 211 225 256 F   7   224 80  78  OPCION_APLICACION     0    id   0    OPCION_APLICACION     val  0         -1   
+71 211 227 257 F   8   226 81  79  LONGITUD_TRAMA        0    id   0    LONGITUD_TRAMA        val  0         -1   
+72 211 229 258 F   9   228 82  80  INDICADOR_COMMIT      0    id   0    INDICADOR_COMMIT      val  0         -1   
+73 211 231 259 F   10  230 83  81  TIPO_MENSAJE_IN       0    id   0    TIPO_MENSAJE_IN       val  0         -1   
+74 211 233 260 F   11  232 84  82  TIPO_PROCESO          0    id   0    TIPO_PROCESO          val  0         -1   
+75 211 235 261 F   12  234 85  83  CANAL_COMUNICACION    0    id   0    CANAL_COMUNICACION    val  0         -1   
+76 211 237 262 F   13  236 86  84  IND_PRE_FORMATO       0    id   0    IND_PRE_FORMATO       val  0         -1   
+77 211 239 263 F   14  238 87  85  LENGUAJE              0    id   0    LENGUAJE              val  0         -1   
+78 242 244 40  F   1   243 89  37  LONGITUD_MENSAJE      0    id   0    LONGITUD_MENSAJE      val  0         -1   
+79 242 246 5   F   2   245 90  4   TIPO_MENSAJE          0    id   0    TIPO_MENSAJE          val  0         -1   
+80 242 248 5   F   3   247 91  4   MENSAJE               0    id   0    MENSAJE               val  0         -1   
+
+Type (21)
+----
+
+Row count: 86
+
+2101 : Type Identifier
+2103 : Type Composition
+2104 : Type Content
+2105 : Base Type Identifier
+2106 : Logical Type
+2107 : Type Member Index
+2112 : Derivation Style
+2114 : Item Type Index
+2115 : Type Class
+
+   2101 2103 2104 2105 2106 2107 2112 2114 2115 
+0  1    6    3    0    0    -1   1    -1   4    
+1  2    0    0    0    15   -1   4    -1   1    
+2  3    0    0    0    2    -1   4    -1   1    
+3  4    0    0    0    15   -1   4    -1   1    
+4  5    0    0    0    2    -1   4    -1   1    
+5  6    0    0    0    2    -1   4    -1   1    
+6  7    0    0    0    2    -1   4    -1   1    
+7  8    0    0    0    16   -1   4    -1   1    
+8  9    0    0    0    16   -1   4    -1   1    
+9  10   0    0    0    16   -1   4    -1   1    
+10 11   0    0    0    6    -1   4    -1   1    
+11 12   0    0    0    2    -1   4    -1   1    
+12 13   0    0    0    4    -1   4    -1   1    
+13 14   0    0    0    2    -1   4    -1   1    
+14 15   0    0    0    2    -1   4    -1   1    
+15 16   0    0    0    14   -1   4    -1   1    
+16 17   0    0    0    15   -1   4    -1   1    
+17 18   0    0    0    2    -1   4    -1   1    
+18 19   0    0    0    10   -1   4    -1   1    
+19 20   0    0    0    16   -1   4    -1   1    
+20 21   0    0    0    16   -1   4    -1   1    
+21 22   0    0    0    4    -1   4    -1   1    
+22 23   0    0    0    4    -1   4    -1   1    
+23 24   0    0    0    15   -1   4    -1   1    
+24 25   0    0    0    0    -1   5    17   1    
+25 27   0    0    0    2    -1   4    -1   1    
+26 28   0    0    0    16   -1   4    -1   1    
+27 29   0    0    0    2    -1   4    -1   1    
+28 30   0    0    0    15   -1   4    -1   1    
+29 31   0    0    0    4    -1   4    -1   1    
+30 32   0    0    0    4    -1   4    -1   1    
+31 33   0    0    0    4    -1   4    -1   1    
+32 34   0    0    0    6    -1   4    -1   1    
+33 35   0    0    0    2    -1   4    -1   1    
+34 36   0    0    0    2    -1   4    -1   1    
+35 37   0    0    0    15   -1   4    -1   1    
+36 38   0    0    0    0    -1   5    27   1    
+37 40   0    0    0    4    -1   4    -1   1    
+38 41   0    0    0    12   -1   4    -1   1    
+39 42   0    0    0    10   -1   4    -1   1    
+40 43   0    0    0    2    -1   4    -1   1    
+41 44   0    0    0    0    -1   5    40   1    
+42 46   0    0    0    16   -1   4    -1   1    
+43 47   0    0    0    2    -1   4    -1   1    
+44 48   0    0    0    15   -1   4    -1   1    
+45 49   0    0    0    15   -1   4    -1   1    
+46 51   6    1    0    0    0    1    -1   4    
+47 75   0    0    0    2    -1   4    -1   1    
+48 76   0    0    0    2    -1   4    -1   1    
+49 77   0    0    0    2    -1   4    -1   1    
+50 78   0    0    0    2    -1   4    -1   1    
+51 79   0    0    0    2    -1   4    -1   1    
+52 80   0    0    0    2    -1   4    -1   1    
+53 81   0    0    0    2    -1   4    -1   1    
+54 82   0    0    0    2    -1   4    -1   1    
+55 83   0    0    0    2    -1   4    -1   1    
+56 84   0    0    0    2    -1   4    -1   1    
+57 85   0    0    0    2    -1   4    -1   1    
+58 87   6    1    0    0    11   1    -1   4    
+59 90   6    1    0    0    13   1    -1   4    
+60 121  6    1    0    0    27   1    -1   4    
+61 125  6    1    0    0    28   1    -1   4    
+62 128  6    1    0    0    30   1    -1   4    
+63 140  6    1    0    0    33   1    -1   4    
+64 149  6    1    0    0    36   1    -1   4    
+65 152  6    1    0    0    39   1    -1   4    
+66 169  6    1    0    0    46   1    -1   4    
+67 198  6    1    0    0    59   1    -1   4    
+68 203  6    1    0    0    60   1    -1   4    
+69 206  6    1    0    0    61   1    -1   4    
+70 211  6    1    0    0    64   1    -1   4    
+71 242  6    1    0    0    78   1    -1   4    
+72 250  0    0    0    2    -1   4    -1   1    
+73 251  0    0    0    2    -1   4    -1   1    
+74 252  0    0    0    2    -1   4    -1   1    
+75 253  0    0    0    2    -1   4    -1   1    
+76 254  0    0    0    2    -1   4    -1   1    
+77 255  0    0    0    2    -1   4    -1   1    
+78 256  0    0    0    2    -1   4    -1   1    
+79 257  0    0    0    2    -1   4    -1   1    
+80 258  0    0    0    2    -1   4    -1   1    
+81 259  0    0    0    2    -1   4    -1   1    
+82 260  0    0    0    2    -1   4    -1   1    
+83 261  0    0    0    2    -1   4    -1   1    
+84 262  0    0    0    2    -1   4    -1   1    
+85 263  0    0    0    2    -1   4    -1   1    
+
+Member Id to Type Member index (20)
+------------------------------
+
+Row count: 81
+
+2001 : Member Identifier
+2002 : Type Member Index
+
+   2001 2002 
+0  52   0    
+1  54   1    
+2  56   2    
+3  58   3    
+4  60   4    
+5  62   5    
+6  64   6    
+7  66   7    
+8  68   8    
+9  70   9    
+10 72   10   
+11 88   11   
+12 91   13   
+13 93   14   
+14 95   15   
+15 97   16   
+16 99   17   
+17 101  18   
+18 103  19   
+19 105  20   
+20 107  21   
+21 109  22   
+22 111  23   
+23 113  24   
+24 115  25   
+25 117  26   
+26 119  12   
+27 122  27   
+28 126  28   
+29 129  30   
+30 131  31   
+31 133  32   
+32 135  29   
+33 141  33   
+34 143  34   
+35 145  35   
+36 150  36   
+37 153  39   
+38 155  40   
+39 157  41   
+40 159  42   
+41 161  43   
+42 163  44   
+43 165  45   
+44 167  37   
+45 170  46   
+46 172  47   
+47 174  48   
+48 176  49   
+49 178  50   
+50 180  51   
+51 182  52   
+52 184  53   
+53 186  54   
+54 188  55   
+55 190  56   
+56 192  57   
+57 194  58   
+58 196  38   
+59 199  59   
+60 204  60   
+61 207  61   
+62 209  62   
+63 212  64   
+64 214  65   
+65 216  66   
+66 218  67   
+67 220  68   
+68 222  69   
+69 224  70   
+70 226  71   
+71 228  72   
+72 230  73   
+73 232  74   
+74 234  75   
+75 236  76   
+76 238  77   
+77 240  63   
+78 243  78   
+79 245  79   
+80 247  80   
+
+Namespace (26)
+---------
+
+2000 : Row Count
+2601 : Namespace URI
+NP_0 : Preferred Prefix
+
+  2000 2601                                      NP_0   
+0 5                                                     
+1      http://www.w3.org/2001/XMLSchema          xsd    
+2      ps9.connector.hi.bbva.com.pe              tns    
+3      http://www.w3.org/2001/XMLSchema-instance xsi    
+4      http://www.w3.org/XML/1998/namespace      xml    
+
+TDSWireFormat (Text1)
+=============
+
+Identification (1000)
+--------------
+
+100001 : Message Set Identifier
+100002 : Message Set Name
+100003 : Message Set Level
+100004 : Model Version (Major)
+100005 : Model Version (Minor)
+100006 : Timestamp
+100007 : Dictionary Type
+100008 : Format Level
+100009 : Compatibility Level
+100010 : Dependency Table
+100022 : Message Set Alias
+100020 : Format Name
+100021 : Format Identifier
+
+  100001        100002                100003 100004 100005 100006 100007 100008 100009 100010        100022 100020 100021 
+0 HM370SO002001 HI_MS_CONNECTOR_FRAME 1      2      0             2      610    610    HM370SO002001        TDS    Text1  
+
+MessageSet (1)
+----------
+
+105 : Default Wire Format Identifier
+106 : Message Type Prefix
+107 : Use Namespaces
+NP_0 : TDS Wire Format Identifier
+NP_1 : Messaging Standard
+NP_2 : Default CCSID
+NP_3 : Trim Fix Len String
+NP_4 : Group Indicator
+NP_5 : Group Terminator
+NP_6 : Tag Data Separator
+NP_7 : Tag Length
+NP_8 : Decimal Point
+NP_9 : Escape Character
+NP_10 : Reserved Chars
+NP_11 : Output Compression Technique
+NP_12 : Input Compression Technique
+NP_13 : Boolean True Representation
+NP_14 : Boolean False Representation
+NP_15 : Boolean Null Representation
+NP_16 : Default DateTime Format
+NP_17 : Default Time Zone ID
+NP_18 : Century Window
+NP_19 : First Week of Year
+NP_20 : First Day of Week
+NP_21 : Allow Lenient Datetimes
+NP_22 : Strict Numeric Checking
+NP_23 : Preserve UTC Format
+NP_24 : Truncate Fixed Length Strings
+NP_25 : Quote character
+NP_26 : Output policy for missing elements
+NP_27 : Default byte order
+NP_28 : Default packed decimal byte order
+NP_29 : Default float format
+NP_30 : Packed decimal positive code
+NP_31 : Binary boolean true value
+NP_32 : Binary boolean false value
+NP_33 : Binary boolean null value
+
+  105 106 107 NP_0  NP_1 NP_2 NP_3 NP_4 NP_5 NP_6 NP_7 NP_8 NP_9 NP_10 NP_11 NP_12 NP_13 NP_14 NP_15 NP_16                    NP_17 NP_18 NP_19 NP_20 NP_21 NP_22 NP_23 NP_24 NP_25 NP_26 NP_27 NP_28 NP_29 NP_30 NP_31    NP_32    NP_33    
+0         1   Text1 0    367  0                   0    .               0     0     1     0     0     yyyy-MM-dd'T'HH:mm:ssZZZ       53    0           0     0     0     0           0     0     0     0     C     00000001 00000000 00000000 
+
+Tag (2)
+---
+
+201 : Tag Identifier
+203 : Type Identifier
+204 : Class
+207 : Nullable
+209 : Default Value Index
+211 : Type Index
+214 : isAttribute
+NP_0 : Message Key
+NP_1 : Tag
+NP_2 : Data Pattern
+NP_3 : Length
+NP_4 : Justification
+NP_5 : Padding Character
+NP_6 : Interpret Element Value
+NP_7 : Virtual Decimal Point
+NP_8 : Precision
+NP_9 : Format
+NP_10 : Sign Orientation
+NP_11 : Positive Sign
+NP_12 : Negative Sign
+NP_13 : Encoding Null
+NP_14 : Encoding Null Value
+NP_15 : Physical Type
+NP_16 : Length units
+NP_17 : EBCDIC custom overpunched
+
+   201 203 204 207 209 211 214 NP_0 NP_1 NP_2 NP_3 NP_4 NP_5 NP_6 NP_7 NP_8 NP_9 NP_10 NP_11 NP_12 NP_13            NP_14 NP_15           NP_16 NP_17 
+0  50  51  M   0   -1  46  0                  0    0         0    0    0         -1                                                       0     0     
+1  53  75  F   0   -1  47  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+2  55  76  F   0   -1  48  0                  3    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+3  57  77  F   0   -1  49  0                  3    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+4  59  78  F   0   -1  50  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+5  61  79  F   0   -1  51  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+6  63  80  F   0   -1  52  0                  15   1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+7  65  81  F   0   -1  53  0                  20   1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+8  67  82  F   0   -1  54  0                  7    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+9  69  83  F   0   -1  55  0                  7    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+10 71  84  F   0   -1  56  0                  16   1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+11 73  85  F   0   -1  57  0                  16   1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+12 74  51  S   0   -1  46  0                  0    0         0    0    -1        -1          -                                            0     0     
+13 86  87  M   0   -1  58  0                  0    0         0    0    0         -1                                                       0     0     
+14 89  90  S   0   -1  59  0                  0    0         0    0    -1        -1          -                                            0     0     
+15 92  5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+16 94  5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+17 96  5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+18 98  5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+19 100 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+20 102 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+21 104 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+22 106 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+23 108 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+24 110 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+25 112 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+26 114 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+27 116 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+28 118 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+29 120 121 S   0   -1  60  0                  0    0         0    0    -1        -1          -                                            0     0     
+30 123 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+31 124 125 M   0   -1  61  0                  0    0         0    0    0         -1                                                       0     0     
+32 127 128 S   0   -1  62  0                  0    0         0    0    -1        -1          -                                            0     0     
+33 130 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+34 132 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+35 134 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+36 136 121 S   0   -1  60  0                  0    0         0    0    -1        -1          -                                            0     0     
+37 137 87  S   0   -1  58  0                  0    0         0    0    -1        -1          -                                            0     0     
+38 138 125 S   0   -1  61  0                  0    0         0    0    -1        -1          -                                            0     0     
+39 139 140 M   0   -1  63  0                  0    0         0    0    0         -1                                                       0     0     
+40 142 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+41 144 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+42 146 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+43 147 140 S   0   -1  63  0                  0    0         0    0    -1        -1          -                                            0     0     
+44 148 149 M   0   -1  64  0                  0    0         0    0    0         -1                                                       0     0     
+45 151 152 S   0   -1  65  0                  0    0         0    0    -1        -1          -                                            0     0     
+46 154 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+47 156 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+48 158 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+49 160 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+50 162 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+51 164 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+52 166 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+53 168 169 S   0   -1  66  0                  0    0         0    0    -1        -1          -                                            0     0     
+54 171 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+55 173 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+56 175 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+57 177 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+58 179 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+59 181 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+60 183 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+61 185 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+62 187 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+63 189 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+64 191 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+65 193 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+66 195 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+67 197 198 S   0   -1  67  0                  0    0         0    0    -1        -1          -                                            0     0     
+68 200 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+69 201 149 S   0   -1  64  0                  0    0         0    0    -1        -1          -                                            0     0     
+70 202 203 M   0   -1  68  0                  0    0         0    0    0         -1                                                       0     0     
+71 205 206 S   0   -1  69  0                  0    0         0    0    -1        -1          -                                            0     0     
+72 208 5   F   0   -1  4   0                  8    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+73 210 211 S   0   -1  70  0                  0    0         0    0    -1        -1          -                                            0     0     
+74 213 250 F   0   -1  72  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+75 215 251 F   0   -1  73  0                  8    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+76 217 252 F   0   -1  74  0                  8    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+77 219 253 F   0   -1  75  0                  8    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+78 221 254 F   0   -1  76  0                  8    2    0    0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+79 223 255 F   0   -1  77  0                  8    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+80 225 256 F   0   -1  78  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+81 227 257 F   0   -1  79  0                  5    2    0    0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+82 229 258 F   0   -1  80  0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+83 231 259 F   0   -1  81  0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+84 233 260 F   0   -1  82  0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+85 235 261 F   0   -1  83  0                  2    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+86 237 262 F   0   -1  84  0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+87 239 263 F   0   -1  85  0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+88 241 242 S   0   -1  71  0                  0    0         0    0    -1        -1          -                                            0     0     
+89 244 40  F   0   -1  37  0                  4    2    0    0    0    -1        6           -     NullLogicalValue 0     ExternalDecimal 0     0     
+90 246 5   F   0   -1  4   0                  1    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+91 248 5   F   0   -1  4   0                  0    1         0    0    -1        0           -     NullLogicalValue       Characters      1     0     
+92 249 203 S   0   -1  68  0                  0    0         0    0    -1        -1          -                                            0     0     
+
+Type Member (4)
+-----------
+
+401 : Parent Type Id
+402 : Child Tag Id
+403 : Child Type Id
+404 : Child Class
+406 : Sequence Number
+407 : Min Occurs
+409 : Child Repeat Indicator
+410 : Member Id
+411 : Max Occurs
+412 : Child Tag Index
+413 : Child Type Index
+NP_0 : Data Pattern
+NP_1 : Repeating Element Delimiter
+NP_2 : Length Reference
+NP_3 : Tag
+NP_4 : Length
+NP_5 : Justification
+NP_6 : Padding Character
+NP_7 : Interpret Element Value
+NP_8 : Virtual Decimal Point
+NP_9 : Precision
+NP_10 : Format
+NP_11 : Sign Orientation
+NP_12 : Positive Sign
+NP_13 : Negative Sign
+NP_14 : Encoding Null
+NP_15 : Encoding Null Value
+NP_16 : Physical Type
+NP_17 : Repeat Reference
+NP_18 : Inclusive Length Reference
+
+   401 402 403 404 406 407 409 410 411 412 413 NP_0 NP_1 NP_2 NP_3 NP_4 NP_5 NP_6 NP_7 NP_8 NP_9 NP_10 NP_11 NP_12 NP_13 NP_14 NP_15 NP_16           NP_17 NP_18 
+0  51  53  75  F   1   1   0   52  1   1   47            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+1  51  55  76  F   2   1   0   54  1   2   48            0         3    1         0    0    -1         0           -     1           Characters      0     0     
+2  51  57  77  F   3   1   0   56  1   3   49            0         3    1         0    0    -1         0           -     1           Characters      0     0     
+3  51  59  78  F   4   1   0   58  1   4   50            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+4  51  61  79  F   5   1   0   60  1   5   51            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+5  51  63  80  F   6   1   0   62  1   6   52            0         15   1         0    0    -1         0           -     1           Characters      0     0     
+6  51  65  81  F   7   1   0   64  1   7   53            0         20   1         0    0    -1         0           -     1           Characters      0     0     
+7  51  67  82  F   8   1   0   66  1   8   54            0         7    1         0    0    -1         0           -     1           Characters      0     0     
+8  51  69  83  F   9   1   0   68  1   9   55            0         7    1         0    0    -1         0           -     1           Characters      0     0     
+9  51  71  84  F   10  1   0   70  1   10  56            0         16   1         0    0    -1         0           -     1           Characters      0     0     
+10 51  73  85  F   11  1   0   72  1   11  57            0         16   1         0    0    -1         0           -     1           Characters      0     0     
+11 87  89  90  S   1   1   0   88  1   14  59            0         0    0         0    0    -1         -1          -     -1                          0     0     
+12 87  120 121 S   2   1   0   119 1   29  60            0         0    0         0    0    -1         -1          -     -1                          0     0     
+13 90  92  5   F   1   1   0   91  1   15  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+14 90  94  5   F   2   1   0   93  1   16  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+15 90  96  5   F   3   1   0   95  1   17  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+16 90  98  5   F   4   1   0   97  1   18  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+17 90  100 5   F   5   1   0   99  1   19  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+18 90  102 5   F   6   1   0   101 1   20  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+19 90  104 5   F   7   1   0   103 1   21  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+20 90  106 5   F   8   1   0   105 1   22  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+21 90  108 5   F   9   1   0   107 1   23  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+22 90  110 5   F   10  1   0   109 1   24  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+23 90  112 5   F   11  1   0   111 1   25  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+24 90  114 5   F   12  1   0   113 1   26  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+25 90  116 5   F   13  1   0   115 1   27  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+26 90  118 5   F   14  1   0   117 1   28  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+27 121 123 5   F   1   1   0   122 1   30  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+28 125 127 128 S   1   1   0   126 1   32  62            0         0    0         0    0    -1         -1          -     -1                          0     0     
+29 125 136 121 S   2   1   0   135 1   36  60            0         0    0         0    0    -1         -1          -     -1                          0     0     
+30 128 130 5   F   1   1   0   129 1   33  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+31 128 132 5   F   2   1   0   131 1   34  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+32 128 134 5   F   3   1   0   133 1   35  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+33 140 142 5   F   1   1   0   141 1   40  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+34 140 144 5   F   2   1   0   143 1   41  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+35 140 146 5   F   3   1   0   145 1   42  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+36 149 151 152 S   1   1   0   150 1   45  65            0         0    0         0    0    -1         -1          -     -1                          0     0     
+37 149 168 169 S   2   1   0   167 1   53  66            0         0    0         0    0    -1         -1          -     -1                          0     0     
+38 149 197 198 S   3   1   0   196 1   67  67            0         0    0         0    0    -1         -1          -     -1                          0     0     
+39 152 154 5   F   1   1   0   153 1   46  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+40 152 156 5   F   2   1   0   155 1   47  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+41 152 158 5   F   3   1   0   157 1   48  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+42 152 160 5   F   4   1   0   159 1   49  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+43 152 162 5   F   5   1   0   161 1   50  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+44 152 164 5   F   6   1   0   163 1   51  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+45 152 166 5   F   7   1   0   165 1   52  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+46 169 171 5   F   1   1   0   170 1   54  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+47 169 173 5   F   2   1   0   172 1   55  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+48 169 175 5   F   3   1   0   174 1   56  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+49 169 177 5   F   4   1   0   176 1   57  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+50 169 179 5   F   5   1   0   178 1   58  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+51 169 181 5   F   6   1   0   180 1   59  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+52 169 183 5   F   7   1   0   182 1   60  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+53 169 185 5   F   8   1   0   184 1   61  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+54 169 187 5   F   9   1   0   186 1   62  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+55 169 189 5   F   10  1   0   188 1   63  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+56 169 191 5   F   11  1   0   190 1   64  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+57 169 193 5   F   12  1   0   192 1   65  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+58 169 195 5   F   13  1   0   194 1   66  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+59 198 200 5   F   1   1   0   199 1   68  4             0         0    1         0    0    -1         0           -     1           Characters      0     0     
+60 203 205 206 S   1   1   0   204 1   71  69            0         0    0         0    0    -1         -1          -     -1                          0     0     
+61 206 208 5   F   1   1   0   207 1   72  4             0         8    1         0    0    -1         0           -     1           Characters      0     0     
+62 206 210 211 S   2   1   0   209 1   73  70            0         0    0         0    0    -1         -1          -     -1                          0     0     
+63 206 241 242 S   3   1   0   240 1   88  71            0         0    0         0    0    -1         -1          -     -1                          0     0     
+64 211 213 250 F   1   1   0   212 1   74  72            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+65 211 215 251 F   2   1   0   214 1   75  73            0         8    1         0    0    -1         0           -     1           Characters      0     0     
+66 211 217 252 F   3   1   0   216 1   76  74            0         8    1         0    0    -1         0           -     1           Characters      0     0     
+67 211 219 253 F   4   1   0   218 1   77  75            0         8    1         0    0    -1         0           -     1           Characters      0     0     
+68 211 221 254 F   5   1   0   220 1   78  76            0         8    2    0    0    0    -1         0           -     1           Characters      0     0     
+69 211 223 255 F   6   1   0   222 1   79  77            0         8    1         0    0    -1         0           -     1           Characters      0     0     
+70 211 225 256 F   7   1   0   224 1   80  78            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+71 211 227 257 F   8   1   0   226 1   81  79            0         5    2    0    0    0    -1         0           -     1           Characters      0     0     
+72 211 229 258 F   9   1   0   228 1   82  80            0         1    1         0    0    -1         0           -     1           Characters      0     0     
+73 211 231 259 F   10  1   0   230 1   83  81            0         1    1         0    0    -1         0           -     1           Characters      0     0     
+74 211 233 260 F   11  1   0   232 1   84  82            0         1    1         0    0    -1         0           -     1           Characters      0     0     
+75 211 235 261 F   12  1   0   234 1   85  83            0         2    1         0    0    -1         0           -     1           Characters      0     0     
+76 211 237 262 F   13  1   0   236 1   86  84            0         1    1         0    0    -1         0           -     1           Characters      0     0     
+77 211 239 263 F   14  1   0   238 1   87  85            0         1    1         0    0    -1         0           -     1           Characters      0     0     
+78 242 244 40  F   1   1   0   243 1   89  37            0         4    2    0    0    0    -1         6           -     1     0     ExternalDecimal 0     0     
+79 242 246 5   F   2   1   0   245 1   90  4             0         1    1         0    0    -1         0           -     1           Characters      0     0     
+80 242 248 5   F   3   1   0   247 1   91  4             243       0    1         0    0    -1         0           -     1           Characters      0     0     
+
+Member Id to Type Member index (20)
+------------------------------
+
+Row count: 81
+
+2001 : Member Identifier
+2002 : Type Member Index
+
+   2001 2002 
+0  52   0    
+1  54   1    
+2  56   2    
+3  58   3    
+4  60   4    
+5  62   5    
+6  64   6    
+7  66   7    
+8  68   8    
+9  70   9    
+10 72   10   
+11 88   11   
+12 91   13   
+13 93   14   
+14 95   15   
+15 97   16   
+16 99   17   
+17 101  18   
+18 103  19   
+19 105  20   
+20 107  21   
+21 109  22   
+22 111  23   
+23 113  24   
+24 115  25   
+25 117  26   
+26 119  12   
+27 122  27   
+28 126  28   
+29 129  30   
+30 131  31   
+31 133  32   
+32 135  29   
+33 141  33   
+34 143  34   
+35 145  35   
+36 150  36   
+37 153  39   
+38 155  40   
+39 157  41   
+40 159  42   
+41 161  43   
+42 163  44   
+43 165  45   
+44 167  37   
+45 170  46   
+46 172  47   
+47 174  48   
+48 176  49   
+49 178  50   
+50 180  51   
+51 182  52   
+52 184  53   
+53 186  54   
+54 188  55   
+55 190  56   
+56 192  57   
+57 194  58   
+58 196  38   
+59 199  59   
+60 204  60   
+61 207  61   
+62 209  62   
+63 212  64   
+64 214  65   
+65 216  66   
+66 218  67   
+67 220  68   
+68 222  69   
+69 224  70   
+70 226  71   
+71 228  72   
+72 230  73   
+73 232  74   
+74 234  75   
+75 236  76   
+76 238  77   
+77 240  63   
+78 243  78   
+79 245  79   
+80 247  80   
+
+Type (21)
+----
+
+Row count: 86
+
+2101 : Type Identifier
+2103 : Type Composition
+2104 : Type Content
+2105 : Base Type Identifier
+2106 : Logical Type
+2107 : Type Member Index
+2112 : Derivation Style
+2114 : Item Type Index
+2115 : Type Class
+NP_0 : Group Indicator
+NP_1 : Group Terminator
+NP_2 : Tag Data Separator
+NP_3 : Tag Length
+NP_4 : Data Element Separation
+NP_5 : Delimiter
+NP_6 : Length Of Encoded Length
+NP_7 : Extra Chars In Encoded Length
+NP_8 : Suppress Absent Element Delimiter
+NP_9 : Observe Element Length
+
+   2101 2103 2104 2105 2106 2107 2112 2114 2115 NP_0       NP_1        NP_2 NP_3 NP_4 NP_5 NP_6 NP_7 NP_8 NP_9 
+0  1    6    3    0    0    -1   1    -1   4                                0    4         0    0    1    0    
+1  2    0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+2  3    0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+3  4    0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+4  5    0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+5  6    0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+6  7    0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+7  8    0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+8  9    0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+9  10   0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+10 11   0    0    0    6    -1   4    -1   1                                0    -1        0    0    -1   0    
+11 12   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+12 13   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+13 14   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+14 15   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+15 16   0    0    0    14   -1   4    -1   1                                0    -1        0    0    -1   0    
+16 17   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+17 18   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+18 19   0    0    0    10   -1   4    -1   1                                0    -1        0    0    -1   0    
+19 20   0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+20 21   0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+21 22   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+22 23   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+23 24   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+24 25   0    0    0    0    -1   5    17   1                                0    -1        0    0    -1   0    
+25 27   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+26 28   0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+27 29   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+28 30   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+29 31   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+30 32   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+31 33   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+32 34   0    0    0    6    -1   4    -1   1                                0    -1        0    0    -1   0    
+33 35   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+34 36   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+35 37   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+36 38   0    0    0    0    -1   5    27   1                                0    -1        0    0    -1   0    
+37 40   0    0    0    4    -1   4    -1   1                                0    -1        0    0    -1   0    
+38 41   0    0    0    12   -1   4    -1   1                                0    -1        0    0    -1   0    
+39 42   0    0    0    10   -1   4    -1   1                                0    -1        0    0    -1   0    
+40 43   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+41 44   0    0    0    0    -1   5    40   1                                0    -1        0    0    -1   0    
+42 46   0    0    0    16   -1   4    -1   1                                0    -1        0    0    -1   0    
+43 47   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+44 48   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+45 49   0    0    0    15   -1   4    -1   1                                0    -1        0    0    -1   0    
+46 51   6    1    0    0    0    1    -1   4                                0    4         0    0    1    0    
+47 75   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+48 76   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+49 77   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+50 78   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+51 79   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+52 80   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+53 81   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+54 82   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+55 83   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+56 84   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+57 85   0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+58 87   6    1    0    0    11   1    -1   4                                0    4         0    0    1    0    
+59 90   6    1    0    0    13   1    -1   4                                0    4         0    0    1    0    
+60 121  6    1    0    0    27   1    -1   4                                0    4         0    0    1    0    
+61 125  6    1    0    0    28   1    -1   4                                0    4         0    0    1    0    
+62 128  6    1    0    0    30   1    -1   4                                0    4         0    0    1    0    
+63 140  6    1    0    0    33   1    -1   4                                0    4         0    0    1    0    
+64 149  6    1    0    0    36   1    -1   4                                0    4         0    0    1    0    
+65 152  6    1    0    0    39   1    -1   4                                0    4         0    0    1    0    
+66 169  6    1    0    0    46   1    -1   4                                0    4         0    0    1    0    
+67 198  6    1    0    0    59   1    -1   4                                0    4         0    0    1    0    
+68 203  6    1    0    0    60   1    -1   4                                0    4         0    0    1    0    
+69 206  6    1    0    0    61   1    -1   4                                0    4         0    0    1    0    
+70 211  6    1    0    0    64   1    -1   4    <LT>IH<GT> <LT>/IH<GT>      0    4         0    0    1    0    
+71 242  6    1    0    0    78   1    -1   4    <LT>ME<GT> <LT>/ME<GT>      0    4         0    0    1    0    
+72 250  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+73 251  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+74 252  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+75 253  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+76 254  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+77 255  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+78 256  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+79 257  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+80 258  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+81 259  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+82 260  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+83 261  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+84 262  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+85 263  0    0    0    2    -1   4    -1   1                                0    -1        0    0    -1   0    
+
+Values (25)
+------
+
+2000 : Row Count
+
+  2000 
+0 0    
+
+CWFWireFormat (CWF)
+=============
+
+Message Count: 6
+
+Row Count: 88
+
+Identification (1000)
+--------------
+
+100001 : Message Set Identifier
+100002 : Message Set Name
+100003 : Message Set Level
+100004 : Model Version (Major)
+100005 : Model Version (Minor)
+100006 : Timestamp
+100007 : Dictionary Type
+100008 : Format Level
+100009 : Compatibility Level
+100010 : Dependency Table
+100022 : Message Set Alias
+100020 : Format Name
+100021 : Format Identifier
+
+  100001        100002                100003 100004 100005 100006 100007 100008 100009 100010        100022 100020 100021 
+0 HM370SO002001 HI_MS_CONNECTOR_FRAME 1      2      0             4      610    610    HM370SO002001        CWF    CWF    
+
+MessageSet (1)
+----------
+
+104 : Byte Alignment Pad
+105 : Floating Point Format
+106 : Default Codepage
+107 : Byte Order
+108 : Boolean True
+109 : Boolean False
+112 : Date Time Format
+116 : Packed Decimal Byte Order
+117 : Default Timezone ID
+118 : Century Window
+119 : First Week Of Year
+120 : First Day Of Week
+121 : Boolean Null
+122 : Packed Decimal Positive Format
+123 : Allow Lenient Datetimes
+124 : Output Policy For Missing Elements
+125 : Preserve UTC Format
+126 : Truncate Fixed Length Strings
+
+  104 105 106 107 108      109      112                      116 117 118 119 120    121      122 123 124 125 126 
+0     S   500 B   00000001 00000000 yyyy-MM-dd'T'HH:mm:ssZZZ B       53  4   Monday 00000000    0   0   0   0   
+
+Message (2)
+-------
+
+3 : Message Identifier
+
+  3  
+0 50 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+   401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0  0   50  0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1  1   53  8   2   1   2   0   0   0   L       1       0   52  0   0   -1  1       0   0   0   0   
+2  2   55  8   2   1   3   0   0   0   L       1       0   54  0   0   -1  1       0   0   0   0   
+3  3   57  8   2   1   3   0   0   0   L       1       0   56  0   0   -1  1       0   0   0   0   
+4  4   59  8   2   1   2   0   0   0   L       1       0   58  0   0   -1  1       0   0   0   0   
+5  5   61  8   2   1   2   0   0   0   L       1       0   60  0   0   -1  1       0   0   0   0   
+6  6   63  8   2   1   15  0   0   0   L       1       0   62  0   0   -1  1       0   0   0   0   
+7  7   65  8   2   1   20  0   0   0   L       1       0   64  0   0   -1  1       0   0   0   0   
+8  8   67  8   2   1   7   0   0   0   L       1       0   66  0   0   -1  1       0   0   0   0   
+9  9   69  8   2   1   7   0   0   0   L       1       0   68  0   0   -1  1       0   0   0   0   
+10 10  71  8   2   1   16  0   0   0   L       1       0   70  0   0   -1  1       0   0   0   0   
+11 11  73  8   2   1   16  0   0   0   L       1       0   72  0   0   -1  1       0   0   0   0   
+
+
+3 : Message Identifier
+
+  3  
+0 86 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+   401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0  0   86  0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1  1   89  0   0   1   0   0   0   0   N       1       0   88  0   6   -1  -1      0   0   0   0   
+2  2   92  8   2   1   2   1   0   0   L       1       0   91  0   0   -1  1       0   0   0   0   
+3  3   94  8   2   1   4   1   0   0   L       1       0   93  0   0   -1  1       0   0   0   0   
+4  4   96  8   2   1   2   1   0   0   L       1       0   95  0   0   -1  1       0   0   0   0   
+5  5   98  8   2   1   12  1   0   0   L       1       0   97  0   0   -1  1       0   0   0   0   
+6  6   100 8   2   1   5   1   0   0   R   0   1       0   99  0   0   -1  1       0   0   0   0   
+7  7   102 8   2   1   5   1   0   0   R   0   1       0   101 0   0   -1  1       0   0   0   0   
+8  8   104 8   2   1   4   1   0   0   R   0   1       0   103 0   0   -1  1       0   0   0   0   
+9  9   106 8   2   1   8   1   0   0   L       1       0   105 0   0   -1  1       0   0   0   0   
+10 10  108 8   2   1   4   1   0   0   L       1       0   107 0   0   -1  1       0   0   0   0   
+11 11  110 8   2   1   5   1   0   0   R   0   1       0   109 0   0   -1  1       0   0   0   0   
+12 12  112 8   2   1   2   1   0   0   L       1       0   111 0   0   -1  1       0   0   0   0   
+13 13  114 8   2   1   26  1   0   0   L       1       0   113 0   0   -1  1       0   0   0   0   
+14 14  116 8   2   1   30  1   0   0   L       1       0   115 0   0   -1  1       0   0   0   0   
+15 15  118 8   2   1   39  1   0   0   L       1       0   117 0   0   -1  1       0   0   0   0   
+16 16  120 0   0   1   0   0   0   0   N       1       0   119 0   6   -1  -1      0   0   0   0   
+17 17  123 8   2   1   0   16  0   0   L       1       0   122 3   0   -1  1       0   0   0   0   
+
+
+3 : Message Identifier
+
+  3   
+0 124 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+  401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0 0   124 0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1 1   127 0   0   1   0   0   0   0   N       1       0   126 0   6   -1  -1      0   0   0   0   
+2 2   130 8   2   1   30  1   0   0   L       1       0   129 0   0   -1  1       0   0   0   0   
+3 3   132 8   2   1   7   1   0   0   L       1       0   131 0   0   -1  1       0   0   0   0   
+4 4   134 8   2   1   111 1   0   0   L       1       0   133 0   0   -1  1       0   0   0   0   
+5 5   136 0   0   1   0   0   0   0   N       1       0   135 0   6   -1  -1      0   0   0   0   
+6 6   123 8   2   1   0   5   0   0   L       1       0   122 3   0   -1  1       0   0   0   0   
+
+
+3 : Message Identifier
+
+  3   
+0 139 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+  401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0 0   139 0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1 1   142 8   2   1   148 0   0   0   L       1       0   141 0   0   -1  1       0   0   0   0   
+2 2   144 8   2   1   4   0   0   0   L       1       0   143 0   0   -1  1       0   0   0   0   
+3 3   146 8   2   1   0   0   0   0   L       1       0   145 3   0   -1  1       0   0   0   0   
+
+
+3 : Message Identifier
+
+  3   
+0 148 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+   401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0  0   148 0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1  1   151 0   0   1   0   0   0   0   N       1       0   150 0   6   -1  -1      0   0   0   0   
+2  2   154 8   2   1   0   1   0   0   L       1       0   153 0   0   -1  1       0   0   0   0   
+3  3   156 8   2   1   0   1   0   0   L       1       0   155 0   0   -1  1       0   0   0   0   
+4  4   158 8   2   1   0   1   0   0   L       1       0   157 0   0   -1  1       0   0   0   0   
+5  5   160 8   2   1   0   1   0   0   L       1       0   159 0   0   -1  1       0   0   0   0   
+6  6   162 8   2   1   0   1   0   0   L       1       0   161 0   0   -1  1       0   0   0   0   
+7  7   164 8   2   1   0   1   0   0   L       1       0   163 0   0   -1  1       0   0   0   0   
+8  8   166 8   2   1   0   1   0   0   L       1       0   165 0   0   -1  1       0   0   0   0   
+9  9   168 0   0   1   0   0   0   0   N       1       0   167 0   6   -1  -1      0   0   0   0   
+10 10  171 8   2   1   0   9   0   0   L       1       0   170 0   0   -1  1       0   0   0   0   
+11 11  173 8   2   1   0   9   0   0   L       1       0   172 0   0   -1  1       0   0   0   0   
+12 12  175 8   2   1   0   9   0   0   L       1       0   174 0   0   -1  1       0   0   0   0   
+13 13  177 8   2   1   0   9   0   0   L       1       0   176 0   0   -1  1       0   0   0   0   
+14 14  179 8   2   1   0   9   0   0   L       1       0   178 0   0   -1  1       0   0   0   0   
+15 15  181 8   2   1   0   9   0   0   L       1       0   180 0   0   -1  1       0   0   0   0   
+16 16  183 8   2   1   0   9   0   0   L       1       0   182 0   0   -1  1       0   0   0   0   
+17 17  185 8   2   1   0   9   0   0   L       1       0   184 0   0   -1  1       0   0   0   0   
+18 18  187 8   2   1   0   9   0   0   L       1       0   186 0   0   -1  1       0   0   0   0   
+19 19  189 8   2   1   0   9   0   0   L       1       0   188 0   0   -1  1       0   0   0   0   
+20 20  191 8   2   1   0   9   0   0   L       1       0   190 0   0   -1  1       0   0   0   0   
+21 21  193 8   2   1   0   9   0   0   L       1       0   192 0   0   -1  1       0   0   0   0   
+22 22  195 8   2   1   0   9   0   0   L       1       0   194 0   0   -1  1       0   0   0   0   
+23 23  197 0   0   1   0   0   0   0   N       1       0   196 0   6   -1  -1      0   0   0   0   
+24 24  200 8   2   1   0   23  0   0   L       1       0   199 0   0   -1  1       0   0   0   0   
+
+
+3 : Message Identifier
+
+  3   
+0 202 
+
+Row (4)
+---
+
+401 : Row Number
+402 : Tag Identifier
+403 : Physical Type
+404 : Logical Type
+405 : Repeating Element
+406 : Field length
+407 : Parent Row
+408 : Sign Representation
+409 : Virtual Decimal Point
+410 : Justification
+411 : Padding
+412 : Byte Alignment
+413 : Format
+414 : Leading Skip Bytes
+415 : Member Id
+417 : Length Units
+418 : Type Composition
+419 : Default Value Index
+420 : Encoding Null
+421 : Encoding Null Value
+422 : Encoding Null Permitted
+423 : Trailing Skip Bytes
+424 : Sign EBCDIC Custom
+425 : Inclusive Length Reference
+
+   401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 417 418 419 420 421 422 423 424 425 
+0  0   202 0   0   0   0   -1  0   0   N       1       0   0   0   6   -1  -1      0   0   0   0   
+1  1   205 0   0   1   0   0   0   0   N       1       0   204 0   6   -1  -1      0   0   0   0   
+2  2   208 8   2   1   8   1   0   0   L       1       0   207 0   0   -1  1       0   0   0   0   
+3  3   210 0   0   1   0   1   0   0   N       1       0   209 0   6   -1  -1      0   0   0   0   
+4  4   213 8   2   1   2   3   0   0   L       1       0   212 0   0   -1  1       0   0   0   0   
+5  5   215 8   2   1   8   3   0   0   L       1       0   214 0   0   -1  1       0   0   0   0   
+6  6   217 8   2   1   8   3   0   0   L       1       0   216 0   0   -1  1       0   0   0   0   
+7  7   219 8   2   1   8   3   0   0   L       1       0   218 0   0   -1  1       0   0   0   0   
+8  8   221 8   2   1   8   3   0   0   L       1       0   220 0   0   -1  1       0   0   0   0   
+9  9   223 8   2   1   8   3   0   0   L       1       0   222 0   0   -1  1       0   0   0   0   
+10 10  225 8   2   1   2   3   0   0   L       1       0   224 0   0   -1  1       0   0   0   0   
+11 11  227 8   2   1   5   3   0   0   L       1       0   226 0   0   -1  1       0   0   0   0   
+12 12  229 8   2   1   1   3   0   0   L       1       0   228 0   0   -1  1       0   0   0   0   
+13 13  231 8   2   1   1   3   0   0   L       1       0   230 0   0   -1  1       0   0   0   0   
+14 14  233 8   2   1   1   3   0   0   L       1       0   232 0   0   -1  1       0   0   0   0   
+15 15  235 8   2   1   2   3   0   0   L       1       0   234 0   0   -1  1       0   0   0   0   
+16 16  237 8   2   1   1   3   0   0   L       1       0   236 0   0   -1  1       0   0   0   0   
+17 17  239 8   2   1   1   3   0   0   L       1       0   238 0   0   -1  1       0   0   0   0   
+18 18  241 0   0   1   0   1   0   0   N       1       0   240 0   6   -1  -1      0   0   0   0   
+19 19  244 1   4   1   4   18  1   0   N       1       0   243 0   0   -1  1   0   0   0   0   0   
+20 20  246 8   2   1   0   18  0   0   L       1       0   245 0   0   -1  1       0   0   0   0   
+21 21  248 8   2   1   0   18  0   0   L       1       0   247 0   0   -1  1       0   0   0   0   
+
+
+Values (25)
+------
+
+2000 : Row Count
+
+  2000 
+0 0    
+

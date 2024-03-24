@@ -1,0 +1,53 @@
+CREATE PROCEDURE ParseBlobPS9RsHostToXML(IN refInputRoot REFERENCE, INOUT refEnvironment REFERENCE)
+	
+	BEGIN	
+		DECLARE refEnvWork	REFERENCE TO refEnvironment.Variables.Work;	
+		DECLARE newBlob BLOB;
+		DECLARE BadCharList CHARACTER '00.FF.C29F.0C.0E.00FF.BA.DF';
+		
+--		CALL SplitBadCharList(getBadCharList(),refEnvWork, '.');
+		CALL SplitBadCharList(BadCharList,refEnvWork, '.');
+		DECLARE C_BLOB_SPACE_CCSID_500 CONSTANT BLOB X'40';
+		
+		SET newBlob = replaceBlobCarsByCar(refInputRoot.BLOB.BLOB,refEnvWork.cars,C_BLOB_SPACE_CCSID_500); --C_BLOB_SPACE_CCSID_500);
+		
+			SET refEnvironment.replaceBlobCarsByCar.newBlob = newBlob;
+			
+		DELETE FIELD refEnvWork.cars;
+			
+		-- Se realiza la limpieza de caracteres extraños XML
+		DECLARE ccsidHost INTEGER COALESCE(refEnvironment.CCSID,0);
+		SET newBlob = cambiarCaracteresProhibidosXML(newBlob,ccsidHost);
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob2 = newBlob;
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob2ToCharacter = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		SET newBlob = restaurarCaracteresXMLPS9(newBlob,ccsidHost);
+			SET refEnvironment.restaurarCaracteresXMLPS9.newBlob3 = newBlob;
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob3ToCharacter = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		
+		DECLARE chrResHost CHARACTER;
+		SET chrResHost = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		
+--		DECLARE Posicion_OC_end INTEGER;
+--		SET Posicion_OC_end = POSITION('</OC>' IN chrResHost);
+--		SET refEnvironment.Posicion_OC_end_1 = Posicion_OC_end;
+--		SET Posicion_OC_end = (Posicion_OC_end + 4) - 63;
+--		SET refEnvironment.Posicion_OC_end_2 = Posicion_OC_end;
+		
+--		SET chrResHost = SUBSTRING(chrResHost FROM 64 FOR Posicion_OC_end); --218
+--		SET refEnvironment.chrResHost1 = chrResHost;
+
+--		SET chrResHost = REPLACE(chrResHost,'&lt;','<');
+--		SET chrResHost = REPLACE(chrResHost,'&gt;','>');
+		
+		SET chrResHost = '<PS9Rs>' || chrResHost || '</PS9Rs>';
+			SET refEnvironment.chrResHost = chrResHost;
+		SET newBlob = CAST(chrResHost AS BLOB CCSID ccsidHost);
+			SET refEnvironment.PS9Rs.newBlob4 = newBlob;
+			
+--		CREATE LASTCHILD OF refEnvironment.Variables.Work DOMAIN 'XMLNSC' --C_MESSAGE_DOMAIN_XMLNSC
+--		PARSE(newBlob,,ccsidHost);
+		
+		CREATE LASTCHILD OF refEnvironment.Variables.Work DOMAIN 'XMLNSC' --C_MESSAGE_DOMAIN_XMLNSC
+		PARSE(newBlob,,ccsidHost,,,,RootBitStream);
+		
+	END;

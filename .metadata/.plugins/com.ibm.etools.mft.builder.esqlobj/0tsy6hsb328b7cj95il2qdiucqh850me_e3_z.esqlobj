@@ -1,0 +1,31 @@
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E507_TIPO_ORDEN 	= refJsonData.integrationRequest.tipo_orden;
+		SET refRoot.E507_LUGAR_NEGOC 	= refJsonData.integrationRequest.lugar_negoc;
+		SET refRoot.E507_NEMONIC 	= refJsonData.integrationRequest.nemonic;
+		SET refRoot.E507_ISIN_ENTRADA 	= refJsonData.integrationRequest.isin_entrada;
+		SET refRoot.E507_TIT_ORDENADOS 	= refJsonData.integrationRequest.tit_ordenados;
+		SET refRoot.E507_PRECIO 		= refJsonData.integrationRequest.precio;
+		SET refRoot.E507_DIA_VIGENCIA 		= refJsonData.integrationRequest.dia_vigencia;
+		SET refRoot.E507_CTA_ECONOMICA = refJsonData.integrationRequest.cta_economica;
+		SET refRoot.E507_MONEDA_EXTJ 	= refJsonData.integrationRequest.moneda_extj;
+		SET refRoot.E507_CAMBIO_EXTJ 	= refJsonData.integrationRequest.cambio_extj;
+		SET refRoot.E507_BROKER 	= refJsonData.integrationRequest.broker;
+		SET refRoot.E507_IND_RETENC 	= refJsonData.integrationRequest.ind_retenc;
+		SET refRoot.E507_FUNCION 	= refJsonData.integrationRequest.funcion;
+		SET refRoot.E507_FIRMA 	= refJsonData.integrationRequest.firma;
+		SET refRoot.E507_OBSERVACION1 		= refJsonData.integrationRequest.observacion1;
+		SET refRoot.E507_OBSERVACION2 		= refJsonData.integrationRequest.observacion2;
+		SET refRoot.E507_NUM_ORDEN = refJsonData.integrationRequest.num_orden;
+		SET refRoot.E507_USUARIO 	= refJsonData.integrationRequest.usuario;
+		SET refRoot.E507_CTA_VALOR_ENT 	= refJsonData.integrationRequest.cta_valor_ent;
+		SET refRoot.E507_CTA_VALOR_OFI 	= refJsonData.integrationRequest.cta_valor_ofi;
+		SET refRoot.E507_CTA_VALOR_DCH 	= refJsonData.integrationRequest.cta_valor_dch;
+		SET refRoot.E507_CTA_VALOR_PRO 	= refJsonData.integrationRequest.cta_valor_pro;
+		SET refRoot.E507_CTA_VALOR_NRO 	= refJsonData.integrationRequest.cta_valor_nro;
+		SET refRoot.E507_TIP_COMISION 		= refJsonData.integrationRequest.tip_comision;
+		SET refRoot.E507_IMP_COMISION 		= refJsonData.integrationRequest.imp_comision;
+		SET refRoot.E507_IND_PORTAF = refJsonData.integrationRequest.ind_portaf;
+END;

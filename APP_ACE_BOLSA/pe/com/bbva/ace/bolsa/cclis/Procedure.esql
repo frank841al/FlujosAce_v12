@@ -1,0 +1,69 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cclis
+
+
+/*
+* Description: Procedimiento que crea la estructura del mensaje significativo hacia host 
+* 		que depende de los datos enviados por el canal
+* Parameters:
+* IN: refRoot REFERENCE - Es el arbol del dominio MRM (OutputRoot.MRM).
+* IN: refXMLRoot REFERENCE - Referencia temporal del integrationRequest.
+*/
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E503_NOMBRE_CLTE1 	= refJsonData.integrationRequest.nombre_clte1;
+		SET refRoot.E503_TIPO_CONSULTA 	= refJsonData.integrationRequest.tipo_consulta;
+		SET refRoot.E503_DATO_CONSULTA 	= refJsonData.integrationRequest.dato_consulta;
+		SET refRoot.E503_CTAVAL_REIN 	= refJsonData.integrationRequest.ctaval_rein;
+		SET refRoot.E503_NEMONI_REIN 	= refJsonData.integrationRequest.nemoni_rein;
+		SET refRoot.E503_USUARIO 		= refJsonData.integrationRequest.usuario;
+		SET refRoot.E503_NUMCLI 		= refJsonData.integrationRequest.numcli;
+		SET refRoot.E503_IND_PAGINACION = refJsonData.integrationRequest.ind_paginacion;
+		SET refRoot.E503_ARG_BUSQUEDA 	= refJsonData.integrationRequest.arg_busqueda;
+END;
+
+
+-- procedimiento de salida	
+
+CREATE PROCEDURE CreateResponseToCclis(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+	
+--	    DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);		
+--		CREATE LASTCHILD OF refRoot DOMAIN GET_MESSAGE_DOMAIN_XMLNSC();
+--		DECLARE refDomain REFERENCE TO refRoot.XMLNSC;
+
+	DECLARE refIntegrationResp	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+		
+		DECLARE refEnvRoot REFERENCE TO refEnv.ROOT;
+		--		se adiciona la linea siguiente
+		DECLARE COUNTO INTEGER 1;
+		
+		DECLARE refDetalle REFERENCE TO  refEnvRoot.VLMC503D_DATOS_SALIDA;
+--		DECLARE refTmp REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA[1];
+		DECLARE refTmp REFERENCE TO  refIntegrationResp.listadoDetalle.detalle; 
+-- se comenta y se adiciona la linea siguiente	
+		WHILE LASTMOVE(refDetalle) DO
+					
+			IF (refDetalle.D502_ARQUITECTURA <> '' AND refDetalle.D503_CTAVALOR <> '' AND COUNTO<=30) THEN
+			CREATE LASTCHILD OF refIntegrationResp.listadoDetalle AS refTmp NAME 'detalle';  
+				SET refTmp.cliente   		    = COALESCE(refDetalle.D503_CLIENTE);
+				SET refTmp.rutbvl	   			    = COALESCE(refDetalle.D503_RUT_BVL);
+				SET refTmp.tipo_doc	   			= COALESCE(refDetalle.D503_TIPO_DOC);
+				SET refTmp.nume_doc	   			= COALESCE(refDetalle.D503_NUME_DOC);
+			END IF;
+			SET COUNTO= COUNTO+1;
+			MOVE refDetalle NEXTSIBLING;
+		END WHILE;
+		-- Establecer el valor de los campos de respuesta (response body JSON) en base al valor de los campos PS9 (response bosy HOST)
+		-- En esta operación no hay valores response
+		
+		SET refIntegrationResp.hay_mas     = COALESCE(refEnv.ROOT.S503_HAY_MAS    );
+		SET refIntegrationResp.sgte_cliente = COALESCE(refEnv.ROOT.S503_SGTE_CLIENTE);
+		SET refIntegrationResp.sgte_rut = COALESCE(refEnv.ROOT.S503_SGTE_RUT);
+		SET refIntegrationResp.cod_retorno   = COALESCE(refEnv.ROOT.S503_COD_RETORNO);
+		SET refIntegrationResp.cod_error_dev = COALESCE(refEnv.ROOT.S503_COD_ERROR_DEV);
+		SET refIntegrationResp.var1_error    = COALESCE(refEnv.ROOT.S503_VAR1_ERROR);
+		SET refIntegrationResp.var2_error    = COALESCE(refEnv.ROOT.S503_VAR2_ERROR);
+END;

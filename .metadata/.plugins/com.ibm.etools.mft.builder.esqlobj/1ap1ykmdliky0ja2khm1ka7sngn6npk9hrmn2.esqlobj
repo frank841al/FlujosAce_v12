@@ -1,0 +1,11 @@
+CREATE PROCEDURE crearNombreCampos(IN refCampo REFERENCE, IN refSalida REFERENCE)
+BEGIN
+
+	DECLARE refField REFERENCE TO refCampo.Config[1];
+
+	WHILE LASTMOVE(refField) DO
+		SET refSalida.{refField.ATTRIBUTE} = refField.VALUE;
+		MOVE refField NEXTSIBLING;
+	END WHILE;
+
+END;

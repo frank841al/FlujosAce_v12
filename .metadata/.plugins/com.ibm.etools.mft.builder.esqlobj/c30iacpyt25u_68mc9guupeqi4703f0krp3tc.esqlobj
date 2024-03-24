@@ -1,0 +1,116 @@
+CREATE FUNCTION restaurarCaracteresXMLPS9(IN blobPS9Host BLOB, IN ccsid INTEGER)
+	RETURNS BLOB
+	BEGIN
+	        DECLARE newBlob BLOB blobPS9Host;
+	       
+	        --&lt;OH&gt;
+	        DECLARE OH_HTML_500 BLOB X'5093a35ed6c85087a35e';
+	        DECLARE OH_500 BLOB X'4cd6c86e';
+	        DECLARE OH_HTML_1208 BLOB X'266c743b4f482667743b';
+	        DECLARE OH_1208 BLOB X'3c4f483e';
+	        
+	        --&lt;/OH&gt;
+	        DECLARE OHL_HTML_500 BLOB X'5093a35e61d6c85087a35e';
+	        DECLARE OHL_500 BLOB X'4c61d6c86e';
+	        DECLARE OHL_HTML_1208 BLOB X'266c743b2f4f482667743b';
+	        DECLARE OHL_1208 BLOB X'3c2f4f483e';
+	        
+	        --&lt;ER&gt;
+	        DECLARE ER_HTML_500 BLOB X'5093a35ec5d95087a35e';
+	        DECLARE ER_500 BLOB X'4cc5d96e';
+	        DECLARE ER_HTML_1208 BLOB X'266c743b45522667743b';
+	        DECLARE ER_1208 BLOB X'3c45523e';        
+	          
+	        --&lt;/ER&gt;
+	        DECLARE ERL_HTML_500 BLOB X'5093a35e61c5d95087a35e';
+	        DECLARE ERL_500 BLOB X'4c61c5d96e';
+	        DECLARE ERL_HTML_1208 BLOB X'266c743b2f45522667743b';
+	        DECLARE ERL_1208 BLOB X'3c2f45523e';
+	                     
+			--&lt;AV&gt;
+			DECLARE AV_HTML_500 BLOB X'5093a35ec1e55087a35e';
+	        DECLARE AV_500 BLOB X'4cc1e56e';
+	        DECLARE AV_HTML_1208 BLOB X'266c743b41562667743b';
+	        DECLARE AV_1208 BLOB X'3c41563e';
+					
+			--&lt;/AV&gt;
+			DECLARE AVL_HTML_500 BLOB X'5093a35e61c1e55087a35e';
+	        DECLARE AVL_500 BLOB X'4c61c1e56e';
+	        DECLARE AVL_HTML_1208 BLOB X'266c743b2f41562667743b';
+	        DECLARE AVL_1208 BLOB X'3c2f41563e';
+					
+			--&lt;OC&gt;
+			DECLARE OC_HTML_500 BLOB X'5093a35ed6c35087a35e';
+	        DECLARE OC_500 BLOB X'4cd6c36e';
+	        DECLARE OC_HTML_1208 BLOB X'266c743b4f432667743b';
+	        DECLARE OC_1208 BLOB X'3c4f433e';
+					
+			--&lt;/OC&gt;
+			DECLARE OCL_HTML_500 BLOB X'5093a35e61d6c35087a35e';
+	        DECLARE OCL_500 BLOB X'4c61d6c36e';
+	        DECLARE OCL_HTML_1208 BLOB X'266c743b2f4f432667743b';
+	        DECLARE OCL_1208 BLOB X'3c2f4f433e';
+					
+			--&lt;SG&gt;
+			DECLARE SG_HTML_500 BLOB X'5093a35ee2c75087a35e';
+	        DECLARE SG_500 BLOB X'4ce2c76e';
+	        DECLARE SG_HTML_1208 BLOB X'266c743b53472667743b';
+	        DECLARE SG_1208 BLOB X'3c53473e';
+					
+			--&lt;/SG&gt;
+			DECLARE SGL_HTML_500 BLOB X'5093a35e61e2c75087a35e';
+	        DECLARE SGL_500 BLOB X'4c61e2c76e';
+	        DECLARE SGL_HTML_1208 BLOB X'266c743b2f53472667743b';
+	        DECLARE SGL_1208 BLOB X'3c2f53473e';
+	   -------------------------------------------------------------------------- 
+	        --agregando <DE> </DE>
+	        --&lt;DE&gt;
+			DECLARE DE_HTML_500 BLOB X'5093a35ee2e75087a35e';
+	        DECLARE DE_500 BLOB X'4ce2c76e';
+	        DECLARE DE_HTML_1208 BLOB X'266c743b44452667743b';
+	        DECLARE DE_1208 BLOB X'3c44453e';
+					
+			--&lt;/DE&gt;
+			DECLARE DEL_HTML_500 BLOB X'5093a35e61e2e75087a35e';
+	        DECLARE DEL_500 BLOB X'4c61e2e76e';
+	        DECLARE DEL_HTML_1208 BLOB X'266c743b2f44452667743b';
+	        DECLARE DEL_1208 BLOB X'3c2f44453e';        
+	 ----------------------------------------------------------------------------------    
+	        IF ccsid = 500 THEN
+	        	         
+	           SET newBlob = REPLACE(newBlob,OH_HTML_500,OH_500);
+	           SET newBlob = REPLACE(newBlob,OHL_HTML_500,OHL_500);           
+	           SET newBlob = REPLACE(newBlob,ER_HTML_500,ER_500);
+	           SET newBlob = REPLACE(newBlob,ERL_HTML_500,ERL_500);           
+	           SET newBlob = REPLACE(newBlob,AV_HTML_500,AV_500);
+	           SET newBlob = REPLACE(newBlob,AVL_HTML_500,AVL_500);           
+	           SET newBlob = REPLACE(newBlob,OC_HTML_500,OC_500);
+	           SET newBlob = REPLACE(newBlob,OCL_HTML_500,OCL_500);           
+	           SET newBlob = REPLACE(newBlob,SG_HTML_500,SG_500);
+	           SET newBlob = REPLACE(newBlob,SGL_HTML_500,SGL_500);
+	           ----------------------------------------------------------
+	           SET newBlob = REPLACE(newBlob,DE_HTML_500,DE_500);
+	           SET newBlob = REPLACE(newBlob,DEL_HTML_500,DEL_500);
+	           ------------------------------------------------------------           
+	        ELSEIF ccsid = 1208 THEN
+	               
+	           SET newBlob = REPLACE(newBlob,OH_HTML_1208,OH_1208);
+	           SET newBlob = REPLACE(newBlob,OHL_HTML_1208,OHL_1208);           
+	           SET newBlob = REPLACE(newBlob,ER_HTML_1208,ER_1208);
+	           SET newBlob = REPLACE(newBlob,ERL_HTML_1208,ERL_1208);           
+	           SET newBlob = REPLACE(newBlob,AV_HTML_1208,AV_1208);
+	           SET newBlob = REPLACE(newBlob,AVL_HTML_1208,AVL_1208);           
+	           SET newBlob = REPLACE(newBlob,OC_HTML_1208,OC_1208);
+	           SET newBlob = REPLACE(newBlob,OCL_HTML_1208,OCL_1208);           
+	           SET newBlob = REPLACE(newBlob,SG_HTML_1208,SG_1208);
+	           SET newBlob = REPLACE(newBlob,SGL_HTML_1208,SGL_1208);
+	           ----------------------------------------------------------
+	           SET newBlob = REPLACE(newBlob,DE_HTML_1208,DE_1208);
+	           SET newBlob = REPLACE(newBlob,DEL_HTML_1208,DEL_1208);
+	           ----------------------------------------------------------           
+	        ELSE
+	           THROW USER EXCEPTION CATALOG 'MyCatalog' MESSAGE 9998 VALUES('No soporta este CCSID '||CAST(ccsid AS CHARACTER)) ;                            
+	        END IF;
+	 
+	        RETURN newBlob;
+	END;

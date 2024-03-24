@@ -1,0 +1,272 @@
+CREATE COMPUTE MODULE SubFlowAuxiliar_ApplyRoute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyEntireMessage();
+		
+		DECLARE refAuxiliar REFERENCE TO Environment.Backup.Auxiliar;
+		
+		--Se elimina cualquier mensaje original
+		DELETE FIELD OutputRoot.BLOB;
+		DELETE FIELD OutputRoot.SOAP;
+		DELETE FIELD OutputRoot.JSON;
+		DELETE FIELD OutputRoot.MRM;
+		DELETE FIELD OutputRoot.HTTPInputHeader;
+		DELETE FIELD OutputRoot.HTTPRequestHeader;
+		DELETE FIELD OutputRoot.OutputLocalEnvironment;
+		DELETE FIELD OutputRoot.XMLNS;
+		DELETE FIELD OutputRoot.XMLNSC;
+		
+		
+		/*
+		** ARMANDO ESTRUCTURA PARA ENVIO A AUDITORIA, EVENTO [1]
+		*/
+		
+		IF COALESCE(refAuxiliar.Generate.MsgOne, '') = getSI() THEN
+			
+			DELETE FIELD OutputRoot.MQRFH2.mcd;
+			
+			SET OutputRoot.Properties.Encoding = 273;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+			
+			--Armar estuctura del mensaje tipo 1
+			IF COALESCE(refAuxiliar.Generate.isJson, '') = getNO() THEN
+				CALL armarAuditoriaEventoEntrada (OutputRoot,
+												 OutputRoot.MQMD.MsgId,
+												 OutputRoot.MQRFH2.usr,
+												 Environment.Entrada.XMLNSC);
+			ELSE
+				CALL armarAuditoriaEventoEntrada (OutputRoot,
+												 OutputRoot.MQMD.CorrelId,
+												 OutputRoot.MQRFH2.usr,
+												 InputRoot.JSON);
+			END IF;
+			
+			--Registrar Tipo 1 en auditoria
+			IF SUBSTRING(OutputRoot.MQRFH2.usr.Parametros.LEVEL_AUDIT FROM 1 FOR 1) = '1' THEN
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'QL.GEN.AUDIT.REQ.01';--getCOLA_ENTRADA_FLUJO_AUDIT_SRV();
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = 'TMDW5';--refAuxiliar.REPLY_TO_QMGR;
+				PROPAGATE TO LABEL 'LBL_AUDIT' DELETE NONE;
+			END IF;
+			
+			--Registrar Evento 1
+			IF COALESCE(OutputRoot.MQRFH2.usr.Parametros.EVENTS,'') <> '' THEN
+				IF OutputRoot.MQRFH2.usr.Parametros.EVENTS = getSI() THEN
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'QL.GEN.EVENTS.HUB.REQ.01';--getCOLA_ENTRADA_FLUJO_EVENTS_SRV();
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+					PROPAGATE TO LABEL 'LBL_EVENT' DELETE NONE;
+				END IF;
+			END IF;
+			
+			--SET refAuxiliar.Generate.MsgOne = getNO();
+			DELETE FIELD refAuxiliar;
+			DELETE FIELD Environment.Entrada.XMLNSC;
+			
+		END IF;
+		
+		
+		/*
+		** ARMANDO ESTRUCTURA PARA ENVIO A AUDITORIA, EVENTO [2]
+		*/
+				
+		IF COALESCE(refAuxiliar.Generate.MsgTwo, '') = getSI() THEN
+			
+			DELETE FIELD OutputRoot.MQMD;
+			DELETE FIELD OutputRoot.MQRFH2;
+			
+			CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+			CREATE NEXTSIBLING OF OutputRoot.MQMD DOMAIN 'MQRFH2';
+			
+			SET OutputRoot.MQMD = Environment.Backup.MQMD;
+			SET OutputRoot.MQRFH2 = Environment.Backup.MQRFH2;
+			DELETE FIELD OutputRoot.MQRFH2.mcd;
+			
+			SET OutputRoot.Properties.Encoding = 273;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+		
+			--Armar estuctura del mensaje tipo 2
+			IF COALESCE(refAuxiliar.Generate.isJson, '') = getNO() THEN
+				CALL armarAuditoriaEventoFormateo (OutputRoot,
+												  Environment.Backup.MQMD.MsgId,
+												  Environment.Backup.MQRFH2.usr,
+												  Environment.Request.XMLNSC);
+			
+			ELSE
+				CALL armarAuditoriaEventoFormateo (OutputRoot,
+												  Environment.Backup.MQMD.MsgId,
+												  Environment.Backup.MQRFH2.usr,
+												  Environment.Request.JSON);
+			END IF;
+			
+			
+			--Registrar Tipo 2 en auditoria
+			IF SUBSTRING(Environment.Backup.MQRFH2.usr.Parametros.LEVEL_AUDIT FROM 2 FOR 1) = '1' THEN
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = getCOLA_ENTRADA_FLUJO_AUDIT_SRV();
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+				PROPAGATE TO LABEL 'LBL_AUDIT' DELETE NONE;
+			END IF;
+			
+			--Registrar Evento 2
+			IF COALESCE(Environment.Backup.MQRFH2.usr.Parametros.EVENTS,'') <> '' THEN
+				IF Environment.Backup.MQRFH2.usr.Parametros.EVENTS = getSI() THEN
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName ='QL.GEN.EVENTS.HUB.REQ.01';-- getCOLA_ENTRADA_FLUJO_EVENTS_SRV();
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+					PROPAGATE TO LABEL 'LBL_EVENT' DELETE NONE;
+				END IF;
+			END IF; 
+			
+			--SET refAuxiliar.Generate.MsgTwo = getNO();
+			DELETE FIELD refAuxiliar;
+			DELETE FIELD Environment.Request.XMLNSC;
+			DELETE FIELD Environment.Request.JSON;
+			
+		END IF;
+		
+		
+		/*
+		** ARMANDO ESTRUCTURA PARA ENVIO A AUDITORIA, EVENTO [3]
+		*/
+				
+		IF COALESCE(refAuxiliar.Generate.MsgThree, '') = getSI() THEN
+			
+			DELETE FIELD OutputRoot.MQMD;
+			DELETE FIELD OutputRoot.MQRFH2;
+			
+			CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+			CREATE NEXTSIBLING OF OutputRoot.MQMD DOMAIN 'MQRFH2';
+			
+			SET OutputRoot.MQMD = Environment.Backup.MQMD;
+			SET OutputRoot.MQRFH2 = Environment.Backup.MQRFH2;
+			DELETE FIELD OutputRoot.MQRFH2.mcd;
+			
+			SET OutputRoot.Properties.Encoding = 273;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+			
+			--Armar estuctura del mensaje tipo 3
+			IF COALESCE(refAuxiliar.Generate.isJson, '') = getNO() THEN
+				CALL armarAuditoriaEventoRespuestaProveedor (OutputRoot,
+															Environment.Backup.MQMD.MsgId,
+															Environment.Backup.MQRFH2.usr,
+															Environment.Response.XMLNSC);
+			ELSE
+				CALL armarAuditoriaEventoRespuestaProveedor (OutputRoot,
+															Environment.Backup.MQMD.MsgId,
+															Environment.Backup.MQRFH2.usr,
+															Environment.Response.JSON);
+			END IF;
+		
+			--Registrar Tipo 3 en auditoria
+			IF SUBSTRING(Environment.Backup.MQRFH2.usr.Parametros.LEVEL_AUDIT FROM 3 FOR 1) = '1' THEN
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = getCOLA_ENTRADA_FLUJO_AUDIT_SRV();
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+				PROPAGATE TO LABEL 'LBL_AUDIT' DELETE NONE;
+			END IF;
+			
+			--Registrar Evento 3
+			IF COALESCE(Environment.Backup.MQRFH2.usr.Parametros.EVENTS,'') <> '' THEN
+				IF Environment.Backup.MQRFH2.usr.Parametros.EVENTS = getSI() THEN
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'QL.GEN.EVENTS.HUB.REQ.01';--getCOLA_ENTRADA_FLUJO_EVENTS_SRV();
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+					PROPAGATE TO LABEL 'LBL_EVENT' DELETE NONE;
+				END IF;
+			END IF;
+			
+			--SET refAuxiliar.Generate.MsgThree = getNO();
+			DELETE FIELD refAuxiliar;
+			DELETE FIELD Environment.Response.XMLNSC;
+			DELETE FIELD Environment.Response.JSON;
+			
+		END IF;
+		
+		
+		
+		/*
+		** ARMANDO ESTRUCTURA PARA ENVIO A AUDITORIA, EVENTO [4]
+		*/
+		
+		IF COALESCE(refAuxiliar.Generate.MsgFour, '') = getSI() THEN
+			
+			DELETE FIELD OutputRoot.MQMD;
+			DELETE FIELD OutputRoot.MQRFH2;
+			
+			CREATE NEXTSIBLING OF OutputRoot.Properties DOMAIN 'MQMD';
+			CREATE NEXTSIBLING OF OutputRoot.MQMD DOMAIN 'MQRFH2';
+			
+			SET OutputRoot.MQMD = Environment.Backup.MQMD;
+			SET OutputRoot.MQRFH2 = Environment.Backup.MQRFH2;
+			DELETE FIELD OutputRoot.MQRFH2.mcd;
+			
+			SET OutputRoot.Properties.Encoding = 273;
+			SET OutputRoot.Properties.CodedCharSetId = 1208;
+			
+			--Armar estuctura del mensaje tipo 4
+			
+		
+			--Armar estuctura del mensaje tipo 4
+			IF COALESCE(refAuxiliar.Generate.isJson, '') = getNo() THEN
+				CALL armarAuditoriaEventoRespuestaConsumidor (OutputRoot,
+															  Environment.Backup.MQMD.MsgId,
+															  Environment.Backup.MQRFH2.usr,
+															  Environment.Salida.XMLNSC);
+			ELSE
+				CALL armarAuditoriaEventoRespuestaConsumidor (OutputRoot,
+															  Environment.Backup.MQMD.MsgId,
+															  Environment.Backup.MQRFH2.usr,
+															  Environment.Salida.JSON);
+			END IF;
+			
+			--Registrar Tipo 4 en auditoria
+			IF SUBSTRING(Environment.Backup.MQRFH2.usr.Parametros.LEVEL_AUDIT FROM 4 FOR 1) = '1' THEN
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = getCOLA_ENTRADA_FLUJO_AUDIT_SRV();
+				SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+				PROPAGATE TO LABEL 'LBL_AUDIT' DELETE NONE;
+			END IF;
+			
+			--Registrar Tipo 4 en auditoria
+			IF COALESCE(Environment.Backup.MQRFH2.usr.Parametros.EVENTS,'') <> '' THEN
+				IF Environment.Backup.MQRFH2.usr.Parametros.EVENTS = getSI() THEN
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'QL.GEN.EVENTS.HUB.REQ.01';--getCOLA_ENTRADA_FLUJO_EVENTS_SRV();
+					SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+					PROPAGATE TO LABEL 'LBL_EVENT' DELETE NONE;
+				END IF;
+			END IF;
+			
+			--SET refAuxiliar.Generate.MsgFour = getNO();
+			DELETE FIELD refAuxiliar;
+			DELETE FIELD Environment.Salida.XMLNSC;
+			DELETE FIELD Environment.Salida.JSON;
+			
+		END IF;
+		
+		
+		/*
+		** ARMANDO ESTRUCTURA PARA MANEJO DE ERROR
+		*/
+		
+		IF COALESCE(refAuxiliar.Generate.Error, '') = getSI() THEN
+			
+			DELETE FIELD OutputRoot.MQRFH2.mcd;
+			
+			DECLARE refMQRFh2 	REFERENCE TO OutputRoot.MQRFH2.usr.ResultadoError;
+			
+			CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+			SET OutputRoot.XMLNSC.Error = refMQRFh2;
+			
+			--Asignacion de la cola de entrada del flujo de error
+			SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = getCOLA_ENTRADA_FLUJO_ERROR_SRV();
+			SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueManagername = refAuxiliar.REPLY_TO_QMGR;
+	
+			PROPAGATE TO LABEL 'LBL_ERROR' DELETE NONE;
+			
+			DELETE FIELD refAuxiliar;
+			
+		END IF;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+	
+END MODULE;

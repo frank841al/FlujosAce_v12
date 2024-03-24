@@ -1,0 +1,82 @@
+CREATE FUNCTION determinarValorTransCodeHost(refIntegRequest REFERENCE) RETURNS CHARACTER 
+BEGIN
+	
+	DECLARE valorResultado CHARACTER;
+
+    -- Obtener el valor de idOperacion desde refIntegRequest
+    DECLARE idOperacion CHARACTER;
+    SET idOperacion = refIntegRequest.requestHeader.idOperacion;
+
+    -- Determinar el valor de valorResultado según el valor de idOperacion
+    IF idOperacion = 'CCLI' THEN
+        SET valorResultado = 'VLA2';
+    ELSEIF idOperacion = 'CCLIS' THEN
+        SET valorResultado = 'VLA3';
+    ELSEIF idOperacion = 'RVALUSU' THEN
+        SET valorResultado = 'VLA0';
+    ELSEIF idOperacion = 'CORDCLISMV' THEN
+        SET valorResultado = 'VLA1';
+    ELSEIF idOperacion = 'CFACS' THEN
+        SET valorResultado = 'VLA4';
+    ELSEIF idOperacion = 'CSALSTITVAL' THEN
+        SET valorResultado = 'VLA5';
+    ELSEIF idOperacion = 'CCATSVAL' THEN
+        SET valorResultado = 'VLA6';
+    ELSEIF idOperacion = 'PORDCOMVAL' THEN
+        SET valorResultado = 'VLA7';
+    ELSEIF idOperacion = 'PORDVENVAL' THEN
+        SET valorResultado = 'VLA8';
+    ELSEIF idOperacion = 'ROPERENFIJVAR' THEN
+        SET valorResultado = 'VLA9';
+    ELSEIF idOperacion = 'CORDSCLI' THEN
+        SET valorResultado = 'VLAA';
+    ELSEIF idOperacion = 'CDETORD' THEN
+        SET valorResultado = 'VLAB';
+    ELSEIF idOperacion = 'RORDSEXT' THEN
+        SET valorResultado = 'VLAC';
+    ELSEIF idOperacion = 'CCTAVALEMP' THEN
+        SET valorResultado = 'VLAD';
+    ELSEIF idOperacion = 'CCTAVALSALEMP' THEN
+        SET valorResultado = 'VLAE';
+    ELSEIF idOperacion = 'RGAR' THEN
+        SET valorResultado = 'VLAF';
+    ELSEIF idOperacion = 'RGENPOL' THEN
+        SET valorResultado = 'VLAG';
+    ELSEIF idOperacion = 'RACTPOL' THEN
+        SET valorResultado = 'VLAH';
+    ELSEIF idOperacion = 'CDETPOL' THEN
+        SET valorResultado = 'VLAI';
+    ELSEIF idOperacion = 'CPOLSCTAVAL' THEN
+        SET valorResultado = 'VLAJ';
+    ELSEIF idOperacion = 'CPOLSFEC' THEN
+        SET valorResultado = 'VLAK';
+    ELSEIF idOperacion = 'ROPEPOL' THEN
+        SET valorResultado = 'VLAL';
+    ELSEIF idOperacion = 'CNEMS' THEN
+        SET valorResultado = 'VLAM';
+    ELSEIF idOperacion = 'CBRKS' THEN
+        SET valorResultado = 'VLAN';
+    ELSEIF idOperacion = 'CORDSPENS' THEN
+        SET valorResultado = 'VLAO';
+    ELSEIF idOperacion = 'RSIMOPEREP' THEN
+        SET valorResultado = 'VLAP';
+    ELSEIF idOperacion = 'CPROORD' THEN
+        SET valorResultado = 'VLAQ';
+    ELSEIF idOperacion = 'RORDNEG' THEN
+        SET valorResultado = 'VLAR';
+    ELSEIF idOperacion = 'CMAPSGLOS' THEN
+        SET valorResultado = 'VLAS';
+    ELSEIF idOperacion = 'CDETMAPGLO' THEN
+        SET valorResultado = 'VLAT';
+    ELSEIF idOperacion = 'CCLISESPS' THEN
+        SET valorResultado = 'VLAU';
+    ELSEIF idOperacion = 'COPESCLIESP' THEN
+        SET valorResultado = 'VLAV';
+    ELSEIF idOperacion = 'CDETCUEEFE' THEN
+        SET valorResultado = 'VLAW';
+    ELSE
+        SET valorResultado = 'Valor_Por_Defecto'; -- Manejar otros casos si es necesario
+    END IF;
+	
+    RETURN valorResultado;
+END;

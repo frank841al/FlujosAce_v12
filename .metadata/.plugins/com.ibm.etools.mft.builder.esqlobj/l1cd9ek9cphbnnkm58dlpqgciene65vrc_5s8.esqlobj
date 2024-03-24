@@ -1,0 +1,101 @@
+CREATE PROCEDURE loadCacheParameter (IN cacheServices REFERENCE,
+									 IN inService CHARACTER,
+									 IN nameOperation CHARACTER,
+									 IN refEnv REFERENCE)
+BEGIN
+	
+	--En caso el cache del servicio no este activo, se carga la parametria del servicio
+	--Declaracion de variables
+	DECLARE errorConfig BOOLEAN FALSE;
+	DECLARE errorCode INTEGER 0; 
+	DECLARE errorMsg CHARACTER ''; 
+	DECLARE rowsParamService ROW;
+	DECLARE rowsParamOpe ROW;
+	DECLARE rowsParamGeneric ROW;
+	DECLARE rowsOpe ROW;
+	DECLARE rowsMap ROW;
+	DECLARE rowsUsr ROW;
+	DECLARE rowEnvironment 	ROW;
+	
+	--Carga parametria del Servicio
+	CALL SP_GET_PARAMETER_SERVICE   	(inService		, rowsParamService.Config[]);  
+	CALL SP_GET_PARAMETER_SERVICE		(getSERVGEN()	, rowsParamGeneric.Config[]);
+	CALL SP_GET_MAPEO 					(inService		, rowsMap.Config[]);  
+	CALL SP_GET_OPERATION 				(inService		, rowEnvironment.Operations[]);
+	CALL SP_GET_PARAMETER_OPERATION		(inService		, rowEnvironment.TableParameterOperation[]);
+			
+	CREATE FIELD rowsUsr.usr.Operacion;
+	CREATE FIELD rowsUsr.usr.Parametros;
+	CREATE FIELD rowsUsr.usr.Parametros.Map;
+	CREATE FIELD rowsUsr.usr.ParametrosGenericos;
+	CREATE FIELD rowsUsr.usr.ParametrosOperacion;
+	CREATE FIELD rowsUsr.usr.AddHeaderOperacion;
+	
+	CREATE FIELD refEnv.Operation;
+	CREATE FIELD refEnv.ParamOperation;
+	
+		
+	DECLARE refParam 			REFERENCE TO rowsUsr.usr.Parametros;
+	DECLARE refParamGen 		REFERENCE TO rowsUsr.usr.ParametrosGenericos;
+	DECLARE refParamOperation 	REFERENCE TO rowsUsr.usr.ParametrosOperacion;
+	DECLARE refOperation 		REFERENCE TO rowsUsr.usr.Operacion; 
+	SET rowsOpe.Tabla[] = (SELECT	P.CODE_OPERATION,
+									P.NAME,
+									P.CONDITIONAL,
+									P.ROUTE_CONDITIONAL,
+									P.CODE_SERVICE,
+									P.INPUT
+									FROM rowEnvironment.Operations[] as P
+									WHERE P.CODE_SERVICE = inService AND
+										  P.STATUS = 'A'
+									);
+	
+	SET rowsParamOpe.Config[] =	(SELECT	P.CODE_SERVICE,
+										P.CODE_OPERATION,
+										P.ATTRIBUTE,
+										P.VALUE,
+										P.STATUS_PARAMETER,
+										P.STATUS_OPERATION,
+										P.STATUS_SERVICE
+								 FROM rowEnvironment.TableParameterOperation[] as P
+								 WHERE P.CODE_SERVICE = inService  AND
+									  P.STATUS_PARAMETER = 'A' AND P.STATUS_OPERATION = 'A' AND
+									  P.STATUS_SERVICE = 'A'
+								 );
+
+	CALL crearNombreCampos (rowsParamService	, refParam);
+	CALL crearNombreCampos (rowsParamGeneric	, refParamGen);		
+	CALL crearNombreCampos (rowsParamOpe		, refParamOperation);
+	
+	SET refParam.Map	= rowsMap.Config[1];
+	SET refOperation	= rowsOpe.Tabla[1];
+	--Validaciones de parametria del HUB     
+	IF inService = '' OR inService IS NULL THEN
+		SET errorCode = 1000; 
+		SET errorMsg  = 'No se envio el codigo de servicio';		 
+	ELSEIF CARDINALITY(rowsParamService.Config[]) < 1 THEN
+		SET errorCode = 1001;
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene parametros asignados';
+	ELSEIF LENGTH(refParam.LEVEL_AUDIT) < 4 THEN
+		SET errorCode = 1003; 
+		SET errorMsg  = 'El servicio ' || inService || ' tiene mal configurado el nivel de auditoria'; 
+	ELSEIF CARDINALITY(rowsOpe.Tabla[]) < 1 THEN
+		SET errorCode = 1007; 
+		SET errorMsg  = 'El servicio ' || inService || ' no contiene operaciones'; 
+	ELSEIF CARDINALITY(rowsParamOpe.Config[]) < 1 THEN
+		SET errorCode = 1001; 
+		SET errorMsg  = 'La operacion ' || nameOperation || ' del servicio ' || inService || ' no tiene parametros asignados'; 
+	ELSEIF CARDINALITY(rowsMap.Config[]) < 1 THEN
+		SET errorCode = 1004; 
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene una mapa a seguir'; 
+	END IF;
+	
+		
+	SET cacheServices.{"inService"}.Header.usr 			= rowsUsr.usr;	
+	SET cacheServices.{"inService"}.validate.errorCode  = errorCode;
+	SET cacheServices.{"inService"}.validate.errorMsg 	= errorMsg;
+	SET cacheServices.{"inService"}.Map 				= rowsMap;
+	SET cacheServices.{"inService"}.Operation 	    	= rowsOpe;
+	SET cacheServices.{"inService"}.ParamOperation 		= rowsParamOpe;
+	SET cacheServices.{"inService"}.iniciado 			= TRUE; 
+END;

@@ -1,0 +1,30 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cordspens
+
+
+/*
+* Description: Procedimiento que crea la estructura del mensaje significativo hacia host 
+* 		que depende de los datos enviados por el canal
+* Parameters:
+* IN: refRoot REFERENCE - Es el arbol del dominio MRM (OutputRoot.MRM).
+* IN: refXMLRoot REFERENCE - Referencia temporal del integrationRequest.
+*/
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E524_COD_CLIENTE  	= refJsonData.integrationRequest.cod_cliente;
+		SET refRoot.E524_CTA_VALOR 	= refJsonData.integrationRequest.cta_valor;
+		SET refRoot.E524_NRO_ORDEN 	= refJsonData.integrationRequest.nro_orden;
+		SET refRoot.E524_FECHA_DESDE 	= refJsonData.integrationRequest.fecha_desde;
+		SET refRoot.E524_FECHA_HASTA 	= refJsonData.integrationRequest.fecha_hasta;
+		SET refRoot.E524_USUARIO 		= refJsonData.integrationRequest.usuario;
+		SET refRoot.E524_NEMONICO 		= refJsonData.integrationRequest.nemonico;
+		SET refRoot.E524_CAMPO_AUX1 = refJsonData.integrationRequest.campo_aux1;
+		SET refRoot.E524_CAMPO_AUX2 	= refJsonData.integrationRequest.campo_aux2;
+		SET refRoot.E524_CAMPO_AUX3 = refJsonData.integrationRequest.campo_aux3;
+		SET refRoot.E524_CAMPO_AUX4 	= refJsonData.integrationRequest.campo_aux4;
+		SET refRoot.E524_IND_PAGINAC = refJsonData.integrationRequest.ind_paginac;
+END;
+
+
+-- procedimiento de salida	

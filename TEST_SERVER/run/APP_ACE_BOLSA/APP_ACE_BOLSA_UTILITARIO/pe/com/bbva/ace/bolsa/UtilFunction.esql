@@ -1,0 +1,107 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa
+
+
+
+CREATE FUNCTION getSERVGEN() RETURNS CHARACTER
+BEGIN
+	RETURN C_COD_SERVGEN;
+END;
+
+CREATE FUNCTION getEMPTY_CHARACTER() RETURNS CHARACTER
+BEGIN
+	RETURN C_EMPTY_CHARACTER;
+END;
+
+/* 
+ * genera messaid Unico para transacciones
+*/
+CREATE FUNCTION getMsgId(IN qmgr CHARACTER)
+RETURNS BLOB
+BEGIN
+	RETURN CAST(LEFT(qmgr || '    ', 8) AS BLOB CCSID 1208) || UUIDASBLOB;
+
+END;
+
+CREATE FUNCTION getID_PROTOCOLO_ENTRADA_HTTP() RETURNS CHARACTER
+BEGIN
+	RETURN C_ID_PROTOCOLO_ENTRADA_HTTP;
+END;
+
+CREATE FUNCTION getPROTOCOLO_ENTRADA_HTTP() RETURNS CHARACTER
+BEGIN
+	RETURN C_PROTOCOLO_ENTRADA_HTTP;
+END;
+
+CREATE FUNCTION getSI() RETURNS CHARACTER
+BEGIN
+	RETURN C_SI;
+END;
+
+/*
+* Description: FunciÃ³n que convierte una estructura definida a una cadena de bits (BLOB)
+* Parameters:
+* IN: RefRoot REFERENCE - referencia del Ã¡rbol que se desea convertir
+* IN: MsgSet CHARACTER - Message Set aplicado al mensaje
+* IN: MsgType CHARACTER - Message Type aplicado al mensaje
+* IN: MsgFormat CHARACTER - Message Format aplicado al mensaje
+* IN: MsgEncoding INTEGER - Encoding aplicado al mensaje
+* IN: MsgCCSID INTEGER - CodedCharSetId aplicado al mensaje
+* RETURN: BLOB - estructura del mensaje en formato blob
+*/
+CREATE FUNCTION ConvertReferenceToBitStream( IN RefRoot     REFERENCE, 
+										     IN MsgSet		CHARACTER, 
+										     IN MsgType		CHARACTER,
+										     IN MsgFormat	CHARACTER,
+										     IN MsgEncoding	INTEGER,
+										     IN MsgCCSID	INTEGER	) RETURNS BLOB
+BEGIN
+	DECLARE dataBlob BLOB;
+	SET dataBlob = ASBITSTREAM( RefRoot
+								SET 	 MsgSet
+								TYPE 	 MsgType
+								FORMAT 	 MsgFormat
+								ENCODING MsgEncoding
+								CCSID 	 MsgCCSID
+								OPTIONS  ValidateImmediate);
+	RETURN  dataBlob;
+END;
+
+CREATE FUNCTION getRP_MQ() RETURNS CHARACTER
+BEGIN
+	RETURN C_RP_MQ;
+END;
+
+CREATE FUNCTION getNO() RETURNS CHARACTER
+BEGIN
+	RETURN C_NO;
+END;
+
+--FUNCTIONS PS9--
+------------------ 
+--FUNCTIONS TRAMA TOTAL PS9
+
+--CREATE FUNCTION GET_MESSAGE_CCSID_UTF8() RETURNS CHARACTER
+--BEGIN
+--	RETURN C_MESSAGE_CCSID_UTF8;
+--END;
+
+CREATE FUNCTION GET_MESSAGE_SET_CONNECTOR_FRAME() RETURNS CHARACTER
+BEGIN
+	RETURN C_MESSAGE_SET_CONNECTOR_FRAME;
+END;
+
+CREATE FUNCTION GET_MSGTYPE_REQ_PS9MSG() RETURNS CHARACTER
+BEGIN
+	RETURN C_MSGTYPE_REQ_PS9MSG;
+END;
+
+CREATE FUNCTION GET_MSGFORMAT_PS9MSG() RETURNS CHARACTER
+BEGIN
+	RETURN C_MSGFORMAT_PS9MSG;
+END;
+
+
+
+
+
+

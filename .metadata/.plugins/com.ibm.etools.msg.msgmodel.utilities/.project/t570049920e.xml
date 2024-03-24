@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?><MRMessageSet id="JDDNL0K002001" name="APP_ACE_BOLSA_MSMessageSet" parser="XMLNSC">
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rordneg/VLMC527E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/rordneg/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rordneg/VLMC527E.mxsd#/0/msg_VLMC527EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC527EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC527EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC527EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rordneg/VLMC527E.mxsd#/0/msg_VLMC527EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC527EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/rordneg/}VLMC527EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC527EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rordneg/VLMC527E.mxsd#/0/VLMC527EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC527EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordcomval/VLMC507E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/pordcomval/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordcomval/VLMC507E.mxsd#/0/msg_VLMC507EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC507EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC507EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC507EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordcomval/VLMC507E.mxsd#/0/msg_VLMC507EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC507EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/pordcomval/}VLMC507EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC507EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordcomval/VLMC507E.mxsd#/0/VLMC507EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC507EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsfec/VLMC520E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cpolsfec/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsfec/VLMC520E.mxsd#/0/msg_VLMC520EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC520EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC520EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC520EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsfec/VLMC520E.mxsd#/0/msg_VLMC520EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC520EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cpolsfec/}VLMC520EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC520EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsfec/VLMC520E.mxsd#/0/VLMC520EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC520EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetord/VLMC511E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cdetord/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetord/VLMC511E.mxsd#/0/msg_VLMC511EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC511EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC511EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC511EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetord/VLMC511E.mxsd#/0/msg_VLMC511EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC511EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cdetord/}VLMC511EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC511EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetord/VLMC511E.mxsd#/0/VLMC511EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC511EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cordscli/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510E.mxsd#/0/msg_VLMC510EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC510EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC510EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC510EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510E.mxsd#/0/msg_VLMC510EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC510EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cordscli/}VLMC510EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC510EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510E.mxsd#/0/VLMC510EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC510EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cclis/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd#/0/msg_VLMC503SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC503SDATOSSALIDA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC503SDATOSSALIDA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC503SDATOSSALIDA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd#/0/msg_VLMC503SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC503SDATOSSALIDA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cclis/}VLMC503SDATOSSALIDA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC503SDATOSSALIDA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd#/0/VLMC503SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC503SDATOSSALIDA"/>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd#/0/Vlmc503sdatossalida_vlmc503d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc503sdatossalida_vlmc503d__datos__salida"/>
+    <group href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503S-D.mxsd#/0/vlmc503sdatossalida_vlmc503d__datos__salida;XSDModelGroupDefinition" name="vlmc503sdatossalida_vlmc503d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetcueefe/VLMC532E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cdetcueefe/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetcueefe/VLMC532E.mxsd#/0/msg_VLMC532EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC532EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC532EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC532EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetcueefe/VLMC532E.mxsd#/0/msg_VLMC532EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC532EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cdetcueefe/}VLMC532EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC532EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetcueefe/VLMC532E.mxsd#/0/VLMC532EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC532EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/csalstitval/VLMC505E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/csalstitval/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/csalstitval/VLMC505E.mxsd#/0/msg_VLMC505EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC505EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC505EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC505EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/csalstitval/VLMC505E.mxsd#/0/msg_VLMC505EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC505EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/csalstitval/}VLMC505EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC505EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/csalstitval/VLMC505E.mxsd#/0/VLMC505EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC505EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccatsval/VLMC506E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/ccatsval/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccatsval/VLMC506E.mxsd#/0/msg_VLMC506EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC506EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC506EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC506EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccatsval/VLMC506E.mxsd#/0/msg_VLMC506EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC506EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/ccatsval/}VLMC506EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC506EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccatsval/VLMC506E.mxsd#/0/VLMC506EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC506EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cfacs/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504E.mxsd#/0/msg_VLMC504EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC504EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC504EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC504EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504E.mxsd#/0/msg_VLMC504EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC504EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cfacs/}VLMC504EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC504EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504E.mxsd#/0/VLMC504EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC504EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cbrks/VLMC523E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cbrks/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cbrks/VLMC523E.mxsd#/0/msg_VLMC523EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC523EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC523EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC523EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cbrks/VLMC523E.mxsd#/0/msg_VLMC523EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC523EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cbrks/}VLMC523EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC523EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cbrks/VLMC523E.mxsd#/0/VLMC523EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC523EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgar/VLMC515E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/rgar/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgar/VLMC515E.mxsd#/0/msg_VLMC515EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC515EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC515EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC515EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgar/VLMC515E.mxsd#/0/msg_VLMC515EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC515EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/rgar/}VLMC515EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC515EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgar/VLMC515E.mxsd#/0/VLMC515EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC515EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cfacs/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd#/0/msg_VLMC504SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC504SDATOSSALIDA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC504SDATOSSALIDA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC504SDATOSSALIDA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd#/0/msg_VLMC504SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC504SDATOSSALIDA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cfacs/}VLMC504SDATOSSALIDA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC504SDATOSSALIDA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd#/0/VLMC504SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC504SDATOSSALIDA"/>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd#/0/Vlmc504sdatossalida_vlmc504d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc504sdatossalida_vlmc504d__datos__salida"/>
+    <group href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cfacs/VLMC504S-D.mxsd#/0/vlmc504sdatossalida_vlmc504d__datos__salida;XSDModelGroupDefinition" name="vlmc504sdatossalida_vlmc504d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/ccli/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/msg_VLMC502SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC502SDATOSSALIDA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC502SDATOSSALIDA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC502SDATOSSALIDA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/msg_VLMC502SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC502SDATOSSALIDA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/ccli/}VLMC502SDATOSSALIDA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC502SDATOSSALIDA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/VLMC502SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC502SDATOSSALIDA"/>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/vlmc502sdatossalida_s502__telefonos;XSDComplexTypeDefinition=1" name="vlmc502sdatossalida_s502__telefonos"/>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/Vlmc502sdatossalida_vlmc502d__datos__salida;XSDComplexTypeDefinition=2" name="Vlmc502sdatossalida_vlmc502d__datos__salida"/>
+    <group href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/vlmc502sdatossalida_s502__telefonos;XSDModelGroupDefinition" name="vlmc502sdatossalida_s502__telefonos"/>
+    <group href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502S.mxsd#/0/vlmc502sdatossalida_vlmc502d__datos__salida;XSDModelGroupDefinition=1" name="vlmc502sdatossalida_vlmc502d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetpol/VLMC518E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cdetpol/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetpol/VLMC518E.mxsd#/0/msg_VLMC518EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC518EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC518EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC518EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetpol/VLMC518E.mxsd#/0/msg_VLMC518EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC518EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cdetpol/}VLMC518EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC518EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cdetpol/VLMC518E.mxsd#/0/VLMC518EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC518EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsctaval/VLMC519E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cpolsctaval/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsctaval/VLMC519E.mxsd#/0/msg_VLMC519EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC519EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC519EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC519EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsctaval/VLMC519E.mxsd#/0/msg_VLMC519EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC519EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cpolsctaval/}VLMC519EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC519EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cpolsctaval/VLMC519E.mxsd#/0/VLMC519EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC519EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cclis/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503E.mxsd#/0/msg_VLMC503EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC503EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC503EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC503EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503E.mxsd#/0/msg_VLMC503EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC503EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cclis/}VLMC503EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC503EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cclis/VLMC503E.mxsd#/0/VLMC503EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC503EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rvalusu/VLMC500E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/rvalusu/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rvalusu/VLMC500E.mxsd#/0/msg_VLMC500EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC500EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC500EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC500EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rvalusu/VLMC500E.mxsd#/0/msg_VLMC500EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC500EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/rvalusu/}E500VLMC500E">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC500EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rvalusu/VLMC500E.mxsd#/0/E500VLMC500E;XSDComplexTypeDefinition" name="E500VLMC500E"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cordscli/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd#/0/msg_VLMC510SDATOSSALIDA;XSDElementDeclaration$MRMessage" name="msg_VLMC510SDATOSSALIDA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC510SDATOSSALIDA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC510SDATOSSALIDA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd#/0/msg_VLMC510SDATOSSALIDA;XSDElementDeclaration" name="msg_VLMC510SDATOSSALIDA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cordscli/}VLMC510SDATOSSALIDA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC510SDATOSSALIDA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd#/0/VLMC510SDATOSSALIDA;XSDComplexTypeDefinition" name="VLMC510SDATOSSALIDA"/>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd#/0/Vlmc510sdatossalida_vlmc510d__datos__salida;XSDComplexTypeDefinition=1" name="Vlmc510sdatossalida_vlmc510d__datos__salida"/>
+    <group href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordscli/VLMC510S-D.mxsd#/0/vlmc510sdatossalida_vlmc510d__datos__salida;XSDModelGroupDefinition" name="vlmc510sdatossalida_vlmc510d__datos__salida"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordvenval/VLMC508E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/pordvenval/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordvenval/VLMC508E.mxsd#/0/msg_VLMC508EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC508EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC508EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC508EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordvenval/VLMC508E.mxsd#/0/msg_VLMC508EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC508EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/pordvenval/}VLMC508EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC508EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/pordvenval/VLMC508E.mxsd#/0/VLMC508EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC508EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordspens/VLMC524E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/cordspens/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordspens/VLMC524E.mxsd#/0/msg_VLMC524EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC524EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC524EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC524EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordspens/VLMC524E.mxsd#/0/msg_VLMC524EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC524EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/cordspens/}VLMC524EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC524EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/cordspens/VLMC524E.mxsd#/0/VLMC524EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC524EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ropepol/VLMC521E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/ropepol/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ropepol/VLMC521E.mxsd#/0/msg_VLMC521EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC521EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC521EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC521EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ropepol/VLMC521E.mxsd#/0/msg_VLMC521EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC521EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/ropepol/}VLMC521EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC521EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ropepol/VLMC521E.mxsd#/0/VLMC521EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC521EDATOSENTRADA"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/ccli/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd#/0/msg_VLMC502EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC502EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC502EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC502EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd#/0/msg_VLMC502EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC502EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/ccli/}VLMC502EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC502EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/ccli/VLMC502E.mxsd#/0/VLMC502EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC502EDATOSENTRADA"/>
+  </MRMsgCollection>
+<MRMsgCollection href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgenpol/VLMC516E.mxsd" prefix="tns" targetNamespace="http://bolsa.ace.bbva.com.pe/rgenpol/">
+    <message href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgenpol/VLMC516E.mxsd#/0/msg_VLMC516EDATOSENTRADA;XSDElementDeclaration$MRMessage" name="msg_VLMC516EDATOSENTRADA">
+      <xwf idAttrName="id" idAttrNameNSURI="" idAttrValue="msg_VLMC516EDATOSENTRADA" messageSetDefaultRep="XML1" render="XMLElement" xmlName="msg_VLMC516EDATOSENTRADA"/>
+    </message>
+    <element href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgenpol/VLMC516E.mxsd#/0/msg_VLMC516EDATOSENTRADA;XSDElementDeclaration" name="msg_VLMC516EDATOSENTRADA" type="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://bolsa.ace.bbva.com.pe/rgenpol/}VLMC516EDATOSENTRADA">
+      <xwf messageSetDefaultRep="XML1" xmlName="msg_VLMC516EDATOSENTRADA"/>
+    </element>
+    <complexType baseType="mset://APP_ACE_BOLSA_MSMessageSet#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/APP_ACE_BOLSA_MSMessageSet/APP_ACE_BOLSA_MSMessageSet/pe/com/bbva/ace/bolsa/rgenpol/VLMC516E.mxsd#/0/VLMC516EDATOSENTRADA;XSDComplexTypeDefinition" name="VLMC516EDATOSENTRADA"/>
+  </MRMsgCollection>
+</MRMessageSet>

@@ -1,0 +1,17 @@
+CREATE FUNCTION determinarValorTransCodeHost(refIntegRequest REFERENCE) RETURNS CHARACTER 
+BEGIN
+    DECLARE operation CHARACTER;
+    DECLARE transCodeHost CHARACTER;
+
+    -- Obtener el valor de la operación desde refIntegRequest
+    SET operation = refIntegRequest.requestHeader.nameOperation;
+
+    -- Determinar el valor de transCodeHost según la operación
+    CASE operation
+        WHEN 'CCLI' THEN SET transCodeHost = 'VLA2';
+        WHEN 'RVALUSU' THEN SET transCodeHost = 'VLA4';
+        --ELSE SET transCodeHost = 'Valor_Por_Defecto'; -- Puedes establecer otro valor por defecto según tus necesidades
+    END CASE;
+
+    RETURN transCodeHost;
+END;

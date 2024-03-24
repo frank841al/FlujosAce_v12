@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="ps9.connector.hi.bbva.com.pe" xmlns:tns="ps9.connector.hi.bbva.com.pe">
+    <xsd:complexType name="tIH">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <tdsStructRep groupIndicator="&lt;LT&gt;IH&lt;GT&gt;" groupTerminator="&lt;LT&gt;/IH&lt;GT&gt;" messageSetDefaultRep="Text1"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:sequence maxOccurs="1" minOccurs="1">
+      <xsd:element name="ID_PROTOCOLO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TERMINAL_LOGICO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TERMINAL_CONTABLE">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="USUARIO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="NUMERO_SECUENCIA">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        
+        <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep justification="rightJustify" messageSetDefaultRep="Text1" paddingCharacter="'0'" precision="-1"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TRANS_CODE_HOST">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="OPCION_APLICACION">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LONGITUD_TRAMA">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        
+        <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep justification="rightJustify" messageSetDefaultRep="Text1" paddingCharacter="'0'" precision="-1"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="5"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="INDICADOR_COMMIT">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TIPO_MENSAJE_IN">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TIPO_PROCESO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="CANAL_COMUNICACION">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="IND_PRE_FORMATO">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LENGUAJE">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+        </xsd:sequence>
+  </xsd:complexType>
+    <xsd:complexType name="tME">
+        <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <tdsStructRep groupIndicator="&lt;LT&gt;ME&lt;GT&gt;" groupTerminator="&lt;LT&gt;/ME&lt;GT&gt;" messageSetDefaultRep="Text1"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+        <xsd:sequence>
+      <xsd:element name="LONGITUD_MENSAJE" type="xsd:int">
+                <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep length="4" messageSetDefaultRep="Text1" precision="-1" render="ExternalDecimal"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+            </xsd:element>
+      <xsd:element name="TIPO_MENSAJE" type="xsd:string">
+                <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep length="1" messageSetDefaultRep="Text1" precision="-1"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+            </xsd:element>
+      <xsd:element name="MENSAJE" type="xsd:string">
+                <xsd:annotation>
+          <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep messageSetDefaultRep="Text1" precision="-1"/>
+            <tdsInclRep lengthReference="/0/tME;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle/LONGITUD_MENSAJE;XSDElementDeclaration" messageSetDefaultRep="Text1"/>
+          </xsd:appinfo>
+        </xsd:annotation>
+            </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+    <xsd:complexType name="tPS9REQ">
+    <xsd:sequence>
+      <xsd:element name="ESPACIO_FIJO" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="http://www.wsadie.com/appinfo">
+            <initialValue kind="SPACE"/>
+          </xsd:appinfo>
+        
+        <xsd:appinfo source="WMQI_APPINFO">
+            <tdsElemRep length="8" messageSetDefaultRep="Text1" precision="-1"/>
+            <cwfInclRep messageSetDefaultRep="CWF">
+              <cwfSimpleRep encodingNull="NullLogicalValue" mrLengthEncoding="fixedLength" paddingCharacter="NUL" stringJustification="leftJustify" typeName="MRCWFStringRep" width="8"/>
+            </cwfInclRep>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IH" type="tns:tIH"/>
+            <xsd:element name="ME" type="tns:tME"/>
+        </xsd:sequence>
+  </xsd:complexType>
+    <xsd:complexType name="tPS9MsgIN">
+    <xsd:sequence>
+      <xsd:element name="PS9MsgIN" type="tns:tPS9REQ"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    <xsd:element name="mPS9MsgIN" type="tns:tPS9MsgIN">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/mPS9MsgIN;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

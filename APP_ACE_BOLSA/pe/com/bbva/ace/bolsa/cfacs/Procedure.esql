@@ -1,0 +1,59 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cfacs
+
+
+/*
+* Description: Procedimiento que crea la estructura del mensaje significativo hacia host 
+* 		que depende de los datos enviados por el canal
+* Parameters:
+* IN: refRoot REFERENCE _ Es el arbol del dominio MRM (OutputRoot.MRM).
+* IN: refXMLRoot REFERENCE _ Referencia temporal del integrationRequest.
+*/
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       --Mapeamos los campos del Request Body
+       --SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E504_USUARIO 	= refJsonData.integrationRequest.usuario;
+		SET refRoot.E504_DETALLE_01 	= refJsonData.integrationRequest.detalle_01;
+		SET refRoot.E504_DETALLE_02 	= refJsonData.integrationRequest.detalle_02;
+		SET refRoot.E504_DETALLE_03 	= refJsonData.integrationRequest.detalle_03;
+		SET refRoot.E504_DETALLE_04 	= refJsonData.integrationRequest.detalle_04;
+		SET refRoot.E504_DETALLE_05 	= refJsonData.integrationRequest.detalle_05;
+		SET refRoot.E504_DETALLE_06		= refJsonData.integrationRequest.detalle_06;
+		SET refRoot.E504_DETALLE_07     = refJsonData.integrationRequest.detalle_07;
+		SET refRoot.E504_DETALLE_08 	= refJsonData.integrationRequest.detalle_08;
+		SET refRoot.E504_DETALLE_09     = refJsonData.integrationRequest.detalle_09;
+		SET refRoot.E504_DETALLE_10 	= refJsonData.integrationRequest.detalle_10;
+		SET refRoot.E504_DETALLE_11 	= refJsonData.integrationRequest.detalle_11;
+		SET refRoot.E504_DETALLE_12 	= refJsonData.integrationRequest.detalle_12;
+		SET refRoot.E504_DETALLE_13 	= refJsonData.integrationRequest.detalle_13;
+		SET refRoot.E504_DETALLE_14 	= refJsonData.integrationRequest.detalle_14;
+		SET refRoot.E504_DETALLE_15 	= refJsonData.integrationRequest.detalle_15;
+		SET refRoot.E504_DETALLE_16		= refJsonData.integrationRequest.detalle_16;
+		SET refRoot.E504_DETALLE_17     = refJsonData.integrationRequest.detalle_17;
+		SET refRoot.E504_DETALLE_18 	= refJsonData.integrationRequest.detalle_18;
+		SET refRoot.E504_DETALLE_19     = refJsonData.integrationRequest.detalle_19;
+		SET refRoot.E504_DETALLE_20 	= refJsonData.integrationRequest.detalle_20;
+		SET refRoot.E504_DETALLE_21 	= refJsonData.integrationRequest.detalle_21;
+		SET refRoot.E504_DETALLE_22 	= refJsonData.integrationRequest.detalle_22;
+		SET refRoot.E504_DETALLE_23 	= refJsonData.integrationRequest.detalle_23;
+		SET refRoot.E504_DETALLE_24 	= refJsonData.integrationRequest.detalle_24;
+		SET refRoot.E504_DETALLE_25 	= refJsonData.integrationRequest.detalle_25;
+		SET refRoot.E504_DETALLE_26		= refJsonData.integrationRequest.detalle_26;
+		SET refRoot.E504_DETALLE_27     = refJsonData.integrationRequest.detalle_27;
+		SET refRoot.E504_DETALLE_28 	= refJsonData.integrationRequest.detalle_28;
+		SET refRoot.E504_DETALLE_29     = refJsonData.integrationRequest.detalle_29;
+		SET refRoot.E504_DETALLE_30 	= refJsonData.integrationRequest.detalle_30;
+		SET refRoot.E504_DETALLE_31 	= refJsonData.integrationRequest.detalle_31;
+		SET refRoot.E504_DETALLE_32 	= refJsonData.integrationRequest.detalle_32;
+		SET refRoot.E504_DETALLE_33 	= refJsonData.integrationRequest.detalle_33;
+		SET refRoot.E504_DETALLE_34 	= refJsonData.integrationRequest.detalle_34;
+		SET refRoot.E504_DETALLE_35 	= refJsonData.integrationRequest.detalle_35;
+		SET refRoot.E504_DETALLE_36		= refJsonData.integrationRequest.detalle_36;
+		SET refRoot.E504_DETALLE_37     = refJsonData.integrationRequest.detalle_37;
+		SET refRoot.E504_DETALLE_38 	= refJsonData.integrationRequest.detalle_38;
+		SET refRoot.E504_DETALLE_39     = refJsonData.integrationRequest.detalle_39;
+		SET refRoot.E504_DETALLE_40 	= refJsonData.integrationRequest.detalle_40;
+END;
+
+
+--procedimiento de salida	

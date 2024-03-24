@@ -1,0 +1,27 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.ccliente
+
+
+/*
+* Description: Procedimiento que crea la estructura del mensaje significativo hacia host 
+* 		que depende de los datos enviados por el canal
+* Parameters:
+* IN: refRoot REFERENCE - Es el arbol del dominio MRM (OutputRoot.MRM).
+* IN: refXMLRoot REFERENCE - Referencia temporal del integrationRequest.
+*/
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E502_NOMBRE_CLTE1 	= refJsonData.integrationRequest.nombre_clte1;
+		SET refRoot.E502_TIPO_CONSULTA 	= refJsonData.integrationRequest.tipo_consulta;
+		SET refRoot.E502_DATO_CONSULTA 	= refJsonData.integrationRequest.dato_consulta;
+		SET refRoot.E502_CTAVAL_REIN 	= refJsonData.integrationRequest.ctaval_rein;
+		SET refRoot.E502_NEMONI_REIN 	= refJsonData.integrationRequest.nemoni_rein;
+		SET refRoot.E502_USUARIO 		= refJsonData.integrationRequest.usuario;
+		SET refRoot.E502_NUMCLI 		= refJsonData.integrationRequest.numcli;
+		SET refRoot.E502_IND_PAGINACION = refJsonData.integrationRequest.ind_paginacion;
+		SET refRoot.E502_ARG_BUSQUEDA 	= refJsonData.integrationRequest.arg_busqueda;
+END;
+
+
+-- procedimiento de salida	

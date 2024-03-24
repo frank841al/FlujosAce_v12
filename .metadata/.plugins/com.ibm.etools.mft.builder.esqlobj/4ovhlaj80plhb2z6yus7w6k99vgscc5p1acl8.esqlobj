@@ -1,0 +1,54 @@
+CREATE PROCEDURE CreateResponseToClient(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+	
+--	    DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);		
+--		CREATE LASTCHILD OF refRoot DOMAIN GET_MESSAGE_DOMAIN_XMLNSC();
+--		DECLARE refDomain REFERENCE TO refRoot.XMLNSC;
+
+	DECLARE refIntegrationResp	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+		
+		DECLARE refEnvRoot REFERENCE TO refEnv.ROOT;
+		--		se adiciona la linea siguiente
+		DECLARE COUNTO INTEGER 1;
+		
+		DECLARE refDetalle REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA;
+--		DECLARE refTmp REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA[1];
+		DECLARE refTmp REFERENCE TO  refIntegrationResp.listadoDetalle.detalle; 
+-- se comenta y se adiciona la linea siguiente	
+		WHILE LASTMOVE(refDetalle) DO
+					
+			IF (refDetalle.D502_ARQUITECTURA <> '' AND refDetalle.D502_CTAVALOR <> '' AND COUNTO<=30) THEN
+			CREATE LASTCHILD OF refIntegrationResp.listadoDetalle AS refTmp NAME 'detalle';  
+				SET refTmp.ctavalor   		    = COALESCE(refDetalle.D502_CTAVALOR);
+				SET refTmp.rut	   			    = COALESCE(refDetalle.D502_RUT, GET_EMPTY_CHARACTER());
+				SET refTmp.ecocar	   			= COALESCE(refDetalle.D502_ECOCAR, GET_EMPTY_CHARACTER());
+				SET refTmp.moncar	   			= COALESCE(refDetalle.D502_MONCAR, GET_EMPTY_CHARACTER());
+				SET refTmp.ecoabo	   			= COALESCE(refDetalle.D502_ECOABO, GET_EMPTY_CHARACTER());
+				SET refTmp.monabo	   			= COALESCE(refDetalle.D502_MONABO, GET_EMPTY_CHARACTER());
+				SET refTmp.tipcom	   			= COALESCE(refDetalle.D502_TIPCOM, GET_EMPTY_CHARACTER());
+				SET refTmp.comrda	   			= COALESCE(refDetalle.D502_COMRDA, GET_EMPTY_CHARACTER());
+				SET refTmp.lugneg	   			= COALESCE(refDetalle.D502_LUGNEG, GET_EMPTY_CHARACTER());
+			END IF;
+			SET COUNTO= COUNTO+1;
+			MOVE refDetalle NEXTSIBLING;
+		END WHILE;
+		-- Establecer el valor de los campos de respuesta (response body JSON) en base al valor de los campos PS9 (response bosy HOST)
+		-- En esta operación no hay valores response
+		SET refIntegrationResp.tipo_doc  = COALESCE(refEnv.ROOT.S502_TIPO_DOC , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.nume_doc  = COALESCE(refEnv.ROOT.S502_NUME_DOC , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.cliente   = COALESCE(refEnv.ROOT.S502_CLIENTE  , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.direccion = COALESCE(refEnv.ROOT.S502_DIRECCION, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.telefonos = COALESCE(refEnv.ROOT.S502_TELEFONOS, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.telefonos1 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS1, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.telefonos2 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS2, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.telefonos3 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS3, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.email       = COALESCE(refEnv.ROOT.S502_EMAIL      , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.numcli      = COALESCE(refEnv.ROOT.S502_NUMCLI     , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.hay_mas     = COALESCE(refEnv.ROOT.S502_HAY_MAS    , GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.ctaval_sgte = COALESCE(refEnv.ROOT.S502_CTAVAL_SGTE, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.cod_retorno   = COALESCE(refEnv.ROOT.S502_COD_RETORNO, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.cod_error_dev = COALESCE(refEnv.ROOT.S502_COD_ERROR_DEV, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.var1_error    = COALESCE(refEnv.ROOT.S502_VAR1_ERROR, GET_EMPTY_CHARACTER());
+		SET refIntegrationResp.var2_error    = COALESCE(refEnv.ROOT.S502_VAR2_ERROR, GET_EMPTY_CHARACTER());
+END;

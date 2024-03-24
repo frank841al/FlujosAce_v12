@@ -1,0 +1,858 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa
+
+
+
+CREATE PROCEDURE loadCacheParameter (IN cacheServices REFERENCE,
+									 IN inService CHARACTER,
+									 IN nameOperation CHARACTER,
+									 IN refEnv REFERENCE)
+BEGIN
+	
+	--En caso el cache del servicio no este activo, se carga la parametria del servicio
+	--Declaracion de variables
+	DECLARE errorConfig BOOLEAN FALSE;
+	DECLARE errorCode INTEGER 0; 
+	DECLARE errorMsg CHARACTER ''; 
+	DECLARE rowsParamService ROW;
+	DECLARE rowsParamOpe ROW;
+	DECLARE rowsParamGeneric ROW;
+	DECLARE rowsOpe ROW;
+	DECLARE rowsMap ROW;
+	DECLARE rowsUsr ROW;
+	DECLARE rowEnvironment 	ROW;
+	
+	--Carga parametria del Servicio
+	CALL SP_GET_PARAMETER_SERVICE   	(inService		, rowsParamService.Config[]);  
+	CALL SP_GET_PARAMETER_SERVICE		(getSERVGEN()	, rowsParamGeneric.Config[]);
+	CALL SP_GET_MAPEO 					(inService		, rowsMap.Config[]);  
+	CALL SP_GET_OPERATION 				(inService		, rowEnvironment.Operations[]);
+	CALL SP_GET_PARAMETER_OPERATION		(inService		, rowEnvironment.TableParameterOperation[]);
+			
+	CREATE FIELD rowsUsr.usr.Operacion;
+	CREATE FIELD rowsUsr.usr.Parametros;
+	CREATE FIELD rowsUsr.usr.Parametros.Map;
+	CREATE FIELD rowsUsr.usr.ParametrosGenericos;
+	CREATE FIELD rowsUsr.usr.ParametrosOperacion;
+	CREATE FIELD rowsUsr.usr.AddHeaderOperacion;
+	
+	CREATE FIELD refEnv.Operation;
+	CREATE FIELD refEnv.ParamOperation;
+	
+		
+	DECLARE refParam 			REFERENCE TO rowsUsr.usr.Parametros;
+	DECLARE refParamGen 		REFERENCE TO rowsUsr.usr.ParametrosGenericos;
+	DECLARE refParamOperation 	REFERENCE TO rowsUsr.usr.ParametrosOperacion;
+	DECLARE refOperation 		REFERENCE TO rowsUsr.usr.Operacion; 
+	SET rowsOpe.Tabla[] = (SELECT	P.CODE_OPERATION,
+									P.NAME,
+									P.CONDITIONAL,
+									P.ROUTE_CONDITIONAL,
+									P.CODE_SERVICE,
+									P.INPUT
+									FROM rowEnvironment.Operations[] as P
+									WHERE P.CODE_SERVICE = inService AND
+										  P.STATUS = 'A'
+									);
+	
+	SET rowsParamOpe.Config[] =	(SELECT	P.CODE_SERVICE,
+										P.CODE_OPERATION,
+										P.ATTRIBUTE,
+										P.VALUE,
+										P.STATUS_PARAMETER,
+										P.STATUS_OPERATION,
+										P.STATUS_SERVICE
+								 FROM rowEnvironment.TableParameterOperation[] as P
+								 WHERE P.CODE_SERVICE = inService  AND
+									  P.STATUS_PARAMETER = 'A' AND P.STATUS_OPERATION = 'A' AND
+									  P.STATUS_SERVICE = 'A'
+								 );
+
+	CALL crearNombreCampos (rowsParamService	, refParam);
+	CALL crearNombreCampos (rowsParamGeneric	, refParamGen);		
+	CALL crearNombreCampos (rowsParamOpe		, refParamOperation);
+	
+	SET refParam.Map	= rowsMap.Config[1];
+	SET refOperation	= rowsOpe.Tabla[1];
+	--Validaciones de parametria del HUB     
+	IF inService = '' OR inService IS NULL THEN
+		SET errorCode = 1000; 
+		SET errorMsg  = 'No se envio el codigo de servicio';		 
+	ELSEIF CARDINALITY(rowsParamService.Config[]) < 1 THEN
+		SET errorCode = 1001;
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene parametros asignados';
+	ELSEIF LENGTH(refParam.LEVEL_AUDIT) < 4 THEN
+		SET errorCode = 1003; 
+		SET errorMsg  = 'El servicio ' || inService || ' tiene mal configurado el nivel de auditoria'; 
+	ELSEIF CARDINALITY(rowsOpe.Tabla[]) < 1 THEN
+		SET errorCode = 1007; 
+		SET errorMsg  = 'El servicio ' || inService || ' no contiene operaciones'; 
+	ELSEIF CARDINALITY(rowsParamOpe.Config[]) < 1 THEN
+		SET errorCode = 1001; 
+		SET errorMsg  = 'La operacion ' || nameOperation || ' del servicio ' || inService || ' no tiene parametros asignados'; 
+	ELSEIF CARDINALITY(rowsMap.Config[]) < 1 THEN
+		SET errorCode = 1004; 
+		SET errorMsg  = 'El servicio ' || inService || ' no tiene una mapa a seguir'; 
+	END IF;
+	
+		
+	SET cacheServices.{"inService"}.Header.usr 			= rowsUsr.usr;	
+	SET cacheServices.{"inService"}.validate.errorCode  = errorCode;
+	SET cacheServices.{"inService"}.validate.errorMsg 	= errorMsg;
+	SET cacheServices.{"inService"}.Map 				= rowsMap;
+	SET cacheServices.{"inService"}.Operation 	    	= rowsOpe;
+	SET cacheServices.{"inService"}.ParamOperation 		= rowsParamOpe;
+	SET cacheServices.{"inService"}.iniciado 			= TRUE; 
+END;
+
+
+
+/*
+ * Procedimiento para obtener el template x Operacion de un servicio
+ */
+CREATE PROCEDURE SP_GET_PARAMETER_SERVICE (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_PARAMETER_SERVICE";
+
+
+/*
+ * Procedimiento para obtener los paarametros de una operacion por servicio
+*/
+CREATE PROCEDURE SP_GET_PARAMETER_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_PARAMETER_OPERATION";
+
+
+/*
+ * Procedimiento para obtener agregar parametros a la cabecera por REST
+*/
+CREATE PROCEDURE SP_ADD_HEADER_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_ADD_HEADER_OPERATION";
+
+
+/*
+ * Procedimiento para obtener las operaciones por servicio
+ */
+CREATE PROCEDURE SP_GET_OPERATION (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_OPERATION";
+
+
+/*
+ * Procedimiento para obtener el mapeo de un servicio
+ */
+CREATE PROCEDURE SP_GET_MAPEO (IN COD_SERVICE CHARACTER)
+LANGUAGE DATABASE
+DYNAMIC RESULT SETS 1
+EXTERNAL NAME "HUBACE.PKG_CONTROL.SP_GET_MAPEO";
+
+------
+
+/*
+* Crea a partir de una lista nombres de campos
+*/
+CREATE PROCEDURE crearNombreCampos(IN refCampo REFERENCE, IN refSalida REFERENCE)
+BEGIN
+
+	DECLARE refField REFERENCE TO refCampo.Config[1];
+
+	WHILE LASTMOVE(refField) DO
+		SET refSalida.{refField.ATTRIBUTE} = refField.VALUE;
+		MOVE refField NEXTSIBLING;
+	END WHILE;
+
+END;
+
+
+CREATE PROCEDURE setOutputHeaderProperties (IN RefOutputRoot 		REFERENCE, 
+											IN MessageFormatParam 	CHARACTER,
+											IN EncodingParam		INTEGER,
+											IN CodedCharSetIdParam	INTEGER,
+											IN PersistenceParam		BOOLEAN)
+BEGIN
+		SET RefOutputRoot.Properties.MessageFormat 	= MessageFormatParam;
+		SET RefOutputRoot.Properties.Encoding		= EncodingParam;
+		SET RefOutputRoot.Properties.CodedCharSetId = CodedCharSetIdParam;
+		SET RefOutputRoot.Properties.Persistence	= PersistenceParam;
+END;
+
+
+CREATE PROCEDURE setOutputHeaderMQMD (IN RefOutputRoot 	REFERENCE, 
+									  IN CorrelIdParam	BLOB, 
+									  IN MsgIdParam		BLOB,												
+									  IN inEncoding		INTEGER,
+									  IN inCCSID		INTEGER)
+BEGIN		
+		SET RefOutputRoot.MQMD.MsgId    		= MsgIdParam;		
+		SET RefOutputRoot.MQMD.CorrelId 		= CorrelIdParam;
+		SET RefOutputRoot.MQMD.Encoding			= inEncoding;
+		SET RefOutputRoot.MQMD.CodedCharSetId	= inCCSID;
+			
+END;
+
+
+CREATE PROCEDURE setOutputHeaderRFH2 (IN refOutUsr 		REFERENCE, 
+									  IN idProtocolo	CHARACTER,
+									  IN tipoProtocolo	CHARACTER,
+									  IN msgId			BLOB,
+									  IN inEnconding	INTEGER,
+									  IN inCCSID		INTEGER,
+									  IN RequestIdentifier BLOB,
+									  IN IP				CHARACTER,
+									  IN PutApplName	CHARACTER)
+BEGIN
+	  
+	SET refOutUsr.inEncoding 	= inEnconding;
+	SET refOutUsr.inCCSID 		= inCCSID; 
+			
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Protocolo';
+	CREATE LASTCHILD OF refOutUsr.Parametros			NAME 'Servicio';
+	CREATE LASTCHILD OF refOutUsr.Parametros.Servicio 	NAME 'Datos';
+	
+	DECLARE refParamPro 	REFERENCE TO refOutUsr.Parametros.Protocolo;
+	DECLARE refParamDatos 	REFERENCE TO refOutUsr.Parametros.Servicio.Datos;
+	
+	SET refParamPro.IdProtocolo			= idProtocolo;
+	SET refParamPro.TipoProtocolo		= tipoProtocolo;
+	
+	SET refParamDatos.MsgId				= msgId;
+	SET refParamDatos.CorrelId			= msgId;
+	SET refParamDatos.PutApplName		= PutApplName;
+	SET refParamDatos.Encoding			= inEnconding;
+	SET refParamDatos.CodedCharSetId	= inCCSID;
+	SET refParamDatos.RequestIdentifier = RequestIdentifier;
+	SET refParamDatos.IP				= IP;
+			
+END;
+
+
+/*
+* Procedimiento que crea la estructura PS9 de petición hacia host
+*
+*/
+CREATE PROCEDURE BuildPS9Request(IN refOutputRoot REFERENCE,
+								IN refParamOperation REFERENCE,
+								IN chrTramaTxRq CHARACTER, 
+								IN refParamGeneric REFERENCE,
+								IN refCodService CHARACTER,
+								IN refEnv REFERENCE)
+
+BEGIN 
+	
+	--Declaracion de variables
+	DECLARE refMsgPS9 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgIH 		REFERENCE TO refOutputRoot;
+	DECLARE refMsgME 		REFERENCE TO refOutputRoot;
+	DECLARE refIntegRequest	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+	DECLARE longMsjHost 	INTEGER LENGTH(COALESCE(chrTramaTxRq, ''));
+	DECLARE tipoFormatoTerminal CHARACTER COALESCE(FIELDVALUE(refParamOperation.TIPO_TERMINAL), 'FA');
+	DECLARE nameOperation REFERENCE TO refIntegRequest.requestHeader.idOperacion;
+
+	SET refEnv.Data.longMsjHost = longMsjHost;
+
+	DECLARE al CHARACTER COALESCE(FIELDVALUE(refParamOperation.RANDOM_NRO_SECUENCE), 'N');
+	
+	CREATE LASTCHILD OF refOutputRoot AS refMsgPS9 NAME 'PS9MsgIN';
+	CREATE LASTCHILD OF refMsgPS9 NAME 'ESPACIO_FIJO' VALUE '';
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgIH NAME 'IH';
+	
+	SET refMsgIH.ID_PROTOCOLO 		= '26'; 	--COALESCE(FIELDVALUE(refParamOperation.IH_IDENTIFICADOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TERMINAL_LOGICO 	= '88%0'; 	--getTerminalApp(refCodService, FIELDVALUE(refParamGeneric.URL_APP_TERMINAL));
+	SET refMsgIH.TERMINAL_CONTABLE 	= '88%0';   --COALESCE(FIELDVALUE(refParamOperation.IH_TERMINAL_CONTABLE), getEMPTY_CHARACTER());
+	SET refMsgIH.USUARIO 			= refIntegRequest.requestHeader.usuario; --'P004718';	--COALESCE(FIELDVALUE(refParamOperation.IH_USUARIO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.NUMERO_SECUENCIA 	= '00000000';		--getSecuenciaPS9();
+	SET refMsgIH.TRANS_CODE_HOST 	= determinarValorTransCodeHost(refIntegRequest);--'VLA2';--getNamespaceOperation(nameOperation);----	OperationNam;	--COALESCE(FIELDVALUE(refParamOperation.IH_CODIGO_TRANSACCION), getEMPTY_CHARACTER());	
+	SET refMsgIH.OPCION_APLICACION 	= '00'; 		--'00';ACE		--COALESCE(FIELDVALUE(refParamOperation.IH_OPCION_APLICACION_USER), getEMPTY_CHARACTER());
+	SET refMsgIH.LONGITUD_TRAMA 	= getLengthTramaPS9(longMsjHost);	--'00126'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LONGITUD_TRAMA), getEMPTY_CHARACTER());
+	SET refMsgIH.INDICADOR_COMMIT 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_COMMIT_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_MENSAJE_IN 	= '1'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_MENSAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.TIPO_PROCESO 		= 'O'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_TIPO_PROCESO_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.CANAL_COMUNICACION = refIntegRequest.requestHeader.canal;	--'VL'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_CANAL), getEMPTY_CHARACTER());
+	SET refMsgIH.IND_PRE_FORMATO 	= 'N'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_INDICADOR_PREFOR_PROTOCOLO), getEMPTY_CHARACTER());
+	SET refMsgIH.LENGUAJE 			= 'R'; 		--COALESCE(FIELDVALUE(refParamOperation.IH_LENGUAJE_PROTOCOLO), getEMPTY_CHARACTER());
+	
+	CREATE LASTCHILD OF refMsgPS9 AS refMsgME NAME 'ME';
+	
+	SET refMsgME.LONGITUD_MENSAJE = longMsjHost;
+	SET refMsgME.TIPO_MENSAJE = '1'; 			--FIELDVALUE(refParamOperation.ME_TIPO_MENSAJE_PROTOCOLO);
+	SET refMsgME.MENSAJE = chrTramaTxRq;
+	
+END;
+
+CREATE PROCEDURE setOutputConfigProperties (IN refOutputRoot 	REFERENCE, 
+											IN messageSet 		CHARACTER,
+											IN messageType		CHARACTER,
+											IN messageFormat	CHARACTER,
+											IN replyProtocol	CHARACTER,
+											IN contentType		CHARACTER)
+BEGIN
+		
+		SET refOutputRoot.Properties.MessageSet 	= messageSet;
+		SET refOutputRoot.Properties.MessageType 	= messageType;
+		SET refOutputRoot.Properties.MessageFormat 	= messageFormat;
+		SET refOutputRoot.Properties.ReplyProtocol	= replyProtocol;
+		SET refOutputRoot.Properties.ContentType	= contentType;
+END;
+
+CREATE PROCEDURE setOutputConfigMQMD (IN refEnv REFERENCE,
+									  IN refOutputRoot 	REFERENCE, 
+									  IN refParamOpera	REFERENCE, 
+									  IN msgId			BLOB,												
+									  IN REPLY_TO_QMGR	CHARACTER)
+BEGIN
+		
+		DECLARE nameQmgr CHARACTER ''; --getEMPTY_CHARACTER();
+    	SET nameQmgr = COALESCE(refParamOpera.REPLY_TO_QMGR, ''); --getEMPTY_CHARACTER());
+    		
+    	IF CONTAINS(nameQmgr, '**') THEN
+    		SET nameQmgr = REPLACE(nameQmgr, '**', REPLY_TO_QMGR);
+    	END IF;
+		
+		SET refOutputRoot.MQMD.Encoding			= 465; --CAST(COALESCE(refParamOpera.ENCODING, 273) AS INTEGER);
+		SET refOutputRoot.MQMD.CodedCharSetId   = 500;
+		SET refOutputRoot.MQMD.Format			= 'MQSTR'; --COALESCE(refParamOpera.FORMAT, MQFMT_STRING);
+		SET refOutputRoot.MQMD.Version			= CAST(COALESCE(refParamOpera.VERSION, 2) AS INTEGER);
+		SET refOutputRoot.MQMD.Report			= CAST(COALESCE(refParamOpera.REPORT, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgType			= CAST(COALESCE(refParamOpera.MSG_TYPE, 8) AS INTEGER);
+		SET refOutputRoot.MQMD.Expiry			= CAST(COALESCE(refParamOpera.EXPIRY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Feedback			= CAST(COALESCE(refParamOpera.FEED_BACK, 0) AS INTEGER);
+		SET refOutputRoot.MQMD.Priority			= CAST(COALESCE(refParamOpera.PRIORITY, -1) AS INTEGER);
+		SET refOutputRoot.MQMD.Persistence		= CAST(COALESCE(refParamOpera.PERSISTENCE, 1) AS INTEGER);
+		SET refOutputRoot.MQMD.MsgId			= msgId;
+		SET refOutputRoot.MQMD.CorrelId			= msgId;
+--		SET refOutputRoot.MQMD.ReplyToQ			= COALESCE(refParamOpera.REPLY_TO_Q, getEMPTY_CHARACTER());
+		SET refOutputRoot.MQMD.ReplyToQ			= 'QLT.ECS2.RESP';
+		SET refOutputRoot.MQMD.ReplyToQMgr		= 'ECS2.TMDW5'; --nameQmgr;
+		
+		SET refEnv.Data.Format					= COALESCE(refOutputRoot.MQMD.Format,'MQSTR_X' );
+END;
+
+--17/02/2024
+CREATE PROCEDURE buildResClient_WP_RIW3_OK(IN refRoot REFERENCE,
+										   IN refInPS9 REFERENCE,
+										   IN refJsonIn REFERENCE)
+BEGIN
+	
+	CREATE LASTCHILD OF refRoot NAME 'integrationResponse';
+	DECLARE refIntegrationResp REFERENCE TO refRoot.integrationResponse;
+	
+	CALL buildHeaderResponse(refIntegrationResp, refJsonIn, getNO(), getNO(), getEMPTY_CHARACTER(), getEMPTY_CHARACTER());
+	
+	--CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	--DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseBody';
+	DECLARE refResponseBody REFERENCE TO refIntegrationResp.responseBody;
+	
+	DECLARE refBody REFERENCE TO refInPS9.OC[1];
+	
+	--Se arma la cabecera
+	--SET refResponseHeader.idSesion			= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionEmpresa	= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionBanco	= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idOperacion		= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.codigoServicio	= getCOD_RPTA_OK();
+ 	--SET refResponseHeader.mensajeServicio	= getDES_RPTA_OK();
+ 	--SET refResponseHeader.estadoServicio	= getEST_RPTA_OK();
+ 	
+ 	--Se arma el cuerpo
+ 	WHILE LASTMOVE(refBody) DO
+	 	IF SUBSTRING(refBody FROM 1 FOR 10) = 'B1RIMSRIW3' THEN
+		 	SET refResponseBody.tipoPersona			= TRIM(COALESCE(SUBSTRING(refBody FROM 26 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numDocumento		= TRIM(COALESCE(SUBSTRING(refBody FROM 32 FOR 11), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codDocumento		= TRIM(COALESCE(SUBSTRING(refBody FROM 46 FOR 1), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.razonSocial			= TRIM(COALESCE(SUBSTRING(refBody FROM 50 FOR 60), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.oficinaCliente		= TRIM(COALESCE(SUBSTRING(refBody FROM 113 FOR 4), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.descOficinaCliente	= TRIM(COALESCE(SUBSTRING(refBody FROM 120 FOR 35), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codGestorCli		= TRIM(COALESCE(SUBSTRING(refBody FROM 158 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.nombreGestor		= TRIM(COALESCE(SUBSTRING(refBody FROM 169 FOR 25), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.tecomCliente		= TRIM(COALESCE(SUBSTRING(refBody FROM 197 FOR 5), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.desCEtiqueta		= TRIM(COALESCE(SUBSTRING(refBody FROM 205 FOR 19), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codCentral			= TRIM(COALESCE(SUBSTRING(refBody FROM 227 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codActivCli			= TRIM(COALESCE(SUBSTRING(refBody FROM 238 FOR 11), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.desActividad		= TRIM(COALESCE(SUBSTRING(refBody FROM 252 FOR 45), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.clasifBanco			= TRIM(COALESCE(SUBSTRING(refBody FROM 300 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.clasifSistFinanc	= TRIM(COALESCE(SUBSTRING(refBody FROM 319 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.buro				= TRIM(COALESCE(SUBSTRING(refBody FROM 338 FOR 2), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.fechaNac			= TRIM(COALESCE(SUBSTRING(refBody FROM 343 FOR 10), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dirCliente			= TRIM(COALESCE(SUBSTRING(refBody FROM 356 FOR 90), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.prefTelef			= TRIM(COALESCE(SUBSTRING(refBody FROM 449 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numTelef			= TRIM(COALESCE(SUBSTRING(refBody FROM 455 FOR 9), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.numEntidades		= TRIM(COALESCE(SUBSTRING(refBody FROM 467 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.edad				= TRIM(COALESCE(SUBSTRING(refBody FROM 473 FOR 3), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.periodoRating		= TRIM(COALESCE(SUBSTRING(refBody FROM 479 FOR 6), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.puntRating			= TRIM(COALESCE(SUBSTRING(refBody FROM 488 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.escRating			= TRIM(COALESCE(SUBSTRING(refBody FROM 499 FOR 5), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.sobreendeu			= RTRIM(COALESCE(SUBSTRING(refBody FROM 507 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.impagos				= TRIM(COALESCE(SUBSTRING(refBody FROM 530 FOR 1), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.inelegibles			= TRIM(COALESCE(SUBSTRING(refBody FROM 534 FOR 30), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.riesgoAct			= RTRIM(COALESCE(SUBSTRING(refBody FROM 567 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.tipoCambio			= RTRIM(COALESCE(SUBSTRING(refBody FROM 590 FOR 16), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.codGrupEco			= TRIM(COALESCE(SUBSTRING(refBody FROM 609 FOR 8), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.nomGrupo			= TRIM(COALESCE(SUBSTRING(refBody FROM 620 FOR 50), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.periodoSisFin		= TRIM(COALESCE(SUBSTRING(refBody FROM 673 FOR 6), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudSisFin			= RTRIM(COALESCE(SUBSTRING(refBody FROM 682 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaBanco			= RTRIM(COALESCE(SUBSTRING(refBody FROM 705 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaSeguro			= RTRIM(COALESCE(SUBSTRING(refBody FROM 728 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.correo				= TRIM(COALESCE(SUBSTRING(refBody FROM 751 FOR 80), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dcastsf				= RTRIM(COALESCE(SUBSTRING(refBody FROM 834 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.dcastbc				= RTRIM(COALESCE(SUBSTRING(refBody FROM 857 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.propyme				= TRIM(COALESCE(SUBSTRING(refBody FROM 880 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.ubigeo				= TRIM(COALESCE(SUBSTRING(refBody FROM 903 FOR 7), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaDirectaSF		= RTRIM(COALESCE(SUBSTRING(refBody FROM 913 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaIndirectaSF	= RTRIM(COALESCE(SUBSTRING(refBody FROM 936 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaDirectaBanco	= RTRIM(COALESCE(SUBSTRING(refBody FROM 959 FOR 20), getEMPTY_CHARACTER()));
+	    	SET refResponseBody.deudaIndirectaBanco	= RTRIM(COALESCE(SUBSTRING(refBody FROM 982 FOR 20), getEMPTY_CHARACTER()));
+	 	END IF;
+		MOVE refBody NEXTSIBLING;
+ 	END WHILE;
+ 	
+END;
+
+CREATE PROCEDURE buildHeaderResponse(INOUT refIntegrationResp REFERENCE,
+									 IN refJsonIn REFERENCE,
+									 IN isError CHARACTER,
+									 IN isErrorHost CHARACTER,
+									 IN chrCodigoError CHARACTER,
+									 IN chrDescripcionError CHARACTER)
+BEGIN
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	--Se arma la cabecera
+	SET refResponseHeader.idSesion			= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	SET refResponseHeader.idPeticionEmpresa	= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	SET refResponseHeader.idPeticionBanco	= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	SET refResponseHeader.idOperacion		= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	
+	IF isError = getNO() THEN
+		SET refResponseHeader.codigoServicio	= getCOD_RPTA_OK();
+	 	SET refResponseHeader.mensajeServicio	= getDES_RPTA_OK();
+	 	SET refResponseHeader.estadoServicio	= getEST_RPTA_OK();
+	ELSE
+		IF isErrorHost = getNO() THEN
+		 	SET refResponseHeader.codigoServicio	= getCOD_RPTA_ERROR();
+		 	SET refResponseHeader.mensajeServicio	= chrCodigoError || chrDescripcionError;
+		ELSE
+		 	SET refResponseHeader.codigoServicio	= chrCodigoError;
+		 	SET refResponseHeader.mensajeServicio	= chrDescripcionError;
+		END IF;
+		SET refResponseHeader.estadoServicio	= getEST_RPTA_ERROR();
+	END IF;
+	
+END;
+
+CREATE PROCEDURE buildResClient_WP_RIW_ERROR(IN refRoot REFERENCE,
+										      IN refJsonIn REFERENCE,
+										      IN isErrorHost CHARACTER,
+										      IN chrCodigoError CHARACTER,
+										      IN chrDescripcionError CHARACTER)
+BEGIN
+	
+	CREATE LASTCHILD OF refRoot NAME 'XMLNSC';
+	CREATE LASTCHILD OF refRoot.XMLNSC NAME 'integrationResponse';
+	DECLARE refIntegrationResp REFERENCE TO refRoot.XMLNSC.integrationResponse;
+	
+	CALL buildHeaderResponse(refIntegrationResp, refJsonIn, getSI(), isErrorHost, chrCodigoError, chrDescripcionError);
+	
+	--CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';
+	--DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+	
+	--SET refResponseHeader.idSesion 				= COALESCE(refJsonIn.idSesion, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionEmpresa		= COALESCE(refJsonIn.idPeticionEmpresa, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idPeticionBanco		= COALESCE(refJsonIn.idPeticionBanco, getEMPTY_CHARACTER());
+	--SET refResponseHeader.idOperacion			= COALESCE(refJsonIn.idOperacion, getEMPTY_CHARACTER());
+	
+	--IF isErrorHost = getNO() THEN
+	-- 	SET refResponseHeader.codigoServicio	= getCOD_RPTA_ERROR();
+	-- 	SET refResponseHeader.mensajeServicio	= chrCodigoError || chrDescripcionError;
+	--ELSE
+	-- 	SET refResponseHeader.codigoServicio	= chrCodigoError;
+	-- 	SET refResponseHeader.mensajeServicio	= chrDescripcionError;
+	--END IF;
+ 	
+ 	--SET refResponseHeader.estadoServicio		= getEST_RPTA_ERROR();
+	
+	CREATE LASTCHILD OF refIntegrationResp NAME 'responseBody';
+	
+END;
+/*
+* Registrar Auditoria del mensaje de entrada desde la aplicacion consumidora (Evento 1)
+*
+*/
+CREATE PROCEDURE armarAuditoriaEventoEntrada (IN refOutput REFERENCE,
+											  IN chrMsgId BLOB,
+											  IN refMQRFH2usr REFERENCE,
+											  IN refBody REFERENCE)
+BEGIN
+	DELETE FIELD refOutput.XMLNSC;
+	CREATE LASTCHILD OF refOutput DOMAIN 'XMLNSC';
+	
+	--CALL setearPropiedadesMensaje(refOutput,'MS_ESB_CORE_GENERICS','MSG_AUDITORIA','CWF1');
+	--CREATE LASTCHILD OF refOutput DOMAIN 'XMLNSC';
+	CREATE FIELD refOutput.XMLNSC.MENSAJE.DATOSAUDITORIA;
+	DECLARE refA REFERENCE TO refOutput.XMLNSC.MENSAJE.DATOSAUDITORIA;
+
+	SET refA.MSGID = SUBSTRING(CAST(chrMsgId AS CHARACTER) FROM 3 FOR 48);
+	SET refA.FECHAHORA = obtenerFechaHoraAuditoria();  
+	SET refA.HORA = obtenerHoraAuditoria();
+	SET refA.IP_ORIGEN = refMQRFH2usr.Parametros.Servicio.Datos.IP;
+	SET refA.CODSERVICIO = refMQRFH2usr.inService;
+	SET refA.PROTOCOLOENTRADA = refMQRFH2usr.Parametros.Protocolo.IdProtocolo;
+	SET refA.OPERATION = COALESCE(refMQRFH2usr.Parametros.Map.NAME_OPERATION,'');
+	--SET refA.RUTASERVICIO = refMQRFH2usr.Auditoria.rutaServicio;
+	--SET refA.GRUPOSERVICIO = refMQRFH2usr.Auditoria.grupoServicio;
+	SET refA.ANOMES = obtenerAnoMesAuditoria();
+	SET refA.TIPOEVENTO = getEVENTO_ENTRADA();
+	SET refA.TIPOMENSAJE = getMENSAJE_ENTRADA();
+
+	SET refA.BROKER = BrokerName;
+	SET refA.IS = ExecutionGroupLabel;
+	SET refA.FLUJO = MessageFlowLabel;
+	SET refA.CODERROR = '';
+
+	DECLARE blobMensaje BLOB;
+	DECLARE chrMensaje CHARACTER;
+    
+	SET blobMensaje = ASBITSTREAM(refBody CCSID 1208);
+	
+	SET chrMensaje = CAST(blobMensaje AS CHARACTER CCSID 1208);
+	SET chrMensaje = REPLACE(chrMensaje,'&lt;','<');
+	SET chrMensaje = REPLACE(chrMensaje,'&gt;','>');
+	SET chrMensaje = REPLACE(chrMensaje,'&quot;','"');
+
+	SET refA.DATO = chrMensaje;
+
+END;
+--13/03/2024
+	/*
+	* Description: Procedimiento que reemplaza caracteres extraños de la respuesta de HOST le agrega el XML Root <PS9Rs>
+	* Parameters:
+	* IN: refInputRoot REFERENCE - Es la referencia al arbol InputRoot
+	* INOUT: refEnvironment REFERENCE - Es la referencia al arbol Environment
+	*/			
+	CREATE PROCEDURE ParseBlobPS9RsHostToXML(IN refInputRoot REFERENCE, INOUT refEnvironment REFERENCE)
+	
+	BEGIN	
+		DECLARE refEnvWork	REFERENCE TO refEnvironment.Variables.Work;	
+		DECLARE newBlob BLOB;
+		DECLARE BadCharList CHARACTER '00.FF.C29F.0C.0E.00FF.BA.DF';
+		
+--		CALL SplitBadCharList(getBadCharList(),refEnvWork, '.');
+		CALL SplitBadCharList(BadCharList,refEnvWork, '.');
+		DECLARE C_BLOB_SPACE_CCSID_500 CONSTANT BLOB X'40';
+		
+		SET newBlob = replaceBlobCarsByCar(refInputRoot.BLOB.BLOB,refEnvWork.cars,C_BLOB_SPACE_CCSID_500); --C_BLOB_SPACE_CCSID_500);
+		
+			SET refEnvironment.replaceBlobCarsByCar.newBlob = newBlob;
+			
+		DELETE FIELD refEnvWork.cars;
+			
+		-- Se realiza la limpieza de caracteres extraños XML
+		DECLARE ccsidHost INTEGER COALESCE(refEnvironment.CCSID,0);
+		SET newBlob = cambiarCaracteresProhibidosXML(newBlob,ccsidHost);
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob2 = newBlob;
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob2ToCharacter = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		SET newBlob = restaurarCaracteresXMLPS9(newBlob,ccsidHost);
+			SET refEnvironment.restaurarCaracteresXMLPS9.newBlob3 = newBlob;
+			SET refEnvironment.cambiarCaracteresProhibidosXML.newBlob3ToCharacter = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		
+		DECLARE chrResHost CHARACTER;
+		SET chrResHost = CAST (newBlob AS CHARACTER CCSID ccsidHost);
+		
+--		DECLARE Posicion_OC_end INTEGER;
+--		SET Posicion_OC_end = POSITION('</OC>' IN chrResHost);
+--		SET refEnvironment.Posicion_OC_end_1 = Posicion_OC_end;
+--		SET Posicion_OC_end = (Posicion_OC_end + 4) - 63;
+--		SET refEnvironment.Posicion_OC_end_2 = Posicion_OC_end;
+		
+--		SET chrResHost = SUBSTRING(chrResHost FROM 64 FOR Posicion_OC_end); --218
+--		SET refEnvironment.chrResHost1 = chrResHost;
+
+--		SET chrResHost = REPLACE(chrResHost,'&lt;','<');
+--		SET chrResHost = REPLACE(chrResHost,'&gt;','>');
+		
+		SET chrResHost = '<PS9Rs>' || chrResHost || '</PS9Rs>';
+			SET refEnvironment.chrResHost = chrResHost;
+		SET newBlob = CAST(chrResHost AS BLOB CCSID ccsidHost);
+			SET refEnvironment.PS9Rs.newBlob4 = newBlob;
+			
+--		CREATE LASTCHILD OF refEnvironment.Variables.Work DOMAIN 'XMLNSC' --C_MESSAGE_DOMAIN_XMLNSC
+--		PARSE(newBlob,,ccsidHost);
+		
+		CREATE LASTCHILD OF refEnvironment.Variables.Work DOMAIN 'XMLNSC' --C_MESSAGE_DOMAIN_XMLNSC
+		PARSE(newBlob,,ccsidHost,,,,RootBitStream);
+		
+	END;
+		/* 
+	======================================================================================== 
+	PROCEDURE SplitBadCharList 
+	========================================================================================
+	*/ 
+	CREATE PROCEDURE SplitBadCharList (IN BadCharList CHARACTER, IN refEnvWork REFERENCE, IN Delim CHARACTER) 
+	BEGIN 
+	   DECLARE P INTEGER; 
+	   DECLARE Idx INTEGER 1; 
+	
+	   SET refEnvWork.cars = NULL;
+	    
+	   REPEAT 
+	      SET P = POSITION(Delim IN BadCharList); 
+	      IF P = 0 THEN 
+	         SET refEnvWork.cars.car[Idx] = CAST(BadCharList AS BLOB); 
+	      ELSE 
+	         SET refEnvWork.cars.car[Idx] = CAST(LEFT(BadCharList, P - 1) AS BLOB); 
+	         SET BadCharList = SUBSTRING(BadCharList FROM P + LENGTH(Delim)); 
+	         SET Idx = Idx + 1;
+	      END IF;
+	   UNTIL P = 0 
+	       
+	   END REPEAT;    
+	
+	END;					
+		/*
+	* Nombre: replaceBlobCarsByCar
+	* Tipo: FUNCTION
+	* Fecha Creación: 2021-06-02
+	* Autor: Katherine Sanchez
+	* Descripción:
+	Reemplaza los caracteres 'nulos', 'extraños', de una trama BLOB.
+	Es usado para 'limpiar' la la respuesta de Host (formato PS9) por el caracter enviado como parametro.
+	* Parametros:
+	(IN)blobPS9Host : El BLOB (respuesta de HOST) que se quiere parsear.
+	(IN)refCars : Referencia donde estan los caracteres (BLOB) que se quiere reemplazar.Debe poseer la sgte.
+	estructura:
+	-cars
+	-car[1] --> val ejemplo: X'00'
+	-car[2] --> val ejemplo: X'FF'
+	-car[3] --> val ejemplo: X'C29F'
+	(IN)blobRep : Caracter (BLOB) por el que se van a reemplazar los caracteres enviados.
+	* Retorno: El 'nuevo' BLOB con los caracteres reemplazados.
+	*/
+	CREATE FUNCTION replaceBlobCarsByCar(IN blobPS9Host BLOB, IN refCars REFERENCE, IN blobRep BLOB)
+	RETURNS BLOB
+	BEGIN
+		DECLARE newBlob BLOB blobPS9Host;
+		FOR car AS refCars.car[] DO		
+			SET newBlob = REPLACE(newBlob,car, REPLICATE(blobRep,LENGTH(car)));
+		END FOR;
+		RETURN newBlob;
+	END;
+		/*
+	* Fecha Creación: 2014-04-08
+	* Autor: Alexander Chiroque
+	* Nombre: formatearCaracterExtranio
+	* Tipo: FUNCTION
+	* Descripción:
+	   Función que permite reeemplazar el caracater '&', '"', ''' , '<', '>'
+	* Parametros:
+	   (IN)cadena : El valor a formatear.
+	* Retorno:
+	    Devuelve la cadena cambiando el caracter 'y'.
+	    Ejemplo:
+	    formatearArroba(&) --> 'y' 
+	*/
+	CREATE FUNCTION cambiarCaracteresProhibidosXML(IN blobPS9Host BLOB, IN ccsid INTEGER)
+	RETURNS BLOB
+	BEGIN
+	        DECLARE newBlob BLOB blobPS9Host;
+	       
+	        --&amp;
+	        DECLARE ampersand_500 BLOB X'50';
+	        DECLARE ampersand_HTML_500 BLOB X'508194975e';
+	        DECLARE ampersand_1208 BLOB X'26';
+	        DECLARE ampersand_HTML_1208 BLOB X'26616d703b';
+	       
+	        --&apos;
+	        DECLARE comillaSimple_500 BLOB X'7d';
+	        DECLARE comillaSimple_HTML_500 BLOB X'50819796a25e';
+	        DECLARE comillaSimple_1208 BLOB X'27';
+	        DECLARE comillaSimple_HTML_1208 BLOB X'2661706f733b';
+	       
+	        --&quot;
+	        DECLARE comillaDoble_500 BLOB X'7f';
+	        DECLARE comillaDoble_HTML_500 BLOB X'5098a496a35e';
+	        DECLARE comillaDoble_1208 BLOB X'22';
+	        DECLARE comillaDoble_HTML_1208 BLOB X'2671756f743b';
+	       
+	        --&lt; --> '<'
+	        DECLARE menorQue_500 BLOB X'4c';
+	        DECLARE menorQue_HTML_500 BLOB X'5093a35e';
+	        DECLARE menorQue_1208 BLOB X'3c';
+	        DECLARE menorQue_HTML_1208 BLOB X'266c743b';
+	       
+	        --&gt; --> '>'
+	        DECLARE mayorQue_500 BLOB X'6e';
+	        DECLARE mayorQue_HTML_500 BLOB X'5087a35e';
+	        DECLARE mayorQue_1208 BLOB X'3e';
+	        DECLARE mayorQue_HTML_1208 BLOB X'2667743b';
+	       
+	        --#;
+	        DECLARE numeral_500 BLOB X'7b';         --#
+	        DECLARE numeral_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE numeral_1208 BLOB X'23'; --#
+	        DECLARE numeral_error_1208 BLOB X'c391'; --Ã‘
+	       
+	        --¿;
+	        DECLARE interrogacion_500 BLOB X'7b';               --¿
+	        DECLARE interrogacion_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE interrogacion_1208 BLOB X'23'; --¿
+	        DECLARE interrogacion_error_1208 BLOB X'c2bf'; --Â¿
+	       
+	        --!;
+	        DECLARE admiracion_500 BLOB X'7b';    --!
+	        DECLARE admiracion_error_500 BLOB X'c391'; --Desconocido
+	        DECLARE admiracion_1208 BLOB X'23'; --!
+	        DECLARE admiracion_error_1208 BLOB X'c2bf'; --Â!
+	       
+	       
+	        IF ccsid = 500 THEN
+	           SET newBlob = REPLACE(newBlob,ampersand_500,ampersand_HTML_500);
+	           SET newBlob = REPLACE(newBlob,comillaSimple_500,comillaSimple_HTML_500);
+	           SET newBlob = REPLACE(newBlob,comillaDoble_500,comillaDoble_HTML_500);
+	           SET newBlob = REPLACE(newBlob,menorQue_500,menorQue_HTML_500);
+	           SET newBlob = REPLACE(newBlob,mayorQue_500,mayorQue_HTML_500);
+	           --SET newBlob = REPLACE(newBlob,numeral_error_500,numeral_500);
+	                      
+	        ELSEIF ccsid = 1208 THEN                            
+	           SET newBlob = REPLACE(newBlob,ampersand_1208,ampersand_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,comillaSimple_1208,comillaSimple_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,comillaDoble_1208,comillaDoble_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,menorQue_1208,menorQue_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,mayorQue_1208,mayorQue_HTML_1208);
+	           SET newBlob = REPLACE(newBlob,numeral_error_1208,numeral_1208);
+	                      
+	        ELSE
+	           THROW USER EXCEPTION CATALOG 'MyCatalog' MESSAGE 9998 VALUES('No soporta este CCSID '||CAST(ccsid AS CHARACTER)) ;                            
+	        END IF;
+	 
+	        RETURN newBlob;
+	END;
+	/*
+	* Description: Procedimiento que convierte la respuesta de HOST despues de haberle aplicado
+	*              la función 'cambiarCaracteresProhibidosXML'
+	* Parameters:
+	* IN: blobPS9Host BLOB - respuesta de HOST despues de aplicarle la función 'cambiarCaracteresProhibidosXML'
+	* IN: ccsid INTEGER - Es la referencia al arbol temporal del dominio XMLNSC
+	*/
+	CREATE FUNCTION restaurarCaracteresXMLPS9(IN blobPS9Host BLOB, IN ccsid INTEGER)
+	RETURNS BLOB
+	BEGIN
+	        DECLARE newBlob BLOB blobPS9Host;
+	       
+	        --&lt;OH&gt;
+	        DECLARE OH_HTML_500 BLOB X'5093a35ed6c85087a35e';
+	        DECLARE OH_500 BLOB X'4cd6c86e';
+	        DECLARE OH_HTML_1208 BLOB X'266c743b4f482667743b';
+	        DECLARE OH_1208 BLOB X'3c4f483e';
+	        
+	        --&lt;/OH&gt;
+	        DECLARE OHL_HTML_500 BLOB X'5093a35e61d6c85087a35e';
+	        DECLARE OHL_500 BLOB X'4c61d6c86e';
+	        DECLARE OHL_HTML_1208 BLOB X'266c743b2f4f482667743b';
+	        DECLARE OHL_1208 BLOB X'3c2f4f483e';
+	        
+	        --&lt;ER&gt;
+	        DECLARE ER_HTML_500 BLOB X'5093a35ec5d95087a35e';
+	        DECLARE ER_500 BLOB X'4cc5d96e';
+	        DECLARE ER_HTML_1208 BLOB X'266c743b45522667743b';
+	        DECLARE ER_1208 BLOB X'3c45523e';        
+	          
+	        --&lt;/ER&gt;
+	        DECLARE ERL_HTML_500 BLOB X'5093a35e61c5d95087a35e';
+	        DECLARE ERL_500 BLOB X'4c61c5d96e';
+	        DECLARE ERL_HTML_1208 BLOB X'266c743b2f45522667743b';
+	        DECLARE ERL_1208 BLOB X'3c2f45523e';
+	                     
+			--&lt;AV&gt;
+			DECLARE AV_HTML_500 BLOB X'5093a35ec1e55087a35e';
+	        DECLARE AV_500 BLOB X'4cc1e56e';
+	        DECLARE AV_HTML_1208 BLOB X'266c743b41562667743b';
+	        DECLARE AV_1208 BLOB X'3c41563e';
+					
+			--&lt;/AV&gt;
+			DECLARE AVL_HTML_500 BLOB X'5093a35e61c1e55087a35e';
+	        DECLARE AVL_500 BLOB X'4c61c1e56e';
+	        DECLARE AVL_HTML_1208 BLOB X'266c743b2f41562667743b';
+	        DECLARE AVL_1208 BLOB X'3c2f41563e';
+					
+			--&lt;OC&gt;
+			DECLARE OC_HTML_500 BLOB X'5093a35ed6c35087a35e';
+	        DECLARE OC_500 BLOB X'4cd6c36e';
+	        DECLARE OC_HTML_1208 BLOB X'266c743b4f432667743b';
+	        DECLARE OC_1208 BLOB X'3c4f433e';
+					
+			--&lt;/OC&gt;
+			DECLARE OCL_HTML_500 BLOB X'5093a35e61d6c35087a35e';
+	        DECLARE OCL_500 BLOB X'4c61d6c36e';
+	        DECLARE OCL_HTML_1208 BLOB X'266c743b2f4f432667743b';
+	        DECLARE OCL_1208 BLOB X'3c2f4f433e';
+					
+			--&lt;SG&gt;
+			DECLARE SG_HTML_500 BLOB X'5093a35ee2c75087a35e';
+	        DECLARE SG_500 BLOB X'4ce2c76e';
+	        DECLARE SG_HTML_1208 BLOB X'266c743b53472667743b';
+	        DECLARE SG_1208 BLOB X'3c53473e';
+					
+			--&lt;/SG&gt;
+			DECLARE SGL_HTML_500 BLOB X'5093a35e61e2c75087a35e';
+	        DECLARE SGL_500 BLOB X'4c61e2c76e';
+	        DECLARE SGL_HTML_1208 BLOB X'266c743b2f53472667743b';
+	        DECLARE SGL_1208 BLOB X'3c2f53473e';
+	   -------------------------------------------------------------------------- 
+	        --agregando <DE> </DE>
+	        --&lt;DE&gt;
+			DECLARE DE_HTML_500 BLOB X'5093a35ee2e75087a35e';
+	        DECLARE DE_500 BLOB X'4ce2c76e';
+	        DECLARE DE_HTML_1208 BLOB X'266c743b44452667743b';
+	        DECLARE DE_1208 BLOB X'3c44453e';
+					
+			--&lt;/DE&gt;
+			DECLARE DEL_HTML_500 BLOB X'5093a35e61e2e75087a35e';
+	        DECLARE DEL_500 BLOB X'4c61e2e76e';
+	        DECLARE DEL_HTML_1208 BLOB X'266c743b2f44452667743b';
+	        DECLARE DEL_1208 BLOB X'3c2f44453e';        
+	 ----------------------------------------------------------------------------------    
+	        IF ccsid = 500 THEN
+	        	         
+	           SET newBlob = REPLACE(newBlob,OH_HTML_500,OH_500);
+	           SET newBlob = REPLACE(newBlob,OHL_HTML_500,OHL_500);           
+	           SET newBlob = REPLACE(newBlob,ER_HTML_500,ER_500);
+	           SET newBlob = REPLACE(newBlob,ERL_HTML_500,ERL_500);           
+	           SET newBlob = REPLACE(newBlob,AV_HTML_500,AV_500);
+	           SET newBlob = REPLACE(newBlob,AVL_HTML_500,AVL_500);           
+	           SET newBlob = REPLACE(newBlob,OC_HTML_500,OC_500);
+	           SET newBlob = REPLACE(newBlob,OCL_HTML_500,OCL_500);           
+	           SET newBlob = REPLACE(newBlob,SG_HTML_500,SG_500);
+	           SET newBlob = REPLACE(newBlob,SGL_HTML_500,SGL_500);
+	           ----------------------------------------------------------
+	           SET newBlob = REPLACE(newBlob,DE_HTML_500,DE_500);
+	           SET newBlob = REPLACE(newBlob,DEL_HTML_500,DEL_500);
+	           ------------------------------------------------------------           
+	        ELSEIF ccsid = 1208 THEN
+	               
+	           SET newBlob = REPLACE(newBlob,OH_HTML_1208,OH_1208);
+	           SET newBlob = REPLACE(newBlob,OHL_HTML_1208,OHL_1208);           
+	           SET newBlob = REPLACE(newBlob,ER_HTML_1208,ER_1208);
+	           SET newBlob = REPLACE(newBlob,ERL_HTML_1208,ERL_1208);           
+	           SET newBlob = REPLACE(newBlob,AV_HTML_1208,AV_1208);
+	           SET newBlob = REPLACE(newBlob,AVL_HTML_1208,AVL_1208);           
+	           SET newBlob = REPLACE(newBlob,OC_HTML_1208,OC_1208);
+	           SET newBlob = REPLACE(newBlob,OCL_HTML_1208,OCL_1208);           
+	           SET newBlob = REPLACE(newBlob,SG_HTML_1208,SG_1208);
+	           SET newBlob = REPLACE(newBlob,SGL_HTML_1208,SGL_1208);
+	           ----------------------------------------------------------
+	           SET newBlob = REPLACE(newBlob,DE_HTML_1208,DE_1208);
+	           SET newBlob = REPLACE(newBlob,DEL_HTML_1208,DEL_1208);
+	           ----------------------------------------------------------           
+	        ELSE
+	           THROW USER EXCEPTION CATALOG 'MyCatalog' MESSAGE 9998 VALUES('No soporta este CCSID '||CAST(ccsid AS CHARACTER)) ;                            
+	        END IF;
+	 
+	        RETURN newBlob;
+	END;	

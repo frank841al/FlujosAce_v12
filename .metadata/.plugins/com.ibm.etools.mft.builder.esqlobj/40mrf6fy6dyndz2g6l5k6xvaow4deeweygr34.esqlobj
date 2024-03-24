@@ -1,0 +1,19 @@
+CREATE PROCEDURE CreateResponseErrorToClient(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+		
+       CREATE LASTCHILD OF refRoot NAME 'XMLNSC';
+		CREATE LASTCHILD OF refRoot.XMLNSC NAME 'integrationResponse';
+		DECLARE refIntegrationResp REFERENCE TO refRoot.XMLNSC.integrationResponse;	
+		
+		CREATE LASTCHILD OF refIntegrationResp NAME 'responseHeader';		
+		DECLARE refResponseHeader REFERENCE TO refIntegrationResp.responseHeader;
+		
+		DECLARE refDataRequest REFERENCE TO refEnv.Backup.JSON.Data.integrationRequest.requestHeader; 
+				
+		SET refResponseHeader.idSesion 				= refDataRequest.idSesion; --COALESCE(refDataAudit.idSesion, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idPeticionEmpresa		= refDataRequest.idPeticionEmpresa; --COALESCE(refDataAudit.idPeticionEmpresa, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idPeticionBanco		= refDataRequest.idPeticionBanco;  --COALESCE(refDataAudit.idPeticionBanco, GET_EMPTY_CHARACTER());
+		SET refResponseHeader.idOperacion		 	= refDataRequest.idOperacion; --COALESCE(refDataAudit.idOperacion, GET_EMPTY_CHARACTER());
+			
+END;

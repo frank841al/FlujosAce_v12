@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmLabel.msgnode="ComIbmLabel.msgnode" xmlns:ComIbmMQOutput.msgnode="ComIbmMQOutput.msgnode" xmlns:ComIbmTrace.msgnode="ComIbmTrace.msgnode" xmlns:ComIbmTryCatch.msgnode="ComIbmTryCatch.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="pe/com/bbva/ace/bolsa/SubFlowAuxiliar.subflow" nsPrefix="pe_com_bbva_ace_bolsa_SubFlowAuxiliar.subflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true" udpSupport="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.PATH_OK" name="PATH_OK" defaultValueLiteral="/opt/MB_WORK/bolsa/ccliente4.log">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.PATH_ERROR" name="PATH_ERROR" defaultValueLiteral="/opt/MB_WORK/bolsa/ccliente_error4.log">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.destinationQueueManagerName" name="destinationQueueManagerName" defaultValueLiteral="TMDW1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.queueManagerHostname" name="queueManagerHostname" defaultValueLiteral="HOST">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.listenerPortNumber" name="listenerPortNumber" defaultValueLiteral="11111">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.channelName" name="channelName" defaultValueLiteral="CHANNEL">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <translation xmi:type="utility:TranslatableString" key="SubFlowAuxiliar" bundleName="pe/com/bbva/ace/bolsa/SubFlowAuxiliar" pluginId="APP_ACE_BOLSA_UTILITARIO"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/APP_ACE_BOLSA_UTILITARIO/icons/full/obj16/SubFlowAuxiliar.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/APP_ACE_BOLSA_UTILITARIO/icons/full/obj30/SubFlowAuxiliar.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="86,64">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="pe/com/bbva/ace/bolsa/SubFlowAuxiliar" pluginId="APP_ACE_BOLSA_UTILITARIO"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="257,353" destination="file" filePath="/opt/MB_WORK/bolsa/ccliente4.log" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Info E]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Datos MQMD = [CCSID: ${Root.MQMD.CodedCharSetId}]  -  [Encoding: ${Root.MQMD.Encoding}]  -  [Formato: ${Root.MQMD.Format}]  -  [ReplyToQ: ${Root.MQMD.ReplyToQ}]  -  [ReplyToQmgr: ${Root.MQMD.ReplyToQMgr}]&#xD;&#xA;Events = ${Root.XMLNSC}&#xD;&#xA;Cola Destino = ${LocalEnvironment.Destination.MQ.DestinationData.queueName}  -  Qmgr ='${COALESCE(LocalEnvironment.Destination.MQ.DestinationData.queueManagername, '')}'">
+        <translation xmi:type="utility:ConstantString" string="T_InfoE"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="567,156" labelName="LBL_ERROR">
+        <translation xmi:type="utility:ConstantString" string="LBL_ERROR"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="80,211" labelName="LBL_AUDIT">
+        <translation xmi:type="utility:ConstantString" string="LBL_AUDIT"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="746,156" connection="CLIENT" destinationQueueManagerName="TMDW1" queueManagerHostname="HOST" listenerPortNumber="11111" channelName="CHANNEL" destinationMode="list" transactionMode="no" persistenceMode="yes">
+        <translation xmi:type="utility:ConstantString" string="QL.GEN.ERROR.REQ.01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="83,349" labelName="LBL_EVENT">
+        <translation xmi:type="utility:ConstantString" string="LBL_EVENT"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="257,215" destination="file" filePath="/opt/MB_WORK/bolsa/ccliente4.log" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Info A]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Datos MQMD = [CCSID: ${Root.MQMD.CodedCharSetId}]  -  [Encoding: ${Root.MQMD.Encoding}]  -  [Formato: ${Root.MQMD.Format}]  -  [ReplyToQ: ${Root.MQMD.ReplyToQ}]  -  [ReplyToQmgr: ${Root.MQMD.ReplyToQMgr}]&#xD;&#xA;Auditoria = ${Root.XMLNSC}&#xD;&#xA;Cola Destino = ${LocalEnvironment.Destination.MQ.DestinationData.queueName}  -  Qmgr ='${COALESCE(LocalEnvironment.Destination.MQ.DestinationData.queueManagername, '')}'">
+        <translation xmi:type="utility:ConstantString" string="T_InfoA"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="665,156" destination="file" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Error 3]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Datos MQMD = [CCSID: ${Root.MQMD.CodedCharSetId}]  -  [Encoding: ${Root.MQMD.Encoding}]  -  [Formato: ${Root.MQMD.Format}]  -  [ReplyToQ: ${Root.MQMD.ReplyToQ}]&#xD;&#xA;Mensaje = ${CASE WHEN Environment.Backup.MQRFH2.usr.Parametros.CONFIDENCIAL = 'S' THEN  'LOGS NO DISPONIBLES' ELSE Root.XMLNSC END}&#xD;&#xA;Cola Destino = ${LocalEnvironment.Destination.MQ.DestinationData.queueName}  -  Qmgr ='${COALESCE(LocalEnvironment.Destination.MQ.DestinationData.queueManagername, '')}'">
+        <translation xmi:type="utility:ConstantString" string="T_Error"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="252,64" computeExpression="esql://routine/pe.com.bbva.ace.bolsa#SubFlowAuxiliar_ApplyRoute.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="ApplyRoute"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="168,64" destination="file" filePath="/opt/MB_WORK/bolsa/ccliente4.log" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Info]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Root = ${Root}&#xD;&#xA;Auxiliar = ${Environment.Backup.Auxiliar}">
+        <translation xmi:type="utility:ConstantString" string="T_Info"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTryCatch.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="167,349">
+        <translation xmi:type="utility:ConstantString" string="Try Catch"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Respaldo del mensaje del evento"/>
+        <longDescription xmi:type="utility:ConstantString" string="Respaldo del mensaje del evento"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="329,353" connection="CLIENT" destinationQueueManagerName="QUEUEMANAGER" queueManagerHostname="HOST" listenerPortNumber="11111" channelName="CHANNEL" destinationMode="list" transactionMode="no" persistenceMode="yes">
+        <translation xmi:type="utility:ConstantString" string="QL.GEN.EVENTS.HUB.REQ.01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="258,291" destination="file" filePath="/opt/MB_WORK/bolsa/ccliente_error4.log" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Error Event]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'  -  CodServicio = ${Root.MQRFH2.usr.inService}  -  Servicio = '${COALESCE(Root.MQRFH2.usr.nameService,'')}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Hubo un error en la cola ${LocalEnvironment.Destination.MQ.DestinationData.queueName} en el MQ '${COALESCE(LocalEnvironment.Destination.MQ.DestinationData.queueManagername, '')}'. Se respalda la informacion en la cola 'QL.GEN.EVENTS.HUB.REQ.02'">
+        <translation xmi:type="utility:ConstantString" string="T_ErrorE"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="330,291" queueName="QL.GEN.EVENTS.HUB.REQ.02" connection="CLIENT" destinationQueueManagerName="TMDW1" queueManagerHostname="HOST" listenerPortNumber="11111" channelName="CHANNEL" transactionMode="no" persistenceMode="yes">
+        <translation xmi:type="utility:ConstantString" string="QL.GEN.EVENTS.HUB.REQ.02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_16" location="256,147" destination="file" filePath="/opt/MB_WORK/bolsa/ccliente_error4.log" pattern="**********************************************************************************************************************************************************&#xD;&#xA;[Error Audit]  -  CorrelId = ${Root.MQMD.MsgId}  -  Fecha y Hora = '${CURRENT_TIMESTAMP}'  -  CodServicio = ${Root.MQRFH2.usr.inService}  -  Servicio = '${COALESCE(Root.MQRFH2.usr.nameService,'')}'&#xD;&#xA;**********************************************************************************************************************************************************&#xD;&#xA;Hubo un error en la cola ${LocalEnvironment.Destination.MQ.DestinationData.queueName} en el MQ '${COALESCE(LocalEnvironment.Destination.MQ.DestinationData.queueManagername, '')}'. Se respalda la informacion en la cola 'QL.GEN.AUDIT.REQ.02'">
+        <translation xmi:type="utility:ConstantString" string="T_ErrorA"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTryCatch.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_17" location="165,211">
+        <translation xmi:type="utility:ConstantString" string="Try Catch1"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Respaldo del mensaje de la auditoria"/>
+        <longDescription xmi:type="utility:ConstantString" string="Respaldo del mensaje de la auditoria"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_18" location="344,147" queueName="QL.GEN.AUDIT.REQ.02" connection="CLIENT" destinationQueueManagerName="TMDW1" queueManagerHostname="HOST" listenerPortNumber="11111" channelName="CHANNEL" transactionMode="no" persistenceMode="yes">
+        <translation xmi:type="utility:ConstantString" string="QL.GEN.AUDIT.REQ.02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_19" location="343,215" connection="CLIENT" destinationQueueManagerName="QUEUEMANAGER" queueManagerHostname="HOST" listenerPortNumber="11111" channelName="CHANNEL" destinationMode="list" transactionMode="no" persistenceMode="yes">
+        <translation xmi:type="utility:ConstantString" string="QL.GEN.AUDIT.REQ.01"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_11" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_11" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_12" sourceTerminalName="OutTerminal.catch" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_15" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_12" sourceTerminalName="OutTerminal.try" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_13" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_16" sourceNode="FCMComposite_1_17" sourceTerminalName="OutTerminal.catch" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_18" sourceNode="FCMComposite_1_16" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_11" targetNode="FCMComposite_1_7" sourceNode="FCMComposite_1_17" sourceTerminalName="OutTerminal.try" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_12" targetNode="FCMComposite_1_19" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_13" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="FCMComposite_1_17" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer>
+      <propertyDescriptor groupName="Group.Basic" configurable="true" describedAttribute="Property.PATH_OK">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.PATH_OK" bundleName="pe/com/bbva/ace/bolsa/SubFlowAuxiliar" pluginId="APP_ACE_BOLSA_UTILITARIO"/>
+        <propertyDescriptor groupName="Group.Basic" configurable="true" describedAttribute="Property.PATH_ERROR">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.PATH_ERROR" bundleName="pe/com/bbva/ace/bolsa/SubFlowAuxiliar" pluginId="APP_ACE_BOLSA_UTILITARIO"/>
+          <propertyDescriptor groupName="Group.Basic" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.mq.RemoteQueueManagerNameEditor" configurable="true" describedAttribute="Property.destinationQueueManagerName">
+            <propertyName xmi:type="utility:TranslatableString" key="Property.destinationQueueManagerName" bundleName="ComIbmMQOutput" pluginId="com.ibm.etools.mft.ibmnodes.definitions"/>
+            <propertyDescriptor groupName="Group.Basic" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.mq.HostnamePropertyEditor" configurable="true" describedAttribute="Property.queueManagerHostname">
+              <propertyName xmi:type="utility:TranslatableString" key="Property.queueManagerHostname" bundleName="ComIbmMQOutput" pluginId="com.ibm.etools.mft.ibmnodes.definitions"/>
+              <propertyDescriptor groupName="Group.Basic" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.mq.PortPropertyEditor" configurable="true" describedAttribute="Property.listenerPortNumber">
+                <propertyName xmi:type="utility:TranslatableString" key="Property.listenerPortNumber" bundleName="ComIbmMQOutput" pluginId="com.ibm.etools.mft.ibmnodes.definitions"/>
+                <propertyDescriptor groupName="Group.Basic" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.mq.ChannelNameEditor" configurable="true" describedAttribute="Property.channelName">
+                  <propertyName xmi:type="utility:TranslatableString" key="Property.channelName" bundleName="ComIbmMQOutput" pluginId="com.ibm.etools.mft.ibmnodes.definitions"/>
+                </propertyDescriptor>
+              </propertyDescriptor>
+            </propertyDescriptor>
+          </propertyDescriptor>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+    <attributeLinks promotedAttribute="Property.PATH_OK" overriddenNodes="FCMComposite_1_7 FCMComposite_1_11 FCMComposite_1_1">
+      <overriddenAttribute href="ComIbmTrace.msgnode#Property.filePath"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.PATH_ERROR" overriddenNodes="FCMComposite_1_9">
+      <overriddenAttribute href="ComIbmTrace.msgnode#Property.filePath"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.destinationQueueManagerName" overriddenNodes="FCMComposite_1_5 FCMComposite_1_18 FCMComposite_1_15 FCMComposite_1_13 FCMComposite_1_19">
+      <overriddenAttribute href="ComIbmMQOutput.msgnode#Property.destinationQueueManagerName"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.queueManagerHostname" overriddenNodes="FCMComposite_1_5 FCMComposite_1_18 FCMComposite_1_15 FCMComposite_1_13 FCMComposite_1_19">
+      <overriddenAttribute href="ComIbmMQOutput.msgnode#Property.queueManagerHostname"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.listenerPortNumber" overriddenNodes="FCMComposite_1_5 FCMComposite_1_18 FCMComposite_1_15 FCMComposite_1_13 FCMComposite_1_19">
+      <overriddenAttribute href="ComIbmMQOutput.msgnode#Property.listenerPortNumber"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.channelName" overriddenNodes="FCMComposite_1_5 FCMComposite_1_18 FCMComposite_1_15 FCMComposite_1_13 FCMComposite_1_19">
+      <overriddenAttribute href="ComIbmMQOutput.msgnode#Property.channelName"/>
+    </attributeLinks>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

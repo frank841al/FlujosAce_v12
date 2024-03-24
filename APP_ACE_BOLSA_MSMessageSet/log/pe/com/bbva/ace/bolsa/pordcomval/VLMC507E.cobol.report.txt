@@ -1,0 +1,37 @@
+
+
+Importing file: C:\ESBrokerss\Fuentes_Bolsa_150224_1321\APP_ACE_BOLSA_MS\operaciones-cpy\pordcomval-VLA7\VLMC507E.cpy
+
+Import options for COBOL: 
+	EXTENSION_COB=FP
+	EXTENSION_CCP=FP
+	QUOTE=DOUBLE
+	EXTENSION_CPY=DS
+	EXTENSION_CBL=FP
+	CODEPAGE=ISO8859_1
+	FLOATING_POINT_FORMAT=0
+	REMOTE_ENDIAN=Little
+	TRUNC=STD
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXT_DECIMAL_SIGN=ASCII
+	PLATFORM_SELECTION=0
+	NUMPROC=PFD
+	SCHEMA_TARGET_NAMESPACE_URI=http://bolsa.ace.bbva.com.pe/pordcomval/
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "msg_VLMC507EDATOSENTRADA" for type "VLMC507EDATOSENTRADA"
+Creating message "msg_VLMC507EDATOSENTRADA" from global element "msg_VLMC507EDATOSENTRADA"
+Setting Padding Character for elements of type String  "SPACE"
+
+Elapsed time processing this message definition file: 0.585 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

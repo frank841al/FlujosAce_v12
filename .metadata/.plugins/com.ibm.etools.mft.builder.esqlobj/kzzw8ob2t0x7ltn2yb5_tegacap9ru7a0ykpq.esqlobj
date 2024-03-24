@@ -1,0 +1,9 @@
+CREATE FUNCTION replaceBlobCarsByCar(IN blobPS9Host BLOB, IN refCars REFERENCE, IN blobRep BLOB)
+	RETURNS BLOB
+	BEGIN
+		DECLARE newBlob BLOB blobPS9Host;
+		FOR car AS refCars.car[] DO		
+			SET newBlob = REPLACE(newBlob,car, REPLICATE(blobRep,LENGTH(car)));
+		END FOR;
+		RETURN newBlob;
+	END;

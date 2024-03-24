@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="ps9.connector.hi.bbva.com.pe" xmlns:tns="ps9.connector.hi.bbva.com.pe" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+  <xsd:complexType name="tConfigTX">
+    <xsd:sequence>
+     <xsd:element name="distQNameIN" type="xsd:string"/>
+     <xsd:element name="distQNameOUT" type="xsd:string"/>
+     <xsd:element name="hostQMName" type="xsd:string"/>
+     <xsd:element name="hostQNameOUT" type="xsd:string"/>
+	 <xsd:element name="CCSID" type="xsd:string"/>
+            <xsd:element name="timeExpMsjTx" type="xsd:string"/>
+            <xsd:element name="persistenciaMsj" type="xsd:string"/>
+        </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tIHBD">
+    <xsd:sequence>
+      <xsd:element name="idProtocolo" type="xsd:string"/>
+      <xsd:element name="terminalInicial" type="xsd:string"/>
+      <xsd:element name="terminalFinal" type="xsd:string"/>
+      <xsd:element name="usuario" type="xsd:string"/>
+      <xsd:element name="numSecuencia" type="xsd:string"/>
+      <xsd:element name="codTX" type="xsd:string"/>
+      <xsd:element name="opcApp" type="xsd:string"/>
+      <xsd:element name="indCommit" type="xsd:string"/>
+      <xsd:element name="tipoMensaje" type="xsd:string"/>
+      <xsd:element name="tipoProceso" type="xsd:string"/>
+      <xsd:element name="canalComunicacion" type="xsd:string"/>
+      <xsd:element name="indPreformato" type="xsd:string"/>
+      <xsd:element name="lenguaje" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tMEBD">
+    <xsd:sequence>
+      <xsd:element name="tipoMensaje" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tPS9BD">
+    <xsd:sequence>
+     <xsd:element name="ConfigTX" type="tns:tConfigTX"/>
+     <xsd:element name="IH" type="tns:tIHBD"/>
+     <xsd:element name="ME" type="tns:tMEBD"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PS9BD" type="tns:tPS9BD">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/PS9BD;XSDElementDeclaration$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

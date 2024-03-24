@@ -1,0 +1,32 @@
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E500_ASUNTO1 	= refJsonData.integrationRequest.asunto1;
+		SET refRoot.E500_ASUNTO2 	= refJsonData.integrationRequest.asunto2;
+		SET refRoot.E500_ASUNTO3 	= refJsonData.integrationRequest.asunto3;
+		SET refRoot.E500_DESCRIPCION1 	= refJsonData.integrationRequest.descripcion1;
+		SET refRoot.E500_DESCRIPCION2 	= refJsonData.integrationRequest.descripcion2;
+		SET refRoot.E500_DESCRIPCION3 		= refJsonData.integrationRequest.descripcion3;
+		SET refRoot.E500_DESCRIPCION4 		= refJsonData.integrationRequest.descripcion4;
+		SET refRoot.E500_FECHA1 = refJsonData.integrationRequest.fecha1;
+		SET refRoot.E500_FECHA2 	= refJsonData.integrationRequest.fecha2;
+		SET refRoot.E500_IMPORTE1 	= refJsonData.integrationRequest.importe1;
+		SET refRoot.E500_IMPORTE2 	= refJsonData.integrationRequest.importe2;
+		SET refRoot.E500_IMPORTE3 	= refJsonData.integrationRequest.importe3;
+		SET refRoot.E500_IMPORTE4 	= refJsonData.integrationRequest.importe4;
+		SET refRoot.E500_INDICADOR1 	= refJsonData.integrationRequest.indicador1;
+		SET refRoot.E500_INDICADOR2 		= refJsonData.integrationRequest.indicador2;
+		SET refRoot.E500_INDICADOR3 		= refJsonData.integrationRequest.indicador3;
+		SET refRoot.E500_INDICADOR4 = refJsonData.integrationRequest.indicador4;
+		SET refRoot.E500_CODIGO1 	= refJsonData.integrationRequest.codigo1;
+		SET refRoot.E500_CODIGO2 	= refJsonData.integrationRequest.codigo2;
+		SET refRoot.E500_CODIGO3 	= refJsonData.integrationRequest.codigo3;
+		SET refRoot.E500_CODIGO4 	= refJsonData.integrationRequest.codigo4;
+		SET refRoot.E500_NUMERO1 	= refJsonData.integrationRequest.numero1;
+		SET refRoot.E500_NUMERO2 	= refJsonData.integrationRequest.numero2;
+		SET refRoot.E500_NUMERO3 		= refJsonData.integrationRequest.numero3;
+		SET refRoot.E500_NUMERO4 		= refJsonData.integrationRequest.numero4;
+		SET refRoot.E500_IND_PAGINACION = refJsonData.integrationRequest.ind_paginacion;
+		SET refRoot.E500_ARG_BUSQUEDA 	= refJsonData.integrationRequest.arg_busqueda;
+END;

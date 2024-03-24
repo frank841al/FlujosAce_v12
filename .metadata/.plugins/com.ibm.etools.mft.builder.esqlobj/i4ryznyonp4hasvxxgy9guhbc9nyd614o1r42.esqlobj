@@ -1,0 +1,17 @@
+CREATE FUNCTION ConvertReferenceToBitStream( IN RefRoot     REFERENCE, 
+										     IN MsgSet		CHARACTER, 
+										     IN MsgType		CHARACTER,
+										     IN MsgFormat	CHARACTER,
+										     IN MsgEncoding	INTEGER,
+										     IN MsgCCSID	INTEGER	) RETURNS BLOB
+BEGIN
+	DECLARE dataBlob BLOB;
+	SET dataBlob = ASBITSTREAM( RefRoot
+								SET 	 MsgSet
+								TYPE 	 MsgType
+								FORMAT 	 MsgFormat
+								ENCODING MsgEncoding
+								CCSID 	 MsgCCSID
+								OPTIONS  ValidateImmediate);
+	RETURN  dataBlob;
+END;

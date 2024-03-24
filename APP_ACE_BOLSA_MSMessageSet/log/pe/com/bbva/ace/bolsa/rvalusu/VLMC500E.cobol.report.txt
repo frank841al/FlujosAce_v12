@@ -1,0 +1,37 @@
+
+
+Importing file: C:\ESBrokerss\Fuentes_Bolsa_150224_1321\APP_ACE_BOLSA_MS\operaciones-cpy\rvalusu-VLA0\VLMC500E.cpy
+
+Import options for COBOL: 
+	EXTENSION_COB=FP
+	EXTENSION_CCP=FP
+	QUOTE=DOUBLE
+	EXTENSION_CPY=DS
+	EXTENSION_CBL=FP
+	CODEPAGE=ISO8859_1
+	FLOATING_POINT_FORMAT=0
+	REMOTE_ENDIAN=Little
+	TRUNC=STD
+	NSYMBOL=NATIONAL
+	ENDIAN=Little
+	EXT_DECIMAL_SIGN=ASCII
+	PLATFORM_SELECTION=0
+	NUMPROC=PFD
+	SCHEMA_TARGET_NAMESPACE_URI=http://bolsa.ace.bbva.com.pe/rvalusu/
+	CREATE_DEFAULT_VALUES_FROM_INITIAL_VALUES=false
+	CREATE_FACETS_FROM_LEVEL_88_VALUE_CLAUSES=false
+	CREATE_NULL_VALUES_FOR_FIELDS=false
+	NULL_CHARACTER=SPACE
+	STRING_PADDING_CHARACTER=SPACE
+
+Creating global element "msg_E500VLMC500E" for type "E500VLMC500E"
+Creating message "msg_E500VLMC500E" from global element "msg_E500VLMC500E"
+Setting Padding Character for elements of type String  "SPACE"
+
+Elapsed time processing this message definition file: 0.45 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

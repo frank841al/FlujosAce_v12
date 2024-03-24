@@ -1,0 +1,2 @@
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_ccliente_PrepareResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN

@@ -1,0 +1,85 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cfacs
+PATH pe.com.bbva.ace.bolsa;
+
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_cfacs_PrepareResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+--		RETURN TRUE;
+--Prueba		
+			CALL CopyEntireMessage();
+		
+		DECLARE refJsonIn REFERENCE TO Environment.Backup.JSON.Data.integrationRequest.requestHeader;
+		
+		--Eliminando datos
+		DELETE FIELD OutputRoot.BLOB;
+		DELETE FIELD OutputRoot.MQRFH2;
+		DELETE FIELD OutputRoot.MQMD;
+		
+		CREATE LASTCHILD OF OutputRoot DOMAIN 'JSON';
+		CREATE FIELD OutputRoot.JSON.Data;
+		
+		
+		--Declaracion de variables
+		DECLARE refPS9Rs REFERENCE TO Environment.PS9.XMLNSC.Data;
+		DECLARE refOut REFERENCE TO OutputRoot.JSON.Data;
+		
+		
+		/* 
+		*  SE ARMA RESPUESTA AL CONSUMIDOR
+		*/
+		
+		IF FIELDTYPE(refPS9Rs.ER) IS NULL THEN
+			-- Se crea el mensaje de respuesta del proveedor con éxito
+			CALL buildResClient_WP_RIW3_OK(refOut, refPS9Rs, refJsonIn);
+			
+		ELSE
+			-- Se crea el mensaje de respuesta del proveedor con error de negocio
+			DECLARE chrCodigoError CHARACTER getEMPTY_CHARACTER();
+			DECLARE chrDescripcionError CHARACTER getEMPTY_CHARACTER();
+			
+			SET chrCodigoError = LEFT(FIELDVALUE(refPS9Rs.ER),7);
+			SET chrDescripcionError = SUBSTRING(FIELDVALUE(refPS9Rs.ER) FROM 9);
+			
+			CALL buildResClient_WP_RIW_ERROR(refOut, refJsonIn, getSI(), chrCodigoError, chrDescripcionError);
+			
+		END IF;
+		
+		-- Se establece la id correlacion del mensaje HTTP
+		SET OutputLocalEnvironment.Destination.HTTP.RequestIdentifier =  Environment.Backup.LocalEnvironment.Destination.SOAP.Reply.ReplyIdentifier;
+		
+		
+		/*
+		** SE PREPARA LOS DATOS PARA AUDITORIA Y EVENTO [4]
+		*/
+		
+--		CREATE FIELD Environment.Backup.Auxiliar;
+--		DECLARE refAuxiliar REFERENCE TO Environment.Backup.Auxiliar;
+--		SET refAuxiliar.Generate.MsgFour = getSI();
+--		SET refAuxiliar.Generate.isJson = getSI(); --Tiene salida Json?
+--		SET refAuxiliar.REPLY_TO_QMGR = REPLY_TO_QMGR;
+--		
+--		CREATE LASTCHILD OF Environment.Salida DOMAIN 'JSON';
+--		DECLARE refEnt REFERENCE TO Environment.Salida.JSON;
+--		SET refEnt = OutputRoot.JSON;  
+		
+		PROPAGATE TO TERMINAL 0 DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

@@ -1,0 +1,82 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.cclis
+
+
+/*
+* Description: Procedimiento que crea la estructura del mensaje significativo hacia host 
+* 		que depende de los datos enviados por el canal
+* Parameters:
+* IN: refRoot REFERENCE - Es el arbol del dominio MRM (OutputRoot.MRM).
+* IN: refXMLRoot REFERENCE - Referencia temporal del integrationRequest.
+*/
+CREATE PROCEDURE buildPS9Rq(IN refRoot REFERENCE, IN refJsonData REFERENCE)
+BEGIN		
+       -- Mapeamos los campos del Request Body
+       -- SET refRoot.[Campo_HOST]      = refXMLRoot.[Campo_Json];
+		SET refRoot.E503_NOMBRE_CLTE1 	= refJsonData.integrationRequest.nombre_clte1;
+		SET refRoot.E503_TIPO_CONSULTA 	= refJsonData.integrationRequest.tipo_consulta;
+		SET refRoot.E503_DATO_CONSULTA 	= refJsonData.integrationRequest.dato_consulta;
+		SET refRoot.E503_CTAVAL_REIN 	= refJsonData.integrationRequest.ctaval_rein;
+		SET refRoot.E503_NEMONI_REIN 	= refJsonData.integrationRequest.nemoni_rein;
+		SET refRoot.E503_USUARIO 		= refJsonData.integrationRequest.usuario;
+		SET refRoot.E503_NUMCLI 		= refJsonData.integrationRequest.numcli;
+		SET refRoot.E503_IND_PAGINACION = refJsonData.integrationRequest.ind_paginacion;
+		SET refRoot.E503_ARG_BUSQUEDA 	= refJsonData.integrationRequest.arg_busqueda;
+END;
+
+
+-- procedimiento de salida	
+
+CREATE PROCEDURE CreateResponseToCclis(IN refRoot REFERENCE, IN refEnv REFERENCE)
+
+BEGIN
+	
+--	    DECLARE nsOper NAMESPACE getNamespaceOperation(C_OPERATION);		
+--		CREATE LASTCHILD OF refRoot DOMAIN GET_MESSAGE_DOMAIN_XMLNSC();
+--		DECLARE refDomain REFERENCE TO refRoot.XMLNSC;
+
+	DECLARE refIntegrationResp	REFERENCE TO refEnv.Backup.TramaJson.JSON.Data.integrationRequest;
+		
+		DECLARE refEnvRoot REFERENCE TO refEnv.ROOT;
+		--		se adiciona la linea siguiente
+		DECLARE COUNTO INTEGER 1;
+		
+		DECLARE refDetalle REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA;
+--		DECLARE refTmp REFERENCE TO  refEnvRoot.VLMC502D_DATOS_SALIDA[1];
+		DECLARE refTmp REFERENCE TO  refIntegrationResp.listadoDetalle.detalle; 
+-- se comenta y se adiciona la linea siguiente	
+		WHILE LASTMOVE(refDetalle) DO
+					
+			IF (refDetalle.D502_ARQUITECTURA <> '' AND refDetalle.D502_CTAVALOR <> '' AND COUNTO<=30) THEN
+			CREATE LASTCHILD OF refIntegrationResp.listadoDetalle AS refTmp NAME 'detalle';  
+				SET refTmp.ctavalor   		    = COALESCE(refDetalle.D502_CTAVALOR);
+				SET refTmp.rut	   			    = COALESCE(refDetalle.D502_RUT);
+				SET refTmp.ecocar	   			= COALESCE(refDetalle.D502_ECOCAR);
+				SET refTmp.moncar	   			= COALESCE(refDetalle.D502_MONCAR);
+				SET refTmp.ecoabo	   			= COALESCE(refDetalle.D502_ECOABO);
+				SET refTmp.monabo	   			= COALESCE(refDetalle.D502_MONABO);
+				SET refTmp.tipcom	   			= COALESCE(refDetalle.D502_TIPCOM);
+				SET refTmp.comrda	   			= COALESCE(refDetalle.D502_COMRDA);
+				SET refTmp.lugneg	   			= COALESCE(refDetalle.D502_LUGNEG);
+			END IF;
+			SET COUNTO= COUNTO+1;
+			MOVE refDetalle NEXTSIBLING;
+		END WHILE;
+		-- Establecer el valor de los campos de respuesta (response body JSON) en base al valor de los campos PS9 (response bosy HOST)
+		-- En esta operación no hay valores response
+		SET refIntegrationResp.tipo_doc  = COALESCE(refEnv.ROOT.S502_TIPO_DOC);
+		SET refIntegrationResp.nume_doc  = COALESCE(refEnv.ROOT.S502_NUME_DOC );
+		SET refIntegrationResp.cliente   = COALESCE(refEnv.ROOT.S502_CLIENTE  );
+		SET refIntegrationResp.direccion = COALESCE(refEnv.ROOT.S502_DIRECCION);
+		SET refIntegrationResp.telefonos = COALESCE(refEnv.ROOT.S502_TELEFONOS);
+		SET refIntegrationResp.telefonos1 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS1);
+		SET refIntegrationResp.telefonos2 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS2);
+		SET refIntegrationResp.telefonos3 = COALESCE(refEnv.ROOT.S502_TELEFONOS.S502_TELEFONOS3);
+		SET refIntegrationResp.email       = COALESCE(refEnv.ROOT.S502_EMAIL      );
+		SET refIntegrationResp.numcli      = COALESCE(refEnv.ROOT.S502_NUMCLI     );
+		SET refIntegrationResp.hay_mas     = COALESCE(refEnv.ROOT.S502_HAY_MAS    );
+		SET refIntegrationResp.ctaval_sgte = COALESCE(refEnv.ROOT.S502_CTAVAL_SGTE);
+		SET refIntegrationResp.cod_retorno   = COALESCE(refEnv.ROOT.S502_COD_RETORNO);
+		SET refIntegrationResp.cod_error_dev = COALESCE(refEnv.ROOT.S502_COD_ERROR_DEV);
+		SET refIntegrationResp.var1_error    = COALESCE(refEnv.ROOT.S502_VAR1_ERROR);
+		SET refIntegrationResp.var2_error    = COALESCE(refEnv.ROOT.S502_VAR2_ERROR);
+END;

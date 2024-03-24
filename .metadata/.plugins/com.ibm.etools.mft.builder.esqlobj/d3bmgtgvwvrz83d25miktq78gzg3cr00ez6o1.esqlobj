@@ -1,0 +1,21 @@
+CREATE PROCEDURE SplitBadCharList (IN BadCharList CHARACTER, IN refEnvWork REFERENCE, IN Delim CHARACTER) 
+	BEGIN 
+	   DECLARE P INTEGER; 
+	   DECLARE Idx INTEGER 1; 
+	
+	   SET refEnvWork.cars = NULL;
+	    
+	   REPEAT 
+	      SET P = POSITION(Delim IN BadCharList); 
+	      IF P = 0 THEN 
+	         SET refEnvWork.cars.car[Idx] = CAST(BadCharList AS BLOB); 
+	      ELSE 
+	         SET refEnvWork.cars.car[Idx] = CAST(LEFT(BadCharList, P - 1) AS BLOB); 
+	         SET BadCharList = SUBSTRING(BadCharList FROM P + LENGTH(Delim)); 
+	         SET Idx = Idx + 1;
+	      END IF;
+	   UNTIL P = 0 
+	       
+	   END REPEAT;    
+	
+	END;

@@ -1,0 +1,35 @@
+BROKER SCHEMA pe.com.bbva.ace.bolsa.pordvenval
+
+
+CREATE COMPUTE MODULE Flow_Bolsa_RestHost_pordvenval_ConfHeader
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyEntireMessage();
+		   
+		DECLARE refRfh2 REFERENCE TO Environment.Backup.MQRFH2.usr;
+		DECLARE refParamOperation REFERENCE TO refRfh2.ParametrosOperacion;
+		
+--		CALL setOutputConfigProperties(OutputRoot, getEMPTY_CHARACTER(), getEMPTY_CHARACTER(), getEMPTY_CHARACTER(), getRP_MQ(), getEMPTY_CHARACTER());
+		
+		SET OutputRoot.MQMD.MsgId		= InputRoot.MQMD.MsgId;
+	--	SET OutputRoot.MQMD.ReplyToQ	= refParamOperation.REPLY_TO_Q;
+	--	SET OutputRoot.MQMD.ReplyToQMgr	= REPLY_TO_QMGR;
+		
+--		SET OutputLocalEnvironment.MQ.GET.QueueName 		 = refParamOperation.REPLY_TO_Q;
+		SET OutputLocalEnvironment.MQ.GET.QueueName 		 = 'QLT.ECS2.RESP';
+		SET OutputLocalEnvironment.MQ.GET.QueueManagerName 	 = 'TMDW5'; --REPLY_TO_QMGR;
+--		SET OutputLocalEnvironment.MQ.GET.MQGMO.WaitInterval = CAST(refParamOperation.TIMEOUT_MQ AS INTEGER);
+		SET OutputLocalEnvironment.MQ.GET.MQGMO.WaitInterval = CAST('60000' AS INTEGER);
+		
+		DELETE FIELD OutputRoot.MRM;
+		
+		PROPAGATE TO TERMINAL 0 DELETE NONE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

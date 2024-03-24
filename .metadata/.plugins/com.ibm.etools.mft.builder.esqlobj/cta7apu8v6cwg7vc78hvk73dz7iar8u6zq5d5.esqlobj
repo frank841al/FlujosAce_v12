@@ -1,0 +1,15 @@
+CREATE FUNCTION determinarValorTransCodeHost(refIntegRequest REFERENCE) RETURNS CHARACTER 
+BEGIN
+	DECLARE valorResultado CHARACTER;
+
+    -- Obtener el valor de idOperacion desde refIntegRequest
+    DECLARE idOperacion CHARACTER;
+    SET idOperacion = refIntegRequest.requestHeader.idOperacion;
+
+    -- Determinar el valor de valorResultado según el valor de idOperacion
+    SWITCH idOperacion
+        CASE 'CLI' THEN SET valorResultado = 'VLA2';
+        CASE 'CLIS' THEN SET valorResultado = 'VLA3';
+        CASE 'RVALUSU' THEN SET valorResultado = 'VLAR';
+      BREAK;
+    END SWITCH;

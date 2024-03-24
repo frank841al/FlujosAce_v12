@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="D:\BBVA\X-Proyectos\BOLSA\2024\ws_Bolsa_v12f\BARfiles\BOLSA_test.bar" deployTimestamp="2024-02-15 16:45:47">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente" deployBarfile="D:\BBVA\X-Proyectos\BOLSA\2024\ws_Bolsa_v12f\BARfiles\BOLSA_test.bar" deployTimestamp="2024-02-15 16:45:47">
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ConfHeader.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ConfHeader.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ConfHeader.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#Error.filePath" override="/opt/MB_WORK/murex/ccliente_error.log">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.URLSpecifier" override="/sab/ccli2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#HTTPInput.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.SSLCertificateLabel">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.SSLCipherSpec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.SSLPeerName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.channelName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.connection">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.destinationQueueManagerName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.listenerPortNumber">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.policyUrl">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.queueManagerHostname">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.queueName" override="parameter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.securityIdentity">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.useSSL">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Get.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.AddRequestToGroup">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.GroupRequestFolderName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.GroupRequestTimeout">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.SSLCertificateLabel">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.SSLCipherSpec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.SSLPeerName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.channelName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.connection">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.destinationQueueManagerName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.listenerPortNumber">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.policyUrl">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.queueManagerHostname">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.queueManagerName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.queueName" override="parameter">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.replyToQ">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.replyToQMgr">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.securityIdentity">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.useSSL">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#MQ Output.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ObtenerParametros.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ObtenerParametros.dataSource" override="APP_HUBACE">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#ObtenerParametros.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareRequest.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareRequest.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareRequest.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareResponse.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareResponse.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#PrepareResponse.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#Trace.filePath" override="/opt/MB_WORK/murex/ccliente.log">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#filePath" override="/opt/MB_WORK/murex/ccliente.log">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="pe.com.bbva.ace.bolsa.ccliente.Flow_Bolsa_RestHost_ccliente#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>
